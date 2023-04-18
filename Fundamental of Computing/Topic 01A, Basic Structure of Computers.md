@@ -226,6 +226,42 @@ The address bus is used to transfer the address of the data between the CPU and 
 
 The data bus is used to transfer data between the CPU and the RAM.
 
+------------------------------
+
+![Alt text](Image%20Files/15.PNG)
+
+> I/O Polling and Interrupts
+
+>I/O Polling is a method of transferring data between the CPU and the I/O devices.
+
+> The CPU sends a request to the I/O device to transfer data.
+
+>> The I/O device transfers the data to the CPU.
+
+>>> The CPU checks if the data is ready.
+
+>>>> If the data is ready, the CPU will read the data.
+
+>>>>>If the data is not ready, the CPU will wait for the data to be ready.
+
+>>>>>> Interrupts is a method of transferring data between the CPU and the I/O devices.
+
+
+---------------------------
+
+# What is BIOs?
+
+BIOS is a program that is run when the computer is turned on.
+
+BIOS is stored in ROM.
+
+BIOS is used to initialize the hardware components of the computer.
+
+BIOS is used to store the boot sequence.
+
+BIOS is used to store the CMOS settings.
+
+
 
 
 
