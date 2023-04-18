@@ -261,7 +261,28 @@ BIOS is used to store the boot sequence.
 
 BIOS is used to store the CMOS settings.
 
+---------------------------------
 
+# NIC Card
+
+NIC stands for Network Interface Card.
+
+They attach to the motherboard. They have a MAC address. Example: 00-0C-29-5A-5A-5A
+
+They are used to connect the computer to a network using a wire, LAN
+
+Wireless NICs, they are used to connect the computer to a network using a wireless connection
+
+They use SSID to identify the network and connect to a wifi network.
+
+They use WEP, WPA, WPA2 to secure the wireless connection.
+
+They use DHCP to automatically assign an IP address to the computer.
+
+They use DNS to translate the domain name to an IP address.
+
+
+--------------------------------
 
 
 
