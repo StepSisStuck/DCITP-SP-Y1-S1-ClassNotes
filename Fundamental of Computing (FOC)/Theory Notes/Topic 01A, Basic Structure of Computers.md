@@ -1,7 +1,18 @@
 # Topic 01A
 
 
-## _Objectives of the topic_
+Table of Contents Listed Below:
+1. [Objectives of the topic](#Objectives-of-the-topic)
+2. [Topology](#Topology)
+3. [Computer Funtion](#Computer-Funtion)
+4. [List of Input](#list-input)
+5. [List of Output](#output)
+6. [List of Storage](#Storage)
+7. [What is BIOs](#bios)
+8. [NIC Card](#NIC)
+
+<h2 id="Objectives-of-the-topic " >Objectives of the topic </h2>
+
  Describe basic computer
 components and operation
 Explain the fundamentals
@@ -18,7 +29,8 @@ Computing services
 
 
 ![Alt text](Image%20Files/1.PNG)
-# Type of Topology
+<h2 id="Topology"> Type of Topology <h2>
+<h4>
 >> Ring topology = LAN
 
 >> Bus topology = LAN
@@ -44,7 +56,9 @@ The admin can do offsite or onsite administration.
 
 ---------------------------
 
-## A computer’s functions can be broken down into three basic tasks:
+<h2 id="Computer-Funtion" > A computer’s functions can be broken down into three basic tasks: <h2>
+
+<h4>
 > Input: A user types the letter ‘A’ on the keyboard, which results in sending a code representing the
 letter ‘A’ to the computer
 
@@ -61,7 +75,9 @@ They can use external input devices such as a mouse, keyboard, scanner, or camer
 
 
 ----------------------------------
-# These are the common items that are used as input devices:
+<h2 id="list-input"> These are the common items that are used as input devices: <h2>
+
+<h4>
 > PS2 Mouse
 
 > USB Mouse
@@ -109,7 +125,10 @@ CPU is the central processing unit of the computer
 ------------------------------
 ![Alt text](Image%20Files/5.PNG)
 
-## Output Components 
+<h2 id="output">Output Components<h2>
+
+<h4>
+
 > Monitor
 
 > Printer
@@ -126,6 +145,10 @@ CPU is the central processing unit of the computer
 
 ![Alt text](Image%20Files/6.PNG)
 
+
+<h2 id="Storage"> Storage and Memory <h2>
+
+<h4>
 - Two types of memory:
 Short term memory (RAM) and long term memory (ROM)
 
@@ -208,7 +231,9 @@ ROM are used to store the BIOS, which is a program that is run when the computer
 
 --------------------------------
 
-# Computer Bus Fundamentals
+<h2 id="Bus">  Computer Bus Fundamentals <h2>
+
+<h4>
 
 A bus is a set of wires that connect the components of a computer together.
 
@@ -254,7 +279,10 @@ The data bus is used to transfer data between the CPU and the RAM.
 
 ---------------------------
 
-# What is BIOs?
+<h2 id="bios"> What is BIOs? <h2>
+
+<h4>
+
 
 BIOS is a program that is run when the computer is turned on.
 
@@ -268,7 +296,7 @@ BIOS is used to store the CMOS settings.
 
 ---------------------------------
 
-# NIC Card
+<h4 id="NIC"> NIC Card<h4>
 
 NIC stands for Network Interface Card.
 
