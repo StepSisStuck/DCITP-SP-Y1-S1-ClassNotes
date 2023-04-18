@@ -5,7 +5,7 @@
 1. [Why JavaScript?](#Why-JavaScript?)
 2. [What is JavaScript?](#What-is-JavaScript?)
 3. [What is node js?](#What-is-node-js?)
-4. [Why use Visual Studio Code?](#Why-use-Visual-Studio-Code?)
+4. [Why use Visual Studio Code?](#Why-use-Visual-Studio-Code)
 
 
 
@@ -32,7 +32,7 @@ An Interpreter is a program that reads and executes code line by line. It is als
 
 --------------------------------
 
-<h2 id="Why-use-Visual-Studio-Code?>">Why use Visual Studio Code?</h2>
+<h2 id="Why-use-Visual-Studio-Code>">Why use Visual Studio Code?</h2>
 
 Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications. Visual Studio Code is free and available on your favorite platform - Linux, macOS, and Windows.
 
