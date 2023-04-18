@@ -1,5 +1,6 @@
 # Topic 01A
 
+# [Document to refer](../School%20Notes/Topic%2001A%20Basic%20Structure%20of%20Computers(1).pdf)
 
 Table of Contents Listed Below:
 1. [Objectives of the topic](#Objectives-of-the-topic)
