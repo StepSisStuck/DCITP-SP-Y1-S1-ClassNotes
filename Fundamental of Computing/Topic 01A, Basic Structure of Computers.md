@@ -181,23 +181,23 @@ They are faster than HDD.
 
 A motherboard is a circuit board that connects all the other components of a computer together.
 
-They have a heat sink to cool the CPU.
+- They have a heat sink to cool the CPU.
 
-They have a power supply to provide power to the computer.
+- They have a power supply to provide power to the computer.
 
-They have a BIOS to store the boot sequence.
+- They have a BIOS to store the boot sequence.
 
-They use a CMOS battery to store the BIOS settings.
+- They use a CMOS battery to store the BIOS settings.
 
-They have a chipset to connect the CPU to the RAM.
+- They have a chipset to connect the CPU to the RAM.
 
-They have a northbridge to connect the CPU to the RAM.
+- They have a northbridge to connect the CPU to the RAM.
+ 
+- They have a southbridge to connect the CPU to the RAM.
 
-They have a southbridge to connect the CPU to the RAM.
+- They have a PCI slot to connect the PCI cards.
 
-They have a PCI slot to connect the PCI cards.
-
-They have a PCI-E slot to connect the PCI-E cards.
+- They have a PCI-E slot to connect the PCI-E cards.
 
 ![Alt text](Image%20Files/12.PNG)
 
