@@ -12,9 +12,11 @@ console.log("c:\\user");
 
 ```
 
-    If my requirment I put double \, it will show me one \
+    If my require to put one \
+    I put double \, it will show me one \
 
-    If my requirment I put single \, it will show me two \\
+    If my require to put two \\ 
+    I put single \, it will show me two \\
    
    
  ------------------
