@@ -83,3 +83,10 @@ var  _myname, $cash , 1hundred, chong cs
 
 If you do not assign a number, it will be undefined/null
 
+## Names
+String
+Boolean
+Integer
+Double
+Float point = 10 x 10^-2
+
