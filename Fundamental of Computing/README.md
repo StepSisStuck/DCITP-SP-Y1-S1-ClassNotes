@@ -1,4 +1,4 @@
-# Fundamental of Computing
+# Introduction Fundamental of Computing
 
 
 > Topics covered in this module include: Introduction to Computer Architecture, Computer Networks and Hardware Essentials, Network Protocols, Linux Fundamentals, Linux System Organisation, Linux Resource Management Fundamentals, Client/Server Architecture and Cloud Computing.
