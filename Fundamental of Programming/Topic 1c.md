@@ -67,4 +67,17 @@ A variable is a named storage for data. We can use variables to store data.
 
 ## [Example for this code](Practical/Practical%201/programmingexample1.js)
 
+## Declaring a variable
+
+Although we can declare a variable using the var keyword, it does not require the var keyword. 
+
+However, it is a good practice to always use the var keyword to declare a variable. 
+
+
+``` javascript
+var  _myname, $cash , hundred1, chong_cs
+// This will work
+var  _myname, $cash , 1hundred, chong cs
+//This will not work
+```
 
