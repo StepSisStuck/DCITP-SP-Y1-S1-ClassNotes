@@ -1,7 +1,8 @@
 # Topic 01A
 
-> Objectives of the topic
->> Describe basic computer
+
+## _Objectives of the topic_
+ Describe basic computer
 components and operation
 Explain the fundamentals
 of network communication
@@ -12,8 +13,12 @@ Application
 Describe basic cloud
 Computing services
 
+>Notes to refer: [Topic 01A](School%20Notes/Topic%2001A%20Basic%20Structure%20of%20Computers(1).pdf)
+
+
+
 ![Alt text](Image%20Files/1.PNG)
->Type of Topology
+# Type of Topology
 >> Ring topology = LAN
 
 >> Bus topology = LAN
@@ -306,7 +311,6 @@ Type of Computers
 They can upgrade their conputer by adding more RAM, adding more hard drive space, adding more PCI cards, adding more PCI-E cards, adding more USB ports, adding more SATA ports, adding more IDE ports, adding more PS2 ports, adding more VGA ports, adding more DVI ports, adding more HDMI ports, adding more Ethernet ports, adding more Firewire ports, adding more Audio
 
 --------------------------------
-
 
 
 
