@@ -298,6 +298,8 @@ BIOS is used to store the CMOS settings.
 
 <h2 id="NIC"> NIC Card<h2>
 
+<h4>
+
 NIC stands for Network Interface Card.
 
 They attach to the motherboard. They have a MAC address. Example: 00-0C-29-5A-5A-5A
