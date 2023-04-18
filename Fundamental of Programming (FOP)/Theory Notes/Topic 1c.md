@@ -4,6 +4,7 @@
 ------------------
 ## Escape Sequences
 
+
 An escape sequence is a combination of characters that represents a single character. For example, the escape sequence `\n` represents a newline character. The following table lists some of the most common escape sequences.
 ![Alt text](Images/1.PNG)
 
@@ -56,11 +57,11 @@ console.log("The quick brown fox /njumps over the lazy dog");
 
 -------------------------
 ## Comennting  in Javascript
-### Single Line
+### Single Line Comennting 
 ``` javascript
 console.log("The quick brown fox \njumps over the lazy dog"); // You can use "//" to use to comment 
 ```
-### Multi Line
+### Multi Line Commenting
 ``` javascript
 console.log("The quick brown fox")
 /*
@@ -95,6 +96,9 @@ var  _myname, $cash , 1hundred, chong cs
 ```
 
 If you do not assign a number, it will be undefined/null
+## Section Title {#my-section}
+
+This is the content of my section.
 
 ## List of data type
 - String
@@ -103,3 +107,4 @@ If you do not assign a number, it will be undefined/null
 - Double
 - Float point = 10 x 10^-2
 
+[Link Text](#my-section)
