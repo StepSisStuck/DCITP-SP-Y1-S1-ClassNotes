@@ -1,0 +1,1 @@
+console.log("The quick brown fox \n\tjumps over the \nlazy dog");
