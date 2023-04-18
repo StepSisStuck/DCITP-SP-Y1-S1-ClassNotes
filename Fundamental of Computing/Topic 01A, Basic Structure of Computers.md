@@ -283,6 +283,31 @@ They use DNS to translate the domain name to an IP address.
 
 
 --------------------------------
+Type of Computers
+
+> Desktop Computer
+
+> Laptop Computer
+
+> Server Computer
+
+> Mainframe Computer
+
+>Supercomputer
+
+> "Cloud" Computer
+
+> Embedded Computer
+
+--------------------------------
+
+![Alt text](Image%20Files/16.PNG)
+![Alt text](Image%20Files/17.PNG)
+They can upgrade their conputer by adding more RAM, adding more hard drive space, adding more PCI cards, adding more PCI-E cards, adding more USB ports, adding more SATA ports, adding more IDE ports, adding more PS2 ports, adding more VGA ports, adding more DVI ports, adding more HDMI ports, adding more Ethernet ports, adding more Firewire ports, adding more Audio
+
+--------------------------------
+
+
 
 
 
