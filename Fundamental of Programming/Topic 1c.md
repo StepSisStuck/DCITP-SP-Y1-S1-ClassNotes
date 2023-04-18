@@ -1,4 +1,6 @@
 # Topic 1C
+
+## [Notes to refer](School%20Notes/Topic%201c%20Intro%20to%20JavaScript%20Programming_DataTypesv1.pdf)
 ## Escape Sequences
 
 An escape sequence is a combination of characters that represents a single character. For example, the escape sequence `\n` represents a newline character. The following table lists some of the most common escape sequences.
@@ -64,3 +66,5 @@ A variable is a named storage for data. We can use variables to store data.
 ![Alt text](Images/2.PNG)
 
 ## [Example for this code](Practical/Practical%201/programmingexample1.js)
+
+
