@@ -1,8 +1,14 @@
 # Ploblem Solving Skills Topic 1a
 ## [ Document to refer](../School%20Notes/Topic%201a%20Problem%20Solving%20Skillsv1.pdf)
 
+
+Table of Contents Listed Below:
+1. [Problem Solving Skills](#Problem-Solving-Skills)
+2. [Impliment the algorithm](#Impliment-the-algorithm)
+3. [Maintance](#Maintance)
+
 -----------------
-## Understand problem requirements
+<h2 id="Understand-problem-requirements" >Understand problem requirements</h2>
  - What are the inputs?
   
  - What are the outputs?
@@ -14,7 +20,7 @@
     - combine the solutions to the smaller problems to solve the original problem
 
 ------------------------
-  ## Impliment the algorithm
+  <h2 id= "Impliment-the-algorithm" >Impliment the algorithm</h2>
    Before a computer can solve a problem, you must first write an algorithm that describes the steps to solve the problem. An algorithm is a step-by-step procedure for solving a problem. 
 
   - An algorithm
@@ -22,7 +28,7 @@
     - is a sequence of instructions
     - is a set of rules
 ------------------  
-## Maintance
+<h2 id="Maintance" > Maintance</h2>
 - Once you have written an algorithm, you must test it to make sure it works. You can test your algorithm by running it on a small set of data and comparing the results to the expected results. If the results are not correct, you must debug your algorithm. Debugging is the process of finding and fixing errors in your algorithm.
 
     -  It's good to write comments in your code to explain what your code does. This will help you and others understand your code.
