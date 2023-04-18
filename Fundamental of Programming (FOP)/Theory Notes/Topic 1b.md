@@ -1,5 +1,7 @@
 # Topic 1B
-## [Document to Refer](Topic%201b.md)
+## [Document to refer](../School%20Notes/Topic%201b%20Introduction%20To%20JavaScriptv1.pdf)
+
+-----   
 ## Why JavaScript?
 JavaScript, or JS for short, is a programming language that is used to make web pages interactive. It is the most popular programming language in the world. It is used by millions of developers around the world. It is the language of the web.
 

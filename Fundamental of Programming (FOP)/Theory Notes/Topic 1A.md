@@ -1,5 +1,5 @@
 # Ploblem Solving Skills Topic 1a
-[Document to refer](School%20Notes/Topic%201a%20Problem%20Solving%20Skillsv1.pdf)
+## [ Document to refer](../School%20Notes/Topic%201a%20Problem%20Solving%20Skillsv1.pdf)
 
 -----------------
 ## Understand problem requirements
