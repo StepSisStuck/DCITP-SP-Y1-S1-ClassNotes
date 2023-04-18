@@ -20,3 +20,9 @@ Node.js is a server. It receives requests from the client, processes them, and s
 An Interpreter is a program that reads and executes code line by line. It is also called a runtime environment. The interpreter reads the code and executes it. It does not create a file that can be run later.
 
 --------------------------------
+
+## Why use Visual Studio Code?
+
+Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications. Visual Studio Code is free and available on your favorite platform - Linux, macOS, and Windows.
+
+--------------------------------
