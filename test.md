@@ -1,12 +1,12 @@
-## Table of Contents {#toc}
+## Table of Contents {#table-of-contents}
 
-1. [Introduction](#intro)
+1. [Introduction](#introduction)
 2. [Background](#background)
 3. [Conclusion](#conclusion)
 
-Click [here](#toc) to go back to the Table of Contents.
+Click [here](#table-of-contents) to go back to the Table of Contents.
 
-## Introduction {#intro}
+## Introduction {#introduction}
 
 This is the introduction section.
 
@@ -17,4 +17,3 @@ This is the background section.
 ## Conclusion {#conclusion}
 
 This is the conclusion section.
-1
