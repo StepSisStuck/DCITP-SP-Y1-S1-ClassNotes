@@ -81,3 +81,5 @@ var  _myname, $cash , 1hundred, chong cs
 //This will not work
 ```
 
+If you do not assign a number, it will be undefined/null
+
