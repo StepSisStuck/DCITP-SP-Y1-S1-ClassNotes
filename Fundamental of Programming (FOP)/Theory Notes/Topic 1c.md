@@ -1,22 +1,8 @@
 # Topic 1C
 
-## [Document to refer](Topic%201c.md)
-
-These are the topic covered in this section
-
-- [Escape Sequences](#escape-sequences)
-- [How to type " in a string](#how-to-type-in-a-string)
-- [How to put in a new line](#how-to-put-in-a-new-line)
-- [Comennting  in Javascript](#comennting-in-javascript)
-- [Variable](#variable)
-- [What is a variable?](#what-is-a-variable)
-- [Declaring a variable](#declaring-a-variable)
-- [List of data type](#list-of-data-type)
-- [How to declare a variable](#how-to-declare-a-variable)
-
-
+## [Document to refer](../School%20Notes/Topic%201c%20Intro%20to%20JavaScript%20Programming_DataTypesv1.pdf)
 ------------------
-## Escape Sequences {#escape-sequences}
+## Escape Sequences
 
 
 An escape sequence is a combination of characters that represents a single character. For example, the escape sequence `\n` represents a newline character. The following table lists some of the most common escape sequences.
@@ -37,7 +23,7 @@ console.log("c:\\user");
 
 
  --------------------------------
-## How to type " in a string {#how-to-type-in-a-string}
+## How to type " in a string 
 The wrong way
 ``` javascript
 console.log("I "love" you");
@@ -57,7 +43,7 @@ console.log("I \"love\" you");
 
 
 ------------------
-## How to put in a new line {#how-to-put-in-a-new-line}
+## How to put in a new line
 ``` javascript
 console.log("The quick brown fox /njumps over the lazy dog");
 ```
@@ -70,7 +56,7 @@ console.log("The quick brown fox /njumps over the lazy dog");
 
 
 -------------------------
-## Comennting  in Javascript {#comennting-in-javascript}
+## Comennting  in Javascript
 ### Single Line Comennting 
 ``` javascript
 console.log("The quick brown fox \njumps over the lazy dog"); // You can use "//" to use to comment 
@@ -83,7 +69,7 @@ This will use a muiltiline comment
 start /* and end with */ 
 
 ```
-# Variable {#variable}
+# Variable
 ## What is a variable?
 A variable is a named storage for data. We can use variables to store data.
 
@@ -93,8 +79,7 @@ A variable is a named storage for data. We can use variables to store data.
 
 ------------------- 
 
-## Declaring a variable {#declaring-a-variable}
-``` javascript
+## Declaring a variable
 
 Although we can declare a variable using the var keyword, it does not require the var keyword. 
 
@@ -111,15 +96,14 @@ var  _myname, $cash , 1hundred, chong cs
 ```
 
 If you do not assign a number, it will be undefined/null
-
+## Section Title {#my-section}
 
 This is the content of my section.
 
-## List of data type {#list-of-data-type}
+## List of data type
 - String
 - Boolean
 - Integer
 - Double
 - Float point = 10 x 10^-2
-
 
