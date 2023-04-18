@@ -1,8 +1,14 @@
 # Topic 1C
 
 ## [Document to refer](../School%20Notes/Topic%201c%20Intro%20to%20JavaScript%20Programming_DataTypesv1.pdf)
+
+# Table of Contents Listed Below:
+
+1. [Escape Sequences](#Escape-Sequences)
+
+
 ------------------
-## Escape Sequences
+<h2 id="#Escape-Sequences">Escape Sequences</h2>
 
 
 An escape sequence is a combination of characters that represents a single character. For example, the escape sequence `\n` represents a newline character. The following table lists some of the most common escape sequences.
