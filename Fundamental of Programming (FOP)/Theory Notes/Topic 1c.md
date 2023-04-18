@@ -5,7 +5,10 @@
 # Table of Contents Listed Below:
 
 1. [Escape Sequences](#Escape-Sequences)
-
+2. [How to type " in a string](#How-to-type-quot-in-a-string)
+3. [How to put in a new line" in a string](#How-to-tab)
+4. [Comennting in Javascript](#Comennting-in-Javascript)
+5. [Variable](#Variable)
 
 ------------------
 <h2 id="#Escape-Sequences">Escape Sequences</h2>
@@ -29,7 +32,8 @@ console.log("c:\\user");
 
 
  --------------------------------
-## How to type " in a string 
+<h2 id="How-to-type-quot-in-a-string">How to type " in a string</h2>
+ 
 The wrong way
 ``` javascript
 console.log("I "love" you");
@@ -49,7 +53,8 @@ console.log("I \"love\" you");
 
 
 ------------------
-## How to put in a new line
+<h2 id="How-to-tab"> How to put in a new line" in a string</h2>
+
 ``` javascript
 console.log("The quick brown fox /njumps over the lazy dog");
 ```
@@ -62,7 +67,8 @@ console.log("The quick brown fox /njumps over the lazy dog");
 
 
 -------------------------
-## Comennting  in Javascript
+<h2 id="Comennting-in-Javascript" >Comennting in Javascript</h2>
+
 ### Single Line Comennting 
 ``` javascript
 console.log("The quick brown fox \njumps over the lazy dog"); // You can use "//" to use to comment 
@@ -75,7 +81,8 @@ This will use a muiltiline comment
 start /* and end with */ 
 
 ```
-# Variable
+<h2 id="Variable">Variable</h2>
+
 ## What is a variable?
 A variable is a named storage for data. We can use variables to store data.
 
@@ -102,7 +109,7 @@ var  _myname, $cash , 1hundred, chong cs
 ```
 
 If you do not assign a number, it will be undefined/null
-## Section Title {#my-section}
+
 
 This is the content of my section.
 
