@@ -57,4 +57,10 @@ This will use a muiltiline comment
 start /* and end with */ 
 
 ```
+# Variable
+## What is a variable?
+A variable is a named storage for data. We can use variables to store data.
 
+![Alt text](Images/2.PNG)
+
+## [Example for this code](Topic%201c.md)
