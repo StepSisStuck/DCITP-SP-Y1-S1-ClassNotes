@@ -296,7 +296,7 @@ BIOS is used to store the CMOS settings.
 
 ---------------------------------
 
-<h4 id="NIC"> NIC Card<h4>
+<h2 id="NIC"> NIC Card<h2>
 
 NIC stands for Network Interface Card.
 
