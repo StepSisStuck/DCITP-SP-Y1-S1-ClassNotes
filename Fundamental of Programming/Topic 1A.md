@@ -2,7 +2,7 @@
 [Document to refer](School%20Notes/Topic%201a%20Problem%20Solving%20Skillsv1.pdf)
 
 -----------------
-Understand problem requirements
+# Understand problem requirements
  - What are the inputs?
   
  - What are the outputs?
