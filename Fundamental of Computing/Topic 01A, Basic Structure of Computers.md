@@ -143,12 +143,96 @@ When its not needed, it will be transfered back to the hard drive.
 
 RAM is used to store the operating system, which is a program that is run when the computer is turned on.
 
----------------------------
+![Alt text](Image%20Files/9.PNG)
+Virtual memory is a feature of an operating system that allows a computer to use the hard drive as if it were RAM. This is called paging.
 
+They can transfer which is a bus data from the hard drive to the RAM when the computer is turned on.
+
+When its not needed, it will be transfered back to the hard drive.
+
+---------------------------
+![Alt text](Image%20Files/10.PNG)
+## Long Term Storage
+They use metal platters to store data.
+Some use magnetic heads to read and write data.
+
+Some use laser heads to read and write data.
+
+If they have a bit of dust on the platters, it will cause the data to be corrupted.
+
+CD and DVD are non volatile, meaning that they retain their contents when the power is turned off.
+
+Some of them uses SSD (Solid State Drive) to store data.
+They are non volatile, meaning that they retain their contents when the power is turned off.
+
+They are faster than HDD.
+
+
+
+
+
+----------------------------
+![Alt text](Image%20Files/11.PNG)
+
+A motherboard is a circuit board that connects all the other components of a computer together.
+
+They have a heat sink to cool the CPU.
+
+They have a power supply to provide power to the computer.
+
+They have a BIOS to store the boot sequence.
+
+They use a CMOS battery to store the BIOS settings.
+
+They have a chipset to connect the CPU to the RAM.
+
+They have a northbridge to connect the CPU to the RAM.
+
+They have a southbridge to connect the CPU to the RAM.
+
+They have a PCI slot to connect the PCI cards.
+
+They have a PCI-E slot to connect the PCI-E cards.
+
+![Alt text](Image%20Files/12.PNG)
+
+------------------------------
 ROM are volatile, meaning that they lose their contents when the power is turned off.
 
 ROM are used to store the BIOS, which is a program that is run when the computer is turned on.
+
+--------------------------------
+
+# Computer Bus Fundamentals
+
+A bus is a set of wires that connect the components of a computer together.
+
+They are used to transfer data between the components of a computer.
+
+There are buses between the CPU and the RAM.
+
+  - Data Bus is used to transfer data between the CPU and the RAM.
+
+   - Address Bus is used to transfer the address of the data between the CPU and the RAM.
+
+- Control Bus is used to transfer control signals between the CPU and the RAM.
+![Alt text](Image%20Files/13.PNG)
+![Alt text](Image%20Files/14.PNG)
+
 ------------------------------
+Difference between Address bus and Data bus
+
+The address bus is used to transfer the address of the data between the CPU and the RAM.
+
+The data bus is used to transfer data between the CPU and the RAM.
+
+
+
+
+
+
+
+
 
 
 
