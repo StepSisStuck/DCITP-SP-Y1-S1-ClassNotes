@@ -5,7 +5,7 @@ console.log("Hello World");
 // If don't have a space, don't need to add ""
 // Example: File: Hello World.js = node "Hello World.js"
 // Example: File: HelloWorld.js = node HelloWorld.js
-console.log("c:\\user");
+console.log("c:\\\\user");
 
 //if my requirment I put double \, it will show me one \
 //if my requirment I put single \, it will show me two \\
