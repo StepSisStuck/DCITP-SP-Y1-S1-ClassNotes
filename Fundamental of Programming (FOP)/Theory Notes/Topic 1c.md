@@ -8,7 +8,7 @@
 2. [How to type " in a string](#How-to-type-quot-in-a-string)
 3. [How to put in a new line" in a string](#How-to-tab)
 4. [Comennting in Javascript](#Comennting-in-Javascript)
-5. [Variable](#Variable)
+5. [Variable and Data Types](#Variable)
 
 ------------------
 <h2 id="#Escape-Sequences">Escape Sequences</h2>
@@ -115,8 +115,13 @@ This is the content of my section.
 
 ## List of data type
 - String
-- Boolean
+   - a string is a sequence of characters 
+- Boolean 
+    - true or false
 - Integer
+    - 1,2,3,4,5,6,7,8,9,0
 - Double
+    - 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 0.0
 - Float point = 10 x 10^-2
+    - 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 0.0
 

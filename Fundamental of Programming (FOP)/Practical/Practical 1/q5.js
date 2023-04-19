@@ -1,0 +1,1 @@
+console.log("Module Code\Name:ST0563\"Fundamental of Programming\"\n CA1 \t :40% \n CA 2 \t :20% \n EXAM \t :40% \n Total \t :100% \n");
