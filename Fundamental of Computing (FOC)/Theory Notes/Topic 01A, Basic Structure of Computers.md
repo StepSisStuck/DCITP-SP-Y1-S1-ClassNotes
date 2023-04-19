@@ -79,6 +79,7 @@ They can use external input devices such as a mouse, keyboard, scanner, or camer
 <h2 id="list-input"> These are the common items that are used as input devices: <h2>
 
 <h4>
+
 > PS2 Mouse
 
 > USB Mouse
