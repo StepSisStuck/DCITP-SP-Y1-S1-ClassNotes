@@ -72,7 +72,7 @@ So if a numver % 5 is 0 ---> it is divisible by 5
 <h4>
 
  +=, -=, *=, /=, %=, <<=, >>=, &=, ^=, |=
- 
+
 -------------------------
 Example:
 
@@ -113,19 +113,19 @@ y = z // 5
 What is this output
     
 ``` javascript
-    a = 2; // a = 2
-    a= a++ + a; // a = 2 + 3
-    console.log(a); // 5
+a = 2; // a = 2
+a= a++ + a; // a = 2 + 3
+console.log(a); // 5
 
-    //explaination: why is a 3 and not 2?
-    // a++ is 2, but a is 3
+//explaination: why is a 3 and not 2?
+// a++ is 2, but a is 3
     
 ```
 ![Alt text](Images/7.PNG)
 
 ``` javascript
-   b =2;
-   b = b + b++; // b = 2 + 2
-    console.log(b); // 4
-    //explaination: b++ is 2, but b is 4
+b =2;
+b = b + b++; // b = 2 + 2
+console.log(b); // 4
+//explaination: b++ is 2, but b is 4
 ``` 
