@@ -1,0 +1,103 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 5
+   Coding Challenge 1
+   
+   Filename: code5-1_layout.css
+
+*/
+html {
+   width: 100%;
+}
+
+body {
+   min-width: 350px;
+   max-width: 900px;
+   width: 95%;
+   margin: 0px auto;
+}
+
+a {
+   text-decoration: none;
+}
+
+header img {
+   display: block;
+   width: 100%;
+}
+
+nav {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   background-color: rgb(2,87,90);
+}
+nav h1 {
+   font-size: 0.8em;
+   text-transform: uppercase;
+   letter-spacing: 0.3em;
+   text-align: center;
+   margin: 0 0 10px 0;
+   background-color: rgb(50,50,50);
+   color: white;
+}
+nav li {
+   list-style: none;
+   line-height: 1.2em;
+}
+nav ul {
+   padding:0;
+}
+
+nav ul.mainmenu {
+   margin: 0;
+}
+
+nav ul.mainmenu > li {
+   padding-bottom: 10px;
+}
+
+nav ul.submenu li {
+   font-size: 0.75em;
+}
+
+nav.ul.submenu li:last-of-type {
+   padding-bottom: 20px;
+}
+
+
+
+
+ul.submenu li {
+   margin-left: 10px;
+}
+
+nav a {
+   color: white;
+}
+
+article h1 {
+   font-size: 1.8em;
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   line-height: 1em;
+   margin: 10px 0 20px 0;
+   text-align: center;
+   letter-spacing: 0.1em;
+}
+
+article img {
+   display: block;
+   float: right;
+   margin: 0px 10px 20px 20px;
+   width: 40%;
+}
+
+article p {
+   font-size: 1.3em;
+   margin: 0 10px;
+}
+
+article p:last-of-type {
+   text-align: right;
+   clear: right;
+}

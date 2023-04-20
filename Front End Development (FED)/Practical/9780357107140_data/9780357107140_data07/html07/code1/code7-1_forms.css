@@ -1,0 +1,55 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 7
+   Coding Challenge 1
+   
+   Filename: code7-1_forms.css
+
+*/
+
+h1 {
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   margin-left: 25px;
+}
+fieldset {
+   width: 250px;
+   border-radius: 15px;
+   margin-left: 30px;
+   background: ivory;
+}
+
+legend {
+   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+   font-size: 1.1em;
+}
+
+label {
+   display: block;
+   margin: 8px 0px 5px 10px;
+   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+select {
+   display: block;
+   width: 200px;
+   margin: 0px 0px 5px 10px;
+   font-size: 1em;
+}
+
+select option {
+   padding: 2px 0px 2px 5px;
+}
+
+input {
+   width: 200px;
+   margin: 0px 0px 5px 5px;
+}
+
+input[type="submit"] {
+   display: block;
+   width: 75px;
+   margin: 10px 0px 0px 130px;
+   font-size: 1em;
+}

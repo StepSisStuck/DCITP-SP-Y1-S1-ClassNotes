@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Demo
+
+   3D Backfaces Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_cards.html
+   Supporting files: demo.gif, demo2.gif, michelangelo.png
+-->
+   <title>3D Backfaces Demo</title>
+   <style>
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul, table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+      
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, nav a, ol, p, section, span, ul,
+table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: content-box;
+   -moz-box-sizing: content-box;
+   box-sizing: content-box;  
+}
+      
+/* use for all demo pages */
+
+body {
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+}
+      
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   height: 100%;
+   margin: 0px auto;
+}
+
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   width: 100%;
+   margin: 0px 10px;
+}
+      
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 345px 10px 50px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+ul, ol {
+   list-style: none;
+}
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+nav a {
+   text-decoration: none;
+}
+
+/* 
+      styles specific to this demo 
+*/
+
+div#demo_container {
+   position: relative;
+}
+      
+div#demo_container h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-weight: normal;
+   font-size: 1.4em;
+   margin-top: 15px;
+   padding-bottom: 10px;
+}
+
+div#options3D {
+   line-height: 2em;
+   z-index: 1;
+   width: 625px;
+   background-color: rgba(255, 255, 255, 0.8);
+   border-right: 1px solid rgb(155, 155, 155);
+}
+
+label {
+	display: inline-block;
+	width: 150px;
+	margin-right: 5px;
+}
+
+
+input#insertFront, input#insertBack {
+	margin: 10px 10px 10px 0px;
+	height: 35px;
+	width: 150px;
+}
+
+div#setupCard {
+	border-bottom: 1px solid rgb(180, 180, 180);
+	width: 625px;
+}
+
+input#useBackface {
+	margin-bottom: 10px;
+}
+
+div#innerTrans {
+	width: 625px;
+	border-bottom: 1px solid rgb(180, 180, 180);
+	padding-bottom: 10px;
+}
+
+div#htmlCode, div#cssCode {
+	padding-bottom: 5px;
+	float: left;
+}
+
+div#htmlCode {
+	width: 225px;
+   padding-left: 10px;
+}
+div#cssCode {
+	width: 378px;
+	border-right: 1px solid rgb(180, 180, 180);
+	border-left: 1px solid rgb(180, 180, 180);	
+   padding-left: 10px;
+}
+
+
+div#frontCodeStart, div#backCodeStart, div#frontCSS, div#backCSS, div#showBackBackface, div#showFrontBackface {
+	display: none;
+}
+
+div#containerCSS, div#cardCSS, div#frontCSS, div#backCSS {
+	margin-bottom: 5px;
+}
+
+
+
+div#container {
+	position: absolute;
+	top: 180px;
+	left: 685px;
+	width: 225px;
+	height: 326.25px;
+	perspective: 1500px;
+}
+
+div#card {
+	position: relative;
+	width: 225px;
+	height: 326.25px;
+	transform-style: preserve-3d;
+	outline: 3px solid rgb(150, 150, 150);	
+}
+
+img#front, div#back {
+	position: absolute;
+	width: 225px;
+	height: 326.25px;
+	outline: 3px solid rgb(150, 150, 150);
+   display: none;
+}
+
+img#front {
+	z-index: 2;
+	top: -300px;
+	left: 0px;
+}
+
+div#back {
+	transform: rotateY(0deg);
+	top: -300px;
+	left: 0px;	
+	z-index: 1;
+}
+
+div#back h1 {
+	font-weight: bold;
+	font-size: 1em;
+	width: 225px;
+	margin: 5px 2px 2px 2px;
+	text-align: center;
+	line-height: 0.9em;
+	border-bottom: 1px solid rgb(110, 110, 110);	
+}
+
+
+div#back p {
+	font-size: 0.61em;
+	width: 210px;
+	margin: 5px auto;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";	
+}
+
+div#back foot {
+	position: absolute;
+	bottom: 5px;
+	width: 225px;
+	font-size: 0.4em;
+	line-height: 2em;
+	text-align: center;
+	font-style: italic;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	border-top: 1px solid rgb(110, 110, 110);
+}
+
+
+/* Animation */
+
+@keyframes highlightMe {
+	0% {
+		color: rgb(255, 0, 0);
+	}
+	99% {
+		color: rgb(255, 0, 0);
+	}	
+	100% {
+		color: rgb(101, 101, 101);
+	}	
+}
+
+@keyframes moveFront {
+	0% {
+		top: -200px;
+		left: 0px;
+		transform: scale(0, 0);     
+	}
+	100% {
+		top: 0px;
+		left: 0px;
+		transform: scale(1, 1);
+	}
+}
+
+@keyframes moveBack {
+	0% {
+		top: -200px;
+		left: 0px;
+		transform: scale(0, 0) rotateY(0deg);
+	}
+	50% {
+		top: -200px;
+		left: 125px;
+		transform: scale(0.7, 0.7) rotateY(0deg);
+	}
+	
+	70% {
+		top: -200px;
+		left: 125px;		
+		transform: scale(0.7, 0.7) rotateY(180deg);
+	}
+	
+	90% {
+		top: -200px;
+		left: 125px;		
+		transform: scale(0.7, 0.7) rotateY(180deg);		
+	}
+	100% {
+		top: 0px;
+		left: 0px;
+		transform: scale(1, 1) rotateY(180deg);
+	}
+}
+
+
+</style>
+<script>
+window.onload = function() {
+	var rotatex = document.getElementById("rotatex");
+	var rotatey = document.getElementById("rotatey");	
+	var useBackface = document.getElementById("useBackface");		
+	var card = document.getElementById("card");	
+	var front = document.getElementById("front");	 	
+	var back = document.getElementById("back");
+	
+	
+	front.style.transform = "scale(0, 0)";
+   front.style.display = "block";
+   back.style.transform = "scale(0,0)";
+   back.style.display = "block";
+	rotatex.onchange = transformImg;
+	rotatey.onchange = transformImg;
+	useBackface.onclick = function(e) {
+		document.getElementById("showFrontBackface").style.display = "block";
+		document.getElementById("showBackBackface").style.display = "block";
+		document.getElementById("backBackcode").style.display = "inline";
+		document.getElementById("backFrontcode").style.display = "inline";		
+		if (e.target.checked === true) {
+			front.style.backfaceVisibility = "visible";
+			back.style.backfaceVisibility = "visible";			
+		} else {
+			front.style.backfaceVisibility = "hidden";
+			back.style.backfaceVisibility = "hidden";			
+		}
+		
+		document.getElementById("backFrontcode").textContent = "backface-visibility: " + front.style.backfaceVisibility;
+		document.getElementById("backBackcode").textContent = "backface-visibility: " + back.style.backfaceVisibility;		
+	};
+	
+	document.getElementById("insertFront").onclick = function(e) {
+		document.getElementById("frontCodeStart").style.display = "block";
+		document.getElementById("frontCSS").style.display = "block";	
+		document.getElementById("showFrontBackface").style.display = "none";		
+		front.style.animation = "moveFront 4s forwards linear";
+		document.getElementById("frontCodeStart").style.animation = "highlightMe 7s forwards linear";
+		document.getElementById("frontCSS").style.animation = "highlightMe 7s forwards linear";		
+		e.target.disabled = true;		
+	};
+	
+	document.getElementById("insertBack").onclick = function(e) {
+		document.getElementById("backCodeStart").style.display = "block";
+		document.getElementById("backCSS").style.display = "block";
+		document.getElementById("showBackBackface").style.display = "none";			
+		back.style.animation = "moveBack 8s forwards linear";
+		document.getElementById("backCodeStart").style.animation = "highlightMe 7s forwards linear";
+		document.getElementById("backCSS").style.animation = "highlightMe 7s forwards linear";			
+		e.target.disabled = true;
+		
+	};	
+	
+	function transformImg() {		
+		card.style.transform = "rotateX(" + rotatex.value + "deg) rotateY(" + rotatey.value + "deg)";		
+        document.getElementById("cardTranscode").textContent = "rotateX(" + rotatex.value + "deg) rotateY(" + rotatey.value + "deg)";
+	}
+
+	
+
+};
+   
+</script>
+</head>
+
+<body>
+   <div id="demo_page">
+      <div id="demo_intro">
+         <table>
+            <tr>
+               <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+               <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                  Tutorial 4 </td>
+            </tr>
+         </table>
+         <h2 id="h2heading"> Backfaces </h2>
+         <div id="para">
+            <p>This demo display how to work with backfaces in three dimension. To create
+               a two-sided object, the objects must be placed at the same location. The object
+               representing the backface must be rotated 180&deg; around the y-axis.</p>
+            <p>After the two objects have been positioned, you can use the <code>backface-visibility</code>
+               property to set whether the backface shows through or not. If <code>backface-visibility</code>
+               is set to <code>hidden</code> the backface does not show through. If <code>backface-visibility</code>
+               is set to <code>visible</code>, the backface will show through into the front face.</p>
+            <p>Click the [Insert Front Object] and [Insert Back Object] buttons to animate the process of adding
+               the front and back objects to the demo. Use the sliders to rotate the object horizontal and vertical
+               axes. Click the Display Backfaces checkboxes to toggle between displaying and hiding the backface.
+               The CSS code for your choices appears below.</p>
+         </div>
+      </div>
+      <div id="demo_container">
+         <h1>CSS Backfaces</h1>
+         <div id="options3D">	   
+            <div id="setupCard">	   
+               <input type="button" value="Insert Front Object" id="insertFront" /> 
+                  <input type="button" value="Insert Back Object" id="insertBack" /><br />
+                  <input id="useBackface" type="checkbox" checked /> <label for="useBackface">Display Backfaces</label>  
+            </div>
+            <div id="innerTrans">
+               <h2>Rotate Card</h2>	   
+               <label for="xdeg">Rotate x-axis</label> 0deg <input type="range" name="rotatex" id="rotatex" value="0" min="0" max="360" step="5"/> 360deg<br />
+               <label for="ydeg">Rotate y-axis</label> 0deg <input type="range" name="rotatey" id="rotatey" value="0" min="0" max="360" step="5"/> 360deg<br />		   
+            </div>
+
+            <div id="htmlCode">
+               <h2>HTML</h2>
+               <div id="containerCodeStart">
+                  &lt;div id="container" &gt;
+               </div>
+               <div id="cardCodeStart">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="card" &gt;
+               </div>
+               <div id="frontCodeStart">
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="front" &gt; ... &lt;/div&gt;
+               </div>
+               <div id="backCodeStart">
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="back" &gt; ... &lt;/div&gt;
+               </div>		   
+               <div id="cardCodeEnd">
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+               </div>		   
+               <div id="containerCodeEnd">
+                  &lt;/div&gt;
+               </div>		   
+            </div>
+            <div id="cssCode">
+               <h2>CSS</h2>
+               <div id="containerCSS">
+                  div#container {<br />
+                  &nbsp;&nbsp;&nbsp; perspective: 1500px;<br />
+                  }
+               </div>
+               <div id="cardCSS">
+                  div#card {<br />
+                  &nbsp;&nbsp;&nbsp;transform-style: preserve-3d;<br />
+                  &nbsp;&nbsp;&nbsp;transform: <span id="cardTranscode">rotateX(0deg) rotateY(0deg)</span>;<br />
+                  }
+               </div>
+               <div id="frontCSS">
+                  div#front {<br />
+                  &nbsp;&nbsp;&nbsp;position: absolute; top: 0px; left: 0px;<br />
+                  <span id="showFrontBackface">&nbsp;&nbsp;&nbsp;<span id="backFrontcode">backface-visibility: visible</span>;<br /></span>
+                  }
+               </div>		   
+               <div id="backCSS">
+                  div#back {<br />
+                  &nbsp;&nbsp;&nbsp;position: absolute; top: 0px; left: 0px;<br />
+                  &nbsp;&nbsp;&nbsp;transform: rotateY(180deg);<br />
+                  <span id="showBackBackface">&nbsp;&nbsp;&nbsp;<span id="backBackcode">backface-visibility: visible</span>;<br /></span>			   
+                  }
+               </div>		   
+            </div>	   
+
+         </div>
+
+
+         <div id="container">
+           <div id="card"> 
+            <img src="michelangelo.png" id="front" alt="Michelangelo Sketch" />
+            <div id="back">
+               <h1>Study for the Battle of Cascina</h1>
+               <p>This card displays a sketch for the painting <em>Battle of Cascina</em> by
+                  Michelangelo, in which Florentine soldiers bathing in a river are taken by surprise by the Pisan army.
+                 This prepatory sketch of part of the final painting depicts
+                  a soldier emerging naked from the river to face the attacking Pisans.</p>
+               <p>The final painting was destroyed shortly after its completion, so prepatory
+                  sketches are all that remain of Michelangelo's vision.
+               </p>
+               <foot>Chalk and silver rod on paper, Galleria degli Uffizi, Florence</foot>
+            </div>		  
+            </div>	   
+         </div>   
+      </div>
+      <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+         Cengage Learning: Boston, 2019. </div>
+   </div>
+</body>
+</html>

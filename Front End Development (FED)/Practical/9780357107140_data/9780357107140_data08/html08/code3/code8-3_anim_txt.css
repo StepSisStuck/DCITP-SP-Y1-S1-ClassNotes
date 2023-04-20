@@ -1,0 +1,64 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Coding Challenge 3
+
+   Author:   coding challenge 3
+   Date:     3/1/2022
+   Filename: code8-3_anim.css
+
+*/
+
+div#cube {
+	position: absolute;
+	top: 300px;
+	left: 350px;
+	width: 300px;
+	height: 300px;
+	perspective: 2000px;
+	transform: rotateX(24deg) rotateY(40deg);  
+	transform-style: preserve-3d;   
+}
+
+div#cube img {
+   display: block;
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+} 
+
+
+
+@keyframes moveFront {
+	0% {transform: translate3d(0px, 0px, 0px);}
+	100% {transform: translate3d(0px, 0px, 150px);}		
+}
+
+@keyframes moveBack {
+	0% {transform: rotateY(0deg) translate3d(0px, 0px, 0px)}
+	100% {transform: rotateY(180deg) translate3d(0px, 0px, 150px);}		
+}
+
+@keyframes moveBottom {
+	0% {transform: rotateX(0deg) translate3d(0px, 0px, 0px);}
+	100% {transform: rotateX(-90deg) translate3d(0px, 0px, 150px);}		
+}
+
+@keyframes moveLeft {
+	0% {transform: rotateY(0deg) translate3d(0px, 0px, 0px);	}
+	100% {transform: rotateY(-90deg) translate3d(0px, 0px, 150px);}		
+}
+
+@keyframes moveRight {
+	0% {rotateY(0deg) translate3d(0px, 0px, 0px);}
+	100% {transform: rotateY(90deg) translate3d(0px, 0px, 150px);}		
+}
+
+@keyframes moveTop {
+	0% {transform: rotateX(0deg) translate3d(0px, 0px, 0px);}	
+	100% {transform: rotateX(90deg) translate3d(0px, 0px, 150px);}		
+}

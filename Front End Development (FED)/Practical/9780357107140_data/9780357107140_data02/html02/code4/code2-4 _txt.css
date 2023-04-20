@@ -1,0 +1,46 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 2
+   Coding Challenge 4
+
+   Author: 
+   Date:   
+   
+   Filename: code2-4.css
+
+*/
+
+div {
+   background-color: rgb(255 171 171);
+   padding-size: 10px;
+   font-size: 1.2em;
+}
+
+aside {
+   background-color: rgb(209,227,107);
+   padding: 0 20px;
+}
+
+aside h1 {
+   font-size: 1.9em;
+   font: Segoe, Verdana, sans-serif;
+   line-height: 0.8em;
+   margin: 20px 0 0 0;
+}
+
+aside h2 {
+   margin-top: 5px;
+   font-family: Segoe, Verdana, sans-serif;
+   font-size: 1.2e;
+}
+
+aside p {
+   font-size: 1.1em;
+   text-ident: 1em;
+}
+
+aside p:first of type {
+   text-indent: 0em;
+}

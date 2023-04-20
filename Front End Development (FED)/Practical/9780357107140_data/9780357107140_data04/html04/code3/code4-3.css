@@ -1,0 +1,43 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Coding Challenge 3
+
+   Author: 
+   Date:   
+   
+   Filename: code4-3.css
+
+*/
+
+body {
+   width: 900px;
+   margin: 20px auto;
+}
+
+
+h1 {
+   color: black;
+   font-size: 3.3em;
+   text-align: center;
+   line-height: 1.4em;
+   margin-bottom: 0px;
+}
+
+div#cube {
+   position: relative;
+   margin: 100px auto;
+   width: 300px;
+   height: 300px;
+}
+
+img {
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   display: block;
+}

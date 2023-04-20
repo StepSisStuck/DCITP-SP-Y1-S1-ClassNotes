@@ -1,0 +1,71 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 10
+   Coding Challenge 4
+   
+   Filename: code10-4_styles.css
+
+
+
+*/
+
+html {
+
+}
+
+body {
+   width: 90%;
+   margin: 0px auto;
+}
+
+h1 {
+   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+   margin: 10px 0px 0px;
+   text-align: center;
+}
+
+h2 {
+   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+   text-align: center;
+   width: 100%;
+   margin: 0px 0px 20px 0px;
+   letter-spacing: 0.5em;
+   font-size: 2em;
+}
+
+div#calendar {
+   display: flex;
+   flex-flow: row wrap;
+}
+
+table {
+   border-collapse: collapse;
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   flex: 0 0 250px;
+   margin: 5px 20px;
+}
+
+table caption {
+   background-color: hsla(359,59%,33%,1.00);
+   color: white;
+}
+
+
+table th {
+   background-color: red;
+   color: white;
+}
+
+th, td {
+   width: 20px;
+   padding: 5px;
+   text-align: right;
+   background-color: ivory;
+}
+
+td#today {
+   background-color: hsla(359,73%,79%,1.00);
+   outline: 1px solid black;
+}

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Demo
+
+   CSS Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_rgb.html
+   Supporting files: demo.gif, demo2.gif
+-->
+   <title>Cubic Bezier Demo</title>
+   <style>
+
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+   display: block;
+}
+
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, nav a, ol, p, section, span, ul,
+table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;  
+}
+
+      
+/* use for all demo pages */
+html {
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   height: 100%;
+   font-size: 18px;
+   color: rgb(101, 101, 101);
+}
+
+body {
+   padding: 20px 0px 0px 20px;
+   position: relative;   
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+   height: 100%;
+}
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   padding-left: 15px;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   top: 10px;
+   left: 0px;
+   width: 100%;
+   margin: 0px 10px
+}
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 25px 10px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+      
+
+
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+
+ul, ol {
+   list-style: none;
+}
+
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+
+nav a {
+   text-decoration: none;
+}
+
+      
+/* styles specific to this demo */
+
+h1 {
+   font-weight: normal;
+   font-size: 2.4em;
+   margin-top: 5px;
+   margin-left: 0px;
+   padding-bottom: 10px;
+}
+
+
+label {
+   display: inline-block;
+   width: 70px;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+
+
+h2 {
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 1.1em;
+}
+
+
+
+input[type="number"] {
+	width: 45px;
+	margin-left: 10px;
+	text-align: right;
+}
+
+div#demo_container table {
+	width: 550px;
+	border-collapse: collapse;
+	border: 5px outset rgb(121, 121, 121);
+	box-shadow: 5px 5px 15px rgb(101, 101, 101);
+}
+
+div#demo_container table tr:first-of-type th {
+	background-color: rgb(121, 121, 121);
+	color: rgb(251, 251, 251);
+	padding: 5px 0px;
+}
+
+div#demo_container table th {
+	font-weight: normal;
+}
+
+div#demo_container table tr th:last-of-type {
+	vertical-align: bottom;
+}
+
+
+div#demo_container table tbody tr:nth-of-type(even) {
+	background-color: rgb(255, 230, 230)
+}
+
+div#demo_container table tbody tr:nth-of-type(odd) {
+	background-color: rgb(255, 255, 230)
+}
+
+div#demo_container table img {
+	width: 50px;
+}
+
+div#demo_container table tr td:first-of-type {
+	width: 110px;
+	padding-top: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+div#demo_container table tr td:last-of-type {
+	padding-top: 10px;
+	vertical-align: top;
+	padding-left: 20px;
+}
+
+div#demo_container table td canvas {
+	background-color: rgb(229, 229, 229);
+	width: 50px;
+	height: 50px;
+}
+
+input.bInput {
+	text-align: right;
+	font-size: 0.65em;
+	margin: 0px 3px 0px 0px;
+	display: inline-block;
+	width: 45px;
+	color: rgb(51, 51, 51);
+}
+
+
+div#outcome {
+   margin-top: 30px;
+   font-size: 22px;
+}
+
+div#outcome div#outcomebox:hover+h3+div#transCSS span#transCode {
+	color: red;
+	background-color: hsla(54,88%,52%,0.26);
+}
+
+div#outcomebox {
+	width: 700px;
+	position: relative;
+	top: 0px; left: 0px;
+	border: 1px solid rgb(101, 101, 101);
+	height: 444px;
+    cursor: pointer;
+	background: url(graph.png);	
+	background-position: 142px 115px;
+}
+
+div#outcomebox div#startingBox {
+	width: 70px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 443px;
+	background-color: red;
+	box-shadow: 0px 0px 35px black inset;
+	color: white;
+}
+
+div#startingBox h4 {
+	text-align: center;
+	height: 70px;
+	width: 373px;
+	line-height: 70px;
+	transform-origin: top left;
+	letter-spacing: 0.8em;
+	font-size: 1.4em;
+	text-shadow: 3px 3px 6px black;
+	transform: rotate(270deg) translate(-373px, 0px);
+
+	cursor: pointer;
+}
+
+div#track {
+	position: relative;
+	width: 830px;
+	left: 70px;
+	height: 420px;
+
+}
+
+div#outcome img, div#outcome canvas {
+	display: block;
+	position: absolute;
+	left: 10px;
+	width: 60px;
+	height: 60px;
+	box-shadow: 5px 5px 15px rgb(155, 0, 0);
+}
+
+div#outcome canvas {
+	background-color: rgb(229, 229, 229);
+	left: 0px;
+}
+
+
+img#easeImg {
+	top: 20px;
+}
+
+img#linearImg {
+	top: 90px;
+}
+
+
+img#easeInImg {
+	top: 160px;
+}
+
+img#easeOutImg {
+	top: 230px;
+}
+
+img#easeInOutImg {
+	top: 300px;
+}
+
+canvas#bezCanvas2 {
+	top: 370px;
+}
+
+h3 {
+	width: 700px;
+	font-weight: normal;
+	font-size: 0.9em;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-style: italic;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+div#outcomebox div#transobject {
+
+
+   	position: absolute;
+   	top: 0px;
+   	color: rgb(0, 255, 0);
+	border: 3px solid rgb(101, 101, 101);
+
+}
+
+
+div#outcomecode {
+	line-height: 1.2em;
+}
+
+div#transCSS {
+	margin-left: 75px;
+	font-size: 0.85em;
+	line-height: 0.8em;
+}
+
+</style>
+   
+   <style id="hoverRules">
+	   div#startingBox+div#track img, div#startingBox+div#track canvas {
+		   left: 0px;
+		   border-radius: 0%;
+		   filter:  invert(0%) drop-shadow(30px 10px 10px rgb(51, 51, 51));
+		   transition-property: left border-radius filter;
+		   transition-duration: 4s;		   
+	   }
+		div#startingBox+div#track img#easeImg {
+			transition-timing-function: ease;
+		}
+		div#startingBox+div#track img#linearImg {
+			transition-timing-function: linear;
+		}		   
+		div#startingBox+div#track img#easeInImg {
+			transition-timing-function: ease-in;
+		}
+		div#startingBox+div#track img#easeOutImg {
+			transition-timing-function: ease-out;
+		}	
+		div#startingBox+div#track img#easeInOutImg {
+			transition-timing-function: ease-in-out;
+		}	
+		div#startingBox+div#track canvas {
+			transition-timing-function: cubic-bezier(1, 0, 0, 1);
+		}	   
+	   div#startingBox:hover+div#track img, div#startingBox:hover+div#track canvas {
+		   left: 568px;
+		   border-radius: 50%;
+		   filter: invert(100%) drop-shadow(-30px -10px 10px rgb(51, 51, 51));   
+	   }	   
+   </style>
+   
+<script>
+      
+window.onload = function() {
+	var x1 = document.getElementById("x1");
+	var y1 = document.getElementById("y1");
+	var x2 = document.getElementById("x2");
+	var y2 = document.getElementById("y2");
+	var c = document.getElementById("bezCanvas");
+	var c2 = document.getElementById("bezCanvas2");	
+	var ctx = c.getContext("2d");
+	var ctx2 = c2.getContext("2d");	
+	
+	drawBCurve(x1.value, y1.value, x2.value, y2.value);
+	
+	document.getElementById("duration").onchange = function(e) {
+		var initRule = document.styleSheets[1].cssRules[0];
+		initRule.style.transitionDuration = e.target.value + "s";		
+	
+		document.getElementById("Code1").textContent = "left border-radius filter " + e.target.value + "s ease";
+		document.getElementById("Code2").textContent = "left border-radius filter " + e.target.value + "s linear";
+		document.getElementById("Code3").textContent = "left border-radius filter " + e.target.value + "s ease-in";
+		document.getElementById("Code4").textContent = "left border-radius filter " + e.target.value + "s ease-out";
+		document.getElementById("Code5").textContent = "left border-radius filter " + e.target.value + "s ease-in-out";	
+		document.getElementById("Code6").textContent = "left border-radius filter " + e.target.value + "s";		
+	};
+	
+	x1.onchange = function() {
+		drawBCurve(x1.value, y1.value, x2.value, y2.value);
+	};
+	y1.onchange = function() {
+		drawBCurve(x1.value, y1.value, x2.value, y2.value);
+	};
+	x2.onchange = function() {
+		drawBCurve(x1.value, y1.value, x2.value, y2.value);
+	};
+	y2.onchange = function() {
+		drawBCurve(x1.value, y1.value, x2.value, y2.value);
+	};	
+	function drawBCurve(x1val, y1val, x2val, y2val) {
+		ctx.clearRect(0, 0, c.width, c.height);		
+		ctx.beginPath();
+		ctx.moveTo(10, 40);
+		ctx.bezierCurveTo(10+x1val*30, 40-y1val*30, 10+x2val*30, 40-y2val*30, 40, 10);
+		ctx.lineWidth = 1.3;
+		ctx.stroke();	
+		
+		ctx2.clearRect(0, 0, c2.width, c2.height);		
+		ctx2.beginPath();
+		ctx2.moveTo(10, 50);
+		ctx2.bezierCurveTo(10+x1val*40, 50-y1val*40, 10+x2val*40, 50-y2val*40, 50, 10);
+		ctx2.lineWidth = 1.3;
+		ctx2.stroke();	
+		
+		var BRule = document.styleSheets[1].cssRules[6];
+		BRule.style.transitionTimingFunction = "cubic-bezier("+x1.value+","+y1.value+","+x2.value+","+y2.value+")";
+		document.getElementById("cubicCode").textContent = "cubic-bezier("+x1.value+", "+y1.value+", "+x2.value+", "+y2.value+")";
+	}
+
+	
+};
+</script>   
+</head>
+
+<body>
+      <div id="demo_page">
+         <div id="demo_intro">
+            <table>
+               <tr>
+                  <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+                  <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                     Tutorial 8 </td>
+               </tr>
+            </table>
+            <h2 id="h2heading">Cubic B&eacute;zier Curves </h2>
+            <div id="para">
+               <p>This page demonstrates how to create a timing function based on a Cubic B&eacute;zier curve.
+                  Enter a duration length in the input box. Enter the parameter values for the Cubic B&eacute;zier
+                  curve in the four input boxes for the function. Move your mouse pointer over the Start box
+                  to compare the effect of different timings. Try the following Cubic B&eacute;zier curves:<br /><br />
+                  cubic-bezier(1, 0, 0, 1)<br />
+                  cubic-bezier(0, 2, 1, -2)<br />
+                  cubic-beizer(1, 0, 1, -0.5)
+               </p>
+            </div>
+         </div>
+         <div id="demo_container">
+            <h1>Cubic B&eacute;zier Curves</h1>
+            <div id="transitionOptions">
+               <div id="initial">
+                  <h2>Set Duration</h2>
+                  <label>duration: </label> <input id="duration" type="number" value="4" /> seconds   		   
+               </div>
+               <div id="time">
+                  <h2>Timing Options</h2>
+                  <table>
+                     <tr>
+                        <th>Transition Graph</th>
+                        <th>Cubic Bezier Curve</th>
+                     </tr>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <img src="ease.png" alt="ease" /><br />
+                              ease
+                           </td>
+                           <td>
+                              cubic-bezier(0.25, 0.1, 0.25, 1)
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <img src="linear.png" alt="linear" /><br />
+                              linear
+                           </td>
+                           <td>
+                              cubic-bezier(0, 0, 1, 1)
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <img src="ease_in.png" alt="ease-in" /><br />
+                              ease-in
+                           </td>
+                           <td>
+                              cubic-bezier(0.42, 0, 1, 1)
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <img src="ease_out.png" alt="ease-out" /><br />
+                              ease-out
+                           </td>
+                           <td>
+                              cubic-bezier(0, 0, 0.58, 1)
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <img src="ease_in_out.png" alt="ease-in-out" /><br />
+                              ease-in-out
+                           </td>
+                           <td>
+                              cubic-bezier(0.42, 0, 0.58, 1)
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <canvas id="bezCanvas" width="50" height="50"></canvas><br />
+                              custom
+                           </td>
+                           <td>
+                              cubic-bezier(<input type="number" class="bInput" id="x1" value="1" min="0" max="1" step="0.01" />,
+                                                  <input type="number" class="bInput" id="y1" value="0" min="0" max="1" step="0.01" />,
+                                                  <input type="number" class="bInput" id="x2" value="0" min="0" max="1" step="0.01" />,
+                                                  <input type="number" class="bInput" id="y2" value="1" min="0" max="1" step="0.01" />)
+                           </td>
+                        </tr>				   
+                     </tbody>
+                  </table>		   
+               </div>		   
+            </div>
+
+
+            <div id="outcome">
+               <div id="outcomebox">
+                  <div id="startingBox">
+                     <h4>START</h4>
+                  </div>
+                  <div id="track">
+                     <img src="ease.png" alt="ease" id="easeImg" />
+                     <img src="linear.png" alt="ease" id="linearImg" />			   
+                     <img src="ease_in.png" alt="ease-in" id="easeInImg" />	
+                     <img src="ease_out.png" alt="ease-out" id="easeOutImg" />
+                     <img src="ease_in_out.png" alt="ease-in-out" id="easeInOutImg" />
+                     <canvas id="bezCanvas2" width="60" height="60"/>
+                  </div>
+               </div>
+               <h3>Hover the Mouse Pointer over the Starting Box to Start the Transition</h3>
+
+               <div id="transCSS">
+                  div#track img#one {transition: <span id="Code1">left border-radius filter 4s ease</span>;}<br /><br />
+                  div#track img#two {transition: <span id="Code2">left border-radius filter 4s linear</span>;}<br /><br />
+                  div#track img#three {transition: <span id="Code3">left border-radius filter 4s ease-in</span>;}<br /><br />
+                  div#track img#four {transition: <span id="Code4">left border-radius filter 4s ease-out</span>;}<br /><br />
+                  div#track img#five {transition: <span id="Code5">left border-radius filter 4s ease-in-out</span>;}<br /><br />
+                  div#track canvas#six {transition: <span id="Code6">left border-radius filter 4s </span> <span id="cubicCode">cubic-bezier(1, 0, 0, 1)</span>;}
+               </div>    
+            </div>   
+         </div>
+         <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+            Cengage Learning: Boston, 2019. </div>
+      </div>
+</body>
+
+</html>

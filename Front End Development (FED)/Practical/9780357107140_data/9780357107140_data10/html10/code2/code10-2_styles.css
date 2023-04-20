@@ -1,0 +1,52 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 10
+   Coding Challenge 2
+   
+   Filename: code10-2_styles.css
+
+
+
+*/
+
+html {
+
+}
+
+body {
+   width: 90%;
+   margin: 0px auto;
+}
+
+h1 {
+   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+   margin: 10px auto;
+}
+
+
+table {
+   border-collapse: collapse;
+   border: 1px solid black;
+   width: 70%;
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   margin-bottom: 20px;
+}
+
+th, td {
+   border: 1px solid black;
+   padding: 7px;
+   vertical-align: top;
+}
+
+th {
+   background-color: black;
+   color: white;
+   text-transform: uppercase;
+   font-size: 1.1em;
+}
+
+tr td:nth-of-type(3) {
+   text-align: right;
+}

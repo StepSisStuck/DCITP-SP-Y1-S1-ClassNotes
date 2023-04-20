@@ -1,0 +1,51 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Coding Challenge 2
+
+   Author: 
+   Date:   
+   
+   Filename: code4-2.css
+
+*/
+
+body {
+   width: 900px;
+   margin: 20px auto;
+   font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+   font-size: 1.4em;
+   padding-bottom: 30px;
+}
+
+article {
+   padding-left: 40px;
+   padding-bottom: 80px;
+}
+
+h1, h2 {
+   font-weight: normal;
+}
+h1 {
+   color: rgb(255, 155, 155);
+   font-size: 2.8em;
+   text-align: center;
+   line-height: 1.4em;
+   margin-bottom: 0px;
+}
+
+h2 {
+   color: rgb(255, 155, 155);
+   font-size: 1.4em;
+   text-align: center;
+   line-height: 1em;
+   margin-top: 0px;
+}
+
+p {
+   font-size: 1.2em;
+   line-height: 2em;
+   color: rgb(255, 225, 225);
+}

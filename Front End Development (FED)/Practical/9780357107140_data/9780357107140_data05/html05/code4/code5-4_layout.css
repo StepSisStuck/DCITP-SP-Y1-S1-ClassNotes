@@ -1,0 +1,65 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 5
+   Coding Challenge 4
+   
+   Filename: code5-4_layout.css
+
+*/
+html {
+   width: 100%;
+}
+
+body {
+   min-width: 350px;
+   max-width: 900px;
+   width: 95%;
+   margin: 0px auto;
+}
+
+a {
+   text-decoration: none;
+}
+
+header img {
+   display: block;
+   width: 100%;
+}
+
+nav {
+   width: 100%;
+   background-color: rgba(79,132,198,1.00);
+}
+nav ul {
+   list-style-type: none;
+   text-transform: uppercase;
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   font-size: 0.8em;
+   margin: 0;
+   padding: 10px 0 ;
+}
+
+nav ul li {
+   margin: 0 10px;
+   text-align: center;
+   color: ivory;
+}
+
+article h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-size: 1.6em;
+   letter-spacing: 0.12em;
+}
+
+article img {
+   display: block;
+   float: right;
+   width: 50%;
+   margin: 0 0 20px 20px;
+}
+
+article p {
+   font-size: 1.2em;
+}

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Demo
+
+   3D Multiple Transformations Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_transform3dm.html
+   Supporting files: demo.gif, demo2.gif, delsarto.png
+-->
+   <title>3D Multiple Transformations Demo</title>
+   <style>
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul, table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+/* use for all demo pages */
+
+body {
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+}
+      
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   height: 100%;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   width: 100%;
+   margin: 0px 10px;
+}
+      
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 145px 10px 10px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+ul, ol {
+   list-style: none;
+}
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+nav a {
+   text-decoration: none;
+}
+
+/* 
+      styles specific to this demo 
+*/
+
+div#demo_container {
+   position: relative;
+}
+      
+div#demo_container h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-weight: normal;
+   font-size: 1.4em;
+   margin-top: 15px;
+   padding-bottom: 10px;
+}
+
+div#transformOptions {
+   line-height: 1.5em;
+   z-index: 1;
+   position: relative;
+   width: 500px;
+   background-color: rgba(255, 255, 255, 0.8);
+   border-right: 1px solid rgb(155, 155, 155);
+}
+
+label {
+   display: inline-block;
+   width: 140px;
+   margin-left: 10px;
+	margin-right: 10px;
+}
+
+label.rotate3dlabel {
+	width: 20px;
+	margin: 0px;
+	text-align: right;
+}
+
+label.translate3dlabel {
+	width: 20px;
+	margin: 0px;
+	text-align: right;
+}
+
+input#tx, input#ty, input#tz {
+	width: 40px;
+	text-align: right;
+	margin: 0px;
+}
+
+
+input#vx, input#vy, input#vz, #input#vangle {
+	width: 40px;
+	text-align: right;
+	margin: 0px;
+}
+
+label#ranglelabel {
+	margin: 0px 20px 0px 170px;
+	width: 35px;
+}
+
+label.scale3dlabel {
+	width: 20px;
+	margin: 0px;
+	text-align: right;
+}
+
+input#sx, input#sy, input#sz {
+	width: 40px;
+	text-align: right;
+	margin: 0px;
+}
+
+input.eraseT {
+   display: inline-block;
+   margin-right: 10px;
+}
+
+
+div.preview h3 {
+	position: relative;
+	top: -50px;
+	text-align: center;
+}
+
+div#outcomecode {
+	color: red;
+}
+
+div#summary table {
+	color: red;
+}
+
+div#outcome3q {
+	position: absolute;
+	top: 50px;
+	left: 600px;
+	width: 200px;
+	height: 200px;
+	perspective: 800px;
+	perspective-origin: center center;	
+}
+
+div#summary table td {
+	vertical-align: top;
+	text-align: left;
+}
+
+div#summary table tr td:first-of-type {
+	width: 150px;
+}
+
+
+div#outcomefront {
+	position: absolute;
+	top: 450px;
+	left: 600px;
+	width: 200px;
+	height: 200px;
+	perspective: 800px;
+	perspective-origin: center center;	
+}
+
+div#outcome3q div.cube {
+	position: relative;
+	left: 0px; top: 0px;
+	transform-style: preserve-3d;
+	width: 200px; 
+	height: 200px;
+	transform: rotateX(-24deg) rotateY(-40deg) rotateZ(0deg);
+}
+
+div#outcomefront div.cube {
+	position: relative;
+	left: 0px; top: 0px;
+	transform-style: preserve-3d;
+	width: 200px; 
+	height: 200px;
+	transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+div.cube figure {
+	display: block;
+	position: absolute;
+
+}
+
+div.cube figure.face {
+	width: 200px;
+	height: 200px;
+	border: 2px solid red;
+	backface-visibility: visible;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+div.cube figure.axis {
+	width: 100px; 
+	height: 100px; 	
+}
+
+div.cube img {
+	display: block;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	filter: opacity(0.85);
+}
+
+div.cube figure span {
+	display: block;
+	font-size: 2em;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	text-shadow: 1px 1px 1px red;
+	width: 40px;
+	text-align: center;
+	vertical-align: middle;
+	height: 20px;
+	margin: 90px 80px;
+	background: rgba(255, 255, 255, 0.35);
+}
+		
+/* Face Transforms */		
+div.cube figure.front { 
+	transform: rotateY(0deg) translateZ(100px);
+}
+div.cube figure.back {
+	transform: rotateY(180deg) translateZ(100px);	
+}
+div.cube figure.right {
+	transform: rotateY(90deg) translateZ(100px);
+}
+div.cube figure.left {
+	transform: rotateY(-90deg) translateZ(100px);	
+}
+div.cube figure.top {
+	transform: rotateX( 90deg) translateZ(100px);
+}
+div.cube figure.bottom {
+	transform: rotateX(-90deg) translateZ(100px);		
+}	
+
+
+/* Axis Transforms */
+
+div.cube figure.xaxis {
+	transform:  rotateX(-90deg) translateY(-50px) translateZ(50px); 
+	border-right: 3px solid black; 
+	border-bottom: 3px solid black;
+}
+div.cube .yaxis {
+	transform: rotateY(-90deg) translateZ(-50px) translateX(-50px); 
+	border-right: 3px solid black; 
+	border-bottom: 3px solid black;
+}		
+div.cube .zaxis  {
+	transform: rotateX(0deg) translateX(100px) translateY(100px); 
+	border-left: 3px solid black; 
+	border-top: 3px solid black;
+}
+
+/* Border Adjustments */
+
+div#outcome3q div.cube figure.back {
+	border-bottom: 2px solid rgba(255, 0, 0, 0.3);
+	border-right: 2px solid rgba(255, 0, 0, 0.3);	
+}
+
+div#outcome3q div.cube figure.left {
+	border-bottom: 2px solid rgba(255, 0, 0, 0.3);
+	border-left: 2px solid rgba(255, 0, 0, 0.3);	
+}
+
+div#outcome3q div.cube figure.bottom {
+	border-left: 2px solid rgba(255, 0, 0, 0.3);	
+	border-bottom: 2px solid rgba(255, 0, 0, 0.3);		
+}
+
+/* Border Adjustments */
+
+div#outcomefront div.cube figure.back {
+	border: 2px solid rgba(255, 0, 0, 0.3);	
+}
+
+div#outcomefront div.cube figure.left {
+	border-top: 2px solid rgba(255, 0, 0, 0.3);	
+	border-bottom: 2px solid rgba(255, 0, 0, 0.3);	
+}
+
+div#outcomefront div.cube figure.right {
+	border-top: 2px solid rgba(255, 0, 0, 0.3);	
+	border-bottom: 2px solid rgba(255, 0, 0, 0.3);	
+}
+
+div#outcomefront div.cube figure.top {
+	border-left: 2px solid rgba(255, 0, 0, 0.3);	
+	border-right: 2px solid rgba(255, 0, 0, 0.3);	
+}
+
+div#outcomefront div.cube figure.bottom {
+	border-left: 2px solid rgba(255, 0, 0, 0.3);	
+	border-right: 2px solid rgba(255, 0, 0, 0.3);	
+}
+
+
+
+</style>
+<script>
+   window.onload = function() {
+
+      var outcometrans = document.getElementById("outcometrans");
+      var origincode = document.getElementById("origincode");	
+      var erase = document.getElementById("erase");
+      var rotateX2 = document.getElementById("rotatex2");
+      var rotateY2 = document.getElementById("rotatey2");
+      var rotateZ2 = document.getElementById("rotatez2");	
+      var vx = document.getElementById("vx");
+      var vy = document.getElementById("vy");
+      var vz = document.getElementById("vz");	
+      var vangle = document.getElementById("vangle");
+      var pvalue = document.getElementById("pvalue");	
+      var perspective = document.getElementById("perspective");
+      var hKeyword = document.getElementById("hKeyword");
+      var vKeyword = document.getElementById("vKeyword");
+      var zOrigin = document.getElementById("zOrigin");	
+      var figure3q = document.getElementById("figure3q");	
+      var figurefront = document.getElementById("figurefront"); 
+      var scaleX2 = document.getElementById("scalex2");
+      var scaleY2 = document.getElementById("scaley2");
+      var scaleZ2 = document.getElementById("scalez2");	
+      var sx = document.getElementById("sx");
+      var sy = document.getElementById("sy");
+      var sz = document.getElementById("sz");	
+      var translateX2 = document.getElementById("translatex2");
+      var translateY2 = document.getElementById("translatey2");
+      var translateZ2 = document.getElementById("translatez2");	
+      var tx = document.getElementById("tx");
+      var ty = document.getElementById("ty");
+      var tz = document.getElementById("tz");		
+
+      figure3q.style.transform = "";
+      figurefront.style.transform = "";	
+
+      var transBoxes = document.getElementsByClassName("transBox");
+      for (var i=0; i < transBoxes.length; i++) {
+         transBoxes[i].onchange = applyTrans;
+      }	
+
+      var radiobuttons = document.getElementsByClassName("eraseT");
+      for (var i=0; i < radiobuttons.length; i++) {
+         radiobuttons[i].onclick = toggleTrans;
+      }
+
+      perspective.onchange = function() {
+         var currentTrans = outcometrans.textContent;
+         var persp = "perspective(" + perspective.value + "px) ";
+         pvalue.textContent = persp;
+        figure3q.style.transform =  persp + currentTrans;  
+        figurefront.style.transform =   persp + currentTrans;	       	    
+      };
+
+
+
+      erase.onclick = function() {
+         figure3q.style.transform = "perspective(1200px)";
+         figurefront.style.transform = "perspective(1200px)";	   
+         outcometrans.textContent = "";
+        origincode.textContent = "initial";
+         for (var i=0; i < radiobuttons.length; i++) {
+            radiobuttons[i].checked = false;
+         }
+        rotateX2.value="0";
+        rotateY2.value="0";
+        rotateZ2.value="0";
+
+        scaleX2.value="1";
+        scaleY2.value="1";
+        scaleZ2.value="1";
+
+        translateX2.value="0";
+        translateY2.value="0";
+        translateZ2.value="0";
+
+        tx.value="0";
+        ty.value="0";
+        tz.value="0";	   
+        hKeyword.selectedIndex = 1;
+        vKeyword.selectedIndex = 1;	 
+        zOrigin.selectedIndex = 3;
+        vangle.value="0";
+        vx.value="1";
+        vy.value="1";
+        vz.value="0";
+        perspective.value = "1200";
+        pvalue.textContent = "perspective(1200px) ";
+      };
+
+      hKeyword.onchange = defineOrigin;
+      vKeyword.onchange = defineOrigin;
+      zOrigin.onchange = defineOrigin;
+
+      function defineOrigin() {
+         var originString = "";
+        originString += hKeyword.options[hKeyword.selectedIndex].value + " " + vKeyword.options[vKeyword.selectedIndex].value + " " + zOrigin.options[zOrigin.selectedIndex].value;
+
+         origincode.textContent = originString;
+         figure3q.style.transform = pvalue.textContent + " " + outcometrans.textContent;
+         figure3q.style.transformOrigin = originString;
+         figurefront.style.transform = pvalue.textContent + " " + outcometrans.textContent;	   
+         figurefront.style.transformOrigin = originString;	   
+      }	
+
+
+      function toggleTrans(e) {
+
+        var transString, transValue, transType, currentTrans, newTrans, startTrans, endTrans, oldOption;      
+       if (e.target.checked === true) {
+
+          if (e.target.id === "userotate3d") {
+             transType = "rotate3d";
+             transString ="rotate3d("+ vx.value + ", " + vy.value + ", " + vz.value + ", " + vangle.value + "deg)";	
+          } else if (e.target.id === "usescale3d") {
+             transType = "scale3d";
+             transString ="scale3d("+ sx.value + ", " + sy.value + ", " + sz.value + ")";		 
+          } else if (e.target.id === "usetranslate3d") {
+             transType = "translate3d";			 
+             transString ="translate3d("+ tx.value + "px, " + ty.value + "px, " + tz.value + "px)";			 
+          } else {
+            transValue = e.target.nextElementSibling.value; 
+            transType = e.target.previousElementSibling.textContent; 
+            transString = transType + "(" + transValue + ((e.target.nextElementSibling.id === "translatex2" || e.target.nextElementSibling.id === "translatey2" || e.target.nextElementSibling.id === "translatez2") ? "px":"") + ((e.target.nextElementSibling.id === "rotatex2" || e.target.nextElementSibling.id === "rotatey2" || e.target.nextElementSibling.id === "rotatez2") ? "deg":"") + ")";			 
+          }		 
+
+          currentTrans = outcometrans.textContent;
+
+            if (currentTrans === "") {	       
+              outcometrans.textContent = transString;      
+            } else {
+               if (currentTrans.indexOf(transType+"(") === -1) {      
+              outcometrans.textContent = currentTrans + " " + transString; 
+               } else {
+                  startTrans = currentTrans.indexOf(transType+"(");
+                  endTrans = currentTrans.indexOf(")", startTrans)+1;
+                  oldOption = currentTrans.substring(startTrans, endTrans+1);
+                  newTrans = currentTrans.replace(oldOption, transString);									       
+              outcometrans.textContent = newTrans; 
+
+               } 
+            }         
+         } else {
+            transType = e.target.previousElementSibling.textContent;
+            currentTrans = outcometrans.textContent;
+            if (currentTrans.indexOf(transType+"(") !== -1) {
+               startTrans = currentTrans.indexOf(transType+"(");
+               endTrans = currentTrans.indexOf(")", startTrans)+1;
+               oldOption = currentTrans.substring(startTrans, endTrans);
+               newTrans = currentTrans.replace(oldOption, "");
+               if (newTrans === "") {
+                  outcometrans.textContent = "";
+               } else {
+                  outcometrans.textContent = newTrans.trim();              
+               }          
+            }		 
+        }
+
+        defineOrigin(e);	   	                
+      }
+
+      function applyTrans(e) {
+         var transString, transValue, transType, currentTrans, newTrans, startTrans, endTrans, oldOption;	   
+
+       if ((e.target.id === "vx") || (e.target.id === "vy") || (e.target.id === "vz") || (e.target.id === "vangle")) {
+          transType = "rotate3d";
+          transString ="rotate3d("+ vx.value + ", " + vy.value + ", " + vz.value + ", " + vangle.value + "deg)";
+          document.getElementById("userotate3d").checked = true;	 
+       } else if ((e.target.id === "sx") || (e.target.id === "sy") || (e.target.id === "sz")) {
+          transType = "scale3d";
+          transString ="scale3d("+ sx.value + ", " + sy.value + ", " + sz.value + ")";
+          document.getElementById("usescale3d").checked = true;
+       } else if ((e.target.id === "tx") || (e.target.id === "ty") || (e.target.id === "tz")) {
+          transType = "translate3d"	;		 
+          transString ="translate3d("+ tx.value + "px, " + ty.value + "px, " + tz.value + "px)";	
+          document.getElementById("usetranslate3d").checked = true;
+       } else {
+         transValue = e.target.value; 
+         transType = e.target.previousElementSibling.previousElementSibling.textContent;	
+         e.target.previousElementSibling.checked = true; 	
+         transString = transType + "(" + transValue + ((e.target.id === "translatex2" || e.target.id === "translatey2" || e.target.id === "translatez2") ? "px":"") + ((e.target.id === "rotatex2" || e.target.id === "rotatey2" || e.target.id === "rotatez2") ? "deg":"") + ")";			 
+       }	  
+
+
+        currentTrans = outcometrans.textContent;
+
+          if (currentTrans === "") {	       
+              outcometrans.textContent = transString;      
+          } else {
+            if (currentTrans.indexOf(transType+"(") === -1) {	       
+              outcometrans.textContent = currentTrans + " " + transString; 
+            } else {
+               startTrans = currentTrans.indexOf(transType+"(");
+               endTrans = currentTrans.indexOf(")", startTrans)+1;
+               oldOption = currentTrans.substring(startTrans, endTrans+1).trim();
+               newTrans = currentTrans.replace(oldOption, transString);	       
+              outcometrans.textContent = newTrans; 
+
+            } 
+          } 
+
+         defineOrigin(e);
+      }
+   };
+   
+</script>
+</head>
+
+<body>
+   <div id="demo_page">
+      <div id="demo_intro">
+         <table>
+            <tr>
+               <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+               <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                  Tutorial 4 </td>
+            </tr>
+         </table>
+         <h2 id="h2heading"> Multiple 3D Transformations </h2>
+         <div id="para">
+            <p>To apply multiple transformations in three dimensions, apply the following
+               <code>transform</code> style:
+            </p>
+            <p><code>transform: <i>effects</i></code>;</p>
+            <p>where <code><i>effects</i></code> is a space-separated list of 3D transformation
+               functions. Transformations are applied in the order in which they are listed.
+               To modify the origin of all transformations in the list, apply 
+               the <code>transform-origin</code> style.</p>
+            <p>Use the web form below to generate the CSS code to apply multiple transformations to the preview
+               image and to change the location of the transformation. Use the checkboxes to add or remove
+               transformations from the space-separated list. The page displays two versions of the transformation:
+               the top version shows a three-quarter view to help you better visualize the placement of the object in
+               3D space; the bottom version shows the view that the user would see in the web page.
+            </p>
+         </div>
+      </div>
+      <div id="demo_container">
+         <h1>3D Multiple Transformations</h1>
+         <div id="transformOptions">   
+
+            <label for="useTranslateX">translateX</label> <input type="checkbox" name="transtype" id="useTranslateX" class="eraseT" /> -300px <input id="translatex2" type="range" min="-300" max="300" step="10" value="0" class="transBox" /> 300px<br /> 
+
+            <label for="useTranslateY">translateY</label> <input type="checkbox" name="transtype" id="useTranslateY" class="eraseT" /> -300px <input id="translatey2" type="range" min="-300" max="300" step="10" value="0" class="transBox" /> 300px<br /> 
+
+            <label for="useTranslateZ">translateZ</label> <input type="checkbox" name="transtype" id="useTranslateZ" class="eraseT" /> -300px <input id="translatez2" type="range" min="-300" max="300" step="10" value="0" class="transBox" /> 300px<br />  	   
+
+            <label for="usetranslate3d">translate3d</label> <input type="checkbox" name="transtype" id="usetranslate3d" class="eraseT" />
+               <label class="translate3dlabel">x: </label> <input type="text" id="tx" class="transBox" value="0" />
+               <label class="translate3dlabel">y: </label> <input type="text" id="ty" class="transBox" value="0" />
+               <label class="translate3dlabel">z: </label> <input type="text" id="tz" class="transBox" value="0" /><br /> 
+
+            <label for="usescaleX">scaleX</label> <input type="checkbox" name="transtype" id="usescaleX" class="eraseT" /> -2 <input id="scalex2" type="range" min="-2" max="2" step="0.1" value="1" class="transBox" /> 2<br /> 
+
+            <label for="usescaleY">scaleY</label> <input type="checkbox" name="transtype" id="usescaleY" class="eraseT" /> -2 <input id="scaley2" type="range" min="-2" max="2" step="0.1" value="1" class="transBox" /> 2<br /> 
+
+            <label for="usescaleZ">scaleZ</label> <input type="checkbox" name="transtype" id="usescaleZ" class="eraseT" /> -2 <input id="scalez2" type="range" min="-2" max="2" step="0.1" value="1" class="transBox" /> 2<br /> 	   
+
+            <label for="usescale3d">scale3d</label> <input type="checkbox" name="transtype" id="usescale3d" class="eraseT" />
+               <label class="scale3dlabel">x: </label> <input type="text" id="sx" class="transBox" value="1" />
+               <label class="scale3dlabel">y: </label> <input type="text" id="sy" class="transBox" value="1" />
+               <label class="scale3dlabel">z: </label> <input type="text" id="sz" class="transBox" value="1" /><br />    
+
+            <label for="useRotateX">rotateX</label> <input type="checkbox" name="transtype" id="useRotateX" class="eraseT" /> -360deg <input id="rotatex2" type="range" min="-360" max="360" step="10" value="0" class="transBox" /> 360deg<br /> 
+
+            <label for="useRotateY">rotateY</label> <input type="checkbox" name="transtype" id="useRotateY" class="eraseT" /> -360deg <input id="rotatey2" type="range" min="-360" max="360" step="10" value="0" class="transBox" /> 360deg<br /> 
+
+            <label for="useRotateZ">rotateZ</label> <input type="checkbox" name="transtype" id="useRotateZ" class="eraseT" /> -360deg <input id="rotatez2" type="range" min="-360" max="360" step="10" value="0" class="transBox" /> 360deg<br /> 	   
+
+            <label for="userotate3d">rotate3d</label> <input type="checkbox" name="transtype" id="userotate3d" class="eraseT" />
+               <label class="rotate3dlabel">x: </label> <input type="text" id="vx" class="transBox" value="1" />
+               <label class="rotate3dlabel">y: </label> <input type="text" id="vy" class="transBox" value="1" />
+               <label class="rotate3dlabel">z: </label> <input type="text" id="vz" class="transBox" value="0" /><br />
+             <label id="ranglelabel">angle: </label> -360deg <input id="vangle" type="range" min="-360" max="360" step="10" value="0" class="transBox" /> 360deg<br /> 
+
+           <div style="margin-top: 20px; border-top: 1px solid rgb(155, 155, 155); border-bottom: 1px solid rgb(155, 155, 155)">
+          <label>transform-origin</label>
+          <select id="hKeyword">
+            <option value="left">left</option>            
+            <option selected value="center">center</option>  
+            <option value="right">right</option>                         
+          </select> 
+          <select id="vKeyword">
+            <option value="top">top</option>            
+            <option selected value="center">center</option>  
+            <option value="bottom">bottom</option>                         
+          </select>
+          <select id="zOrigin">
+             <option value="-200px">-200px</option>		 
+             <option value="-100px">-100px</option>
+             <option value="-50px">-50px</option>
+             <option value="0px" selected>0px</option>
+             <option value="50px">50px</option>		 
+             <option value="100px">100px</option>
+             <option value="200px">200px</option>		 
+         </select>
+            </div> 
+           <div style="margin-top: 20px; border-top: 1px solid rgb(155, 155, 155); border-bottom: 1px solid rgb(155, 155, 155)">
+          <label>perspective</label> 200px <input id="perspective" type="range" min="200" max="1600" step="100" value="1200" /> 1600px 
+            </div>	   
+
+           <div id="summary">
+              <table>
+                 <tr>
+                    <td>transform: </td>
+                    <td>
+                    <span id="pvalue">perspective(1200px) </span> <span id="outcometrans"></span>;
+                    </td>
+                 </tr>
+                 <tr>
+                    <td>transform-origin: </td>
+                    <td><span id="origincode">initial</span>;</td>
+                 </tr>
+              </table>
+               <input type="button" value="Reset Transformations" id="erase" />		  
+            </div>
+
+         </div>
+
+
+         <div id="outcome3q" class="preview">
+           <h3>Three-Quarter View</h3>	   
+           <div class="cube">
+            <figure class="face front"><span>z+</span></figure>
+            <figure class="face back"><span>z&ndash;</span></figure>
+            <figure class="face right"><span>x+</span></figure>
+            <figure class="face left"><span>x&ndash;</span></figure>
+            <figure class="face top"><span>y&ndash;</span></figure>
+            <figure class="face bottom"><span>y+</span></figure>
+            <figure class="axis xaxis"></figure>
+            <figure class="axis yaxis"></figure>
+            <figure class="axis zaxis"></figure>
+            <img id="figure3q" class="previewimg" src="delsarto.png" alt=""/>
+           </div>
+         </div> 
+         <div id="outcomefront" class="preview">
+           <h3>User's View</h3>	   
+           <div class="cube">
+            <figure class="face front"><span>z+</span></figure>
+            <figure class="face back"><span>z&ndash;</span></figure>
+            <figure class="face right"><span>x+</span></figure>
+            <figure class="face left"><span>x&ndash;</span></figure>
+            <figure class="face top"><span>y&ndash;</span></figure>
+            <figure class="face bottom"><span>y+</span></figure>
+            <figure class="axis xaxis"></figure>
+            <figure class="axis yaxis"></figure>
+            <figure class="axis zaxis"></figure>	  
+            <img id="figurefront" class="previewimg" src="delsarto.png" alt=""/>
+           </div>
+         </div>	
+      </div>
+      <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+         Cengage Learning: Boston, 2019. </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+
+Marlin Internet Pricing Data
+
+
+Starter ($19.95 per month)
+==========================
+Download Speed: 15 Mbps
+Upload Speed: 3 Kbps
+Cloud Storage: 2 GB
+E-mail Accounts: 2 Accounts
+24/7 Support: Yes
+Summary: Just the speed you need to send emails, download map directions, and search the Internet for restaurant reviews.
+
+Prime ($29.95 per month)
+==========================
+Download Speed: 30 Mbps
+Upload Speed: 6 Mbps
+Cloud Storage: 5 GB
+E-mail Accounts: 3 Accounts
+24/7 Support: Yes
+Summary: A great speed at a great price for the family: kids can play games, adults can pay bills, and everyone can surf at the same time.
+
+
+Prime ($49.95 per month)
+==========================
+Download Speed: 50 Mbps
+Upload Speed: 10 Mbps
+Cloud Storage: 15 GB
+E-mail Accounts: 5 Accounts
+24/7 Support: Yes
+Summary: Super speeds for multiple tasks that require more broadband capacity; ideal for gamers who need fast response times.
+
+
+Ultra ($69.95 per month)
+==========================
+Download Speed: 100 Mbps
+Upload Speed: 20 Mbps
+Cloud Storage: 40 GB
+E-mail Accounts: 10 Accounts
+24/7 Support: Yes
+Summary: Perfect for a small business running multiple media streams, demanding reduced lag time and fast data delivery.

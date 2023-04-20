@@ -1,0 +1,240 @@
+@charset "utf-8";
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 9
+   Case Problem 1
+   
+
+   Bridger College Student Union Layout Style Sheet
+
+*/
+
+
+/* HTML and Body Styles */
+
+html {
+   background: rgb(230, 172, 242);
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 12px;
+}
+
+body {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;   
+   background: white;
+   max-width: 1024px;
+   min-width: 420px;
+   margin: 0px auto;
+   box-shadow: rgb(51, 51, 51) 10px 10px 25px,  rgb(51, 51, 51) -10px 10px 25px;
+}
+
+p {
+   font-size: 1.2em;
+   line-height: 1.4em;
+   margin: 15px;
+}
+
+
+/* Header Styles */
+
+body > header {
+   background: url(bc_logo.png) center/cover no-repeat;
+   width: 100%;
+}
+
+body > header > h1 {
+   height: 150px;
+   text-align: right;
+   padding: 10px;
+   font-size: 1.8em;
+   color: rgb(90, 57, 57);
+   text-shadow: rgb(237, 237, 134) 0px 0px 1px,
+                rgb(237, 237, 134) 0px 0px 2px,
+                rgb(237, 237, 134) 0px 0px 5px,
+                rgb(237, 237, 134) 0px 0px 8px,                 
+                rgb(237, 237, 134) 0px 0px 10px,
+                rgb(237, 237, 134) 0px 0px 15px;                
+}
+
+
+/* Top Navigation Styles */
+
+nav#top ul {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-align-items: center;
+   align-items: center;
+   background-color: rgb(78, 79, 28);
+   height: 50px;
+}
+   
+nav#top ul li {
+   -webkit-flex: 0 1 80px;
+   flex: 0 1 80px;   
+   margin: 10px;
+}
+
+nav#top ul li a {
+   color: white;
+   display: block;
+   font-size: 1.2em;
+   text-align: center;
+   padding: 50% 0%;
+}
+
+nav#top ul li a:hover, nav#top ul li a:active {
+   color: rgb(255, 0, 0);
+   text-shadow: 0px 0px 2px black, 0px 0px 15px white;
+}
+
+
+/* Section Styles */
+
+section {
+   background-color: rgb(161, 161, 34);
+   padding-bottom: 15px;
+}
+
+section h1 {
+   font-size: 2.5em;
+   color: rgb(111, 111, 111);
+   text-shadow: white -2px 0px 1px,  white -5px 0px 30px;
+   padding: 20px 15px 10px 0px;
+   text-align: right
+}
+
+section img {
+   width: 25%;
+   float: left;
+   display: block;
+   margin: 20px 20px 10px 15px;
+}
+
+section p {
+   margin-bottom: 0px;
+}
+
+section a {
+   color: rgb(58, 58, 28);
+}
+
+section::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+/* Article Styles */
+
+article {
+   -webkit-flex: 2 1 400px;
+   flex: 2 1 400px;
+}
+   
+/* Aside  Styles */
+
+aside {
+   background-color: rgb(233, 233, 148);
+   color: rgb(96, 96, 28);   
+   -webkit-flex: 1 2 200px;
+   flex: 1 2 200px;   
+}
+
+aside h1 {
+   font-size: 1.6em;
+   font-weight: bold;
+   letter-spacing: 0.1em;
+   line-height: 1em;
+   text-align: center;
+   margin: 20px 0px 5px;
+}
+
+aside h2 {
+   text-align: center;
+   font-size: 1.2em;
+   margin-bottom: 15px;
+}
+
+aside a {
+   color: rgb(234, 44, 234);
+}
+
+/* Description List Styles */
+
+dl {
+   text-align: left;
+   padding: 0px 15px;
+}
+
+dt {
+   font-size: 1.2em;
+   font-weight: bold;
+   margin-top: 20px;
+   border-top: 1px solid rgb(78, 78, 28);
+   padding-top: 5px;
+}
+
+dd {
+   margin: 10px 0px;
+}
+
+dd p {
+   margin: 0px 0px 5px 10px;
+}
+
+
+/* Footer Styles */
+
+footer {
+   width: 100%;
+}
+
+footer p {
+   color: rgb(211, 211, 211);
+   font-size: 0.9em;
+   text-align: center;
+   background-color: black;
+   margin: 0px;
+   padding: 10px 0px;
+}
+
+
+/* Bottom Navigation List Styles */
+
+nav#bottom {
+   background-color: rgb(77, 77, 28);
+   color: rgb(211, 211, 211);
+   padding: 15px;
+}
+
+nav#bottom ul li {
+   font-size: 1em;
+   line-height: 1.8em;
+}
+
+nav#bottom ul a {
+   color: white;
+}
+
+
+
+/* Bottom Navigation Styles */
+
+nav#bottom {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+nav#bottom ul {
+   flex: 0 1 150px;
+}

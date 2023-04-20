@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Demo
+
+   3D Spaces Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_preserve3d.html
+   Supporting files: demo.gif, demo2.gif, piazzetta.png
+-->
+   <title>3D Spaces Demo</title>
+   <style>
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul, table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+/* use for all demo pages */
+
+body {
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+}
+      
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   height: 100%;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   width: 100%;
+   margin: 0px 10px;
+}
+      
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 145px 10px 50px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+ul, ol {
+   list-style: none;
+}
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+nav a {
+   text-decoration: none;
+}
+
+/* 
+      styles specific to this demo 
+*/
+
+div#demo_container {
+   position: relative;
+}
+      
+div#demo_container h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-weight: normal;
+   font-size: 1.4em;
+   margin-top: 15px;
+   padding-bottom: 10px;
+}
+
+h2 {
+   font-weight: normal;
+   font-size: 1.3em;
+   margin: 20px 0px 5px 0px;
+}
+
+
+
+div#3dOptions {
+   line-height: 2em;
+   z-index: 1;
+   width: 450px;
+   background-color: rgba(255, 255, 255, 0.8);
+   border-right: 1px solid rgb(155, 155, 155);
+}
+
+label {
+	display: inline-block;
+	width: 150px;
+	margin-right: 5px;
+}
+
+label.tinyLabel {
+	width: 40px;
+	margin: 0px;
+	text-align: right;
+}
+
+label.tinyLabel2 {
+	width: 80px;
+	margin: 0px;	
+}
+
+label.tinyLabel3 {
+	width: 50px;
+	margin: 0px;
+}
+
+p#showp {
+	display: none;
+}
+
+div#outerp p, div#innerp p {
+	margin-left: 25px;
+	color: red;
+}
+
+div#outerp p:first-of-type, div#innerp p:first-of-type, div#outerp p:last-of-type, div#innerp p:last-of-type {
+	margin-left: 0px;
+}
+
+div#outerp, div#innerp {
+	margin: 10px 0px;
+}
+
+input#tx2, input#ty2, input#tz2 {
+	width: 40px;
+	text-align: right;
+	margin: 0px;
+}
+
+input#resetButton {
+	display: block;
+	font-size: 1em;
+	width: 100px;
+	height: 30px;
+	margin: 20px 0px 0px 20px;
+}
+div#outcome {
+	position: absolute;
+	top: 150px;
+	left: 550px;
+	width: 500px;
+	height: 500px;	
+}
+
+div#container2 {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	background-color: hsla(32,77%,47%,1);
+	border: 15px outset hsla(32, 50%, 20%,1);	
+}
+
+div#container2 img {
+	display: block;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 50px;
+	left: 50px;	
+}
+
+
+</style>
+<script>
+   window.onload = function() {
+      var rotatex = document.getElementById("rotatex");
+      var rotatey = document.getElementById("rotatey");
+      var rotatez = document.getElementById("rotatez");
+      var rotatex2 = document.getElementById("rotatex2");
+      var rotatey2 = document.getElementById("rotatey2");
+      var rotatez2 = document.getElementById("rotatez2");	
+      var tx2 = document.getElementById("tx2");
+      var ty2 = document.getElementById("ty2");
+      var tz2 = document.getElementById("tz2");	
+
+      var container = document.getElementById("container2");	
+      var perspective = document.getElementById("perspective");
+      var figure3d = document.getElementById("figure3d");	
+      var tsflat = document.getElementById("tsflat");	
+      var tspreserve = document.getElementById("tspreserve");	
+      var useFn = document.getElementById("useFn");	
+      var useP = document.getElementById("useP");		
+
+      rotatex.onchange = transformContainer;
+      rotatey.onchange = transformContainer;
+      rotatez.onchange = transformContainer;	
+      rotatex2.onchange = transformFigure;
+      rotatey2.onchange = transformFigure;
+      rotatez2.onchange = transformFigure;	
+      tx2.onchange = transformFigure;
+      ty2.onchange = transformFigure;
+      tz2.onchange = transformFigure;	
+
+      tsflat.onclick = function () {
+         transformContainer();
+      };
+      tspreserve.onclick = function () {
+         transformContainer();	
+      };	
+
+      useFn.onclick = function () {
+         transformContainer();
+      };
+      useP.onclick = function () {
+         transformContainer();	
+      };	
+
+      perspective.onchange = function() {
+         transformContainer();	
+      };
+
+      document.getElementById("resetButton").onclick = function() {
+         rotatex.value = "0"; rotatey.value = "0"; rotatez.value = "0";
+         rotatex2.value = "0"; rotatey2.value = "0"; rotatez2.value = "0";		
+         tx2.value = "0"; ty2.value = "0"; tz2.value = "0";		
+         perspective.value = "1200";
+         tsflat.checked = true;
+         useFn.checked = true;
+         transformContainer();
+         transformFigure();		
+      };
+      function transformContainer() {
+         if (useFn.checked === true) {
+            container.style.transform = "perspective(" + perspective.value + "px) rotateX("+rotatex.value+"deg) rotateY("+rotatey.value+"deg) rotateZ("+rotatez.value+"deg)";
+            container.style.perspective = "";
+         } else {
+            container.style.transform = "rotateX("+rotatex.value+"deg) rotateY("+rotatey.value+"deg) rotateZ("+rotatez.value+"deg)";
+            container.style.perspective = perspective.value + "px";			
+         }
+         container.style.transformStyle = document.querySelector('input[name="ts"]:checked').value;	
+         upDateCodeString();
+      }
+
+
+      function transformFigure() {
+         figure3d.style.transform = "translate3d("+tx2.value+"px,"+ty2.value+"px,"+tz2.value+"px) rotateX("+rotatex2.value+"deg) rotateY("+rotatey2.value+"deg) rotateZ("+rotatez2.value+"deg)";	
+         container.style.transformStyle = document.querySelector('input[name="ts"]:checked').value;
+         upDateCodeString();
+      }
+
+      function upDateCodeString() {
+         document.getElementById("containerTranscode1").textContent = container.style.transform;
+         document.getElementById("containerTranscode2").textContent = container.style.transformStyle;
+         if (useP.checked === true) {
+            document.getElementById("showp").style.display = "block";
+            document.getElementById("showp").textContent = "perspective: " + perspective.value + "px;";
+         } else {
+            document.getElementById("showp").style.display = "none";			
+         } 	
+         document.getElementById("imgTranscode").textContent = figure3d.style.transform;		
+      }
+
+   };
+   
+</script>
+</head>
+
+<body>
+   <div id="demo_page">
+      <div id="demo_intro">
+         <table>
+            <tr>
+               <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+               <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                  Tutorial 4 </td>
+            </tr>
+         </table>
+         <h2 id="h2heading"> 3D Spaces </h2>
+         <div id="para">
+            <p>This demo explores how to place several objects within the same 3D space. Set the perspective size of the outer object
+               using the web form. To pass the perspective value from the outer object to the inner object, set the <code>transform-style</code>
+               to <code>preserve-3d</code>. To put the outer and inner objects within their own perspective spaces, change
+               the value of the <code>transform-style</code> to <code>flat</code>.</p>
+            <p>You can place the perspective value as a function value within the <code>transform</code>
+               property which applies the perspective value to the outer object and passes it along to the inner object. If you set the
+               perspective value in the <code>perspective</code> property it will simply be passed to the inner object.
+            </p>
+            <p>To see the impact of the outer and inner objects residing in the same 3D space, set the perspective value as a function
+               and change the <code>transform-style</code> value to <code>preserve-3d</code> and then rotate both objects
+               separately; then compare the result to a <code>transform-style</code> which is set to <code>flat</code>.</p>
+         </div>
+      </div>
+      <div id="demo_container">
+         <h1>3D Space Options</h1>
+         <div id="3dOptions">
+            <div id="outerTrans">
+               <h2>Container</h2>
+               <label for="xdeg">Rotate x-axis</label> -360deg <input type="range" name="rotatex" id="rotatex" value="0" min="-360" max="360" step="2"/> 360deg<br />
+               <label for="ydeg">Rotate y-axis</label> -360deg <input type="range" name="rotatey" id="rotatey" value="0" min="-360" max="360" step="2"/> 360deg<br />
+               <label for="zdeg">Rotate z-axis</label> -360deg <input type="range" name="rotatez" id="rotatez" value="0" min="-360" max="360" step="2" /> 360deg   
+            </div>
+            <div id="innerTrans">
+               <h2>Inner Object</h2>
+               <label for="usetranslate3d">translate3d</label>
+               <label class="tinyLabel">x: </label> <input type="text" id="tx2" class="transBox" value="0" />
+               <label class="tinyLabel">y: </label> <input type="text" id="ty2" class="transBox" value="0" />
+               <label class="tinyLabel">z: </label> <input type="text" id="tz2" class="transBox" value="0" /><br />		   
+               <label for="xdeg">Rotate x-axis</label> -360deg <input type="range" name="rotatex2" id="rotatex2" value="0" min="-360" max="360" step="2"/> 360deg<br />
+               <label for="ydeg">Rotate y-axis</label> -360deg <input type="range" name="rotatey2" id="rotatey2" value="0" min="-360" max="360" step="2"/> 360deg<br />
+               <label for="zdeg">Rotate z-axis</label> -360deg <input type="range" name="rotatez2" id="rotatez2" value="0" min="-360" max="360" step="2" /> 360deg
+            </div>
+
+            <div style="margin-top: 20px; border-top: 1px solid rgb(155, 155, 155); border-bottom: 1px solid rgb(155, 155, 155); width: 450px"> 
+               <label for="perspective">Perspective: </label> 300px <input type="range" name="perspective" id="perspective" value="1200" min="300" max="1500" step="100"/> 1500px 
+               <br />
+               <label></label><label class="tinyLabel3" for="useFn">function</label> <input type="radio" name="ptype" id="useFn" value="useFn" checked />
+                                       <label class="tinyLabel3" for="useP">property</label> <input type="radio" name="ptype" id="useP" /><br /><br />	  
+
+               <label>transform-style: </label><label class="tinyLabel" for="tsflat">flat</label> <input type="radio" name="ts" id="tsflat" value="flat" checked />
+                                       <label class="tinyLabel2" for="tspreserve">preserve-3d</label> <input type="radio" name="ts" id="tspreserve" value="preserve-3d" /><br />
+            </div>
+            <div id="outerp">
+               <p>div#container {</p>
+               <p>transform: <span id="containerTranscode1">perspective(1200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)</span>;</p>
+               <p>transform-style: <span id="containerTranscode2">flat</span>;</p>
+               <p id="showp"></p>
+               <p>}</p>
+            </div>
+            <div id="innerp">
+               <p>div#container img {</p>
+               <p>transform: <span id="imgTranscode">translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)</span>;</p>
+               <p>}</p>			   
+            </div>
+
+            <input type="button" value="reset" id="resetButton" />
+         </div>
+
+
+         <div id="outcome">
+           <div id="container2" style="transform-style: flat; perspective: 1200px; transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);">
+            <img id="figure3d" src="piazzetta.png" alt="" style="transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);"/>
+           </div>	   
+         </div>   
+      </div>
+      <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+         Cengage Learning: Boston, 2019. </div>
+   </div>
+</body>
+</html>

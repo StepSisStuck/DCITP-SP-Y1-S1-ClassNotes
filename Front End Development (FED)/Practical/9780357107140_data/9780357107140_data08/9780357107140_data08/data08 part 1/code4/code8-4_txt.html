@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Coding Challenge 4
+   
+   Author:   coding challenge 4
+   Date:     3/1/2022
+   Filename: code8-4.html
+   -->
+   <meta charset="utf-8">
+   <title>Coding Challenge 8-4</title>
+   <link href="code8-4_styles.css" rel="stylesheet" />
+
+</head>
+<body>
+  <h1>Payment Form</h1> 
+  <form id="payment">		  
+   <fieldset id="creditCard">
+      <legend>Credit Card (required)</legend>
+
+      <fieldset>
+         <label class="cardLabel">
+            <input name="cCard" value="amex" type="radio" required />
+            <img src="amex.png" alt="American Express" />
+         </label>
+         <label class="cardLabel">               
+            <input name="cCard" value="discover" type="radio" required />
+            <img src="discover.png" alt="Discover" />
+         </label>
+         <label class="cardLabel">                  
+            <input name="cCard" value="master" type="radio" required />
+            <img src="master.png" alt="MasterCard" />
+         </label>
+         <label class="cardLabel">                  
+            <input name="cCard" value="visa" type="radio" required />
+            <img src="visa.png" alt="Visa" />
+         </label>
+      </fieldset>
+
+      <label for="cardBox">Credit Card Number</label>
+      <input name="cardNumber" id="cardBox" type="text" required />
+
+      <label for="csc">CSC</label>
+      <input name="csc" id="csc" type="text" pattern="^\d{3}$" placeholder="nnn" />
+
+      <label for="monthList">Expiration Date</label>
+      <select name="cardMonth" id="monthList" required>
+         <option value="">--Month--</option>
+         <option value="01">January (01)</option>
+         <option value="02">February (02)</option>
+         <option value="03">March (03)</option>
+         <option value="04">April (04)</option>
+         <option value="05">May (05)</option>
+         <option value="06">June (06)</option>
+         <option value="07">July (07)</option>
+         <option value="08">August (08)</option>
+         <option value="09">September (09)</option>
+         <option value="10">October (10)</option>
+         <option value="11">November (11)</option>
+         <option value="12">December (12)</option>
+      </select>
+      <select name="cardYear" id="yearList" required>
+         <option value="">--Year--</option>
+         <option value="2020">2020</option>
+         <option value="2021">2021</option>
+         <option value="2022">2022</option>
+         <option value="2023">2023</option>
+         <option value="2024">2024</option>
+      </select>
+   </fieldset>
+  </form>
+</body>
+</html>

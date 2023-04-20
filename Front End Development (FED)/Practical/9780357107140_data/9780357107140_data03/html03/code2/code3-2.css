@@ -1,0 +1,60 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 3
+   Coding Challenge 2
+
+   Author: 
+   Date:   
+   
+   Filename: code3-2.css
+
+*/
+
+html {
+   background-color: white;
+}
+
+body {
+   font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+h1 {
+   text-align: center;
+   font-size: 1.7em;
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   margin: 3px;
+   line-height: 1.4em;
+}
+
+aside h1 {
+   font-size: 1.2em;
+   line-height: 1em;
+}
+
+a {
+   text-align: center;
+   font-weight: bold;
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   text-transform: lowercase;
+   font-size: 1em;
+   line-height: 0.8em;
+   background-color: lightblue;
+}
+
+header {
+   background-color: pink;
+}
+
+aside {
+   background-color: yellow;
+}
+
+article {
+   background-color: palegoldenrod;
+}
+footer {
+   background-color: gray;
+   color: ivory;
+}

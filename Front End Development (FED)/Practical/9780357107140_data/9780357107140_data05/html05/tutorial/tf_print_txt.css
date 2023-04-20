@@ -1,0 +1,68 @@
+@charset "utf-8";
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 5
+   Tutorial Case
+   
+   Author:   
+   Date:     
+   
+   Filename: tf_print.css
+
+   This file contains the printer styles used with the Trusted
+   Friends page on articles of interest
+
+*/
+
+
+
+/* Hidden Objects */
+
+
+
+/* Page Box Styles */
+
+
+
+/* Header Styles */
+
+body > header {
+   text-align: right;
+}
+
+body > header > img {
+   display: block;
+   width: 100%;
+}
+
+
+/* Typography Styles */
+
+
+
+/* List Styles */
+
+
+
+/* Image Styles */
+
+
+
+
+/* Hypertext Styles */
+
+
+
+
+
+/* Page Break Styles */
+
+
+
+
+	
+
+
+
+
+

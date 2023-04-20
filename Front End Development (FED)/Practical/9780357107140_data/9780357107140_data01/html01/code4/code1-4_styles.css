@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* 
+
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 1
+   Coding Challenge 4 Stylesheet
+   
+   Filename: code1-4styles.css
+*/
+
+html {
+   background: linear-gradient(to right, white 35%, rgb(11, 11, 111) 50%, white 65%);
+}
+body {
+   width: 900px;
+   margin: 20px auto;
+   padding: 0px 20px;
+   background: white;
+}
+
+h1 {
+   font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+   font-size: 2.6em;
+   padding-top: 10px;
+   letter-spacing: 0.13em;
+}
+
+img {
+   display: block;
+   float: right;
+   width: 370px;
+   margin: 0px 0px 10px 20px;
+   box-shadow: 3px 3px 20px black;
+}
+
+p {
+   font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+   font-size: 1.2em;
+   line-height: 1.4em;
+}
+ul {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   line-height: 2.5em;
+   margin-left: 40px;
+   padding-bottom: 20px;
+   list-style-type: circle;
+}
+ul li strong {
+   display: inline-block;
+   width: 150px;
+}

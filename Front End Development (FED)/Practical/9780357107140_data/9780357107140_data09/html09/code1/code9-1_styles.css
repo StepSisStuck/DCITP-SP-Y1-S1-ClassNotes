@@ -1,0 +1,59 @@
+﻿@charset "utf-8";
+
+@font-face {
+   font-family: Segment14;
+   src: url('segment14.woff') format('woff'),
+        url('segment14.ttf') format('truetype');
+}
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 9
+   Coding Challenge 1
+   
+   Filename: code9-1_styles.css
+
+
+   Segment14 font designed by Paul Flo Williams. Download at:
+   http://www.1001fonts.com/segment14-font.html#styles
+
+*/
+
+html {
+   background-color: black;
+}
+
+body {
+   padding: 20px;
+}
+
+h1 {
+   color: white;
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   width: 400px;
+   text-align: center;
+}
+
+div#clock {
+   border: 5px solid yellow;
+   border-radius: 20px;
+   width: 400px;
+}
+div#date, div#time {
+   font-size: 1.8em;
+   color:hsl(64,84%,73%);
+   font-family: Segment14;
+   text-shadow: 1px 1px 1px red, 3px 3px 10px white;
+   text-align: center;
+   margin: 15px auto;
+}
+
+div#wday {
+   font-size: 2.5em;
+   color:hsl(64,84%,73%);
+   font-family: Segment14;
+   text-shadow: 3px 3px 3px red, 3px 3px 10px white;
+   text-align: center;
+   margin: 15px auto;
+   letter-spacing: 0.25em;
+}

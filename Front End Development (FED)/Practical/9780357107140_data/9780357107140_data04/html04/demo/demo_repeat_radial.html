@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Demo
+
+   Repeating Radial Gradient Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_repeat_radial.html
+   Supporting files: demo.gif, demo2.gif
+-->
+   <title>Repeating Radial Gradient Demo</title>
+   <style>
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul, table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+/* use for all demo pages */
+
+body {
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+}
+      
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   height: 100%;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   width: 100%;
+   margin: 0px 10px;
+}
+      
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 145px 10px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+ul, ol {
+   list-style: none;
+}
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+nav a {
+   text-decoration: none;
+}
+
+/* 
+      styles specific to this demo 
+*/
+
+div#demo_container {
+   position: relative;
+}
+      
+div#demo_container h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-weight: normal;
+   font-size: 1.4em;
+   margin-top: 15px;
+   padding-bottom: 10px;
+}
+
+label {
+   display: inline-block;
+   width: 140px;
+   margin-left: 10px;
+}
+
+div#boxOptions {
+   width: 440px;
+   line-height: 2em;
+}
+
+div#baseOptions {
+   border-bottom: 1px solid rgb(191, 191, 191);
+}
+
+input.stopValue {
+   width: 190px;
+}
+
+div.stopOption {
+   margin: 5px 0px;
+   padding: 0px;
+   border-bottom: 1px solid rgb(191, 191, 191);
+}
+
+input.removeStop {
+   width: 25px;
+   height: 25px;
+   margin: 10px;
+   font-size: 1em;
+}
+
+select#directionKeyword {
+   font-size: 0.95em;
+   color: rgb(101, 101, 101);
+}
+
+input#directionDegree {
+   width: 150px;
+}
+
+
+label.lAlpha {
+   width: 50px;
+}
+
+input.gAlpha {
+   width: 130px;
+}
+
+
+div#outcome {
+   position: absolute;
+   top: 0px;
+   left: 430px;
+   font-size: 22px;
+}
+
+
+div#outcomebox {
+   width: 350px;
+   height: 250px;
+   line-height: 3.3em;
+   position: absolute;
+   top: 20px;
+   left: 20px;;
+   background: linear-gradient(white, black);
+   outline: 1px solid gray;
+}
+
+
+
+div#outcomecode {
+   position: absolute;
+   top: 280px;
+   left: 20px;
+   width: 1050px;
+   font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+   font-size: 0.65em;
+}
+
+
+span#gRule {
+   display: block;
+   width: 450px;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+}
+
+
+span#gVal {
+   display: block;
+   width: 650px;
+   position: absolute;
+   top: 0px;
+   left: 300px;
+   line-height: 1.4;
+}
+
+      
+</style>
+<script>
+   window.onload = function() {
+
+      var shapeType = document.getElementById("shapeType");
+      var sizeKey = document.getElementById("sizeKey");
+      var sizeP = document.getElementById("sizeP");
+      var sizeKeyword = document.getElementById("sizeKeyword");
+      var hsizePerc = document.getElementById("hsizePerc"); 
+      var vsizePerc = document.getElementById("vsizePerc");    
+      var posKey = document.getElementById("posKey");
+      var posP = document.getElementById("posP");
+      var hKeyword = document.getElementById("hKeyword");
+      var vKeyword = document.getElementById("vKeyword");
+      var hPos = document.getElementById("hPos");
+      var vPos = document.getElementById("vPos");   
+
+      var outcomebox = document.getElementById("outcomebox");
+
+      shapeType.onchange = applyRad;
+      sizeKey.onclick = applyRad;
+      sizeP.onclick = applyRad; 
+      posKey.onclick = applyRad;  
+      posP.onclick = applyRad;
+      sizeKeyword.onchange = applyRad;
+      hsizePerc.onchange = applyRad;
+      vsizePerc.onchange = applyRad;   
+      hKeyword.onchange = applyRad;
+      vKeyword.onchange = applyRad;
+      hPos.onchange = applyRad;
+      vPos.onchange = applyRad;  
+
+
+      var stopOptions = document.getElementsByClassName("stopOption");
+      stopOptions[0].children[1].onchange = applyRad;
+      stopOptions[0].children[3].onchange = applyRad;
+      stopOptions[0].children[6].onchange = applyRad; 
+      stopOptions[0].children[8].onclick = removeStop;
+      stopOptions[1].children[1].onchange = applyRad;
+      stopOptions[1].children[3].onchange = applyRad;
+      stopOptions[1].children[6].onchange = applyRad; 
+      stopOptions[1].children[8].onclick = removeStop; 
+      stopOptions[2].children[1].onchange = applyRad;
+      stopOptions[2].children[3].onchange = applyRad;
+      stopOptions[2].children[6].onchange = applyRad; 
+      stopOptions[2].children[8].onclick = removeStop;   
+
+      applyRad();
+
+
+      document.getElementById("addStop").onclick = function() {
+         var newOption = stopOptions[stopOptions.length-1].cloneNode(true);
+         newOption.children[1].onchange = applyRad;
+         newOption.children[3].onchange = applyRad;
+         newOption.children[6].onchange = applyRad; 
+         newOption.children[8].onclick = removeStop;      
+         stopOptions[0].parentElement.insertBefore(newOption, stopOptions[0].parentElement.lastElementChild);
+      };
+
+      function applyRad(e) {
+         var radString = "repeating-radial-gradient(";
+         var radString2 = "";
+
+         if (e !== undefined) {
+            if (e.target.id === "sizeKeyword") {
+               sizeKey.checked = true;
+            }
+            if (e.target.id === "hsizePerc") {
+               sizeP.checked = true;
+            }
+            if (e.target.id === "vsizePerc") {
+               sizeP.checked = true;
+            }         
+            if ((e.target.id === "hKeyword")||(e.target.id === "vKeyword")) {
+               posKey.checked = true;
+            }  
+            if ((e.target.id === "hPos")||(e.target.id === "vPos")) {
+               posP.checked = true;
+            }          
+         }
+
+         radString += shapeType.options[shapeType.selectedIndex].value;
+         radString2 += shapeType.options[shapeType.selectedIndex].value;
+
+         if ((shapeType.selectedIndex === 0) && ((sizeKey.checked && sizeKeyword.selectedIndex === 0) || (sizeP.checked && hsizePerc.value === "0" && vsizePerc.value === "0")) && (posKey.checked && hKeyword.selectedIndex === 0 && vKeyword.selectedIndex === 0)) {
+         } else {
+            if (((sizeKey.checked && sizeKeyword.selectedIndex === 0) || (sizeP.checked && hsizePerc.value === "0" && vsizePerc.value === "0")) && (posKey.checked && hKeyword.selectedIndex === 0 && vKeyword.selectedIndex === 0)) {
+               radString += ",";
+               radString2 += ", <br />";
+            } else {
+               if (sizeKey.checked) {
+                  if (sizeKeyword.selectedIndex !== 0) {
+                     radString += " " + sizeKeyword.options[sizeKeyword.selectedIndex].value + " ";
+                     radString2 += " " + sizeKeyword.options[sizeKeyword.selectedIndex].value + " ";
+                  }
+               } else {
+                  var hSize = (hsizePerc.value === "0" ? "" : hsizePerc.value + "px ");
+                  var vSize = (vsizePerc.value === "0" ? "" : vsizePerc.value + "px ");
+                  radString += " " + hSize + " " + vSize + " ";
+                  radString2 += " " + hSize + " " + vSize + " ";
+               }
+
+               if (posKey.checked && hKeyword.selectedIndex === 0 && vKeyword.selectedIndex === 0) {
+                  radString += ",";
+                  radString2 += ", <br />";
+               } else {
+                  if (posKey.checked) {
+                     if ((hKeyword.selectedIndex !== 0) || (vKeyword.selectedIndex !==0)) {
+                        radString += " at " + hKeyword.options[hKeyword.selectedIndex].value + " " + vKeyword.options[vKeyword.selectedIndex].value + ", ";
+                        radString2 += " at " + hKeyword.options[hKeyword.selectedIndex].value + " " + vKeyword.options[vKeyword.selectedIndex].value + ",<br />";
+                     }
+                  } else {
+                        radString += " at " + hPos.value + "% " + vPos.value + "%, ";
+                        radString2 += "  at " + hPos.value + "% " + vPos.value + "%, <br />";
+                  }
+               }
+            }
+         }
+
+         for (var i = 0; i < stopOptions.length; i++) {
+            radString += hexToRGB(stopOptions[i].children[1].value, stopOptions[i].children[3].value); 
+            radString2 += hexToRGB(stopOptions[i].children[1].value, stopOptions[i].children[3].value);          
+            if (stopOptions[i].children[6].value !== "0") {
+               radString += " " + stopOptions[i].children[6].value + "%";
+               radString2 += " " + stopOptions[i].children[6].value + "%";            
+            }       
+            if (i < stopOptions.length-1) {
+               radString += ", ";
+               radString2 += ", <br />";            
+            } else {
+               radString += ")";
+               radString2 += " );";            
+            } 
+         }
+
+         outcomebox.style.background = radString;
+         document.getElementById("gVal").innerHTML = radString2;
+
+      }
+
+      function removeStop(e) {
+         var deadOption = e.target.parentElement;
+         stopOptions[0].parentNode.removeChild(deadOption);
+         applyRad();
+      }
+
+      function hexToRGB(hexc, alpha){
+       var h = "0123456789ABCDEF";
+       var hex = hexc.toUpperCase();
+       var r = h.indexOf(hex[1])*16+h.indexOf(hex[2]);
+       var g = h.indexOf(hex[3])*16+h.indexOf(hex[4]);
+       var b = h.indexOf(hex[5])*16+h.indexOf(hex[6]);
+       if (alpha==="1") {
+         return "rgb("+r+", "+g+", "+b+")";
+       } else {
+         return "rgba("+r+", "+g+", "+b+","+alpha+")"; 
+       }
+      }   
+   };
+   
+</script>
+</head>
+
+<body>
+   <div id="demo_page">
+      <div id="demo_intro">
+         <table>
+            <tr>
+               <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+               <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                  Tutorial 4 </td>
+            </tr>
+         </table>
+         <h2 id="h2heading"> Repeating Radial Gradients </h2>
+         <div id="para">
+            <p>To add a repeating radial gradient to a block-level element, apply the following
+               <code>repeating-radial-gradient</code> function to the element background:
+            </p>
+            <p><code>repeating-radial-gradient(<i>params</i></code>)</p>
+            <p>where <code><i>params</i></code> set the parameters of the radial gradient.</p>
+            <p>Use the web form below to generate the code for the <code>repeating-linear-gradient</code>
+               function. Use the [+] button to add more color stops. Use the [-] button 
+               to remove color stops. The location of the last color stop must be less than 100% for the gradient to repeat.</p>
+         </div>
+      </div>
+      <div id="demo_container">
+         <h1>Repeating Radial Gradients</h1>
+         <div id="boxOptions">
+            <div id="baseOptions"> 
+               <label for="shapeType">Shape</label>
+               <select id="shapeType">
+                  <option value="" selected></option>
+                  <option value="circle">circle</option>            
+                  <option value="ellipse">ellipse</option>  
+               </select><br />
+               <label>Size</label><input type="radio" name="sizeType" id="sizeKey" checked />   
+               <select id="sizeKeyword">
+                  <option value="" selected></option>
+                  <option value="farthest-corner">farthest-corner</option>            
+                  <option value="farthest-side">farthest-side</option>  
+                  <option value="closest-corner">closest-corner</option>     
+                  <option value="closest-side">closest-side</option>                     
+               </select><br />  
+               <label></label><input type="radio" name="sizeType" id="sizeP" />  
+               0px <input id="hsizePerc" type="range" min="0" max="300" step="10" value="150" /> 300px<br /> 
+               <label></label><span style="display: inline-block; width: 25px"></span>0px <input id="vsizePerc" type="range" min="0" max="300" step="10" value="150" /> 300px<br />          
+               <label>Position</label><input type="radio" name="posType" id="posKey" checked />   
+               <select id="hKeyword">
+                  <option value="" selected></option>
+                  <option value="left">left</option>            
+                  <option value="center">center</option>  
+                  <option value="right">right</option>                         
+               </select> 
+               <select id="vKeyword">
+                  <option value="" selected></option>
+                  <option value="top">top</option>            
+                  <option value="center">center</option>  
+                  <option value="bottom">bottom</option>                         
+               </select><br />
+               <label></label><input type="radio" name="posType" id="posP" />  
+               0% <input id="hPos" type="range" min="0" max="100" step="1" value="50" /> 100%<br /> 
+               <label></label><span style="display: inline-block; width: 25px"></span>0% <input id="vPos" type="range" min="0" max="100" step="1" value="50" /> 100%                            
+            </div>
+
+            <div class="stopOption">
+               <label>Gradient Color</label> <input class="gColor" type="color" value="#FF0000" />
+               <label class="lAlpha">Alpha</label> 0 <input class="gAlpha" type="range" min="0" max="1" step="0.01" value="1" /> 1<br />
+               <label>Color Stop</label> 0% <input class="stopValue" type="range" min="0" max="100" step="1" value="0" /> 100%<br />         
+               <input type="button" class="removeStop" value="-" />
+            </div>
+            <div class="stopOption">
+               <label>Gradient Color</label> <input class="gColor" type="color" value="#FFFF00" />
+               <label class="lAlpha">Alpha</label> 0 <input class="gAlpha" type="range" min="0" max="1" step="0.01" value="1" /> 1<br />
+               <label>Color Stop</label> 0% <input class="stopValue" type="range" min="0" max="100" step="1" value="0" /> 100%<br />         
+               <input type="button" class="removeStop" value="-" />
+            </div>
+            <div class="stopOption">
+               <label>Gradient Color</label> <input class="gColor" type="color" value="#0000FF" />
+               <label class="lAlpha">Alpha</label> 0 <input class="gAlpha" type="range" min="0" max="1" step="0.01" value="1" /> 1<br />
+               <label>Color Stop</label> 0% <input class="stopValue" type="range" min="0" max="100" step="1" value="0" /> 100%<br />         
+               <input type="button" class="removeStop" value="-" />
+            </div>      
+
+            <div id="addBox">
+               <input type="button" id="addStop" value="+" />      
+            </div>
+         </div>
+
+
+         <div id="outcome">
+            <div id="outcomebox"></div>      
+            <div id="outcomecode">
+               <span id="gRule">background: repeating-radial-gradient(</span><span id="gVal">white, black);</span>
+            </div>
+         </div>    
+
+      </div>
+      <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+         Cengage Learning: Boston, 2019. </div>
+   </div>
+</body>
+</html>

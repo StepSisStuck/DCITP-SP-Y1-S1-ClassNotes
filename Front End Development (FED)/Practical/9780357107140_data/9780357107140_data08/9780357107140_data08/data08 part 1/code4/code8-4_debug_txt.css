@@ -1,0 +1,52 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Coding Challenge 4
+
+   Author:   coding challenge 4
+   Date:     3/1/2022
+   Filename: code8-4_form.css
+
+*/
+
+@keyframes drop-down {
+   0% {top: -200px;}
+   100% {top: 100px;}
+}
+
+@keyframes slide-right {
+   0% {left: -400px;}
+   100% {left: 0px;}
+}
+
+form#payment {
+   animation: dropdown 3s;
+}
+
+h1 {
+   animation: slide-right easein 3s;
+}
+
+input#cardBox, input#csc {
+   box-shadow: 0px 0px 0px brown;
+   transition: box-shadow 1sec linear;
+}
+
+input#cardBox:focus, input#csc:focus {
+   box-shadow: 0px 0px 25px brown;
+}
+
+input#csc:invalid {
+	transform: translateX(5px) skewX(20deg) rotate(1deg);
+	box-shadow: 0px 0px 10px red;
+	transition: transformation 1sec cubicbezier(0,5,1,-5);
+}
+
+input#csc:focus:invalid {
+	transform: translateX(0px) skewX(0deg) rotate(0deg);
+	transform-origin: bottom;
+	box-shadow: 0px 0px 0px red;
+   
+}

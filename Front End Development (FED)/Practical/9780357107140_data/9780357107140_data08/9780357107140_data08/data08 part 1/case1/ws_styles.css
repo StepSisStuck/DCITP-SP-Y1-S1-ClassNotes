@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Case Problem 1
+
+   Rhetoric in the United States General Style Sheet
+  
+   Filename: ws_styles.css
+
+*/
+
+
+/* HTML and Body styles */
+
+html {
+   background: rgb(221,128,160);
+   font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+   color: rgb(101, 101, 101);
+}
+
+body {
+   box-shadow: rgb(51, 51, 51) 10px 0px 30px,
+               rgb(51, 51, 51) -10px 0px 30px;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;    
+   margin: 0px auto;
+   min-width: 320px;
+   max-width: 1100px;  
+   width: 100%;
+}
+
+/* Header Styles */
+
+header {
+   background: linear-gradient(to bottom,  white 70%, rgb(88,183,229));  
+   border-bottom: 1px solid rgb(0, 0, 0);
+   color: white;
+}
+
+header > #wsimg, header > #logoimg {
+   display: block;
+   width: 100%;
+}
+
+header > h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+   font-size: 1.15em;
+   font-weight: normal;
+   text-align: center;
+   padding: 5px 0px;
+   text-shadow: rgb(50, 50, 50) 0px 0px 5px;
+}
+
+/* Header Navigation List Styles */
+
+header > nav {
+   float: left;
+}
+   
+header > nav ul {
+   display: none;
+   margin-bottom: 15px;
+}
+   
+header > nav ul li {
+   font-size: 0.9em;
+   font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+   line-height: 1.3em;
+   height: 1.3em;
+   margin-left: 25px;
+}
+
+header > nav ul li a {
+   color: rgb(28,114,140);
+}
+ 
+header > nav ul li a:hover {
+   color: rgb(255,218,250);
+   text-shadow: black 0px 0px 2px, black 0px 0px 5px, black 0px 0px 20px;
+}
+
+
+/* Section Styles */
+
+body > section {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;  
+}
+
+
+
+/* Article Styles */
+
+article { 
+   background: rgb(237,237,237);  
+   -webkit-flex: 1 1 500px;
+   flex: 1 1 500px; 
+   border-bottom: 1px solid black;
+}
+
+article h1 {
+   background: rgba(80,102,91,0.32);   
+   font-size: 1.5em;
+   text-align: center;
+   padding: 10px 0px;
+}
+
+article p {
+   margin: 10px 20px;
+}
+
+
+article p:last-of-type {
+   text-align: center;
+}
+
+article p:last-of-type a {
+   text-decoration: none;
+   background: rgb(221,128,160);
+   border: 0px;
+   border-radius: 25px;
+   color: rgb(237, 237, 237);
+   padding: 5px;
+}
+
+/* Aside Styles */
+
+aside {
+   background: rgb(182,207,221);
+   -webkit-flex: 1 1 350px;
+   flex: 1 1 350px;
+   border-bottom: 1px solid black;         
+}
+
+aside h1 {
+   background: rgba(80,102,91,0.32);   
+   font-size: 1.5em;
+   text-align: center;
+   padding: 10px 0px;
+}
+
+aside p {
+   margin: 10px 20px;
+}
+
+
+/* Vertical Navigation Link Styles */
+
+nav.vertical {
+   -webkit-flex: 1 1 300px;
+   flex: 1 1 300px;  
+   background: rgba(177,221,199,1.00);
+   border-bottom: 1px solid black;        
+}
+
+nav.vertical ul {
+   -moz-column-width: 260px;
+   -webkit-column-width: 260px;
+    column-width: 260px;
+
+   -moz-column-gap: 15px;
+   -webkit-column-gap: 15px;
+    column-gap: 15px;
+
+   -moz-column-rule: 1px solid rgb(154, 64, 31);
+   -webkit-column-rule: 1px solid rgb(154, 64, 31);
+    column-rule: 1px solid rgb(154, 64, 31);
+    
+    margin: 10px;
+}  
+
+nav.vertical h1 {
+   background: rgba(80,102,91,0.32);
+   font-size: 1.5em;
+   text-align: center;
+   padding: 10px 0px;   
+}
+
+nav.vertical ul li {
+   font-size: 0.8em;
+   text-decoration: none;
+   margin-bottom: 1.2em;
+}
+
+/* Footer Styles */
+
+footer {
+   background: rgba(126,166,192,1.00);
+   color: rgba(233,236,219,1.00);
+   display: block;
+   text-align: center;
+   font-size: 0.9em;
+   font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+   padding: 5px 0px;
+   width: 100%;
+}
+
+/* ===============================
+   Mobile Styles: 0px to 520px 
+   ===============================
+*/
+@media only screen and (max-width: 520px) {
+   a#navicon {
+      display: block;
+   }
+     
+   a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+   }
+}
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 520px
+   =============================================
+*/
+@media only screen and (min-width: 521px) {
+
+   body > header #navicon {
+      display: none;
+   }
+      
+   body > header #wsimg {
+      float: right;
+      width: 200px;
+   }
+   
+   body > header #logoimg {
+      width: 100%;
+      clear: right;
+   }
+   
+   header > nav {
+      float: none;
+   }
+   
+   header > nav ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end;
+      margin: 5px 10px 0px 0px;
+   }
+   
+   header > nav ul li {
+      -webkit-flex: 0 1 auto;
+      flex: 0 1 auto;
+      font-size: 0.95em;
+   }   
+   
+   header > h1 {
+      font-size: 2em;
+      margin: 10px 0px 10px 0px;
+   }
+ 
+}
+

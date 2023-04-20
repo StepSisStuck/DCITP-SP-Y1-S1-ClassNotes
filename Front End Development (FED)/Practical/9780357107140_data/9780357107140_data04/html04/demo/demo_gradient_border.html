@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Demo
+
+   Gradient Border Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_gradient_border.html
+   Supporting files: demo.gif, demo2.gif
+-->
+   <title>Gradient Border Demo</title>
+   <style>
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul, table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+/* use for all demo pages */
+
+body {
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+}
+      
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   height: 100%;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   width: 100%;
+   margin: 0px 10px;
+}
+      
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 545px 10px 10px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+ul, ol {
+   list-style: none;
+}
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+nav a {
+   text-decoration: none;
+}
+
+/* 
+      styles specific to this demo 
+*/
+
+div#demo_container {
+   position: relative;
+}
+      
+div#demo_container h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-weight: normal;
+   font-size: 1.4em;
+   margin-top: 15px;
+   padding-bottom: 10px;
+}
+
+div#borderOptions {
+   line-height: 2em;
+}
+
+select {
+   font-size: 18px;
+   color: rgb(101, 101, 101);
+}
+   
+label {
+   display: inline-block;
+   width: 120px;
+   margin-left: 10px;
+}
+
+select {
+   font-size: 1em;
+   color: rgb(101, 101, 101);
+   cursor: pointer;
+}
+
+label#bImgL {
+   position: relative;
+   top: -140px;
+}
+
+textarea { 
+   width: 230px;
+   height: 150px;
+   font-size: 1em;
+   color: rgb(101, 101, 101);
+}
+
+input { 
+   width: 150px;
+}
+
+div#outcome {
+   position: absolute;
+   top: 0px;
+   left: 370px;
+   font-size: 22px;
+}
+
+div#framepreview {
+   position: absolute;
+   top: 0px;
+   left: 30px;
+   width: 400px;
+   height: 400px;
+   outline: 1px dashed rgb(51, 51, 51);
+}
+
+
+
+div#framepreview img {
+   display: block;
+   position: absolute;
+}
+
+img#topline {
+   width: 100%;
+   height: 2px;
+}
+
+img#rightline {
+   width: 2px;
+   height: 100%;
+}
+
+img#bottomline {
+   width: 100%;
+   height: 2px;
+}
+
+img#leftline {
+   width: 2px;
+   height: 100%;
+}
+
+div#outcomebox {
+   background: rgba(222,147,81,0.5) padding-box;
+   width: 400px;
+   height: 400px;
+   border: 30px transparent solid;
+   position: absolute;
+   top: 420px;
+   left: 30px;
+}
+
+div#outcomebox img {
+   display: block;
+   position: absolute;
+}
+
+img#topline2 {
+   width: 400px;
+   height: 2px;
+   top: 0px;
+   left: -30px;
+}
+
+img#rightline2 {
+   width: 2px;
+   height: 400px;
+   top: -30px;
+   right: 0px
+}
+
+img#bottomline2 {
+   width: 400px;
+   height: 2px;
+   bottom: 0px;
+   left: -30px;
+}
+
+img#leftline2 {
+   width: 2px;
+   height: 400px;
+   left: 0px;
+   top: -30px;
+}
+
+
+div#outcomecode {
+   position: absolute;
+   top: 820px;
+   left: 30px;
+   width: 600px;
+   font-size: 0.7em;
+   font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+}
+
+
+
+      
+</style>
+<script>
+   window.onload = function() {
+
+      var bImg = document.getElementById("bImg");
+      var bSlice = document.getElementById("bSlice");
+      var bFill = document.getElementById("bFill");
+      var hRepeat = document.getElementById("hRepeat");
+      var vRepeat = document.getElementById("vRepeat");   
+
+      var outcomebox = document.getElementById("outcomebox");
+
+      bSlice.onchange = placeLines;  
+      bImg.onchange = placeLines; 
+      document.getElementById("showgrid").onclick = hideShowLines;
+      bFill.onclick = placeLines;
+      hRepeat.onchange = placeLines;
+      vRepeat.onchange = placeLines;   
+
+      placeLines();
+
+      function placeLines() {
+
+         hideShowLines();
+
+         var framePreview = document.getElementById("framepreview");
+         framePreview.style.background = bImg.value;
+
+         var topline = document.getElementById("topline");
+         var rightline = document.getElementById("rightline");
+         var bottomline = document.getElementById("bottomline");
+         var leftline = document.getElementById("leftline");
+
+         topline.style.top = Math.round(bSlice.value/100*400) + "px";
+         rightline.style.right = Math.round(bSlice.value/100*400) + "px";
+         bottomline.style.bottom = Math.round(bSlice.value/100*400) + "px";
+         leftline.style.left = Math.round(bSlice.value/100*400) + "px"; 
+
+         var fillValue = bFill.checked ? " fill " : "";
+
+         var hrepeatType = hRepeat[hRepeat.selectedIndex].value;
+         var vrepeatType = hRepeat[vRepeat.selectedIndex].value;      
+
+
+         outcomebox. style.borderImage = bImg.value + " " + bSlice.value + "% " + fillValue + " " + hrepeatType + " " + vrepeatType;      
+         document.getElementById("imgFile").textContent = bImg.value;
+         document.getElementById("sliceVal").textContent = bSlice.value + "%";   
+         document.getElementById("fillVal").textContent = fillValue;
+         document.getElementById("hrepeatVal").textContent = hrepeatType; 
+         document.getElementById("vrepeatVal").textContent = vrepeatType;      
+
+
+      }
+
+      function hideShowLines() {
+         if (document.getElementById("showgrid").checked === true) { 
+            document.getElementById("topline2").src = "redot.png";
+            document.getElementById("rightline2").src = "redot.png";
+            document.getElementById("bottomline2").src = "redot.png";
+            document.getElementById("leftline2").src = "redot.png";           
+         } else { 
+            document.getElementById("topline2").src = "nodot.png";
+            document.getElementById("rightline2").src = "nodot.png";
+            document.getElementById("bottomline2").src = "nodot.png";
+            document.getElementById("leftline2").src = "nodot.png";        
+         }
+      }
+   };
+
+   
+</script>
+</head>
+
+<body>
+   <div id="demo_page">
+      <div id="demo_intro">
+         <table>
+            <tr>
+               <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+               <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                  Tutorial 4 </td>
+            </tr>
+         </table>
+         <h2 id="h2heading"> Gradient Borders </h2>
+         <div id="para">
+            <p>You can create a border from a gradient function by first defining the gradient function
+               as either a linear or radial gradient. The gradient can then be sliced using the
+               <code>border-image</code> style in the same way that an image file can be sliced to
+               generate the sides and corners of the border image.
+            <p>Use the web form below to enter a gradient function and define the border image slices.
+               The first preview box shows a preview of the gradient. The second preview box shows
+               how slices from that gradient will be applied to create a gradient border.
+            </p>
+         </div>
+      </div>
+      <div id="demo_container">
+         <h1>Gradient Borders</h1>
+         <div id="borderOptions">
+            <label for="showGrid">Show Grid</label><input type="checkbox" checked id="showgrid" style="width: 20px"/><br />
+            <label id="bImgL" for="bImg">gradient</label> 
+            <textarea id="bImg">linear-gradient(red, green, blue)</textarea> <br />
+            <label for="bSlice">image-slice</label> 0% <input id="bSlice" type="range" min="0" max="50" step="1" value="25" />50% <br />
+            <label for="bFill">image-fill</label><input type="checkbox" id="bFill" style="width: 20px" /><br />
+            <label for="hRepeat">horiz repeat</label>
+            <select id="hRepeat">
+               <option value="" selected></option>
+               <option value="stretch">stretch</option>
+               <option value="repeat">repeat</option>
+               <option value="round">round</option>
+               <option value="space">space</option>
+            </select><br />
+            <label for="vRepeat">vert repeat</label>
+            <select id="vRepeat">
+               <option value="" selected></option>
+               <option value="stretch">stretch</option>
+               <option value="repeat">repeat</option>
+               <option value="round">round</option>
+               <option value="space">space</option>
+            </select>      
+         </div>
+
+
+         <div id="outcome">
+           <div id="framepreview">
+               <img src="redot.png" id="topline" />
+               <img src="redot.png" id="rightline" />
+               <img src="redot.png" id="bottomline" />
+               <img src="redot.png" id="leftline" />
+            </div>
+
+            <div id="outcomebox">
+               <img src="redot.png" id="topline2" />
+               <img src="redot.png" id="rightline2" />
+               <img src="redot.png" id="bottomline2" />
+               <img src="redot.png" id="leftline2" />        
+            </div>      
+            <div id="outcomecode" style="line-height: 1.5em">
+               border: 30px transparent solid;<br />
+               border-image: (<span id="imgFile">linear-gradient(red, green, blue)</span>)  <span id="sliceVal">20</span> <span id="fillVal"></span> <span id="hrepeatVal"></span> <span id="vrepeatVal"></span>; 
+            </div>
+         </div> 
+      </div>
+      <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+         Cengage Learning: Boston, 2019. </div>
+   </div>
+</body>
+</html>

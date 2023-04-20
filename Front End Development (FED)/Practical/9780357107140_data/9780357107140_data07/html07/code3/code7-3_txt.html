@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 7
+   Coding Challenge 3
+   
+   Author:  
+   Date:    
+   Filename: code7-3.html
+
+   regular expression pattern for credit card numbers:
+
+   ^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$
+
+   regular expression pattern for CSC numbers:
+
+   ^\d{3}$
+   -->
+   <meta charset="utf-8">
+   <title>Coding Challenge 7-3</title>
+</head>
+<body>
+   <h1>Payment Information</h1>
+   <form action="process-card.php" method="post">
+      <fieldset>
+         <select id="ccard" name="creditcard">
+         </select>
+         
+         <label for="cname">Name</label>
+         <input id="cname" name="cardname" type="text" />
+         
+         <label for="cnum">Card Number</label>
+         <input type="text" name="cardnumber" id="cnum" />
+         
+         <select name="cardmonth" id="month">        
+         </select>  
+         
+         <select name="cardyear" id="year">        
+         </select>
+         
+         <label for="csc">CSC</label>
+         <input type="text" id="csc" name="cardcsc" />
+         <input type="submit" value="Submit Payment" />      
+      </fieldset>
+   </form>
+</body>
+</html>

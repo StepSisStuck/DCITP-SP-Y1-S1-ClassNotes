@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+@font-face {
+   font-family: Helsinki;
+   src: url('paa_helsinki.woff') format('woff'),
+        url('paa_helsinki.ttf') format('truetype');
+}
+
+/*
+     New Perspectives on HTML and CSS, 8th Edition
+   Tutorial 8
+   Case Problem 2
+
+   Pixal Arts and Entertainment Layout Style Sheet
+  
+   Filename: paa_styles.css
+
+   The Helsinki font is freeware created by Vic Fieger and downloaded from
+   https://www.fontsquirrel.com/license/helsinki
+*/
+
+/* HTML and Body styles */
+
+html {
+   background: linear-gradient(to bottom, white, rgb(12, 48, 84) 40%, black 70%);
+   color: rgb(251, 255, 86);
+   font-family: Verdana, Geneva, sans-serif;
+}
+
+body {    
+   margin: 0px auto;
+   width: 900px;
+}
+
+/* Header Styles */
+
+
+
+
+/* Company Links list styles */
+
+nav#topLinks {
+   height: 80px;
+   border-bottom: 2px solid rgb(254, 232, 125);    
+}
+
+nav#topLinks img#companyLogo {
+   float: right;
+   height: 100%;
+}
+
+
+nav#topLinks > ul {
+   float: right;
+}
+
+nav#topLinks > ul > li {
+   float: right;
+   font-size: 1em; 
+   vertical-align: bottom;
+   padding:50px 10px 0px;
+}
+
+nav#topLinks > ul > li > a {
+   color: rgb(32, 170, 204);
+   display: block;
+   width: 100%;
+}
+
+nav#topLinks > ul > li > a:hover {
+   color: rgb(254, 232, 125);
+   text-shadow: 0px 0px 5px rgb(12, 48, 84),
+                0px 0px 15px rgb(12, 48, 84);
+}
+
+/* Game Logo Styles */
+
+header img#gameLogo {
+   clear: right;
+   display: block;
+   width: 100%;
+}
+
+
+/* Game Links list styles */
+
+nav#gameLinks {
+   -webkit-flex: 1 1 441px;
+   flex: 1 1 441px;
+   margin-top: -20px;
+   margin-bottom: 30px;
+}
+
+nav#gameLinks > ul {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row nowrap;
+   flex-flow: row nowrap;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+nav#gameLinks > ul > li {
+   font-size: 1.5em; 
+   line-height: 1.5em; 
+   height: 1.5em;
+   padding: 0px 10px;
+}
+
+nav#gameLinks > ul > li > a {
+   display: block;
+   font-family: Helsinki, 'Comic Sans MS', cursive;
+   width: 100%;
+}
+
+/* Section Styles */
+
+body > section {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap; 
+}
+
+
+/* Aside Styles */
+
+aside {  
+   -webkit-flex: 0 0 200px;
+   flex: 0 0 200px;
+   padding-top: 80px;       
+}
+
+aside p {
+   font-size: 0.9em;
+   margin: 0px 8px 26px;
+   text-align: center;
+}
+
+
+/* Gamebox Styles */
+
+div#gameBox {
+   background:url(paa_forest.png) center center/ cover no-repeat;
+   border-radius: 75px; 
+   height: 420px; 
+   position: relative; 
+   overflow: hidden;
+   -webkit-flex: 0 0 700px;
+   flex: 0 0 700px;   
+}
+
+/* Article Styles */
+
+article {
+   -webkit-flex: 0 0 700px;
+   flex: 0 0 700px;
+   margin-top: 15px;
+   -moz-column-count: 3;
+   -webkit-column-count: 3;
+   column-count: 3;
+   padding-top: 10px;
+   margin-left: 200px;
+   
+   -moz-column-gap: 20px;
+   -webkit-column-gap: 20px;
+   column-gap: 20px; 
+
+   -moz-column-rule: 1px solid rgb(255, 194, 99);
+   -webkit-column-rule: 1px solid rgb(255, 194, 99);
+   column-rule: 1px solid rgb(255, 194, 99);  
+}
+
+article p {
+   margin: 0px 0px 20px;
+   font-size: 0.9em;
+}
+
+article a {
+   color: rgb(255, 194, 99);
+}
+
+/* Footer Styles */
+
+footer {
+   border-top: 1px solid rgb(255, 194, 99);   
+   display: block;
+   width: 100%;
+   margin-top: 20px;
+   padding: 5px 0px 10px;
+   text-align: center;
+}
+
+footer a {
+   color: rgb(255, 194, 99);
+   text-decoration: none;
+}
+
+
+

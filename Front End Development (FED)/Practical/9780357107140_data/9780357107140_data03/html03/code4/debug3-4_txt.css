@@ -1,0 +1,74 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 3
+   Coding Challenge 4
+
+   Author: 
+   Date:   
+   
+   Filename: debug3-4.css
+
+*/
+
+/* Page Body Styles */
+body {
+   width: 90%;
+   min: 600px;
+   max: 1024px;
+   margin: 10px auto;
+   
+   display: grid;
+   grid-columns-template: 200px auto 200px; 
+   grid-areas-template: "header header header";
+                        "link link link";
+                        "nav main side";
+                        "nav coupons side";
+                        "footer footer footer";
+   grid-gap: 10px/25px;
+}
+
+/* Grid Areas */
+header {grid-area: headers;}
+nav.horizontal {grid-area: links;}
+nav.vertical {grid-area: navs;}
+article {grid-area: main;}
+section {grid-area: coupons}
+aside {grid-area: sides;}
+footer {grid-area: footers;}
+
+/* Image Styles */
+header img {
+   display: block;
+   width: 100%;
+}
+
+/* Horizontal Navigation List Styles */
+nav.horizontal ul {
+   width: 100%;
+   display: grid;
+   grid-columns-template: repeat 5/1fr;
+}
+nav.horizontal ul li {
+   display: block;
+   text-align: center;
+}
+
+/* Coupon Section Styles */
+section {
+   display: grid;
+   grid-columns-template: repeat 3/1fr;
+   grid-gap: 20px;
+}
+
+section div {
+   outline: 4px dashed gray;
+   position: relative;
+}
+
+section div p.last-of-type {
+   position: absolute;
+   bottom: 1px;
+   right: 5px;
+}

@@ -1,0 +1,55 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 7
+   Coding Challenge 4
+   
+   Filename: code7-4_forms.css
+
+*/
+
+h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-size: 1.7em;
+   letter-spacing: 0.1em;
+   margin-left: 20px;
+}
+form {
+   padding: 0px 0px 10px 20px;   
+}
+
+fieldset {
+   width: 300px;
+   padding: 15px;
+}
+
+label {
+   display: block;
+   margin: 0px 0px 10px 0px;
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   
+}
+
+select {
+   display: block;
+   margin: 15px 0px;
+   font-size: 1em;
+}
+
+select option {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-size: 0.9em;
+}
+
+input {
+   display: block;
+   margin: 0px 0px 10px 0px;
+}
+
+
+input[type="submit"] {
+   font-size: 1.2em;
+   display: inline-block;
+   margin: 10px auto
+}

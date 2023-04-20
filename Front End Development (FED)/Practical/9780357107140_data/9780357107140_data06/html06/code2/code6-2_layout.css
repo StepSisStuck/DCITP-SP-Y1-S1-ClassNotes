@@ -1,0 +1,24 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 6
+   Coding Challenge 2
+   
+   Filename: code6-2_layout.css
+
+*/
+html {
+   width: 100%;
+}
+
+body {
+   width: 95%;
+   margin: 0px auto;
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-size: 0.8em;
+}
+
+h1 {
+   font-size: 2em;
+}

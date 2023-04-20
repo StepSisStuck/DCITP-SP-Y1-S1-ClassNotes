@@ -1,0 +1,31 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 2
+   Coding Challenge 2
+   
+   Filename: code2-2_layout.css
+
+*/
+
+body {
+   width: 900px;
+}
+
+nav {
+   width: 250px;
+   float: left;
+   height: 400px;
+   background-color: rgb(39,94,48);
+   padding: 10px; 
+}
+
+article {
+   width: 500px;
+   float: left;
+}
+
+article {
+   margin-left: 40px;
+}

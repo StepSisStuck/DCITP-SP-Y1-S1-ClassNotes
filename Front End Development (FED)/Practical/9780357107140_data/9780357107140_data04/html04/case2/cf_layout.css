@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Case Problem 2
+   
+   Layout Styles for the Chupacabra Music Fest
+   
+   Filename: cf_layout.css
+
+*/
+
+/* HTML and Body Styles */
+
+html {
+	height: 100%;
+	font-size: 12px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+
+body {
+	margin: 0px auto;
+	width: 1200px;
+	min-height: 100%;
+}
+
+/* Header Styles */
+
+body > header > img {
+	display: block;
+	width: 100%;
+}
+
+/* Header Navigation Styles */
+
+body > header > nav.horizontal li {
+	display: block;
+	float: left;
+	position: relative;
+	width: 14.2857%;
+}
+
+body > header > nav.horizontal li a {
+	background-color: rgb(51, 51, 51);
+	color: rgb(195,183,15);
+	display: block;
+	height: 3em;
+	line-height: 3em;
+	font-size: 1.2em;
+	letter-spacing: 0.15em;
+	text-align: center;
+	width: 100%;
+}
+
+body > header > nav.horizontal li:nth-of-type(7) {
+	width: 7.1428%;
+}
+
+body > header > nav.horizontal li:nth-of-type(8) {
+	width: 7.1428%;
+}
+
+body > header > nav.horizontal li a img {
+	display: block;
+	margin: auto;
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	width: 60%;
+}
+
+/* Left Section Styles */
+
+section#left {
+	clear: both;
+	float: left;
+	margin-top: 20px;
+	width: 240px;
+}
+
+section#center {
+	float: left;
+	width: 720px;
+}
+
+section#right {
+	float: left;
+	margin-top: 20px;
+	width: 240px;
+}
+
+/* Cube Styles */
+
+div#cube_top span {
+	color: rgba(215,202,29,1.00);
+}
+
+div#cube_top p {
+	font-size: 1.5em;
+	line-height: 1.5em;
+	padding: 10px;
+	text-align: center;
+}
+
+div#cube_bottom h1 {
+	position: absolute;
+	bottom: 0px;
+	font-size: 3.5em;
+	font-weight: normal;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+div.cube_face img {
+	display: block;
+	width: 100%;
+}
+
+div#cube_top {
+	background-color: rgba(3, 114, 201, 0.7);
+	color: white;
+}
+
+div#cube_bottom {
+	background-color: rgba(92, 42, 8, 0.7);
+	color: rgb(195, 183, 15);
+}
+
+/* Aside Styles */
+
+section aside {
+	background-color: rgba(255, 255, 255, 0.4);
+	margin: 20px auto 0px auto;
+	width: 80%;
+}
+
+section aside h1 {
+	background-color: rgba(51, 51, 51, 0.6);
+	color: rgb(195, 183, 15);
+	font-size: 1.5em;
+	font-weight: normal;
+	text-align: center;
+}
+
+section aside p {
+	font-size: 1.2em;
+	line-height: 1.2;
+	margin: 10px;
+}
+
+/* Footer Styles */
+
+footer {
+	background-color: rgba(51, 51, 51, 0.7);
+	clear: left;
+	margin-top: 55px;
+	text-align: center;
+}
+
+footer, footer span  a {
+   padding: 10px;
+   color: rgb(191, 191, 191);
+}
+
+footer span a:hover {
+   color: rgb(0, 167, 167);
+   text-decoration: underline;
+}
+
+
+
+

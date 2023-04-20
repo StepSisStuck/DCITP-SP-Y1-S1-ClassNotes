@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Coding Challenge 2
+
+   Author:   
+   Date:     
+   Filename: code8-2_trans.css
+
+*/
+
+
+figure {
+   display: block;
+   width: 150px;
+   position: absolute;
+   z-index: 1;
+   cursor: pointer;
+}
+
+figure img {
+   display: block;
+   width: 100%;
+   filter: drop-shadow(3px 3px 10px black) grayscale(1);
+   width: 150px;
+}
+
+figure figcaption {
+   font-size: 0px;
+   text-align: center;
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+#fig1 {
+   top: 0px; left: 0px;
+   transform: rotate(-30deg)
+}
+
+#fig2 {
+   top: 0px; left: 180px;
+   transform: rotate(30deg)
+}
+
+#fig3 {
+   top: 0px; left: 350px;
+   transform: rotate(-40deg)
+}
+
+#fig4 {
+   top: 200px; left: 0px;
+   transform: rotate(20deg)
+}
+
+#fig5 {
+   top: 220px; left: 200px;
+   transform: rotate(-30deg)
+}
+
+#fig6 {
+   top: 210px; left: 400px;
+   transform: rotate(30deg)
+}
+

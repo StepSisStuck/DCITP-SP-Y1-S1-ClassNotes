@@ -1,0 +1,73 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 7
+   Coding Challenge 3
+   
+   Filename: code7-3_forms.css
+
+*/
+
+h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-size: 1.7em;
+   letter-spacing: 0.1em;
+   margin-left: 20px;
+}
+form {
+   padding: 0px 0px 10px 20px;   
+}
+
+fieldset {
+   width: 300px;
+   box-shadow: 0px 0px 10px gray, inset 0px 0px 10px green;
+   padding: 15px;
+}
+
+label {
+   display: block;
+   margin: 0px 0px 10px 0px;
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   
+}
+
+select#ccard {
+   width: 180px;
+}
+
+select option {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-size: 0.9em;
+}
+
+select#ccard {
+   display: block;
+   font-size: 0.9em;
+   margin: 0px 0px 10px 0px;
+}
+input {
+   display: block;
+   margin: 0px 0px 10px 0px;
+}
+
+select[name='cardmonth'] {
+   display: inline-block;
+   margin-right: 10px;
+}
+
+label[for='csc'] {
+   display: inline-blcok;
+   margin-top: 15px;
+}
+
+input#csc {
+   display: inline-block;
+   width: 50px;
+}
+
+input[type="submit"] {
+   font-size: 1.2em;
+   display: block;
+   margin: 10px auto
+}

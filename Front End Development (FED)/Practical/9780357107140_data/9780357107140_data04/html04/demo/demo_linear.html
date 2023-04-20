@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Demo
+
+   Linear Gradient Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_linear.html
+   Supporting files: demo.gif, demo2.gif
+-->
+   <title>Linear Gradient Demo</title>
+   <style>
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul, table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+/* use for all demo pages */
+
+body {
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+}
+      
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   height: 100%;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   width: 100%;
+   margin: 0px 10px;
+}
+      
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 145px 10px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+ul, ol {
+   list-style: none;
+}
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+nav a {
+   text-decoration: none;
+}
+
+/* 
+      styles specific to this demo 
+*/
+
+div#demo_container {
+   position: relative;
+}
+      
+div#demo_container h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-weight: normal;
+   font-size: 1.4em;
+   margin-top: 15px;
+   padding-bottom: 10px;
+}
+
+label {
+   display: inline-block;
+   width: 140px;
+   margin-left: 10px;
+}
+
+div#boxOptions {
+   width: 440px;
+   line-height: 2em;
+}
+
+div#baseOptions {
+   border-bottom: 1px solid rgb(191, 191, 191);
+}
+
+input.stopValue {
+   width: 190px;
+}
+
+div.stopOption {
+   margin: 5px 0px;
+   padding: 0px;
+   border-bottom: 1px solid rgb(191, 191, 191);
+}
+
+input.removeStop {
+   width: 25px;
+   height: 25px;
+   margin: 10px;
+   font-size: 1em;
+}
+
+select#directionKeyword {
+   font-size: 0.95em;
+   color: rgb(101, 101, 101);
+}
+
+input#directionDegree {
+   width: 150px;
+}
+
+
+label.lAlpha {
+   width: 50px;
+}
+
+input.gAlpha {
+   width: 130px;
+}
+
+div#outcome {
+   position: absolute;
+   top: 10px;
+   left: 460px;
+   font-size: 22px;
+}
+
+
+div#outcomebox {
+   width: 350px;
+   height: 250px;
+   line-height: 3.3em;
+   position: absolute;
+   top: 20px;
+   left: 20px;;
+   background: linear-gradient(white, black);
+   outline: 1px solid gray;
+}
+
+
+
+div#outcomecode {
+   position: absolute;
+   top: 280px;
+   left: 20px;
+   width: 1050px;
+   font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+   font-size: 0.75em;
+}
+
+
+span#gRule {
+   display: block;
+   width: 350px;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+}
+
+
+span#gVal {
+   display: block;
+   width: 650px;
+   position: absolute;
+   top: -5px;
+   left: 270px;
+   line-height: 1.4;
+}
+
+
+</style>
+<script>
+   window.onload = function() {
+
+      var keywordOpt = document.getElementById("keywordOpt");
+      var degreeOpt = document.getElementById("degreeOpt");
+      var directionKeyword = document.getElementById("directionKeyword");
+      var directionDegree = document.getElementById("directionDegree");
+
+      var outcomebox = document.getElementById("outcomebox");
+
+      keywordOpt.onclick = applyGrad;
+      degreeOpt.onclick = applyGrad;
+      directionKeyword.onchange = applyGrad;
+      directionDegree.onchange = applyGrad;
+
+
+      var stopOptions = document.getElementsByClassName("stopOption");
+      stopOptions[0].children[1].onchange = applyGrad;
+      stopOptions[0].children[3].onchange = applyGrad;
+      stopOptions[0].children[6].onchange = applyGrad; 
+      stopOptions[0].children[8].onclick = removeStop;
+      stopOptions[1].children[1].onchange = applyGrad;
+      stopOptions[1].children[3].onchange = applyGrad;
+      stopOptions[1].children[6].onchange = applyGrad; 
+      stopOptions[1].children[8].onclick = removeStop; 
+      stopOptions[2].children[1].onchange = applyGrad;
+      stopOptions[2].children[3].onchange = applyGrad;
+      stopOptions[2].children[6].onchange = applyGrad; 
+      stopOptions[2].children[8].onclick = removeStop;   
+
+      applyGrad();
+
+
+      document.getElementById("addStop").onclick = function() {
+         var newOption = stopOptions[stopOptions.length-1].cloneNode(true);
+         newOption.children[1].onchange = applyGrad;
+         newOption.children[3].onchange = applyGrad;
+         newOption.children[6].onchange = applyGrad; 
+         newOption.children[8].onclick = removeStop;      
+         stopOptions[0].parentElement.insertBefore(newOption, stopOptions[0].parentElement.lastElementChild);
+      };
+
+      function applyGrad(e) {
+         var gradString = "linear-gradient(";
+         var gradString2 = "";
+
+         if (e !== undefined) {
+            if (e.target.id === "directionKeyword") {
+               keywordOpt.checked = true;
+            }
+            if (e.target.id === "directionDegree") {
+               degreeOpt.checked = true;
+            }
+         }
+
+         if (keywordOpt.checked) {
+            if (directionKeyword.selectedIndex !== 0) {
+               gradString += "to " + directionKeyword.options[directionKeyword.selectedIndex].value + ", ";
+               gradString2 += "to " + directionKeyword.options[directionKeyword.selectedIndex].value + ", <br />";
+            }
+         } else {
+            gradString += directionDegree.value + "deg, ";
+            gradString2 += directionDegree.value + "deg, <br />";
+         }
+
+         for (var i = 0; i < stopOptions.length; i++) {
+            gradString += hexToRGB(stopOptions[i].children[1].value, stopOptions[i].children[3].value); 
+            gradString2 += hexToRGB(stopOptions[i].children[1].value, stopOptions[i].children[3].value);          
+            if (stopOptions[i].children[6].value !== "0") {
+               gradString += " " + stopOptions[i].children[6].value + "%";
+               gradString2 += " " + stopOptions[i].children[6].value + "%";            
+            }       
+            if (i < stopOptions.length-1) {
+               gradString += ", ";
+               gradString2 += ", <br />";            
+            } else {
+               gradString += ")";
+               gradString2 += " );";            
+            } 
+         }
+
+         outcomebox.style.background = gradString;
+         document.getElementById("gVal").innerHTML = gradString2;
+
+      }
+
+      function removeStop(e) {
+         var deadOption = e.target.parentElement;
+         stopOptions[0].parentNode.removeChild(deadOption);
+         applyGrad();
+      }
+
+      function hexToRGB(hexc, alpha){
+       var h = "0123456789ABCDEF";
+       var hex = hexc.toUpperCase();
+       var r = h.indexOf(hex[1])*16+h.indexOf(hex[2]);
+       var g = h.indexOf(hex[3])*16+h.indexOf(hex[4]);
+       var b = h.indexOf(hex[5])*16+h.indexOf(hex[6]);
+       if (alpha==="1") {
+         return "rgb("+r+", "+g+", "+b+")";
+       } else {
+         return "rgba("+r+", "+g+", "+b+","+alpha+")"; 
+       }
+      }   
+   };
+   
+</script>
+</head>
+
+<body>
+   <div id="demo_page">
+      <div id="demo_intro">
+         <table>
+            <tr>
+               <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+               <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                  Tutorial 4 </td>
+            </tr>
+         </table>
+         <h2 id="h2heading"> Linear Gradients </h2>
+         <div id="para">
+            <p>To add a color gradient to a block-level element, apply the following
+               <code>linear-gradient</code> function to the element background:
+            </p>
+            <p><code>linear-gradient(<i>direction, color-stop1, color-stop2, ...</i></code>)</p>
+            <p>where <code><i>direction</i></code> sets the direction of the gradient expressed
+               either as angle or the corner/side to which the gradient is pointing, 
+               <code><i>color-stop1, color-stop2, ...</i></code> are the colors in the gradient along
+               with the locations (stops) where those colors are placed. </p>
+            <p>Use the web form below to generate the code for the <code>linear-gradient</code>
+               function. Use the [+] button to add more color stops. Use the [-] button 
+               to remove color stops.</p>
+         </div>
+      </div>
+      <div id="demo_container">
+         <h1>Linear Gradient Styles</h1>
+         <div id="boxOptions">
+            <div id="baseOptions"> 
+               <label for="keywordOpt">Direction</label><input type="radio" name="dirType" id="keywordOpt" checked />
+               <select id="directionKeyword">
+                  <option value="" selected></option>
+                  <option value="top left">top left</option>            
+                  <option value="top">top</option>
+                  <option value="top right">top right</option>            
+                  <option value="right">right</option>
+                  <option value="bottom right">bottom right</option>            
+                  <option value="bottom">bottom</option>
+                  <option value="bottom left">bottom left</option>             
+                  <option value="left">left</option>  
+               </select><br />
+               <label></label><input type="radio" name="dirType" id="degreeOpt" />     
+               0deg <input id="directionDegree" type="range" min="0" max="360" step="1" value="0" /> 360deg<br />             
+            </div>
+
+            <div class="stopOption">
+               <label>Gradient Color</label> <input class="gColor" type="color" value="#FF0000" />
+               <label class="lAlpha">Alpha</label> 0 <input class="gAlpha" type="range" min="0" max="1" step="0.01" value="1" /> 1<br />
+               <label>Color Stop</label> 0% <input class="stopValue" type="range" min="0" max="100" step="1" value="0" /> 100%<br />         
+               <input type="button" class="removeStop" value="-" />
+            </div>
+            <div class="stopOption">
+               <label>Gradient Color</label> <input class="gColor" type="color" value="#FFFF00" />
+               <label class="lAlpha">Alpha</label> 0 <input class="gAlpha" type="range" min="0" max="1" step="0.01" value="1" /> 1<br />
+               <label>Color Stop</label> 0% <input class="stopValue" type="range" min="0" max="100" step="1" value="0" /> 100%<br />         
+               <input type="button" class="removeStop" value="-" />
+            </div>  
+           <div class="stopOption">
+               <label>Gradient Color</label> <input class="gColor" type="color" value="#0000FF" />
+               <label class="lAlpha">Alpha</label> 0 <input class="gAlpha" type="range" min="0" max="1" step="0.01" value="1" /> 1<br />
+               <label>Color Stop</label> 0% <input class="stopValue" type="range" min="0" max="100" step="1" value="0" /> 100%<br />         
+               <input type="button" class="removeStop" value="-" />
+            </div> 
+
+            <div id="addBox">
+               <input type="button" id="addStop" value="+" />      
+            </div>
+         </div>
+
+
+         <div id="outcome">
+            <div id="outcomebox"></div>      
+            <div id="outcomecode">
+               <span id="jRule">justify content: </span><span id="jVal">stretch</span>; <br />
+               <span id="aRule">align-items: </span><span id="aVal">stretch</span>;
+            </div>
+         </div>   
+
+      </div>
+      <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+         Cengage Learning: Boston, 2019. </div>
+   </div>
+</body>
+</html>

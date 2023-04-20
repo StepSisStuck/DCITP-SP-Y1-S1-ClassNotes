@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Demo
+
+   CSS Border Images Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_frame.html
+   Supporting files: demo.gif, demo2.gif, frame.png, nodot.png, redot.png
+-->
+   <title>CSS Border Image Demo</title>
+   <style>
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul, table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+/* use for all demo pages */
+html {
+
+}
+body {
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+   height: 100%;
+}
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   height: 100%;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   width: 100%;
+   margin: 0px 10px;
+}
+      
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 15px 10px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+ul, ol {
+   list-style: none;
+}
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+nav a {
+   text-decoration: none;
+}
+
+/* 
+      styles specific to this demo 
+*/
+
+div#demo_container {
+   position: relative;
+}
+      
+div#demo_container h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-weight: normal;
+   font-size: 1.4em;
+   margin-top: 15px;
+   padding-bottom: 10px;
+}
+
+div#borderOptions {
+   line-height: 2em;
+}
+
+label {
+   display: inline-block;
+   width: 120px;
+   margin-left: 10px;
+}
+
+select {
+   font-size: 1em;
+   color: rgb(101, 101, 101);
+   cursor: pointer;
+}
+
+input { 
+   width: 150px;
+}
+
+div#outcome {
+   position: relative;
+   font-size: 22px;
+   height: 500px;
+   width: 900px;
+   margin-left: 30px;
+   margin-top: 20px;
+}
+
+div#framepreview {
+   position: absolute;
+   top: 0px;
+   left: 30px;
+   width: auto;
+   height: auto;
+   outline: 1px dashed rgb(51, 51, 51);
+}
+
+
+
+div#framepreview img {
+   display: block;
+   position: absolute;
+}
+
+div#frameImg {
+   top: 0px;
+   left: 0px;
+   z-index: 1;
+   display: none;
+}
+
+img#topline {
+   width: 100%;
+   height: 2px;
+}
+
+img#rightline {
+   width: 2px;
+   height: 100%;
+}
+
+img#bottomline {
+   width: 100%;
+   height: 2px;
+}
+
+img#leftline {
+   width: 2px;
+   height: 100%;
+}
+
+div#outcomebox {
+   background: rgba(222,147,81,0.5) padding-box;
+   width: 400px;
+   height: 400px;
+   border: 30px transparent solid;
+   position: absolute;
+   top: 0px;
+   left: 500px;
+}
+
+div#outcomebox img {
+   display: block;
+   position: absolute;
+}
+
+img#topline2 {
+   width: 400px;
+   height: 2px;
+   top: 0px;
+   left: -30px;
+}
+
+img#rightline2 {
+   width: 2px;
+   height: 400px;
+   top: -30px;
+   right: 0px
+}
+
+img#bottomline2 {
+   width: 400px;
+   height: 2px;
+   bottom: 0px;
+   left: -30px;
+}
+
+img#leftline2 {
+   width: 2px;
+   height: 400px;
+   left: 0px;
+   top: -30px;
+}
+
+
+div#outcomecode {
+   position: absolute;
+   top: 410px;
+   left: 20px;
+   width: 600px;
+   font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+   font-size: 0.8em;
+}
+
+      
+</style>
+<script>
+   window.onload = function() {
+
+      var topSlice = document.getElementById("topSlice");
+      var rightSlice = document.getElementById("rightSlice");
+      var bottomSlice = document.getElementById("bottomSlice");
+      var leftSlice = document.getElementById("leftSlice");
+
+      var bFill = document.getElementById("bFill");
+
+      var hRepeat = document.getElementById("hRepeat");
+      var vRepeat = document.getElementById("vRepeat"); 
+
+      var outcomebox = document.getElementById("outcomebox");
+
+      topSlice.onchange = placeLines;
+      rightSlice.onchange = placeLines;
+      bottomSlice.onchange = placeLines;
+      leftSlice.onchange = placeLines; 
+      bFill.onclick = placeLines;
+      document.getElementById("showgrid").onclick = hideShowLines;
+      hRepeat.onchange = placeLines;
+      vRepeat.onchange = placeLines;
+
+      placeLines();
+
+      function placeLines() {
+
+         hideShowLines();
+
+         var frameImg = document.getElementById("frameImg");
+         var framePreview = document.getElementById("framepreview");
+         frameImg.src = "frame.png";
+
+         var frameWidth = frameImg.width;
+         var frameHeight = frameImg.height;
+         framePreview.style.width = frameWidth + "px";
+         framePreview.style.height = frameHeight + "px";
+
+         var topline = document.getElementById("topline");
+         var rightline = document.getElementById("rightline");
+         var bottomline = document.getElementById("bottomline");
+         var leftline = document.getElementById("leftline");
+
+         topline.style.top = topSlice.value + "px";
+         rightline.style.right = rightSlice.value + "px";
+         bottomline.style.bottom = bottomSlice.value + "px";
+         leftline.style.left = leftSlice.value + "px"; 
+
+         var fillValue = bFill.checked ? " fill " : "";      
+
+         var hrepeatType = hRepeat[hRepeat.selectedIndex].value;
+         var vrepeatType = hRepeat[vRepeat.selectedIndex].value; 
+
+
+         outcomebox. style.borderImage = "url('frame.png') " + topSlice.value + " " + rightSlice.value + " " + bottomSlice.value + " " + leftSlice.value + " " + fillValue + " " + hrepeatType + " " + vrepeatType;
+         
+         document.getElementById("topVal").textContent = topSlice.value;
+         document.getElementById("rightVal").textContent = rightSlice.value;
+         document.getElementById("bottomVal").textContent = bottomSlice.value;
+         document.getElementById("leftVal").textContent = leftSlice.value;  
+         document.getElementById("fillVal").textContent = fillValue;      
+         document.getElementById("hrepeatVal").textContent = hrepeatType; 
+         document.getElementById("vrepeatVal").textContent = vrepeatType;     
+
+
+      }
+
+      function hideShowLines() {
+         if (document.getElementById("showgrid").checked === true) { 
+            document.getElementById("topline2").src = "redot.png";
+            document.getElementById("rightline2").src = "redot.png";
+            document.getElementById("bottomline2").src = "redot.png";
+            document.getElementById("leftline2").src = "redot.png";           
+         } else { 
+            document.getElementById("topline2").src = "nodot.png";
+            document.getElementById("rightline2").src = "nodot.png";
+            document.getElementById("bottomline2").src = "nodot.png";
+            document.getElementById("leftline2").src = "nodot.png";        
+         }
+      }
+   };  
+</script>
+</head>
+
+<body>
+   <div id="demo_page">
+      <div id="demo_intro">
+         <table>
+            <tr>
+               <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+               <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                  Tutorial 4 </td>
+            </tr>
+         </table>
+         <h2 id="h2heading"> Border Image </h2>
+         <div id="para">
+            <p>To use an image file for an element border, apply the following CSS 
+               <code>border-image</code> style:
+            </p>
+            <p><code>border-image: url(<i>url</i>) <i>slice</i> <i>repeat</i> fill;</code></p>
+            <p>where <code><i>url</i></code> is the source of the graphic image, 
+               <code><i>slice</i></code> is the width or height of the slices, <code><i>repeat</i></code>
+               indicates the side slices should be stretched or tiled to fill the border, and <code>fill</code>
+               is an optional attribute that indicates whether to fill in the background with the image
+               fill interior.</p>
+            <p>Use the web form below to generate the CSS code for applying a border image to the preview box.
+               The image file is shown on the left; the border image is shown on the right.</p>
+         </div>
+      </div>
+      <div id="demo_container">      
+      <h1>Border Images</h1>
+      <div id="borderOptions">
+         <label for="showGrid">Show Grid</label><input type="checkbox" checked id="showgrid" /><br />
+         <label for="topSlice">top-slice</label> 0px <input id="topSlice" type="range" min="0" max="200" step="1" value="100" />200px <br />
+         <label for="rightSlice">right-slice</label> 0px <input id="rightSlice" type="range" min="0" max="200" step="1" value="100" />200px <br />
+         <label for="bottomSlice">bottom-slice</label> 0px <input id="bottomSlice" type="range" min="0" max="200" step="1" value="100" />200px <br />
+         <label for="leftSlice">left-slice</label> 0px <input id="leftSlice" type="range" min="0" max="200" step="1" value="100" />200px <br />  
+         <label for="bFill">image-fill</label><input type="checkbox" id="bFill" style="width: 20px" /><br />
+
+         <label for="hRepeat">horiz repeat</label>
+         <select id="hRepeat">
+            <option value="" selected></option>
+            <option value="stretch">stretch</option>
+            <option value="repeat">repeat</option>
+            <option value="round">round</option>
+            <option value="space">space</option>
+         </select><br />
+         <label for="vRepeat">vert repeat</label>
+         <select id="vRepeat">
+            <option value="" selected></option>
+            <option value="stretch">stretch</option>
+            <option value="repeat">repeat</option>
+            <option value="round">round</option>
+            <option value="space">space</option>
+         </select>  
+      </div>
+
+
+      <div id="outcome">
+        <div id="framepreview">
+            <img src="frame.png" id="frameImg" />
+            <img src="redot.png" id="topline" />
+            <img src="redot.png" id="rightline" />
+            <img src="redot.png" id="bottomline" />
+            <img src="redot.png" id="leftline" />
+         </div>
+
+         <div id="outcomebox">
+            <img src="redot.png" id="topline2" />
+            <img src="redot.png" id="rightline2" />
+            <img src="redot.png" id="bottomline2" />
+            <img src="redot.png" id="leftline2" />        
+         </div>      
+         <div id="outcomecode" style="line-height: 1.5em">
+            border: 30px transparent solid;<br />
+            border-image: url(<span id="imgFile">frame2.png</span>)  <span id="topVal">100</span> <span id="rightVal">100</span> <span id="bottomVal">100</span> <span id="leftVal">100</span> <span id="fillVal"></span> <span id="hrepeatVal"></span> <span id="vrepeatVal"></span>; 
+         </div>        
+      </div>
+      <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+         Cengage Learning: Boston, 2019. </div>
+   </div>
+</body>
+</html>

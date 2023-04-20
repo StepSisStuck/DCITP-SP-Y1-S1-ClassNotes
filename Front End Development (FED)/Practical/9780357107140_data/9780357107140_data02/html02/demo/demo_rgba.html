@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 2
+   Demo
+
+   CSS Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_rgba.html
+   Supporting files: demo.gif, demo2.gif, cross.png
+-->
+   <title>RGBA Demo</title>
+   <style>
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul, table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+/* use for all demo pages */
+html {
+   height: 100%;
+}
+body {
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+   height: 100%;
+}
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   height: 100%;
+   min-height: 100%;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   top: 10px;
+   left: 0px;
+   width: 100%;
+   margin: 0px 10px
+}
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 25px 10px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+ul, ol {
+   list-style: none;
+}
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+nav a {
+   text-decoration: none;
+}
+/* styles specific to this demo */
+
+label {
+   display: inline-block;
+   width: 90px;
+}
+
+div#redContainer, div#greenContainer, div#blueContainer {
+   margin-bottom: 10px;
+}
+
+div#redContainer {
+   margin-top: 50px;
+}
+div#redBox {
+   display: inline-block;
+   background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1)); 
+   padding: 3px;
+   width: 230px;
+   border: 1px solid rgb(191, 191, 191);
+}
+
+div#greenBox {
+   display: inline-block;
+   background: linear-gradient(to right, rgba(0, 255, 0, 0), rgba(0, 255, 0, 1)); 
+   padding: 3px;
+   width: 230px;
+   border: 1px solid rgb(191, 191, 191);
+}
+
+div#blueBox {
+   display: inline-block;
+   background: linear-gradient(to right, rgba(0, 0, 255, 0), rgba(0, 0, 255, 1)); 
+   padding: 3px;
+   width: 230px;
+   border: 1px solid rgb(191, 191, 191);
+}
+
+div#alphaBox {
+   display: inline-block;
+   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(209, 141, 82,1)), url(cross.png); 
+   padding: 3px;
+   width: 230px;
+   border: 1px solid rgb(191, 191, 191);
+}
+
+input {
+   display: inline-block;
+   width: 100%;
+    
+}
+
+input#redValue, input#greenValue, input#blueValue, input#alphaValue {
+   display: none;
+}
+
+div#outcome {
+   position: relative;
+   top: -220px;
+   left: 400px;
+   font-size: 22px;
+   margin-bottom: 200px;
+}
+
+div#backbox {
+   background-color: rgb(255, 0, 0);
+   width: 200px;
+   height: 165px;
+   position: absolute;
+   top: 70px;
+   left: 100px;
+   z-index: 1;
+}
+div#outcomebox {
+   position: absolute;
+   width: 220px;
+   height: 220px;
+   border: 1px solid rgb(191, 191, 191);
+   background-color:  rgba(255, 0, 0, 0.5);
+   margin-bottom: 10px;
+   margin-top: 40px;
+   z-index: 2;
+}
+
+div#outcomecode {
+   line-height: 1.4em;
+   position: absolute;
+   top: 270px;
+   width: 200px;
+}
+</style>
+   <script>
+window.onload = function() {
+   var redValue, greenValue, blueValue, alphaValue; 
+   var redSlide = document.getElementById("redSlider");
+   var greenSlide = document.getElementById("greenSlider");
+   var blueSlide = document.getElementById("blueSlider");
+   var alphaSlide = document.getElementById("alphaSlider");
+   
+   redSlide.oninput = function() {
+      redValue = parseInt(redSlide.value); 
+      greenValue = parseInt(greenSlide.value);
+      blueValue = parseInt(blueSlide.value); 
+      alphaValue = parseFloat(alphaSlide.value);      
+      
+      showOutcome();
+   };
+   
+   greenSlide.oninput = function() {
+      redValue = parseInt(redSlide.value); 
+      greenValue = parseInt(greenSlide.value);
+      blueValue = parseInt(blueSlide.value); 
+      alphaValue = parseFloat(alphaSlide.value);
+      
+      showOutcome();
+      
+   };    
+
+   blueSlide.oninput = function() {
+      redValue = parseInt(redSlide.value); 
+      greenValue = parseInt(greenSlide.value);
+      blueValue = parseInt(blueSlide.value);  
+      alphaValue = parseFloat(alphaSlide.value);      
+      
+      showOutcome();
+   };   
+   
+   alphaSlide.oninput = function() {
+      redValue = parseInt(redSlide.value); 
+      greenValue = parseInt(greenSlide.value);
+      blueValue = parseInt(blueSlide.value); 
+      alphaValue = parseFloat(alphaSlide.value);      
+      
+      showOutcome();
+   }; 
+   
+   function showOutcome() {
+      document.getElementById("outcomebox").style.backgroundColor = "rgba(" + redValue + "," + greenValue + ", " + blueValue + "," + alphaValue + ")";
+      document.getElementById("outcomecode").innerHTML = document.getElementById("outcomebox").style.backgroundColor;
+   }
+   
+};
+</script>
+</head>
+
+<body>
+   <div id="demo_page">
+      <div id="demo_intro">
+         <table>
+            <tr>
+               <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+               <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                  Tutorial 2 </td>
+            </tr>
+         </table>
+         <h2 id="h2heading">RGBA Color Values </h2>
+         <div id="para">
+            <p>This page demonstrates how to define colors using RGBA color values. Drag the red, green,
+               blue, and Alpha sliders shown below to set the RGBA color value. A preview of the color value
+               is shown in the box at the right. The CSS color value itself is shown below the box.</p>
+         </div>
+      </div>
+      <div id="demo_container">
+         <div id="redContainer">
+            <label>Red</label>
+            <div id="redBox">
+               <input type="range" min="0" max="255" step="1" id="redSlider" value="255" />
+            </div>
+         </div>
+         <div id="greenContainer">
+            <label>Green</label>
+            <div id="greenBox">
+               <input type="range" min="0" max="255" step="1" id="greenSlider" value="0" />
+            </div>
+         </div>
+         <div id="blueContainer">
+            <label>Blue</label>
+            <div id="blueBox">
+               <input type="range" min="0" max="255" step="1" id="blueSlider" value="0" />
+            </div>
+         </div>
+         <div id="alphaContainer">
+            <label>Alpha</label>
+            <div id="alphaBox">
+               <input type="range" min="0" max="1" step="0.01" id="alphaSlider" value="0.5" />
+            </div>
+         </div>
+         <div id="outcome">
+            <div id="backbox"></div>
+            <div id="outcomebox"></div>
+            <div id="outcomecode">rgba(255, 0, 0, 0.5)</div>
+         </div>
+         <input type="text" id="redValue" value="255" hidden />
+         <input type="text" id="greenValue" value="0" hidden/>
+         <input type="text" id="blueValue" value="0" hidden/>
+         <input type="text" id="alphaValue" value="0.5" hidden />
+      </div>
+      <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+         Cengage Learning: Boston, 2019. </div>
+   </div>
+</body>
+</html>

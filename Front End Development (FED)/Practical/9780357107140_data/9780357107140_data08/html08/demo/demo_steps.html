@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Demo
+
+   CSS Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_rgb.html
+   Supporting files: demo.gif, demo2.gif
+-->
+   <title>Transition Steps Demo</title>
+   
+   <style id="hoverRules">
+	   div#startingBox+div#track canvas {
+		   left: 0px;
+		   border-radius: 0%;
+		   filter:  invert(0%) drop-shadow(30px 10px 10px rgb(51, 51, 51));
+		   transition-property: left border-radius filter;
+		   transition-duration: 2s;	
+	   }	
+		div#startingBox+div#track canvas#stepCanvas1b {
+			transition-timing-function: step-start;
+		}
+		div#startingBox+div#track canvas#stepCanvas2b {
+			transition-timing-function: step-end;
+		}
+		div#startingBox+div#track canvas#stepCanvas3b {
+			transition-timing-function: steps(4, start);
+		}	
+		div#startingBox+div#track canvas#stepCanvas4b {
+			transition-timing-function: steps(4, end);
+		}		   
+	   div#startingBox:hover+div#track canvas {
+		   left: 668px;
+		   border-radius: 50%;
+		   filter: invert(100%) drop-shadow(-30px -10px 10px rgb(51, 51, 51)); 
+	   }	   
+   </style>	
+   
+   <style>
+
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+   display: block;
+}
+
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, nav a, ol, p, section, span, ul,
+table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;  
+}
+
+      
+/* use for all demo pages */
+html {
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   height: 100%;
+   font-size: 18px;
+   color: rgb(101, 101, 101);
+}
+
+body {
+   padding: 20px 0px 0px 20px;
+   position: relative;   
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+   height: 100%;
+}
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   padding-left: 15px;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   top: 10px;
+   left: 0px;
+   width: 100%;
+   margin: 0px 10px
+}
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 25px 10px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+      
+
+
+
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+
+ul, ol {
+   list-style: none;
+}
+
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+
+nav a {
+   text-decoration: none;
+}
+
+      
+/* styles specific to this demo */
+
+html {
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   height: 100%;
+   font-size: 18px;
+   color: rgb(101, 101, 101);
+}
+
+body {
+   padding: 20px 0px 0px 20px;
+   position: relative;
+}
+
+h1 {
+   font-weight: normal;
+   font-size: 2.4em;
+   margin-top: 5px;
+   margin-left: 0px;
+   padding-bottom: 10px;
+}
+
+
+label {
+   display: inline-block;
+   width: 70px;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+
+
+h2 {
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 1.1em;
+}
+
+
+
+input[type="number"] {
+	width: 45px;
+	margin-left: 10px;
+	text-align: right;
+}
+
+#demo_container table {
+	width: 500px;
+	border-collapse: collapse;
+	border: 5px outset rgb(121, 121, 121);
+	box-shadow: 5px 5px 15px rgb(101, 101, 101);
+}
+
+#demo_container table tr:first-of-type th {
+	background-color: rgb(121, 121, 121);
+	color: rgb(251, 251, 251);
+	padding: 5px 0px;
+}
+
+#demo_container table th {
+	font-weight: normal;
+}
+
+#demo_container table tr th:last-of-type {
+	vertical-align: bottom;
+}
+
+
+#demo_container table tbody tr:nth-of-type(even) {
+	background-color: rgb(255, 230, 230)
+}
+
+#demo_container table tbody tr:nth-of-type(odd) {
+	background-color: rgb(255, 255, 230)
+}
+
+#demo_container table img {
+	width: 50px;
+}
+
+#demo_container table tr td:first-of-type {
+	width: 110px;
+	padding-top: 10px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#demo_container table tr td:last-of-type {
+	padding-top: 10px;
+	vertical-align: top;
+	padding-left: 20px;
+}
+
+#demo_container table td canvas {
+	background-color: rgb(229, 229, 229);
+	width: 50px;
+	height: 50px;
+}
+
+input.bInput {
+	text-align: right;
+	font-size: 0.65em;
+	margin: 0px 3px 0px 0px;
+	display: inline-block;
+	width: 45px;
+	color: rgb(51, 51, 51);
+}
+
+
+div#outcome {
+   margin-top: 30px;
+   font-size: 22px;
+}
+
+div#outcome div#outcomebox:hover+h3+div#transCSS span#transCode {
+	color: red;
+	background-color: hsla(54,88%,52%,0.26);
+}
+
+div#outcomebox {
+	width: 800px;
+	position: relative;
+	top: 0px; left: 0px;
+	border: 1px solid rgb(101, 101, 101);
+	height: 324px;
+    cursor: pointer;
+	background: url(graph.png);	
+	background-position: 142px 68px;
+}
+
+div#outcomebox div#startingBox {
+	width: 70px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 323px;
+	background-color: red;
+	box-shadow: 0px 0px 35px black inset;
+	color: white;
+}
+
+div#startingBox h4 {
+	text-align: center;
+	height: 70px;
+	width: 430px;
+	line-height: 70px;
+	transform-origin: top left;
+	letter-spacing: 0.8em;
+	font-size: 1.4em;
+	text-shadow: 3px 3px 6px black;
+	transform: rotate(270deg) translate(-373px, 0px);
+
+	cursor: pointer;
+}
+
+div#track {
+	position: relative;
+	width: 830px;
+	left: 70px;
+	height: 240px;
+
+}
+
+div#track canvas {
+	display: block;
+	position: absolute;
+	left: 0px;
+	width: 60px;
+	height: 60px;
+	box-shadow: 5px 5px 15px rgb(155, 0, 0);
+	background-color: rgb(229, 229, 229);	
+}
+
+div#track canvas#stepCanvas1b {
+	top: 20px;
+}
+
+
+div#track canvas#stepCanvas2b {
+	top: 90px;
+}
+
+div#track canvas#stepCanvas3b {
+	top: 160px;
+}
+
+div#track canvas#stepCanvas4b {
+	top: 230px;
+}
+
+
+h3 {
+	width: 900px;
+	font-weight: normal;
+	font-size: 0.9em;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-style: italic;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+div#outcomebox div#transobject {
+
+
+   	position: absolute;
+   	top: 0px;
+   	color: rgb(0, 255, 0);
+	border: 3px solid rgb(101, 101, 101);
+
+}
+
+
+
+
+
+
+div#outcomecode {
+	line-height: 1.2em;
+	color: red;
+}
+
+div#transCSS {
+	margin-left: 125px;
+	font-size: 0.85em;
+	line-height: 0.8em;
+	color: red;
+}
+      
+
+</style>
+   
+
+   
+<script>
+window.onload = function() {
+	var c1 = document.getElementById("stepCanvas1");
+	var c2 = document.getElementById("stepCanvas2");
+	var c3 = document.getElementById("stepCanvas3");	
+	var c4 = document.getElementById("stepCanvas4");	
+	var ctx1 = c1.getContext("2d");
+	var ctx2 = c2.getContext("2d");	
+	var ctx3 = c3.getContext("2d");
+	var ctx4 = c4.getContext("2d");		
+	var c1b = document.getElementById("stepCanvas1b");
+	var c2b = document.getElementById("stepCanvas2b");
+	var c3b = document.getElementById("stepCanvas3b");	
+	var c4b = document.getElementById("stepCanvas4b");	
+	var ctx1b = c1b.getContext("2d");
+	var ctx2b = c2b.getContext("2d");	
+	var ctx3b = c3b.getContext("2d");
+	var ctx4b = c4b.getContext("2d");		
+	
+	drawSteps(c1, ctx1, 1, "start", 50);
+	drawSteps(c1b, ctx1b, 1, "start", 60);
+	drawSteps(c2, ctx2, 1, "end", 50);
+	drawSteps(c2b, ctx2b, 1, "end", 60);	
+	drawSteps(c3, ctx3, 4, "start", 50);
+	drawSteps(c3b, ctx3b, 4, "start", 60);
+	drawSteps(c4, ctx4, 4, "end", 50);
+	drawSteps(c4b, ctx4b, 4, "end", 60);		
+	
+	document.getElementById("stepCount3").onchange = function(e) {
+		drawSteps(c3, ctx3, e.target.value*1, "start", 50);
+		drawSteps(c3b, ctx3b, e.target.value*1, "start", 60);
+		document.getElementById("cubicCode3").textContent = "steps(" + e.target.value + ", start)";
+		var stepRule = document.styleSheets[0].cssRules[3];
+		stepRule.style.transitionTimingFunction = "steps("+e.target.value+", start)";	
+	};
+	document.getElementById("stepCount4").onchange = function(e) {
+		drawSteps(c4, ctx4, e.target.value*1, "end", 50);
+		drawSteps(c4b, ctx4b, e.target.value*1, "end", 60);
+		document.getElementById("cubicCode4").textContent = "steps(" + e.target.value + ", end)";
+		var stepRule = document.styleSheets[0].cssRules[4];
+		stepRule.style.transitionTimingFunction = "steps("+e.target.value+", end)";		
+	};	
+	
+	document.getElementById("duration").onchange = function(e) {
+		var initRule = document.styleSheets[0].cssRules[0];
+		initRule.style.transitionDuration = e.target.value + "s";		
+	
+		document.getElementById("Code1").textContent = "left border-radius filter " + e.target.value + "s";
+		document.getElementById("Code2").textContent = "left border-radius filter " + e.target.value + "s";
+		document.getElementById("Code3").textContent = "left border-radius filter " + e.target.value + "s";
+		document.getElementById("Code4").textContent = "left border-radius filter " + e.target.value + "s";		
+	};	
+
+	function drawSteps(c, ctx, n, type, w) {
+		ctx.clearRect(0, 0, c.width, c.height);				
+		var gap = (w-20)/n;
+		var xPos = 10;
+		var yPos = w-10;
+		ctx.lineWidth = 1.3;
+		ctx.beginPath();
+		ctx.moveTo(xPos, yPos);
+		for (var i=1; i<= n; i++) {
+			if (type === "start") {
+				xPos=xPos;
+				yPos -= gap;
+				ctx.lineTo(xPos, yPos);
+				ctx.stroke();
+				xPos += gap;
+				yPos = yPos;
+				ctx.lineTo(xPos, yPos);
+				ctx.stroke();			
+			} else {
+				xPos += gap;
+				yPos = yPos;
+				ctx.lineTo(xPos, yPos);
+				ctx.stroke();				
+				xPos=xPos;
+				yPos -= gap;
+				ctx.lineTo(xPos, yPos);
+				ctx.stroke();				
+			}
+		}		
+	}
+/*	
+	function drawBCurve(x1val, y1val, x2val, y2val) {
+		ctx.clearRect(0, 0, c.width, c.height);		
+		ctx.beginPath();
+		ctx.moveTo(10, 40);
+		ctx.bezierCurveTo(10+x1val*30, 40-y1val*30, 10+x2val*30, 40-y2val*30, 40, 10);
+		ctx.lineWidth = 1.3;
+		ctx.stroke();	
+		
+		ctx2.clearRect(0, 0, c2.width, c2.height);		
+		ctx2.beginPath();
+		ctx2.moveTo(10, 50);
+		ctx2.bezierCurveTo(10+x1val*40, 50-y1val*40, 10+x2val*40, 50-y2val*40, 50, 10);
+		ctx2.lineWidth = 1.3;
+		ctx2.stroke();	
+		
+		var BRule = document.styleSheets[0].cssRules[6];
+		BRule.style.transitionTimingFunction = "cubic-bezier("+x1.value+","+y1.value+","+x2.value+","+y2.value+")";
+		document.getElementById("cubicCode").textContent = "cubic-bezier("+x1.value+", "+y1.value+", "+x2.value+", "+y2.value+")";
+	}
+*/
+	
+};
+</script>   
+</head>
+
+<body>
+      <div id="demo_page">
+         <div id="demo_intro">
+            <table>
+               <tr>
+                  <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+                  <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                     Tutorial 8 </td>
+               </tr>
+            </table>
+            <h2 id="h2heading">Transition Steps </h2>
+            <div id="para">
+               <p>This page demonstrates how to apply transitions in discrete steps. Enter the number of steps
+                  in the steps() function on the web form and then move your mouse pointer over the transition box.
+                  The transition items will move from the start state to the end state in discrete steps rather than
+                  continuously.
+               </p>
+            </div>
+         </div>
+         <div id="demo_container">
+            <h1>Step Transitions</h1>
+            <div id="transitionOptions">
+               <div id="initial">
+                  <h2>Set Duration</h2>
+                  <label>duration: </label> <input id="duration" type="number" value="2" /> seconds   		   
+               </div>
+               <div id="time">
+                  <h2>Timing Options</h2>
+                  <table>
+                     <tr>
+                        <th>Step Graph</th>
+                        <th>Transition Timing Function</th>
+                     </tr>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <canvas id="stepCanvas1" width="50" height="50"></canvas><br />
+                              step-start
+                           </td>
+                           <td>
+                              Transition stays in the end state throughout the duration
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <canvas id="stepCanvas2" width="50" height="50"></canvas><br />
+                              step-end
+                           </td>
+                           <td>Transition stays in the initial state throughout the duration
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <canvas id="stepCanvas3" width="50" height="50"></canvas><br />
+                              steps(n, start)
+                           </td>
+                           <td>
+                              steps(<input type="number" class="bInput" id="stepCount3" value="6" min="1" max="10" step="1" />, start)<br />
+                              Breaks the transition in <em>n</em> discrete step(s) with the first step occuring at the start of the duration
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <canvas id="stepCanvas4" width="50" height="50"></canvas><br />
+                              steps(n, end)
+                           </td>
+                           <td>
+                              steps(<input type="number" class="bInput" id="stepCount4" value="6" min="1" max="10" step="1" />, end)<br />
+                              Breaks the transition in <em>n</em> discrete steps with the last step occuring at the end of the duration
+                           </td>
+                        </tr>				   				   
+                     </tbody>
+                  </table>		   
+               </div>		   
+            </div>
+
+
+            <div id="outcome">
+               <div id="outcomebox">
+                  <div id="startingBox">
+                     <h4>START</h4>
+                  </div>
+                  <div id="track">
+                     <canvas id="stepCanvas1b" width="60" height="60"></canvas>
+                     <canvas id="stepCanvas2b" width="60" height="60"></canvas>
+                     <canvas id="stepCanvas3b" width="60" height="60"></canvas>
+                     <canvas id="stepCanvas4b" width="60" height="60"></canvas>			   
+                  </div>
+               </div>
+               <h3>Hover the Mouse Pointer over the Starting Box to Start the Transition</h3>
+
+               <div id="transCSS">
+                  div#track canvas#one {transition: <span id="Code1">left border-radius filter 2s </span> step-start;}<br /><br />
+                  div#track canvas#two {transition: <span id="Code2">left border-radius filter 2s </span> step-end;}<br /><br />
+                  div#track canvas#three {transition: <span id="Code3">left border-radius filter 2s </span> <span id="cubicCode3">steps(6, start)</span>;}<br /><br />
+                  div#track canvas#four {transition: <span id="Code4">left border-radius filter 2s </span> <span id="cubicCode4">steps(6, end)</span>;}		   
+               </div>    
+            </div>   
+         </div>
+         <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+            Cengage Learning: Boston, 2019. </div>
+      </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 7
+   Coding Challenge 2
+   
+   Filename: code7-2_forms.css
+
+*/
+
+h1 {
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   margin-left: 25px;
+}
+
+ol {
+   line-height: 1.5em;
+}
+
+
+input {
+   display: inline-block;
+   margin-right: 15px;
+}
+
+div#newRow {
+   margin-left: 25px;
+}
+
+input[type="range"] {
+   display: inline-block;
+   margin: 5px 10px;
+   width: 175px;
+}
+
+textarea {
+   width: 400px;
+   height: 100px;
+   display: block;
+   margin: 10px 0px 10px 20px;
+   padding: 3px;
+}

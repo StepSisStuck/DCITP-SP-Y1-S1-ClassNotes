@@ -1,0 +1,30 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Coding Challenge 3
+   
+   Filename: code8-3_styles.css
+
+*/
+
+html {
+   background-color: white;
+}
+
+body {
+   width: 960px;
+   padding: 20px;
+   margin: 3px auto;
+   background-color: white;
+   position: relative;
+}
+
+h1 {
+   font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+   color: white;
+   text-shadow: 0px 0px 2px black, 0px 0px 20px black;
+   font-size: 4em;
+   text-align: center;
+}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Demo
+
+   3D View Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_3dview.html
+   Supporting files: demo.gif, demo2.gif, rubens.png
+-->
+   <title>3D View Demo</title>
+   <style>
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul, table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+/* use for all demo pages */
+
+body {
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+}
+      
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   height: 100%;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   width: 100%;
+   margin: 0px 10px;
+}
+      
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 345px 10px 50px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+ul, ol {
+   list-style: none;
+}
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+nav a {
+   text-decoration: none;
+}
+
+/* 
+      styles specific to this demo 
+*/
+
+div#demo_container {
+   position: relative;
+}
+      
+div#demo_container h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-weight: normal;
+   font-size: 1.4em;
+   margin-top: 15px;
+   padding-bottom: 10px;
+}
+
+div#3dOptions {
+   line-height: 2em;
+   z-index: 1;
+   width: 300px;
+   background-color: rgba(255, 255, 255, 0.8);
+   border-right: 1px solid rgb(155, 155, 155);
+}
+
+label {
+	display: inline-block;
+	width: 150px;
+	margin-right: 5px;
+}
+
+
+div#outcome {
+	position: absolute;
+	top: 120px;
+	left: 500px;
+	width: 300px;
+	height: 300px;
+	perspective: 1200px;
+	perspective-origin: center;	
+}
+
+#cube {
+	position: relative;
+	left: 0px; top: 0px;
+	transform-style: preserve-3d;
+	width: 300px; 
+	height: 300px;
+	transform: rotateX(-24deg) rotateY(-40deg) rotateZ(0deg);
+}
+
+#cube figure {
+	display: block;
+	position: absolute;
+
+}
+
+#cube figure.face {
+	width: 300px;
+	height: 300px;
+	border: 2px solid red;
+	backface-visibility: visible;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+#cube figure.axis {
+	width: 150px; 
+	height: 150px; 	
+}
+
+#cube img {
+	display: none;
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	filter: opacity(0.85);
+}
+
+#cube figure span {
+	display: block;
+	font-size: 2.5em;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	text-shadow: 1px 1px 1px red;
+	width: 50px;
+	text-align: center;
+	vertical-align: middle;
+	height: 30px;
+	margin: 130px 125px;
+	background: rgba(255, 255, 255, 0.35);
+}
+		
+/* Face Transforms */		
+#cube figure.front { 
+	transform: rotateY(0deg) translateZ(150px);
+}
+#cube figure.back {
+	transform: rotateY(180deg) translateZ(150px);
+}
+#cube figure.right {
+	transform: rotateY(90deg) translateZ(150px);
+}
+#cube figure.left {
+	transform: rotateY(-90deg) translateZ(150px);
+}
+#cube figure.top {
+	transform: rotateX( 90deg) translateZ(150px);
+}
+#cube .bottom {
+	transform: rotateX(-90deg) translateZ(150px);
+}	
+
+/* Axis Transforms */
+
+#cube figure.xaxis {
+	transform:  rotateX(-90deg) translateY(-75px) translateZ(75px); 
+	border-right: 3px solid black; 
+	border-bottom: 3px solid black;
+}
+#cube .yaxis {
+	transform: rotateY(-90deg) translateZ(-75px) translateX(-75px); 
+	border-right: 3px solid black; 
+	border-bottom: 3px solid black;
+}		
+#cube .zaxis  {
+	transform: rotateX(0deg) translateX(150px) translateY(150px); 
+	border-left: 3px solid black; 
+	border-top: 3px solid black;
+}
+
+</style>
+<script>
+   window.onload = function() {
+      var xdeg = document.getElementById("xdeg");
+      var ydeg = document.getElementById("ydeg");
+      var zdeg = document.getElementById("zdeg");
+      var quarter3 = document.getElementById("quarter3");
+      var topview = document.getElementById("topview");
+      var sideview = document.getElementById("sideview");
+      var frontview = document.getElementById("frontview");
+      var labels = document.getElementById("labels");
+      var axes = document.getElementById("axes");
+      var box = document.getElementById("box");
+      var tbox = document.getElementById("tbox");
+      var figure = document.getElementById("figure");	
+      var cube = document.getElementById("cube");
+      var axisLabels = document.getElementsByTagName("span");
+      var faces = document.getElementsByClassName("face");
+      var axisLines = document.getElementsByClassName("axis");
+      var figure3d = document.getElementById("figure3d");	
+      var outcome = document.getElementById("outcome");	
+      var perspective = document.getElementById("perspective");		
+
+
+      xdeg.onchange = rotateIt;
+      ydeg.onchange = rotateIt;
+      zdeg.onchange = rotateIt;	
+
+      function rotateIt() {
+         cube.style.transform = "rotateX("+xdeg.value+"deg) rotateY("+ydeg.value+"deg) rotateZ("+zdeg.value+"deg)";		
+      }
+
+      quarter3.onclick = function() {
+         cube.style.transform = "rotateX(-24deg) rotateY(-40deg) rotateZ(0deg)";
+         xdeg.value = -24;
+         ydeg.value = -40;
+         zdeg.value = 0;
+      };
+
+      frontview.onclick = function() {
+         cube.style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
+         xdeg.value = 0;
+         ydeg.value = 0;
+         zdeg.value = 0;		
+      };	
+
+      topview.onclick = function() {
+         cube.style.transform = "rotateX(-90deg) rotateY(0deg) rotateZ(0deg)";
+         xdeg.value = -90;
+         ydeg.value = 0;
+         zdeg.value = 0;		
+      };	
+
+      sideview.onclick = function() {
+         cube.style.transform = "rotateX(0deg) rotateY(-90deg) rotateZ(0deg)";
+         xdeg.value = 0;
+         ydeg.value = -90;
+         zdeg.value = 0;		
+      };	
+
+      labels.onclick = function() {
+         if (labels.checked) {
+            for (var i=0; i<axisLabels.length; i++) {axisLabels[i].style.display = "block";}
+         } else {
+            for (var i=0; i<axisLabels.length; i++) {axisLabels[i].style.display = "none";}			
+         }
+      };
+
+      axes.onclick = function() {
+         if (axes.checked) {
+            for (var i=0; i<axisLines.length; i++) {axisLines[i].style.display = "block";}
+         } else {
+            for (var i=0; i<axisLines.length; i++) {axisLines[i].style.display = "none";}			
+         }
+      };	
+
+      box.onclick = function() {
+         if (box.checked) {
+            for (var i=0; i<faces.length; i++) {
+               faces[i].style.border = "2px solid red";
+               faces[i].style.backgroundColor = "rgba(255, 255, 255, 0.6)";
+            }
+         } else {
+            for (var i=0; i<faces.length; i++) {
+               faces[i].style.border = "2px solid transparent";
+               faces[i].style.backgroundColor = "transparent";
+            }			
+         }
+      };	
+
+      tbox.onclick = function() {
+         if (tbox.checked) {
+            for (var i=0; i<faces.length; i++) {faces[i].style.backgroundColor = "rgba(255, 255, 255, 0.6)";}
+         } else {
+            for (var i=0; i<faces.length; i++) {faces[i].style.backgroundColor = "hsl(120, 30%, 90%)";}			
+         }
+      };
+
+      figure.onclick = function() {
+         if (figure.checked) {
+            figure3d.style.display = "block";
+         } else {
+            figure3d.style.display = "none";	
+         }
+      };	
+
+      perspective.onchange = function() {
+         outcome.style.perspective = perspective.value + "px";
+      }
+
+   };
+   
+</script>
+</head>
+
+<body>
+   <div id="demo_page">
+      <div id="demo_intro">
+         <table>
+            <tr>
+               <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+               <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                  Tutorial 4 </td>
+            </tr>
+         </table>
+         <h2 id="h2heading"> 3D View </h2>
+         <div id="para">
+            <p>Use the web form controls below to view the impact of changing the angle of rotation and
+               setting the perspective size on the appearance of a pseudo 3D cube.
+            </p>
+         </div>
+      </div>
+      <div id="demo_container">
+         <h1>CSS 3D View</h1>
+         <div id="3dOptions">
+            <label for="xdeg">Rotate x-axis</label> -360deg <input type="range" name="xdeg" id="xdeg" value="-24" min="-360" max="360" step="2"/> 360deg<br />
+            <label for="ydeg">Rotate y-axis</label> -360deg <input type="range" name="ydeg" id="ydeg" value="-40" min="-360" max="360" step="2"/> 360deg<br />
+            <label for="zdeg">Rotate z-axis</label> -360deg <input type="range" name="zdeg" id="zdeg" value="0" min="-360" max="360" step="2" /> 360deg<br /><br />
+
+            <input id="quarter3" type="image" src="button1.png" alt="3-quarter view" />
+            <input id="frontview" type="image" src="button2.png" alt="front view" />
+            <input id="topview" type="image" src="button3.png" alt="top view" />	
+            <input id="sideview" type="image" src="button4.png" alt="side view" /><br /><br />
+
+            <label for="labels">Display Axis Labels</label> <input type="checkbox" id="labels" name="labels" checked /><br />
+            <label for="axes">Display Axes</label> <input type="checkbox" id="axes" name="axes" checked /><br />	 
+            <label for="box">Display Box</label> <input type="checkbox" id="box" name="box" checked /><br />
+            <label for="tbox">Transparent Box</label> <input type="checkbox" id="tbox" name="tbox" checked /><br />
+            <label for="figure">Display Figure</label> <input type="checkbox" id="figure" name="figure" /><br /><br />
+
+            <label for="perspective">Set Perspective</label> 300px <input type="range" name="perspective" id="perspective" value="1200" min="300" max="1500" step="100"/> 1500px 
+         </div>
+
+
+         <div id="outcome">
+           <div id="cube">
+              <figure class="face front"><span>z+</span></figure>
+            <figure class="face back"><span>z&ndash;</span></figure>
+            <figure class="face right"><span>x+</span></figure>
+            <figure class="face left"><span>x&ndash;</span></figure>
+            <figure class="face top"><span>y&ndash;</span></figure>
+            <figure class="face bottom"><span>y+</span></figure>
+            <figure class="axis xaxis"></figure>
+            <figure class="axis yaxis"></figure>
+            <figure class="axis zaxis"></figure>
+            <img id="figure3d" src="rubens.png" alt=""/>
+           </div>	   
+         </div>   
+
+      </div>
+      <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+         Cengage Learning: Boston, 2019. </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 8
+   Demo
+
+   CSS Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_rgb.html
+   Supporting files: demo.gif, demo2.gif
+-->
+   <title>Transition Delay Demo</title>
+
+   <style id="hoverRules">
+		div#outcomebox div#transobject {
+			background-color: rgb(255, 255, 128);	
+			left: 0px;
+			width: 50px;	
+			height: 50px;
+			border-radius: 0%;	
+			transition: none;
+		}
+		div#outcomebox:hover div#transobject {
+			background-color: rgb(128, 0,  255);	
+			left: 500px;
+			width: 200px;	
+			height: 200px;
+			border-radius: 50%;	
+		}	   
+   </style>   
+   <style>
+
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+   display: block;
+}
+
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, nav a, ol, p, section, span, ul,
+table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;  
+}
+
+      
+/* use for all demo pages */
+html {
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   height: 100%;
+   font-size: 18px;
+   color: rgb(101, 101, 101);
+}
+
+body {
+   padding: 20px 0px 0px 20px;
+   position: relative;   
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+   height: 100%;
+}
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   padding-left: 15px;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   top: 10px;
+   left: 0px;
+   width: 100%;
+   margin: 0px 10px
+}
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 25px 10px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+      
+
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+
+ul, ol {
+   list-style: none;
+}
+
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+
+nav a {
+   text-decoration: none;
+}
+
+      
+/* styles specific to this demo */
+
+html {
+   font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+   height: 100%;
+   font-size: 18px;
+   color: rgb(101, 101, 101);
+}
+
+body {
+   padding: 20px 0px 0px 20px;
+   position: relative;
+}
+
+h1 {
+   font-weight: normal;
+   font-size: 2.4em;
+   margin-top: 5px;
+   margin-left: 0px;
+   padding-bottom: 30px;
+}
+
+
+label {
+   display: inline-block;
+   width: 200px;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+label.cblal {
+	width: 165px;	
+}
+
+label.cblal2 {
+	width: 10px;	
+}
+
+h2 {
+	font-weight: normal;
+	margin-top: 30px;
+	margin-bottom: 5px;
+	font-size: 1.1em;
+}
+
+div#initial h2 {
+	margin-top: 0px;
+}
+
+input {
+	margin: 2px 0px;
+}
+input[type="number"] {
+	width: 45px;
+	margin-left: 10px;
+	text-align: right;
+}
+
+
+div#trans span:first-of-type {
+	display: inline-block;
+	width: 165px;
+}
+
+div#outcome {
+   margin-top: 30px;
+   font-size: 22px;
+}
+
+div#outcome div#outcomebox:hover+h3+div#transCSS span#transCode {
+	color: red;
+	background-color: hsla(54,88%,52%,0.26);	
+}
+
+span#transCodeLabel {
+	display: inline-block;
+	width: 100px;
+	float: left;
+	margin-left: 20px;
+}
+span#transCode {
+	display: inline-block;
+	width: 450px;
+	float: left;
+}
+div#outcomebox {
+	width: 700px;
+	position: relative;
+	top: 0px; left: 0px;
+	border: 1px solid rgb(101, 101, 101);
+	height: 200px;
+    cursor: pointer;		
+}
+
+h3 {
+	width: 700px;
+	font-weight: normal;
+	font-size: 0.9em;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-style: italic;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+div#outcomebox div#transobject {
+
+
+   	position: absolute;
+   	top: 0px;
+   	color: rgb(0, 255, 0);
+	border: 3px solid rgb(101, 101, 101);
+
+}
+
+
+
+
+
+
+div#outcomecode {
+	line-height: 1.2em;
+}
+
+div#transCSS {
+	margin-left: 75px;
+	font-size: 0.9em;
+	color: red;
+}
+
+</style>   
+   
+<script>
+window.onload = function() {
+   
+	var bgColor1 = document.getElementById("bgColor1");
+	var bgColor2 = document.getElementById("bgColor2");
+	var leftVal1 = document.getElementById("leftVal1");
+	var leftVal2 = document.getElementById("leftVal2");
+	var size1 = document.getElementById("size1");
+	var size2 = document.getElementById("size2");
+	var bRadius1 = document.getElementById("bRadius1");	
+	var bRadius2 = document.getElementById("bRadius2");
+	var noOpt = document.getElementById("noOpt");	
+	var allOpt = document.getElementById("allOpt");
+	var allTime = document.getElementById("allTime");
+	var allTiming = document.getElementById("allTiming");
+	var allDelay = document.getElementById("allDelay");		
+	var selectOpt = document.getElementById("selectOpt");
+	var useBG = document.getElementById("useBG");
+	var bgTime = document.getElementById("bgTime");	
+	var bgTiming = document.getElementById("bgTiming");
+	var bgDelay = document.getElementById("bgDelay");	
+	var useLeft = document.getElementById("useLeft");
+	var leftTime = document.getElementById("leftTime");	
+	var leftTiming = document.getElementById("leftTiming");
+	var leftDelay = document.getElementById("leftDelay");	
+	var useWidthHeight = document.getElementById("useWidthHeight");
+	var whTime = document.getElementById("whTime");
+	var whTiming = document.getElementById("whTiming");
+	var whDelay = document.getElementById("whDelay");	
+	var useBR = document.getElementById("useBR");
+	var brTime = document.getElementById("brTime");
+	var brTiming = document.getElementById("brTiming");
+	var brDelay = document.getElementById("brDelay");	
+
+	var BGCode1 = document.getElementById("BGCode1");
+	var BGCode2 = document.getElementById("BGCode2");
+	var leftCode1 = document.getElementById("leftCode1");
+	var leftCode2 = document.getElementById("leftCode2");
+	var widthCode1 = document.getElementById("widthCode1");
+	var widthCode2 = document.getElementById("widthCode2");
+	var heightCode1 = document.getElementById("heightCode1");
+	var heightCode2 = document.getElementById("heightCode2");	
+	var BRCode1 = document.getElementById("BRCode1");
+	var BRCode2 = document.getElementById("BRCode2");
+	
+	var transCode = document.getElementById("transCode");	
+
+	bgColor1.onchange = changeTrans;
+	bgColor2.onchange = changeTrans;
+	leftVal1.onchange = changeTrans;
+	leftVal2.onchange = changeTrans;	
+	size1.onchange = changeTrans;
+	size2.onchange = changeTrans;	
+	bRadius1.onchange = changeTrans;
+	bRadius2.onchange = changeTrans;	
+	
+	noOpt.onclick = applyTrans;
+	allOpt.onclick = applyTrans;
+	selectOpt.onclick = changeTrans;
+	
+	allTime.onchange = changeTransType3;
+	allTiming.onchange = changeTransType3;	
+	allDelay.onchange = changeTransType3;
+	
+	useBG.onclick = changeTransType;
+	bgTime.onchange = changeTransType2;
+	bgTiming.onchange = changeTransType4;	
+	bgDelay.onchange = changeTransType5;
+	
+	useLeft.onclick = changeTransType;
+	leftTime.onchange = changeTransType2;
+	leftTiming.onchange = changeTransType4;	
+	leftDelay.onchange = changeTransType5;	
+	
+	useWidthHeight.onclick = changeTransType;
+	whTime.onchange = changeTransType2;
+	whTiming.onchange = changeTransType4;	
+	whDelay.onchange = changeTransType5;	
+	
+	useBR.onclick = changeTransType;
+	brTime.onchange = changeTransType2;
+	brTiming.onchange = changeTransType4;	
+	brDelay.onchange = changeTransType5;	
+	
+	function changeTransType() {
+		selectOpt.checked = true;
+		applyTrans();
+	}
+	
+	function changeTransType2(e) {
+		e.target.previousElementSibling.previousElementSibling.checked = true;
+		selectOpt.checked = true;
+		applyTrans();
+	}	
+	
+	function changeTransType3() {
+		allOpt.checked = true;
+		applyTrans();
+	}	
+	
+	function changeTransType4(e) {
+		e.target.previousElementSibling.previousElementSibling.previousElementSibling.checked = true;
+		selectOpt.checked = true;
+		applyTrans();
+	}	
+	
+	function changeTransType5(e) {
+		e.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.checked = true;
+		selectOpt.checked = true;
+		applyTrans();
+	}		
+	
+	function applyTrans() {
+		var transString = "";
+		var transString2 = "";
+		if (noOpt.checked) {
+			transString = "none;";
+			transString2 = "none";			
+		} else if (allOpt.checked) {
+			transString = "all " + allTime.value + "s " + allTiming.options[allTiming.selectedIndex].value + " " + allDelay.value + "s;";
+			transString2 = "all " + allTime.value + "s " + allTiming.options[allTiming.selectedIndex].value + " " + allDelay.value + "s";			
+		} else {
+			if (useWidthHeight.checked) {transString += "width " + whTime.value + "s " + whTiming.options[whTiming.selectedIndex].value + " " + whDelay.value + "s, <br /> height " + whTime.value + "s " + whTiming.options[whTiming.selectedIndex].value + " " + whDelay.value + "s, <br />";}
+			if (useLeft.checked) {transString += "left " + leftTime.value + "s " + leftTiming.options[leftTiming.selectedIndex].value + " " + leftDelay.value + "s, <br />";}			
+			if (useBG.checked) {transString += "background-color " + bgTime.value + "s " + bgTiming.options[bgTiming.selectedIndex].value + " " + bgDelay.value + "s, <br />";}
+			if (useBR.checked) {transString += "border-radius " + brTime.value + "s " + brTiming.options[brTiming.selectedIndex].value + " " + brDelay.value + "s, <br />";}
+
+			if (useWidthHeight.checked) {transString2 += "width " + whTime.value + "s " + whTiming.options[whTiming.selectedIndex].value + " " + whDelay.value + "s, height " + whTime.value + "s " + whTiming.options[whTiming.selectedIndex].value + " " + whDelay.value + "s, ";}
+			if (useLeft.checked) {transString2 += "left " + leftTime.value + "s " + leftTiming.options[leftTiming.selectedIndex].value + " " + leftDelay.value + "s, ";}			
+			if (useBG.checked) {transString2 += "background-color " + bgTime.value + "s " + bgTiming.options[bgTiming.selectedIndex].value + " " + bgDelay.value + "s, ";}		
+			if (useBR.checked) {transString2 += "border-radius " + brTime.value + "s " + brTiming.options[brTiming.selectedIndex].value + " " + brDelay.value + "s, ";}
+			
+			var commaIndex = transString.lastIndexOf(",");
+			var commaIndex2 = transString2.lastIndexOf(",");			
+			transString = transString.substring(0, commaIndex) + ";";
+			transString2 = transString2.substring(0, commaIndex2);			
+		}
+		var initRule = document.styleSheets[0].cssRules[0];
+		initRule.style.transition = transString2;
+		transCode.innerHTML = transString;
+	}
+	
+	function changeTrans() {
+		var initRule = document.styleSheets[0].cssRules[0];
+		var endRule = document.styleSheets[0].cssRules[1];
+		
+		initRule.style.backgroundColor = hexToRGB(bgColor1.value);
+		initRule.style.left = leftVal1.value + "px";
+		initRule.style.width = size1.value + "px";
+		initRule.style.height = size1.value + "px";
+		initRule.style.borderRadius = bRadius1.value + "%";
+		
+		BGCode1.textContent = hexToRGB(bgColor1.value);
+		leftCode1.textContent = leftVal1.value + "px";
+		widthCode1.textContent = size1.value + "px";
+		heightCode1.textContent = size1.value + "px";
+		BRCode1.textContent = bRadius1.value + "%";
+		
+		endRule.style.backgroundColor = hexToRGB(bgColor2.value);
+		endRule.style.left = leftVal2.value + "px";
+		endRule.style.width = size2.value + "px";
+		endRule.style.height = size2.value + "px";
+		endRule.style.borderRadius = bRadius2.value + "%";
+		
+		BGCode2.textContent = hexToRGB(bgColor2.value);
+		leftCode2.textContent = leftVal2.value + "px";
+		widthCode2.textContent = size2.value + "px";
+		heightCode2.textContent = size2.value + "px";
+		BRCode2.textContent = bRadius2.value + "%";
+		
+		applyTrans();
+		
+	}
+		
+   function hexToRGB(hexc){
+    var h = "0123456789ABCDEF";
+    var hex = hexc.toUpperCase();
+    var r = h.indexOf(hex[1])*16+h.indexOf(hex[2]);
+    var g = h.indexOf(hex[3])*16+h.indexOf(hex[4]);
+    var b = h.indexOf(hex[5])*16+h.indexOf(hex[6]);
+      
+	return "rgb("+r+", "+g+", "+b+")";
+   } 		
+
+};
+</script>   
+</head>
+
+<body>
+      <div id="demo_page">
+         <div id="demo_intro">
+            <table>
+               <tr>
+                  <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+                  <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                     Tutorial 8 </td>
+               </tr>
+            </table>
+            <h2 id="h2heading">Delaying a transition </h2>
+            <div id="para">
+               <p>This page demonstrates how to delay a transition in order to apply different styles at different times.
+                  Select the start and ending styles from the form below. To apply styles after different delays, click
+                  the Select styles to transition option button and then enter the duration, timing functions, and delays
+                  for each style. Hover your mouse pointer over the transition box to view the effect of the delayed
+                  transitions.
+               </p>
+            </div>
+         </div>
+         <div id="demo_container">
+            <h1>CSS Transition Delays</h1>
+            <div id="transitionOptions">
+               <div id="initial">
+                  <h2>Initial State</h2>
+                  <label>width/height: </label> 10px <input id="size1" type="range" min="10" value="50" max="200" step="10" /> 200px	<br />	
+                  <label>left: </label> 0px <input id="leftVal1" type="range" min="0" value="0" max="700" step="25" /> 700px <br />		   
+                  <label>background-color: </label> <input id="bgColor1" type="color" value="#FFFF80" /><br />	   
+                  <label>border-radius: </label> 0% <input id="bRadius1" type="range" min="0" value="0" max="50" step="1" /> 50% 		   
+               </div>
+               <div id="final">
+                  <h2>End State</h2>
+                  <label>width/height: </label> 10px <input id="size2" type="range" min="10" value="200" max="200" step="10" /> 200px	<br />
+                  <label>left: </label> 0px <input id="leftVal2" type="range" min="0" value="500" max="700" step="25" /> 700px <br />		   
+                  <label>background-color: </label> <input id="bgColor2" type="color" value="#8000FF" /><br />	   
+                  <label>border-radius: </label> 0% <input id="bRadius2" type="range" min="0" value="50" max="50" step="1" /> 50% 		   
+               </div>		   
+               <div id="trans">
+                  <h2>Transition Styles</h2>
+                  <input type="radio" name="styleListOpt" id="noOpt" checked /> <label class="cblal" for="noOpt">none</label> <br />
+
+                  <input type="radio" name="styleListOpt" id="allOpt" /> <label class="cblal2" for="allOpt">all</label> duration: <input id="allTime" type="number" value="3"  /> s
+                  &nbsp;&nbsp;&nbsp;<select id="allTiming">
+                     <option selected value="ease">ease</option>
+                     <option value="linear">linear</option>
+                     <option value="ease-in">ease-in</option>	
+                     <option value="ease-out">ease-out</option>
+                     <option value="ease-in-out">ease-in-out</option>			   
+                  </select>
+                  delay: <input id="allDelay" type="number" value="0" /> s
+                  <br /><br />
+
+                  <input type="radio" name="styleListOpt" id="selectOpt" /> select styles to transition<br />
+
+                  <label style="width: 0px"></label> <input type="checkbox" id="useWidthHeight" /> <label class="cblal" for="useWidthHeight">width/height</label> duration: <input id="whTime" type="number" value="2" /> s
+                  &nbsp;&nbsp;&nbsp;<select id="whTiming">
+                     <option selected value="ease">ease</option>
+                     <option value="linear">linear</option>
+                     <option value="ease-in">ease-in</option>	
+                     <option value="ease-out">ease-out</option>
+                     <option value="ease-in-out">ease-in-out</option>			   
+                  </select>
+                  delay: <input id="whDelay" type="number" value="0" /> s 
+                  <br />
+
+                  <label style="width: 0px"></label> <input type="checkbox" id="useLeft" /> <label class="cblal" for="useLeft">left</label> duration: <input id="leftTime" type="number" value="2" /> s
+                  &nbsp;&nbsp;&nbsp;<select id="leftTiming">
+                     <option selected value="ease">ease</option>
+                     <option value="linear">linear</option>
+                     <option value="ease-in">ease-in</option>	
+                     <option value="ease-out">ease-out</option>
+                     <option value="ease-in-out">ease-in-out</option>			   
+                  </select>
+                  delay: <input id="leftDelay" type="number" value="2" /> s 
+                  <br />		   
+
+                  <label style="width: 0px"></label> <input type="checkbox" id="useBG" /> <label class="cblal" for="useBG">background-color</label> duration: <input id="bgTime" type="number" value="2" /> s
+                  &nbsp;&nbsp;&nbsp;<select id="bgTiming">
+                     <option selected value="ease">ease</option>
+                     <option value="linear">linear</option>
+                     <option value="ease-in">ease-in</option>	
+                     <option value="ease-out">ease-out</option>
+                     <option value="ease-in-out">ease-in-out</option>			   
+                  </select>
+                  delay: <input id="bgDelay" type="number" value="4" /> s 
+                  <br />
+
+                  <label style="width: 0px"></label> <input type="checkbox" id="useBR" /> <label class="cblal" for="useBR">border-radius</label> duration: <input id="brTime" type="number" value="2" /> s
+                  &nbsp;&nbsp;&nbsp;<select id="brTiming">
+                     <option selected value="ease">ease</option>
+                     <option value="linear">linear</option>
+                     <option value="ease-in">ease-in</option>	
+                     <option value="ease-out">ease-out</option>
+                     <option value="ease-in-out">ease-in-out</option>			   
+                  </select>
+                  delay: <input id="brDelay" type="number" value="6" /> s 
+                  <br />
+               </div>
+            </div>
+
+
+            <div id="outcome">
+               <div id="outcomebox"><div id="transobject"></div></div>
+               <h3>Hover the Mouse Pointer over the Box to View the Transition</h3>
+
+               <div id="transCSS">
+                  div#outcomebox div#transobject {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;width: <span id="widthCode1">50px</span>;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;height: <span id="heightCode1">50px</span>;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;left: <span id="leftCode1">0px</span>;<br />		   
+                  &nbsp;&nbsp;&nbsp;&nbsp;background-color: <span id="BGCode1">rgb(255, 255, 128)</span>;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;border-radius: <span id="BRCode1">0%</span>;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span id="transCodeLabel">transition: </span> <span id="transCode">none;</span>
+                  <br style="clear: left" />
+                  } <br /><br />
+
+                  div#outcomebox:hover div#transobject {<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;width: <span id="widthCode2">200px</span>;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;height: <span id="heightCode2">200px</span>;<br />	
+                  &nbsp;&nbsp;&nbsp;&nbsp;left: <span id="leftCode2">500px</span>;<br />		   
+                  &nbsp;&nbsp;&nbsp;&nbsp;background-color: <span id="BGCode2">rgb(128, 0, 255)</span>;<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;border-radius: <span id="BRCode2">50%</span>;<br />		   
+                  }
+               </div>    
+            </div>   
+  
+         </div>
+         <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+            Cengage Learning: Boston, 2019. </div>
+      </div>
+</body>
+
+</html>

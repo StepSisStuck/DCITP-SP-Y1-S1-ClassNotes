@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 2
+   Demo
+
+   Split Complementary Colors Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_split.html
+   Supporting files: demo.gif, demo2.gif, hue_ring.png, hue_circle.png
+-->
+   <title>Split Complementary Colors Demo</title>
+   <style>
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul, table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+/* use for all demo pages */
+html {
+   height: 100%;
+}
+body {
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+   height: 100%;
+}
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   height: 100%;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   top: 10px;
+   left: 0px;
+   width: 100%;
+   margin: 0px 10px
+}
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 25px 10px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+ul, ol {
+   list-style: none;
+}
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+nav a {
+   text-decoration: none;
+}
+/* 
+      styles specific to this demo 
+*/
+
+label {
+   display: inline-block;
+   width: 90px;
+}
+div#hueBox {
+   position: relative;
+   margin-bottom: 10px;
+}
+img#hueRing {
+   display: block;
+   width: 150px;
+   margin-bottom: 10px;
+   margin-top: 20px;
+   margin-left: 125px;
+}
+img#hueCircle {
+   position: absolute;
+   display: block;
+   top: 66px;
+   left: 190px;
+   transform: translate(0px, -66px);
+}
+img#hueCircle2 {
+   position: absolute;
+   display: block;
+   top: 66px;
+   left: 190px;
+   transform: translate(17.08px, 63.75px);
+}
+img#hueCircle3 {
+   position: absolute;
+   display: block;
+   top: 66px;
+   left: 190px;
+   transform: translate(-17.08px, 63.75px);
+}
+input#hueSlider {
+   display: inline-block;
+   width: 200px;
+}
+div#satBox {
+   display: inline-block;
+   background: linear-gradient(to right, hsl(0, 0%, 50%), hsl(0, 100%, 50%));
+   padding: 3px;
+   width: 200px;
+   border: 1px solid rgb(191, 191, 191);
+}
+input#saturationSlider {
+   display: inline-block;
+   width: 100%;
+}
+div#satContainer {
+   margin-bottom: 10px;
+}
+div#lightBox {
+   display: inline-block;
+   width: 200px;
+   background: linear-gradient(to right, hsl(0, 100%, 0%), hsl(0, 100%, 50%), hsl(0, 100%, 100%));
+   padding: 3px;
+   border: 1px solid rgb(191, 191, 191);
+}
+input#lightSlider {
+   display: inline-block;
+   width: 100%;
+}
+div#outcome {
+   position: relative;
+   top: -300px;
+   left: 400px;
+   font-size: 22px;
+}
+div#outcomebox {
+   width: 170px;
+   height: 220px;
+   border: 1px solid rgb(191, 191, 191);
+   background-color: hsl(0, 100%, 50%);
+   margin-bottom: 10px;
+   margin-top: 40px;
+}
+div#outcomebox2 {
+   width: 170px;
+   height: 220px;
+   border: 1px solid rgb(191, 191, 191);
+   background-color: hsl(165, 100%, 50%);
+   margin-bottom: 10px;
+   margin-top: -230px;
+   margin-left: 170px;
+}
+div#outcomebox3 {
+   width: 170px;
+   height: 220px;
+   border: 1px solid rgb(191, 191, 191);
+   background-color: hsl(195, 100%, 50%);
+   margin-bottom: 10px;
+   margin-top: -230px;
+   margin-left: 340px;
+}
+div#outcomecode {
+   line-height: 1.4em;
+}
+td {
+   width: 169px;
+   font-size: 0.8em;
+}
+</style>
+   <script>
+window.onload = function() {
+   var hueValue, satValue, lightValue; 
+   var hueSlide = document.getElementById("hueSlider");
+   var satSlide = document.getElementById("saturationSlider");
+   var lightSlide = document.getElementById("lightSlider");
+   
+   hueSlide.oninput = function() {
+      hueValue = parseInt(hueSlide.value); 
+      satValue = parseInt(satSlide.value);
+      lightValue = parseInt(lightSlide.value);      
+      
+      document.getElementById("hueValue").value = hueValue;
+      var sineTheta = Math.sin(Math.PI/2-hueValue*Math.PI/180);
+      var cosineTheta = Math.cos(Math.PI/2-hueValue*Math.PI/180); 
+      var sineTheta2 = Math.sin(Math.PI/2-hueValue*Math.PI/180+165*Math.PI/180);
+      var cosineTheta2 = Math.cos(Math.PI/2-hueValue*Math.PI/180+165*Math.PI/180); 
+      var sineTheta3 = Math.sin(Math.PI/2-hueValue*Math.PI/180+195*Math.PI/180);
+      var cosineTheta3 = Math.cos(Math.PI/2-hueValue*Math.PI/180+195*Math.PI/180);      
+      document.getElementById("hueCircle").style.transform = "translate(" + 66*cosineTheta + "px," + -66*sineTheta + "px)";
+      document.getElementById("hueCircle2").style.transform = "translate(" + 66*cosineTheta2 + "px," + -66*sineTheta2 + "px)";   
+      document.getElementById("hueCircle3").style.transform = "translate(" + 66*cosineTheta3 + "px," + -66*sineTheta3 + "px)";       
+
+      
+      document.getElementById("satBox").style.background = "linear-gradient(to right, hsl("+hueValue+",0%,"+lightValue+"%), hsl("+hueValue+",100%,"+lightValue+"%))";  
+      document.getElementById("lightBox").style.background = "linear-gradient(to right, hsl("+hueValue+","+satValue+"%, 0%), hsl("+hueValue+", "+satValue+"%, 50%), hsl("+hueValue+", "+satValue+"%, 100%))"; 
+      showOutcome();
+   };
+   
+   satSlide.oninput = function() {
+      hueValue = parseInt(hueSlide.value); 
+      satValue = parseInt(satSlide.value);
+      lightValue = parseInt(lightSlide.value);      
+      
+      document.getElementById("satValue").value = satValue;      
+      document.getElementById("lightBox").style.background = "linear-gradient(to right, hsl("+hueValue+","+satValue+"%, 0%), hsl("+hueValue+", "+satValue+"%, 50%), hsl("+hueValue+", "+satValue+"%, 100%))";   
+      showOutcome();
+      
+   };    
+
+   lightSlide.oninput = function() {
+      hueValue = parseInt(hueSlide.value); 
+      satValue = parseInt(satSlide.value);
+      lightValue = parseInt(lightSlide.value);      
+      
+      document.getElementById("lightValue").value = lightValue;      
+      document.getElementById("satBox").style.background = "linear-gradient(to right, hsl("+hueValue+",0%,"+lightValue+"%), hsl("+hueValue+",100%,"+lightValue+"%))"; 
+      showOutcome();
+   };   
+   
+   function showOutcome() {
+      document.getElementById("outcomebox").style.backgroundColor = "hsl(" + hueValue + "," + satValue + "%, " + lightValue + "%)";
+      document.getElementById("outcomebox2").style.backgroundColor = "hsl(" + parseInt(hueValue+165) + "," + satValue + "%, " + lightValue + "%)"; 
+      document.getElementById("outcomebox3").style.backgroundColor = "hsl(" + parseInt(hueValue+195) + "," + satValue + "%, " + lightValue + "%)";   
+      
+      document.getElementById("code1").innerHTML = "hsl("+hueValue+", "+satValue+"%, "+lightValue+"%)";
+      document.getElementById("code2").innerHTML = "hsl("+parseInt(hueValue+165)%360+", "+satValue+"%, "+lightValue+"%)";  
+      document.getElementById("code3").innerHTML = "hsl("+parseInt(hueValue+195)%360+", "+satValue+"%, "+lightValue+"%)"; 
+      
+      document.getElementById("code4").innerHTML = document.getElementById("outcomebox").style.backgroundColor;
+      document.getElementById("code5").innerHTML = document.getElementById("outcomebox2").style.backgroundColor; 
+      document.getElementById("code6").innerHTML = document.getElementById("outcomebox3").style.backgroundColor; 
+   }
+   
+};
+</script>
+</head>
+
+<body>
+   <div id="demo_page">
+      <div id="demo_intro">
+         <table>
+            <tr>
+               <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+               <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                  Tutorial 2 </td>
+            </tr>
+         </table>
+         <h2 id="h2heading"> Split Complementary Colors </h2>
+         <div id="para">
+            <p>Split complementary colors consist on one separated by almost 180&deg; from two
+               other colors on the color wheel.
+               Select a color using the controls below and then rotate the hue value on 
+               the color wheel to view different sets of split complementary colors.</p>
+         </div>
+      </div>
+      <div id="demo_container">
+         <div id="hueBox"> <img src="hue_ring.png" alt="" id="hueRing" /> <img src="hue_circle.png" alt="" id="hueCircle" /> <img src="hue_circle.png" alt="" id="hueCircle2" /> <img src="hue_circle.png" alt="" id="hueCircle3" />
+            <label>Hue</label>
+            <input type="range" min="0" max="360" step="1" id="hueSlider" value="0" />
+         </div>
+         <div id="satContainer">
+            <label>Saturation</label>
+            <div id="satBox">
+               <input type="range" min="0" max="100" step="1" id="saturationSlider" value="100" />
+            </div>
+         </div>
+         <div id="lightContainer">
+            <label>Lightness</label>
+            <div id="lightBox">
+               <input type="range" min="0" max="100" step="1" id="lightSlider" value="50" />
+            </div>
+         </div>
+         <div id="outcome">
+            <div id="outcomebox"></div>
+            <div id="outcomebox2"></div>
+            <div id="outcomebox3"></div>
+            <div id="outcomecode">
+               <table>
+                  <tr>
+                     <td id="code1">hsl(0, 100%, 50%)</td>
+                     <td id="code2">hsl(165, 100%, 50%)</td>
+                     <td id="code3">hsl(195, 100%, 50%)</td>
+                  </tr>
+                  <tr>
+                     <td id="code4">rgb(255, 0, 0)</td>
+                     <td id="code5">rgb(255, 255, 191)</td>
+                     <td id="code6">rgb(255, 191, 255)</td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+         <input type="text" id="hueValue" value="0" hidden />
+         <input type="text" id="satValue" value="100" hidden/>
+         <input type="text" id="lightValue" value="50" hidden/>
+      </div>
+      <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+         Cengage Learning: Boston, 2019. </div>
+   </div>
+</body>
+</html>

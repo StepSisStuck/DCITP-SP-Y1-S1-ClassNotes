@@ -1,0 +1,40 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 9
+   Coding Challenge 4
+   
+   Filename: code9-4_styles.css
+
+
+
+*/
+
+body {
+   width: 750px;
+}
+
+h1 {
+   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+   margin: 10px auto;
+   text-align: center;
+}
+
+figure {
+   background-color: tan;
+   width: 750px;
+   padding: 20px;
+}
+figure img {
+   display: block;
+   margin: 10px auto;
+   box-shadow: 3px 3px 15px black;
+}
+
+figure figcaption {
+   text-align: center;
+   font-size: 2em;
+   color: white;
+   text-shadow: 1px 1px 1px black;
+}

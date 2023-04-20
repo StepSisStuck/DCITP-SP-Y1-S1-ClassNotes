@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Coding Challenge 4
+
+   Author: 
+   Date:   
+   
+   Filename: debug4-4.css
+
+*/
+
+
+h1 {
+   text-shadow: rgb(80, 40, 0) 3px -3px 10px
+                rgb(255, 255, 255) -1px -1px 1px;
+}
+
+article {    
+   drop-shadow: 0px 0px 5px 30px rgb(147, 59, 39);
+}
+
+article {
+	border: 20px solid transparent;
+	image-border: linear-gradient(to bottom right, yellow, brown) 35%;
+}
+
+article { 
+   background: radial-gradient(circle 20% 15%, white 5%
+                               rgba(255, 255, 128, 0.8) 10%
+                               rgba(80, 20, 0, 0.8) 75%
+                               rgba(128, 0, 0, 0.8))
+      
+                               url(michelangelo.png) no-repeat bottom right 75%
+                               rgba(252, 250, 247);
+}

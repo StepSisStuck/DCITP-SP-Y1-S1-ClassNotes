@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- 
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 4
+   Demo
+
+   Box Shadow Demo
+   Author: Patrick Carey
+   Date:   2019-03-01
+
+   Filename:         demo_box.html
+   Supporting files: demo.gif, demo2.gif
+-->
+   <title>Box Shadow Demo</title>
+   <style>
+/* Basic styles to be used with all devices and under all conditions */
+
+article, aside, figcaption, figure, footer, header, main, nav, section {
+   display: block;
+}
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, li, main, nav, nav a, ol, p, section, span, ul, table, tr, td, th, col, colgroup {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+/* use for all demo pages */
+html {
+}
+body {
+   background-color: white;
+   background-image: url(demo2.gif);
+   margin: 0px auto;
+   width: 100%;
+}
+#demo_page {
+   background-color: white;
+   border-right: 5px solid rgb(0,0,128);
+   width: 1024px;
+   padding-bottom: 15px;
+   height: 100%;
+   margin: 0px auto;
+}
+* html #demo_page {
+   min-height: 100%;
+   height: 100%;
+}
+#demo_intro {
+   width: 100%;
+   position: relative;
+   margin: 0px 10px
+}
+#demo_intro table {
+   margin: 0px;
+   padding: 0px;
+   border: 0px;
+   width: 97%
+}
+#demo_intro table td {
+   vertical-align: bottom;
+   padding-bottom: 5px
+}
+#h2heading {
+   color: yellow;
+   background-image: url(demo.gif);
+   letter-spacing: 0.75em;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 97%;
+   font-size: 1.5em;
+   margin: 0px;
+   text-align: right;
+   border: 1px solid black;
+   height: 2em;
+   line-height: 2em;
+}
+#para {
+   font-size: 1em;
+   border: 1px solid black;
+   width: 97%;
+   background-color: ivory
+}
+#para p {
+   margin: 8px
+}
+#demo_container {
+   position: relative;
+   width: 100%;
+   margin: 0px 10px;
+}
+      
+#demo_footer {
+   text-align: center;
+   font-size: 0.8em;
+   border-top: 1px solid black;
+   margin: 45px 10px;
+   width: 97%;
+   clear: both;
+}
+span.btitle {
+   font-style: italic
+}
+/* Set the default page element styles */
+
+body {
+   line-height: 1.2em;
+}
+ul, ol {
+   list-style: none;
+}
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+nav a {
+   text-decoration: none;
+}
+
+/* 
+      styles specific to this demo 
+*/
+
+div#demo_container {
+   position: relative;
+}
+      
+div#demo_container h1 {
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+   font-weight: normal;
+   font-size: 1.4em;
+   margin-top: 15px;
+   padding-bottom: 10px;
+}
+
+label {
+   display: inline-block;
+   width: 140px;
+   margin-left: 10px;
+}
+
+div#boxOptions {
+   width: 400px;
+   line-height: 2em;
+}
+
+div#baseOptions {
+   border-bottom: 1px solid rgb(191, 191, 191);
+}
+div.shadowOption {
+   margin: 20px 0px;
+   padding-top: 10px;
+   border-bottom: 1px solid rgb(191, 191, 191);
+}
+
+input.removeShadow {
+   width: 25px;
+   height: 25px;
+   margin: 10px;
+   font-size: 1em;
+}
+
+label.lAlpha {
+   width: 50px;
+}
+
+input.sAlpha, input#bgAlpha {
+   width: 100px;
+}
+
+div#outcome {
+   position: absolute;
+   top: 20px;
+   left: 310px;
+   font-size: 22px;
+}
+
+
+div#outcomebox {
+   width: 250px;
+   height: 250px;
+   line-height: 3.3em;
+   position: absolute;
+   top: 20px;
+   left: 121px;;
+   color: rgb(255, 128, 0);
+   background-color: rgb(255, 255, 155);
+   box-shadow: 3px 3px 6px rgb(0, 0, 0);
+}
+
+
+
+div#outcomecode {
+   position: absolute;
+   top: 270px;
+   left: 130px;
+   width: 1050px;
+   font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+   font-size: 0.7em;
+}
+
+
+span#cRule {
+   display: block;
+   width: 180px;
+   position: absolute;
+   top: 28px;
+   left: 0px;
+}
+
+
+span#sRule {
+   display: block;
+   width: 180px;
+   position: absolute;
+   top: 56px;
+   left: 0px;
+}
+
+
+span#cVal {
+   display: block;
+   width: 350px;
+   position: absolute;
+   top: 28px;
+   left: 176px;
+}
+
+span#shadowVal {
+   display: block;
+   width: 650px;
+   position: absolute;
+   top: 56px;
+   left: 176px;
+   line-height: 1.4;
+}
+
+</style>
+<script>
+   window.onload = function() {
+
+      var bgColor = document.getElementById("bgColor");
+      var bgAlpha = document.getElementById("bgAlpha");   
+      var outcomebox = document.getElementById("outcomebox");
+
+
+
+      bgColor.onchange = function() {
+         outcomebox.style.backgroundColor = hexToRGB(bgColor.value, bgAlpha.value);
+        document.getElementById("cVal").textContent = hexToRGB(bgColor.value, bgAlpha.value)+";";      
+      };
+      bgAlpha.onchange = function() {
+         outcomebox.style.backgroundColor = hexToRGB(bgColor.value, bgAlpha.value);
+        document.getElementById("cVal").textContent = hexToRGB(bgColor.value, bgAlpha.value)+";";      
+      };   
+
+      var shadowOptions = document.getElementsByClassName("shadowOption");
+      shadowOptions[0].children[1].onchange = applyTextShadows;
+      shadowOptions[0].children[3].onchange = applyTextShadows;   
+      shadowOptions[0].children[6].onchange = applyTextShadows;
+      shadowOptions[0].children[9].onchange = applyTextShadows;
+      shadowOptions[0].children[12].onchange = applyTextShadows;
+      shadowOptions[0].children[15].onchange = applyTextShadows;   
+      shadowOptions[0].children[18].onclick = applyTextShadows;   
+      shadowOptions[0].children[20].onclick = removeTextShadow;
+
+      document.getElementById("addShadow").onclick = function() {
+         var newOption = shadowOptions[0].cloneNode(true);
+         newOption.children[1].onchange = applyTextShadows;
+         newOption.children[3].onchange = applyTextShadows;
+         newOption.children[6].onchange = applyTextShadows;      
+         newOption.children[9].onchange = applyTextShadows;
+         newOption.children[12].onchange = applyTextShadows;
+         newOption.children[15].onchange = applyTextShadows;      
+         newOption.children[18].onclick = applyTextShadows;   
+         newOption.children[20].onclick = removeTextShadow;      
+         shadowOptions[0].parentElement.insertBefore(newOption, shadowOptions[0].parentElement.lastElementChild);
+      };
+
+      function applyTextShadows() {
+         var shadowString = "";
+         var shadowString2 = "";
+         for (var i = 0; i < shadowOptions.length; i++) {
+            shadowString += hexToRGB(shadowOptions[i].children[1].value, shadowOptions[i].children[3].value) + " ";
+            shadowString += shadowOptions[i].children[6].value + "px "; 
+            shadowString += shadowOptions[i].children[9].value + "px ";
+            shadowString += shadowOptions[i].children[12].value + "px "; 
+            if (shadowOptions[i].children[15].value !== "0") {
+               shadowString += shadowOptions[i].children[15].value + "px ";
+            } else {
+               shadowString += "";
+            }         
+            if (shadowOptions[i].children[18].checked) {
+               shadowString += "inset ";
+            } else {
+               shadowString += "";
+            }
+
+            shadowString2 += hexToRGB(shadowOptions[i].children[1].value, shadowOptions[i].children[3].value) + " ";
+            shadowString2 += shadowOptions[i].children[6].value + "px "; 
+            shadowString2 += shadowOptions[i].children[9].value + "px ";
+            shadowString2 += shadowOptions[i].children[12].value + "px ";
+            if (shadowOptions[i].children[15].value !== "0") {
+               shadowString2 += shadowOptions[i].children[15].value + "px ";
+            } else {
+               shadowString2 += "";
+            }           
+            if (shadowOptions[i].children[18].checked) {
+               shadowString2 += "inset ";
+            } else {
+               shadowString2 += "";
+            }         
+
+            if (i !== shadowOptions.length - 1) {
+               shadowString += ", ";
+               shadowString2 += ", <br />";
+            }    
+         }
+
+         document.getElementById("outcomebox").style.boxShadow = shadowString;
+         document.getElementById("shadowVal").innerHTML = shadowString2 + ";";
+
+      }
+
+      function removeTextShadow(e) {
+         var deadOption = e.target.parentElement;
+         shadowOptions[0].parentNode.removeChild(deadOption);
+         applyTextShadows();
+      }
+
+      function hexToRGB(hexc, alpha){
+       var h = "0123456789ABCDEF";
+       var hex = hexc.toUpperCase();
+       var r = h.indexOf(hex[1])*16+h.indexOf(hex[2]);
+       var g = h.indexOf(hex[3])*16+h.indexOf(hex[4]);
+       var b = h.indexOf(hex[5])*16+h.indexOf(hex[6]);
+       if (alpha==="1") {
+         return "rgb("+r+", "+g+", "+b+")";
+       } else {
+         return "rgba("+r+", "+g+", "+b+","+alpha+")"; 
+       }
+      }   
+   };
+   
+</script>
+</head>
+
+<body>
+   <div id="demo_page">
+      <div id="demo_intro">
+         <table>
+            <tr>
+               <td style="width: 40%"><img src="cengage.jpg" alt="Course Technology Cengage Learning" /></td>
+               <td style="width: 60%; text-align:right; font-family: Arial, Helvetica, sans-serif; font-size: 1.2em"> New Perspectives on HTML5 and CSS3, 8th Edition<br />
+                  Tutorial 4 </td>
+            </tr>
+         </table>
+         <h2 id="h2heading"> Box Shadows </h2>
+         <div id="para">
+            <p>To add shadows to a block-level element, apply the following
+               <code>box-shadow</code> style:
+            </p>
+            <p><code>box-shadow: <i>color offsetX offsetY blur spread</i> inset</code>;</p>
+            <p>where <code><i>color</i></code> sets the shadow color, <code><i>offsetX</i></code> and
+               <code><i>offsetY</i></code> set the offset of the shadow in the horizontal and vertical
+               directions, <code><i>blur</i></code> defines the blurring of the shadow, and
+               <code><i>spread</i></code> sets the size of the shadow relative to the size of the
+               block element. Add the keyword <code>inset</code> to create an interior shadow rather than
+               an exterior shadow.</p>
+            <p>Use the web form below to generate the CSS code for applying the <code>box-shadow</code>
+               style to the preview box. You can insert multiple shadows by clicking the [+] box.
+               You can remove shadows by clicking the [-] box. The corresponding CSS code appears
+               below the preview box.</p>
+         </div>
+      </div>
+      <div id="demo_container">
+         <h1>Box Shadow Styles</h1>
+         <div id="boxOptions">
+            <div id="baseOptions"> 
+               <label for="bgColor">BG Color</label> <input id="bgColor" type="color" value="#FFFF9B" />
+               <label class="lAlpha">Alpha</label> 0<input id="bgAlpha" type="range" min="0" max="1" step="0.01" value="1" />1
+            </div>
+
+            <div class="shadowOption">
+               <label>Shadow Color</label> <input class="sColor" type="color" value="#000000" />
+               <label class="lAlpha">Alpha</label> 0<input class="sAlpha" type="range" min="0" max="1" step="0.01" value="1" />1<br />
+               <label>offSetX</label> -60px<input class="offsetX" type="range" min="-60" max="60" step="1" value="10" />60px<br />
+               <label>offSetY</label> -60px<input class="offsetY" type="range" min="-60" max="60" step="1" value="10" />60px<br />
+               <label>blur</label> &nbsp;&nbsp;0px<input class="blur" type="range" min="0" max="60" step="1" value="10" />60px<br />
+               <label>spread</label> -60px<input class="spread" type="range" min="-60" max="60" step="1" value="0" />60px<br />         
+               <label for="inset">inset</label> <input type="checkbox" id="inset" /><br />
+               <input type="button" class="removeShadow" value="-" />
+            </div>
+            <div id="addBox">
+               <input type="button" id="addShadow" value="+" />      
+            </div>
+         </div>
+
+
+         <div id="outcome">
+            <div id="outcomebox"></div>      
+            <div id="outcomecode">
+               <span id="cRule">background-color:</span> <span id="cVal">rgb(255, 255, 155);</span>
+               <span id="sRule">box-shadow:</span> <span id="shadowVal">rgb(0, 0, 0) 3px 3px 6px;</span>
+            </div>
+         </div>  
+    
+      </div>
+      <div id="demo_footer"> Carey, P. <span class="btitle">New Perspectives on HTML5 and CSS3, 8th Edition</span>,
+         Cengage Learning: Boston, 2019. </div>
+   </div>
+</body>
+</html>
