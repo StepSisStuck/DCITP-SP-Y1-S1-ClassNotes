@@ -88,7 +88,7 @@ A variable is a named storage for data. We can use variables to store data.
 
 ![Alt text](Images/2.PNG)
 
-## [Example for this code](Practical/Practical%201/programmingexample1.js)
+## [Example for this code](../Practical/Practical%201/programmingexample1.js)
 
 ------------------- 
 
