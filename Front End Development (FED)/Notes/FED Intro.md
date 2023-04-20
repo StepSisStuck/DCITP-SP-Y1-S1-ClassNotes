@@ -4,17 +4,23 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Table of contents of this document
+- [Creating the Head of the Document](#1)
 
+- [List of Metadata to the document](#2)
 
 
 -----------------------------------------------
-## Creating the Document Head
+
+<h3 id= "1"> Creating the Document Head
+<h4>
     The document head is the first thing that is read by the browser. It contains information about the document, such as the title, character set, and other metadata. The document head is contained within the <head> tag.
 
     The <head> tag is a container for metadata (data about data) and is placed between the <html> tag and the <body> tag. Metadata is not displayed. Metadata typically define the document title, character set, styles, scripts, and other meta information.
 
-## List of Metadata to the document
+<h3 id ="2"> List of Metadata to the document
     The following is a list of metadata that can be added to the document head:
+
+<h4>
 
     <title> - Specifies a title for the document
 
@@ -32,8 +38,11 @@
 
     <head> - Contains metadata/information for the document
 
-## Adding comments to youe document
-    Comments are not displayed in the browser, but can be read by anyone viewing the source code. Comments are used to explain code, and to prevent execution when testing alternative code.
+<h3 id = "3"> Adding comments to youe document
+
+<h4>
+ Comments are not displayed in the browser, but can be read by anyone viewing the source code. Comments are used to explain code, and to prevent execution when testing alternative code.
+    
 
     Comments can be added to HTML with the < !-- and -- > tags:
 
@@ -41,7 +50,7 @@
 
     This will be beneficial for people to pass on information to other developers, or to explain what the code is doing.
 
-## Adding a title to your document
+ Adding a title to your document
 
    
     The <title> tag is required in every HTML document. The <title> element specifies a title for the document.
@@ -68,7 +77,10 @@
 
 ```
 
-## Writing the Page Body
+<h3 id = "4"> Writing the Page Body
+
+<h4>
+
 
     The body of the page is the part that is displayed in the browser. The body of the page is contained within the <body> tag.
 
@@ -93,7 +105,9 @@
 ```
 
 
-## Adding a heading to your document
+<h3 id = "5"> Adding a heading to your document
+
+<h4>
 
     The <h1> to <h6> tags are used to define HTML headings.
 
@@ -121,7 +135,11 @@
 
 ```
 
-## Using Grouping Elements
+<h3 id = "6"> Using Grouping Elements
+
+<h4>
+
+
 Here is the list of grouping elements:
 | Element | Description |
 |---------|-------------|
@@ -141,7 +159,10 @@ Here is the list of grouping elements:
 
 
 
-## Block and Inline Elements
+<h3 id = "7"> Block and Inline Elements
+    
+ <h4>
+    
     HTML elements are either block-level or inline elements.
 
     Block-level elements are displayed as blocks. They start on a new line, and take up the whole width.
@@ -172,7 +193,9 @@ Here is the list of grouping elements:
 | Inline-Level | `<span>`, `<a>`, `<img>`, `<em>`, `<strong>`, `<code>`, `<br>`, `<input>`, `<button>`, `<select>`, `<textarea>` |
 
 
-## Working with Character Sets and Special Character
+<h3 id = "8"> Working with Character Sets and Special Character
+
+<h4>
 
 Character encoding is the process of converting characters into a format that can be stored or transmitted and reconstructed later. The most common encoding is UTF-8, which is used by HTML5.
 
