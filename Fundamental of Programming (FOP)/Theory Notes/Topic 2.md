@@ -11,8 +11,9 @@
 
 <h2 id ="Constrains" > Constrants
 <h4>
- - Represents permanent values
-    - eg pi = 3.14159
+
+>Represents permanent values
+    >> eg pi = 3.14159
 
 - 3 Benefits:
     - 1. Improves readability
