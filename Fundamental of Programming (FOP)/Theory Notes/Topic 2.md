@@ -72,7 +72,8 @@ So if a numver % 5 is 0 ---> it is divisible by 5
 <h4>
 
  +=, -=, *=, /=, %=, <<=, >>=, &=, ^=, |=
-
+ 
+-------------------------
 Example:
 
 ``` javascript
