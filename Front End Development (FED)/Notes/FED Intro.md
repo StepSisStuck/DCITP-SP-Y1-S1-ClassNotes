@@ -8,7 +8,7 @@
 
 - [List of Metadata to the document](#2)
 
-- [Adding comments to youe document](#3)
+- [Adding comments to your document](#3)
 
 - [Adding a title to your document](#4)
 
@@ -50,7 +50,7 @@
 
     <head> - Contains metadata/information for the document
 
-<h3 id = "3"> Adding comments to youe document
+<h3 id = "3"> Adding comments to your document
 
 <h4>
  Comments are not displayed in the browser, but can be read by anyone viewing the source code. Comments are used to explain code, and to prevent execution when testing alternative code.
