@@ -9,6 +9,7 @@
 3. [How to put in a new line" in a string](#How-to-tab)
 4. [Comennting in Javascript](#Comennting-in-Javascript)
 5. [Variable and Data Types](#Variable)
+6. [Re-initializing a variable is also possible.](#Change-Var)
 
 ------------------
 <h2 id="#Escape-Sequences">Escape Sequences</h2>
@@ -99,6 +100,8 @@ Although we can declare a variable using the var keyword, it does not require th
 However, it is a good practice to always use the var keyword to declare a variable. 
 
 
+
+
 --------------------------------
 
 ``` javascript
@@ -125,3 +128,26 @@ This is the content of my section.
 - Float point = 10 x 10^-2
     - 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 0.0
 
+-------------------------
+
+<h2 id="Change-Var">Re-initializing a variable.
+
+<h4>
+
+
+``` javascript
+var area = 5; // Declaring a variable
+area = 8; // Re-initializing a variable
+```
+
+Special Math funtions
+
+> Math.floor(58.3) result in 58
+
+> Math.ceil(58.3) result in 59
+
+> Math.sqrt(100) result in 10
+
+> Math.pow(2,3) result in 8
+
+> Math.random() result in 0.123456789
