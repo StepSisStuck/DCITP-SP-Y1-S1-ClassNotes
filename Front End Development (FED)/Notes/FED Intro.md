@@ -1,9 +1,13 @@
 # HTML
 
-
+## [Document to refer](../School%20Notes/Tut01.pptx)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Table of contents of this document
 
+
+
+-----------------------------------------------
 ## Creating the Document Head
     The document head is the first thing that is read by the browser. It contains information about the document, such as the title, character set, and other metadata. The document head is contained within the <head> tag.
 
@@ -116,3 +120,63 @@
     </html>
 
 ```
+
+## Using Grouping Elements
+Here is the list of grouping elements:
+| Element | Description |
+|---------|-------------|
+| `<em>` | Used to emphasize text by italicizing it. |
+| `<strong>` | Used to give text extra importance by making it bold. |
+| `<a>` | Used to create hyperlinks to other pages or websites. |
+| `<abbr>` | Used to create an abbreviation or acronym with a title attribute that expands the abbreviation. |
+| `<cite>` | Used to indicate a citation or reference to a source. |
+| `<code>` | Used to display code snippets or programming code. |
+| `<del>` | Used to indicate deleted text, often used in strikethrough formatting. |
+| `<ins>` | Used to indicate inserted text, often used in underlined formatting. |
+| `<kbd>` | Used to indicate keyboard input or commands. |
+| `<mark>` | Used to highlight or mark text with a color or other visual cue. |
+| `<q>` | Used to create inline quotations. |
+| `<sub>` | Used to create subscript text. |
+| `<sup>` | Used to create superscript text. |
+
+
+
+## Block and Inline Elements
+    HTML elements are either block-level or inline elements.
+
+    Block-level elements are displayed as blocks. They start on a new line, and take up the whole width.
+
+    Inline elements are displayed inline. They do not start on a new line, and only takes up as much width as necessary.
+
+    The following example shows the difference between block-level and inline elements:
+
+``` HTML
+    < !DOCTYPE html>
+    <html>
+    <head>
+    <title>My First Web Page</title>
+    </head>
+    <body>
+
+    <h1>My First Web Page</h1>
+    <p>My First Paragraph</p>
+
+    </body>
+    </html>
+
+```
+
+| Type | Example Elements |
+|------|-----------------|
+| Block-Level | `<div>`, `<p>`, `<h1>`-`<h6>`, `<ul>`, `<ol>`, `<li>`, `<table>`, `<form>`, `<blockquote>`, `<pre>`, `<hr>` |
+| Inline-Level | `<span>`, `<a>`, `<img>`, `<em>`, `<strong>`, `<code>`, `<br>`, `<input>`, `<button>`, `<select>`, `<textarea>` |
+
+
+## Working with Character Sets and Special Character
+
+Character encoding is the process of converting characters into a format that can be stored or transmitted and reconstructed later. The most common encoding is UTF-8, which is used by HTML5.
+
+Character entity references are used to display special characters in HTML. Character entity references are created using the syntax `&char;`
+
+Where `char` is the character to be displayed.
+
