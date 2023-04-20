@@ -11,6 +11,7 @@ Table of Contents Listed Below:
 6. [List of Storage](#Storage)
 7. [What is BIOs](#bios)
 8. [NIC Card](#NIC)
+9. [CPU Casche](#Cache)
 
 <h2 id="Objectives-of-the-topic " >Objectives of the topic </h2>
 
@@ -343,6 +344,20 @@ Type of Computers
 
 
 They can upgrade their conputer by adding more RAM, adding more hard drive space, adding more PCI cards, adding more PCI-E cards, adding more USB ports, adding more SATA ports, adding more IDE ports, adding more PS2 ports, adding more VGA ports, adding more DVI ports, adding more HDMI ports, adding more Ethernet ports, adding more Firewire ports, adding more Audio
+
+--------------------------------
+
+
+<h2 id = "Cache" > How can CPU cache can enhance the performance of a computer?
+<h4>
+
+
+
+> CPU cache is a small amount of RAM that is located on the CPU.
+     >> It is used to store the data that is used by the CPU like a RAM.
+     >>> It is faster than the RAM.
+     >>>> It is used to enhance the performance of the computer.
+     >>>>>The more cache the CPU has, the faster the computer will be. 
 
 --------------------------------
 
