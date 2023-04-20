@@ -12,6 +12,7 @@
 6. [Initialising a variable](#Initialising)
 7. [Re-initializing a variable is also possible.](#Change-Var)
 8. [Special Math funtions](#SpecialMath)
+9. [Reserved Words](#words)
 
 
 ------------------
@@ -166,3 +167,50 @@ area = 8; // Re-initializing a variable
 > Math.pow(2,3) result in 8
 
 > Math.random() result in 0.123456789
+
+
+
+<h2 id="words"> Reserved words
+<h4>
+
+| Reserved Word | Description |
+|---------------|-------------|
+| `break` | Used to terminate a loop or switch statement |
+| `case` | Used to define a branch in a switch statement |
+| `catch` | Used to handle exceptions thrown by try...catch statements |
+| `class` | Used to define a class |
+| `const` | Used to declare a constant variable |
+| `continue` | Used to skip to the next iteration of a loop |
+| `debugger` | Used to pause JavaScript execution and launch a debugger |
+| `default` | Used to define a default case in a switch statement |
+| `delete` | Used to delete an object's property |
+| `do` | Used to create a do...while loop |
+| `else` | Used to specify an alternative block of code to be executed |
+| `export` | Used to export a module from a file |
+| `extends` | Used to create a subclass of a class |
+| `finally` | Used to specify a block of code to be executed after a try...catch statement |
+| `for` | Used to create a for loop |
+| `function` | Used to define a function |
+| `if` | Used to specify a block of code to be executed if a condition is true |
+| `import` | Used to import a module into a file |
+| `in` | Used to check if a property exists in an object |
+| `instanceof` | Used to check if an object is an instance of a specified class |
+| `let` | Used to declare a block-scoped variable |
+| `new` | Used to create an instance of a class |
+| `return` | Used to specify a value to be returned from a function |
+| `super` | Used to call a method on an object's parent |
+| `switch` | Used to evaluate an expression and execute a specific case |
+| `this` | Refers to the current object |
+| `throw` | Used to throw an exception |
+| `try` | Used to specify a block of code to be tested for errors |
+| `typeof` | Used to determine the type of a value |
+| `var` | Used to declare a variable |
+| `void` | Used to specify that a function does not return a value |
+| `while` | Used to create a while loop |
+| `with` | Used to specify an object to use as a default context for a block of code |
+| `yield` | Used to pause and resume a generator function |
+| `async` | Used to define an asynchronous function |
+| `await` | Used to pause the execution of an asynchronous function until a promise is resolved |
+| `static` | Used to define a static method or property for a class |
+| `get` | Used to define a getter method for an object property |
+| `set` | Used to define a setter method for an object property |
