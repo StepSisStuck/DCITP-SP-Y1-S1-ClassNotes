@@ -153,7 +153,7 @@ var area = 5; // Declaring a variable
 area = 8; // Re-initializing a variable
 ```
 
-<h2 id="SpecialMath" Special Math funtions>
+<h2 id="SpecialMath"> Special Math funtions
 
 <h4>
 
