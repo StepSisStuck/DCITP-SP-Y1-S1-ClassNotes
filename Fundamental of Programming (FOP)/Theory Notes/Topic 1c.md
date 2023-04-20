@@ -9,7 +9,10 @@
 3. [How to put in a new line" in a string](#How-to-tab)
 4. [Comennting in Javascript](#Comennting-in-Javascript)
 5. [Variable and Data Types](#Variable)
-6. [Re-initializing a variable is also possible.](#Change-Var)
+6. [Initialising a variable](#Initialising)
+7. [Re-initializing a variable is also possible.](#Change-Var)
+8. [Special Math funtions](#SpecialMath)
+
 
 ------------------
 <h2 id="#Escape-Sequences">Escape Sequences</h2>
@@ -119,17 +122,27 @@ This is the content of my section.
 ## List of data type
 - String
    - a string is a sequence of characters 
+   - NRIC, admin number, postal code, name, address, etc
 - Boolean 
     - true or false
 - Integer
     - 1,2,3,4,5,6,7,8,9,0
+    - rececept number, phone number, etc
 - Double
     - 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 0.0
 - Float point = 10 x 10^-2
     - 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 0.0
 
 -------------------------
+<h2 id="Initialising" >Initialising a variable
+<h4>
 
+``` javascript
+var x; //x is undefined
+var x = 5; //x is 5
+//print x
+console.log(x); //5
+```
 <h2 id="Change-Var">Re-initializing a variable.
 
 <h4>
@@ -140,7 +153,9 @@ var area = 5; // Declaring a variable
 area = 8; // Re-initializing a variable
 ```
 
-Special Math funtions
+<h2 id="SpecialMath" Special Math funtions>
+
+<h4>
 
 > Math.floor(58.3) result in 58
 
