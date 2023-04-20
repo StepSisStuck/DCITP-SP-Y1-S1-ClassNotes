@@ -11,7 +11,8 @@ Table of Contents Listed Below:
 6. [List of Storage](#Storage)
 7. [What is BIOs](#bios)
 8. [NIC Card](#NIC)
-9. [CPU Casche](#Cache)
+9. [CPU Cache](#Cache)
+10. [Binary, Octal, Decimal, Hexadecimal Codes](#Codes)
 
 <h2 id="Objectives-of-the-topic " >Objectives of the topic </h2>
 
@@ -351,8 +352,6 @@ They can upgrade their conputer by adding more RAM, adding more hard drive space
 <h2 id = "Cache" > How can CPU cache can enhance the performance of a computer?
 <h4>
 
-
-
 > CPU cache is a small amount of RAM that is located on the CPU.
      >> It is used to store the data that is used by the CPU like a RAM.
      >>> It is faster than the RAM.
@@ -361,6 +360,21 @@ They can upgrade their conputer by adding more RAM, adding more hard drive space
 
 --------------------------------
 
+<h2 id ="Codes"> Binary, Octal, Decimal, Hexadecimal Codes <h2>
+
+<h4>
+
+    Dec: 0,1,2,3,4,5,6,7,8,9,10 -> base 10
+
+    Binary: 0,1 -> base 2  [0,1]
+
+    Octal: 0,1,2,3,4,5,6,7 -> base 8 [11-->000....111]
+
+    Hex: 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F -> base 16 [1111-->0000....1111]
+
+> 1 Byte = 8 bits
+
+![Alt text](Image%20Files/18.jpg)
 
 
 
