@@ -7,3 +7,5 @@ This repository is a collection of resources for the CommonICT module. The resou
 
 - [Fundamental of Programming](Fundamental%20of%20Programming%20(FOP))
 
+- [Front End Development](Front%20End%20Development%20(FED))
+
