@@ -180,3 +180,16 @@ Character entity references are used to display special characters in HTML. Char
 
 Where `char` is the character to be displayed.
 
+| Character | Entity Name | Entity Number | Description |
+|-----------|-------------|---------------|-------------|
+| `"` | `&quot;` | `&#34;` | Double quotation mark |
+| `&` | `&amp;` | `&#38;` | Ampersand |
+| `<` | `&lt;` | `&#60;` | Less than sign |
+| `>` | `&gt;` | `&#62;` | Greater than sign |
+| ` ` | `&nbsp;` | `&#160;` | Non-breaking space |
+| `©` | `&copy;` | `&#169;` | Copyright symbol |
+| `®` | `&reg;` | `&#174;` | Registered trademark symbol |
+| `™` | `&trade;` | `&#8482;` | Trademark symbol |
+| `€` | `&euro;` | `&#8364;` | Euro currency symbol |
+| `£` | `&pound;` | `&#163;` | Pound sterling currency symbol |
+| `¥` | `&yen;` | `&#165;` | Yen currency symbol |
