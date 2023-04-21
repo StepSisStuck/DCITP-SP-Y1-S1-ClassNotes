@@ -9,3 +9,4 @@ This repository is a collection of resources for the CommonICT module. The resou
 
 - [Front End Development](Front%20End%20Development%20(FED))
 
+- [Assigments](Assigments)
