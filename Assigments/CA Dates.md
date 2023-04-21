@@ -55,4 +55,23 @@ Assessment: Lesson 6 |
 
 <h2 id="4"> TCU Thinking Critlically the UN SDGS
 
+<h4>
+
+| Assessment | Weightage | Deliverables & Deadlines                                |
+|------------|-----------|---------------------------------------------------------|
+| CA1        | 10%       | Quiz 1 (5%) - CA1: Part 1 Quiz (Week 2)                   |
+|            |           | Quiz 2 (5%) - CA1: Part 2 Quiz (Week 4)                   |
+|            |           | Due: Sunday, 23:59 of designated weeks                   |
+| CA2        | To be confirmed | Refer to CA2 Assessment Brief and Rubrics             |
+|            |           | Team Contract (30%)                                      |
+|            |           | Online Team Reflection Meeting (70%)                     |
+|            |           | Part 1: Before Lesson 6                                   |
+|            |           | Part 2: During Lesson 6 (on campus via MS Teams)          |
+| CA3        | 20%       | Reflective Learning 1 (50%) - During Lesson 3            |
+|            |           | Reflective Learning 2 (50%) - During Lesson 5            |
+|            |           | In-class written reflection                              |
+|            |           | Individual assessment                                     |
+|            |           | Submission via Brightspace                               |
+
+
 
