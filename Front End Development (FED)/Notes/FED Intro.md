@@ -101,20 +101,19 @@
     The following example shows the <body> element in action:
 
 ``` HTML
-    < !DOCTYPE html>
-    <html>
-    <head>
-    <title>My First Web Page</title>
-    </head>
-    <body>
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <title>My First Web Page</title>
+ </head>
+ <body>
 
-    <h1>My First Web Page</h1>
-    <p>My First Paragraph</p>
+ <h1>My First Web Page</h1>
+ <p>My First Paragraph</p>
 
-    </body>
-    </html>
-
-```
+ </body>
+ </html>
+ ```
 
 
 <h3 id = "5"> Adding a heading to your document
@@ -184,19 +183,18 @@ Here is the list of grouping elements:
     The following example shows the difference between block-level and inline elements:
 
 ``` HTML
-    < !DOCTYPE html>
-    <html>
-    <head>
-    <title>My First Web Page</title>
-    </head>
-    <body>
+ < !DOCTYPE html>
+ <html>
+ <head>
+ <title>My First Web Page</title>
+ </head>
+ <body>
 
-    <h1>My First Web Page</h1>
-    <p>My First Paragraph</p>
+ <h1>My First Web Page</h1>
+ <p>My First Paragraph</p>
 
-    </body>
-    </html>
-
+ </body>
+ </html>
 ```
 
 | Type | Example Elements |
