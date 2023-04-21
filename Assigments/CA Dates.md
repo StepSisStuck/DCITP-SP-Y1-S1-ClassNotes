@@ -38,8 +38,8 @@ Table of contents of this document:
 | Assignment Title | Assignment Type | Weightage | Deliverables & Deadline |
 |------------------|----------------|-----------|--------------------------|
 | CA2: Team Contract and Online Team Reflection Meeting | Team Contract and Online Team Reflection Meeting | 70% | 
-Part 1: Team Contract (30 marks)
-Part 2: Online Team Reflection Meeting (70 marks)
+Part 1: Team Contract  | |30 marks
+Part 2: Online Team Reflection Meeting ||(70 marks)
 Written CA: CA2 Part 1 Template
 Oral CA: Team assessment
 Team and individual assessment
