@@ -21,6 +21,7 @@ Table of contents of this document:
 
 <h2 id="2">FED CA Dates/Assessments
 <h4>
+
 | Module Code | Module Name | Acad Year/Semester | Assignment Title | Assignment Type | Weightage | Deliverables & Deadline | Late Submission |
 |-------------|-------------|--------------------|---------------------|-----------------|--------------|---------------------------------------|----------------|
 | ST0501 | Front-End Web Development | 2023/2024 Semester 1 | CA1 – Static Website | Individual | 40% | All files used in the web pages. 29 May 2023, Monday 0900HR Digital submission in Bright Space using File naming convention as follows: CCC1AXX_nnnnnnn_yourname.zip Where CCC is your course name e.g. DIT; 1AXX is your class number e.g. 1A01 and nnnnnnn is your admin number e.g. 2312345. | 50% of the marks will be deducted for assignments that are received within ONE (1) calendar day after the submission deadline. No marks will be given thereafter. Exceptions to this policy will be given to students with valid LOA on medical or compassionate grounds. Students in such cases will need to inform the lecturer as soon as reasonably possible. |
