@@ -32,8 +32,7 @@ Table of contents of this document:
 | Assessment | Type | Deadline | Weightage |
 | --- | --- | --- | --- |
 | Lab Task 1 | Individual | 28 Aug | Part of CA3 grading |
-| Graded Quizzes | Individual | Starting next week | Unknown |
-| Quiz0 | Individual | Prior to next week's Quiz | Unknown |
+| Quiz0 | Individual | Week 2 (Thursday) | Unknown |
  
 > Note: Respondus Lockdown browser is required for the quizzes. Multiple submissions are allowed for Lab Task 1 before the deadline, with only the last submission being considered for marking. The quizzes will likely be about 10 minutes long with only one attempt given. Quiz0 is available to familiarize oneself with the quiz mechanism and to install Respondus Lockdown. Quiz schedule will vary between Thursday and Monday's session.
 
