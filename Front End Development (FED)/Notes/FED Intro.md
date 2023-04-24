@@ -34,8 +34,9 @@
 
 - [Linking to a Location on the Same Page](#15)
 
--
+- [Working with a Hypertext Attributes](#16)
 
+- [Specifying the folder path](#17)
 
 
 
@@ -534,9 +535,10 @@ Early web browsers did not support the id attribute. However, nowadays most web 
 
 
 <br>
- - What is a child element?
+  
+  - What is a child element?
 
-   - A child element is an element that is contained within another element. For example, the `<h1>` element is the child element of the `<body>` element.
+    - A child element is an element that is contained within another element. For example, the `<h1>` element is the child element of the `<body>` element.
 
 <br>
 
@@ -560,6 +562,45 @@ Here's an example markdown table of common internet resources and their correspo
 | SMS               | sms:number        |
 | Email             | mailto:email      |
 
+---------------------
+
+<h2 id="17">  Specifying the folder path
+
+<h4>
+
+- The path attribute specifies the path to the folder that contains the files to be displayed.
+
+- A root folder is a folder that contains all other folders and files in a file system or website.
+
+- An absolute path is a path that starts from the root folder.
+
+        example
+        /folder1/folder2/folder3/file.html
+
+- A relative path is a path that starts from the current folder by including the symbol ../
+
+        example
+        ../folder1/folder2/folder3/file.html
+
+- The path attribute specifies the path to the folder that contains the files to be displayed.
 
 
+
+
+---------------------
+
+<h2 id="18">  Setting the Base Path 
+
+<h4>
+
+- The base element specifies the base URL/target for all relative URLs in a page.
+
+- The base element is used to specify a base URL and/or target for all relative URLs in a page.
+
+- This is like a "home base" for all relative URLs on a page, where you want to control the base URL and/or target to the current page.
+
+Example
+```HTML 
+<base href="https://www.w3schools.com/images/" target="_blank">
+```
 
