@@ -504,7 +504,28 @@ Example
 
 - The id attribute is used to point to content within a page that can be linked to.
 
+Early web browsers did not support the id attribute. However, nowadays most web browsers support the id attribute. 
+
 ---------------------
+
+<h2 id="16">  Working with a Hypertext Attributes
+
+<h4>
+
+| Attribute | Description |
+| --- | --- |
+| `href` | Specifies the URL of the page the link goes to |
+| `target` | Specifies where the linked document will open, such as in a new window or in the same frame |
+| `download` | Specifies that the target will be downloaded when the user clicks on the hyperlink |
+| `rel` | Specifies the relationship between the current document and the linked document |
+| `id` | Specifies a unique identifier for an element |
+| `class` | Specifies one or more class names for an element |
+| `style` | Specifies inline CSS styles for an element |
+| `title` | Specifies extra information about an element (displayed as a tooltip) |
+| `alt` | Specifies an alternate text for an image |
+| `src` | Specifies the URL of the image to be displayed |
+| `width` | Specifies the width of an image |
+| `height` | Specifies the height of an image |
 
 
 
