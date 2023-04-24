@@ -449,6 +449,7 @@ Example
     Hyperlinks are used to link from one web page to another using a set of <a> tags.
 
 Example
+
 ```HTML
 Redirect to another website
 <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
@@ -456,6 +457,7 @@ Redirect to another website
 Redirect to another page locally
 <a href="lesson_01.html">Lesson 1</a>
 ```
+
 A roll over effect can be added to the link by using the target attribute, they can change the color of the link when the mouse is over it, or when the link has been clicked.
 
 Example
