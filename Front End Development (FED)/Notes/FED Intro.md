@@ -617,5 +617,17 @@ Example
 
 Link: https://validator.w3.org/
 
-- 
 
+
+---------------------
+
+<h2 id="20"> How to create a HTML document template?
+
+<h4>
+
+
+
+```html
+html:5
+```
+This creates the basic structure of an HTML document. The 5 indicates that this is HTML5.
