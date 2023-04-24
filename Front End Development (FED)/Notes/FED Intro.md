@@ -28,6 +28,14 @@
 
 - [Working with Lists](#12)
 
+- [Working with Hyperext links](#13)
+
+- [Turning an Inline Image into a Hyperlink](#14)
+
+- [Linking to a Location on the Same Page](#15)
+
+-
+
 
 
 
@@ -470,3 +478,34 @@ Example
   <img src="image.jpg" alt="My Image" width="100" height="100">
 </a>
 ```
+
+---------------------
+
+<h2 id="15"> Linking to a Location on the Same Page
+
+<h4>
+
+- You can link to a location on the same page by using the id attribute.
+
+      You can identify the location on the page by using the id attribute. The id attribute specifies a unique id for an HTML element (the value must be unique within the HTML document).
+      Using id="text" on an element, you can link to it by using a URL like this: "myPage.html#text".
+
+Example
+```HTML
+<a href="Example_1">Go to text</a>
+```
+- ID must be unique within the HTML document.
+
+- ID can only contain letters, numbers, underscores, and hyphens (no spaces).
+
+- ID names are case-sensitive.
+
+- The id attribute specifies a unique id for an HTML element.
+
+- The id attribute is used to point to content within a page that can be linked to.
+
+---------------------
+
+
+
+
