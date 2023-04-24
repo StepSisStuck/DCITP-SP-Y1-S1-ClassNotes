@@ -226,3 +226,124 @@ Where `char` is the character to be displayed.
 | `€` | `&euro;` | `&#8364;` | Euro currency symbol |
 | `£` | `&pound;` | `&#163;` | Pound sterling currency symbol |
 | `¥` | `&yen;` | `&#165;` | Yen currency symbol |
+
+
+<h2 id="9"> Working with Inline Images
+
+
+<h4>
+
+- To support embedded content, imported from another source, HTML5 provides the `<img>` tag.
+
+- These elements arr also known as self-closing elements, because they do allow any content between the opening and closing tags.
+
+Example
+```HTML
+<img src="image.jpg" alt="My Image" width="100" height="100">
+```
+
+- Images are marked up using the `<img>` tag. The `<img>` tag has two required attributes: `src` and `alt`.
+
+- The defualt width of an image is 300 pixels, and the default height is 150 pixels.
+
+- Try and put images in a folder called images, and then reference them using the relative path. It's recommended to edit the image on CSS to change the size of the image instead of changing the size of the image itself.
+
+
+<h2 id="10"> Line breaks
+
+<h4>
+
+- The `<br>` tag is used to insert a single line break.
+
+- The `<br>` tag is an empty element, which means that it has no end tag.
+
+- The `<br>` tag is useful for writing addresses or poems.
+
+- The `<br>` tag is also useful for creating single-line text effects, like this:
+
+```HTML
+
+<p>My favorite colors are:<br>
+
+Red<br>
+
+Blue<br>
+
+Green</p>
+
+```
+
+<h2 id="11"> Working with blocks quotes and other elements
+
+<h4>
+
+- The `<blockquote>` tag is used to define a section that is quoted from another source.
+
+- The `<blockquote>` tag is used in conjunction with the `<q>` tag.
+
+- The `<blockquote>` tag is used to define a section that is quoted from another source.
+
+By default, most browsert renders quotes by indenting the quoted material to seprate from it from the website
+
+Example 
+```HTML
+<blockquote cite="https://www.w3schools.com/html/">
+  <p>HTML is the standard markup language for creating Web pages.</p>
+</blockquote>
+```
+
+- The `<q>` tag defines a short quotation.
+
+- The `<q>` tag is used in conjunction with the `<blockquote>` tag.
+
+
+<h2 id="12"> Working with Lists
+
+<h4>
+
+- HTML lists are used to display data in a list format.
+
+- Ordered list
+
+Example
+```HTML
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+```
+
+- Unordered list
+
+Example
+```HTML
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+```
+
+- Description list
+
+Example
+```HTML
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd> 
+</dl>
+```
+
+- Negative lists
+
+Example
+```HTML
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+```
