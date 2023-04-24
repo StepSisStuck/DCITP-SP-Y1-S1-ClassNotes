@@ -18,6 +18,18 @@
 
 - [Using Grouping Elements](#7)
 
+- [Working with Character Sets and Special Character](#8)
+
+- [Working with Inline Images](#9)
+
+- [Line breaks](#10)
+
+- [Working with blocks quotes and other elements](#11)
+
+- [Working with Lists](#12)
+
+
+
 
 
 
@@ -88,7 +100,7 @@
     </html>
 
 ```
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <h3 id = "4"> Writing the Page Body
 
 <h4>
@@ -114,7 +126,7 @@
  </body>
  </html>
  ```
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h3 id = "5"> Adding a heading to your document
 
@@ -145,7 +157,7 @@
     </html>
 
 ```
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <h3 id = "6"> Using Grouping Elements
 
 <h4>
@@ -227,7 +239,7 @@ Where `char` is the character to be displayed.
 | `£` | `&pound;` | `&#163;` | Pound sterling currency symbol |
 | `¥` | `&yen;` | `&#165;` | Yen currency symbol |
 
-
+---------------------------
 <h2 id="9"> Working with Inline Images
 
 
@@ -248,7 +260,7 @@ Example
 
 - Try and put images in a folder called images, and then reference them using the relative path. It's recommended to edit the image on CSS to change the size of the image instead of changing the size of the image itself.
 
-
+-----------------------------
 <h2 id="10"> Line breaks
 
 <h4>
@@ -272,7 +284,7 @@ Blue<br>
 Green</p>
 
 ```
-
+---------------------
 <h2 id="11"> Working with blocks quotes and other elements
 
 <h4>
@@ -295,13 +307,17 @@ Example
 - The `<q>` tag defines a short quotation.
 
 - The `<q>` tag is used in conjunction with the `<blockquote>` tag.
-
+---------------------
 
 <h2 id="12"> Working with Lists
 
 <h4>
 
 - HTML lists are used to display data in a list format.
+
+- There are three types of HTML lists: ordered, unordered, and description.
+
+## Here are the examples
 
 - Ordered list
 
@@ -347,3 +363,52 @@ Example
   <li>Milk</li>
 </ul>
 ```
+
+- Nested lists
+
+Example
+```HTML
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+```
+
+- Nested ordered lists
+
+Example
+```HTML
+<ol>
+    <li>item 1 
+        <ol>
+            <li value="10">item 1.1</li>
+            <li value="20">item 1.2</li>
+        </ol>
+
+    </li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ol>
+```
+
+- Nevigated lists
+
+Example
+```HTML
+<ol>
+  <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+  <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+  <li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
+
+    <li><a href="lesson_01.html">Lesson 1</a></li>>
+    <li><a href="lesson_02.html">Lesson 2</a></li>>
+    <li><a href="lesson_03.html">Lesson 3</a></li>>
+</ol>
+```
+
