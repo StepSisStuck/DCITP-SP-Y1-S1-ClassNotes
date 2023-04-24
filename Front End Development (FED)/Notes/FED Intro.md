@@ -95,18 +95,16 @@
     The following example shows the <title> element in action:
 
 ``` HTML
-    < !DOCTYPE html>
-    <html>
-    <head>
+<!DOCTYPE html>
+<html>
+  <head>
     <title>My First Web Page</title>
-    </head>
-    <body>
-
+  </head>
+  <body>
     <h1>My First Web Page</h1>
     <p>My First Paragraph</p>
-
-    </body>
-    </html>
+  </body>
+</html>
 
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -148,22 +146,21 @@
     The following example shows the <h1> to <h6> elements in action:
 
 ``` HTML
-    < !DOCTYPE html>
-    <html>
-    <head>
+   <!DOCTYPE html>
+<html>
+  <head>
     <title>My First Web Page</title>
-    </head>
-    <body>
-
+  </head>
+  <body>
     <h1>My First Web Page</h1>
     <h2>My First Heading</h2>
     <h3>My First Subheading</h3>
     <h4>My First Subheading</h4>
     <h5>My First Subheading</h5>
     <h6>My First Subheading</h6>
+  </body>
+</html>
 
-    </body>
-    </html>
 
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -605,4 +602,20 @@ Example
 ```HTML 
 <base href="https://www.w3schools.com/images/" target="_blank">
 ```
+
+---------------------
+
+<h2 id="19">  Validating HTML
+
+<h4>
+
+- The HTML validator is a tool that checks the markup validity of Web documents in HTML, XHTML, SMIL, MathML, etc.
+
+- The validator checks the document against the W3C's HTML and XHTML specifications.
+
+- The validator is a free service provided by the World Wide Web Consortium (W3C).
+
+Link: https://validator.w3.org/
+
+- 
 
