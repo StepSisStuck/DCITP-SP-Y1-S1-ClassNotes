@@ -412,3 +412,61 @@ Example
 </ol>
 ```
 
+- Nested description lists
+
+Example
+```HTML
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd> 
+  <dt>Tea</dt>
+  <dd>
+    <dl>
+      <dt>Black tea</dt>
+      <dd>- black hot drink</dd>
+      <dt>Green tea</dt>
+      <dd>- green hot drink</dd>
+    </dl>
+  </dd>
+</dl>
+```
+
+<h2 id="13"> Working with Hyperext links
+
+<h4>
+
+    Hyperlinks are used to link from one web page to another using a set of <a> tags.
+
+Example
+```HTML
+Redirect to another website
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+
+Redirect to another page locally
+<a href="lesson_01.html">Lesson 1</a>
+```
+A roll over effect can be added to the link by using the target attribute, they can change the color of the link when the mouse is over it, or when the link has been clicked.
+
+Example
+```HTML
+<a href="https://www.w3schools.com/html/" target="_blank">Visit our HTML tutorial</a>
+```
+
+- The target attribute specifies where to open the linked document.
+
+---------------------
+
+<h2 id="14"> Turning an Inline Image into a Hyperlink
+
+<h4>
+
+- The `<a>` tag can be used to turn an image into a hyperlink.
+
+Example
+```HTML
+<a href="https://www.w3schools.com/html/">
+  <img src="image.jpg" alt="My Image" width="100" height="100">
+</a>
+```
