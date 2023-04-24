@@ -528,5 +528,38 @@ Early web browsers did not support the id attribute. However, nowadays most web 
 | `height` | Specifies the height of an image |
 
 
+- What is a parrent element?
+
+   - A parent element is an element that contains other elements. For example, the `<body>` element is the parent element of the `<h1>` element.
+
+
+<br>
+ - What is a child element?
+
+   - A child element is an element that is contained within another element. For example, the `<h1>` element is the child element of the `<body>` element.
+
+<br>
+
+-  What is a sibling element?
+
+   - A sibling element is an element that is nested within the same parent element. For example, the `<h1>` and `<p>` elements are sibling elements.
+
+<br>
+
+- What is a target
+   - A target is the location where a link will be opened. The target attribute specifies where to open the linked document.
+
+Here's an example markdown table of common internet resources and their corresponding hyperlink format:
+
+| Internet Resource | Hyperlink Format |
+|-------------------|------------------|
+| Fax               | fax:number        |
+| HTTP              | http://url        |
+| HTTPS             | https://url       |
+| Tel               | tel:number        |
+| SMS               | sms:number        |
+| Email             | mailto:email      |
+
+
 
 
