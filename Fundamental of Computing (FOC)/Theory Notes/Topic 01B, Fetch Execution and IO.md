@@ -1,7 +1,7 @@
 # Topic 01B
 
 
-## [Document to refer](Topic%2001B,%20Fetch%20Execution%20and%20IO.md)
+## [Document to refer](../School%20Notes/Topic%2001B%20Fetch,%20Execution%20and%20IO(1).pdf)
 
 
 Table of content: <br>
