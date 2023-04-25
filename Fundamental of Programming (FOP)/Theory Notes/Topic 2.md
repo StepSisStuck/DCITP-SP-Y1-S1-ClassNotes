@@ -228,3 +228,107 @@ Sure, here's an example markdown table of common data types:
 | Undefined | Represents a value that is not yet defined |
 | Object    | A collection of related data and/or functionality |
 | Array     | A collection of values, typically of the same data type |
+
+
+<h2 id= "input"> Obtaining User Input
+
+<h4>
+
+- Why do we need user input?
+    - To make our programs interactive
+
+- How do we obtain user input?
+    - Using the prompt() function
+
+- Syntax:
+    - prompt("message");
+
+- Example:  
+
+``` javascript  
+var name = prompt("What is your name?");    
+console.log("Hello " + name + "!");  
+```
+
+## Node Package Manager (NPM)
+
+- NPM is a package manager for JavaScript
+    - Developers from all over the world contribute to the NPM registry
+<br> <br>
+- NPM is installed with Node.js
+
+    Download the libary using this code
+
+        npm install readline-sync
+
+    Then, import the library using this code
+
+
+<h2 id="StringtoNumber"> Converting Strings to Numbers
+
+<h4>
+
+- To input a returned from the keyboard as a number, use the Number() function.
+
+- To obtain the input from the keyboard, use the prompt() function.
+
+- To convert the input to a number, use the Number() function.
+
+``` javascript
+
+var num1 = Number(prompt("Enter a number: "));
+var num2 = Number(prompt("Enter another number: "));
+var sum = num1 + num2;
+console.log("The sum of " + num1 + " and " + num2 + " is " + sum);
+
+```
+
+``` javascript
+var a = input.question("What is your number for A? ");
+var b = input.question("What is your number for B? ");
+var c = parseInt (a) + parseInt (b);
+
+console.log("c " + c);
+```
+- What is parseInt?
+    - parseInt is a function that converts a string to an integer
+
+
+A quicker way to do it 
+
+``` javascript
+var a = input.questionInt("What is your number for A? ");
+var b = input.questionInt("What is your number for B? ");
+// var c = parseInt (a) + parseInt (b);
+var c = a + b;
+
+console.log("c " + c);
+```
+Using input.questionInt will automatically convert the string to an integer 
+
+## Can also use this 
+![Alt text](Images/10.png)
+
+<h2 id="Selection"> Selection Statements
+
+<h4>
+
+- Selection statements allow us to execute code based on a condition
+    - If statements
+    - Switch statements
+Example 
+
+``` javascript 
+If (condition) {
+    // code to be executed if condition is true
+}
+```
+
+``` javascript
+var num = 8;
+if (num % 2 == 0) {
+    console.log(num + " is even");
+}
+// Output: 8 is even
+```
+
