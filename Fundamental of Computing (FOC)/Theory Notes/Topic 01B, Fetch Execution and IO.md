@@ -6,20 +6,39 @@
 
 Table of content: <br>
 [Binary](#1) <br>
+
 [Data is Stored in Bits](#2) <br>
+
 [Bits and Bytes](#3) <br>
+
 [Funtional Units](#4) <br>
+
 [Cache Memory](#5) <br>
+
 [Secondary Memory](#6) <br>
+
 [Functional units](#7) <br>
+
 [Processor  - Arithmetic Logic Unit (ALU)](#8) <br>
+
 [Processor  - Control Unit](#9) <br>
+
 [Intel CPU 8086](#10) <br>
+
 [Processor  - Registers](#11) <br>
+
 [Processor  - Instruction Cycle](#12) <br>
+
 [Processor  - Instruction Types](#13) <br>
+
 [Processor  - Instruction Formats](#14) <br>
+
 [Processor  - Components](#15) <br>    
+
+[Processor  - Technology Trends](#16) <br>
+
+[Processor  - Parallelism](#17) <br>
+
 
 
 
@@ -327,6 +346,47 @@ A 32-bit instruction can contain four 8-bit bytes. <br>
     - The purpose of registers is to store data and instructions. <br>
 
 ![Alt text](Image%20Files/22.png)
+
+
+-----------------
+
+<h2 id="16"> Technology Trends
+
+<h4>
+
+Improvements in technology have led to the development of faster and more powerful processors. <br>
+
+Improvements in processor technology have led to the development of smaller and more powerful processors. <br>
+
+There are the list of the processor technology trends. <br>
+
+- 1. Transistors <br>
+- 2. Integrated Circuits <br>
+- 3. Microprocessors <br>
+- 4. Microcontrollers <br>
+- 5. Supercomputers <br>
+- 6. Multiprocessors <br>
+- 7. Multicore Processors <br>
+
+-----------------
+
+<h2 id="17"> Parallelism 
+
+<h4>
+
+- What is parallelism? <br>
+
+    - Parallelism is the ability of a processor to execute multiple instructions at the same time. <br>
+
+- What is the purpose of parallelism? <br>
+
+    - The purpose of parallelism is to increase the speed of the processor. <br>
+
+- What are the types of parallelism? <br>
+
+    - The types of parallelism are instruction-level parallelism and data-level parallelism. <br>
+
+    ![Alt text](Image%20Files/23.png)
 
 
 -----------------
