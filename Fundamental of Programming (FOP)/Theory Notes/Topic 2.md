@@ -7,6 +7,14 @@
 2. [Operators](#Operators)
 3. [Use of remainder operator (%)](#Roperator)
 4. [Shorthand Operators](#Short)
+5. [Boolean Operators](#Bool)
+6. [If Statement](#If)
+7. [Operator Precedence and Evaluation Order](#Operator)
+8. [String Data Type](#Type)
+9. [Data Type](#Data)
+10. [Obtaining User Input](#input)
+11. [Converting Strings to Numbers](#StringtoNumber)\
+12. [Selection Statements](#Selection)
 
 
 <h2 id ="Constrains" > Constrants
