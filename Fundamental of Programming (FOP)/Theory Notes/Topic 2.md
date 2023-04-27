@@ -298,6 +298,9 @@ var c = parseInt (a) + parseInt (b);
 
 console.log("c " + c);
 ```
+``` javascript
+TempC.toFixed(1) // 1 decimal place
+```
 - What is parseInt?
     - parseInt is a function that converts a string to an integer
 
