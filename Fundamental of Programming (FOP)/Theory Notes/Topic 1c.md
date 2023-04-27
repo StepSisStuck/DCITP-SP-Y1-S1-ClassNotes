@@ -179,7 +179,7 @@ area = 8; // Re-initializing a variable
 | `case` | Used to define a branch in a switch statement |
 | `catch` | Used to handle exceptions thrown by try...catch statements |
 | `class` | Used to define a class |
-| `const` | Used to declare a constant variable |
+| `const` | Used to declare a constant variable (Cannoot change the var) |
 | `continue` | Used to skip to the next iteration of a loop |
 | `debugger` | Used to pause JavaScript execution and launch a debugger |
 | `default` | Used to define a default case in a switch statement |
