@@ -23,7 +23,7 @@ Table of content: <br>
 
 - [Processor  - Control Unit](#9) <br>
 
-- Intel CPU 8086](#10) <br>
+- [Intel CPU 8086](#10) <br>
 
 - [Processor  - Registers](#11) <br>
 
