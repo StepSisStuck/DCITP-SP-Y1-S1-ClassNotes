@@ -15,7 +15,7 @@ Table of content: <br>
 
 - [Cache Memory](#5) <br>
 
-- [Secondary Memory](#6) <br>
+- [Secondary Memory](#6) <br>a
 
 - [Functional units](#7) <br>
 
