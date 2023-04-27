@@ -5,39 +5,39 @@
 
 
 Table of content: <br>
-[Binary](#1) <br>
+- [Binary](#1) <br>
 
-[Data is Stored in Bits](#2) <br>
+- [Data is Stored in Bits](#2) <br>
 
-[Bits and Bytes](#3) <br>
+- [Bits and Bytes](#3) <br>
 
-[Funtional Units](#4) <br>
+- [Funtional Units](#4) <br>
 
-[Cache Memory](#5) <br>
+- [Cache Memory](#5) <br>
 
-[Secondary Memory](#6) <br>
+- [Secondary Memory](#6) <br>
 
-[Functional units](#7) <br>
+- [Functional units](#7) <br>
 
-[Processor  - Arithmetic Logic Unit (ALU)](#8) <br>
+- [Processor  - Arithmetic Logic Unit (ALU)](#8) <br>
 
-[Processor  - Control Unit](#9) <br>
+- [Processor  - Control Unit](#9) <br>
 
-[Intel CPU 8086](#10) <br>
+- Intel CPU 8086](#10) <br>
 
-[Processor  - Registers](#11) <br>
+- [Processor  - Registers](#11) <br>
 
-[Processor  - Instruction Cycle](#12) <br>
+- [Processor  - Instruction Cycle](#12) <br>
 
-[Processor  - Instruction Types](#13) <br>
+- [Processor  - Instruction Types](#13) <br>
 
-[Processor  - Instruction Formats](#14) <br>
+- [Processor  - Instruction Formats](#14) <br>
 
-[Processor  - Components](#15) <br>    
+- [Processor  - Components](#15) <br>    
 
-[Processor  - Technology Trends](#16) <br>
+- [Processor  - Technology Trends](#16) <br>
 
-[Processor  - Parallelism](#17) <br>
+- [Processor  - Parallelism](#17) <br>
 
 
 
