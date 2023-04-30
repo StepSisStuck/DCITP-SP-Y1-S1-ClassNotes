@@ -376,6 +376,8 @@ They can upgrade their conputer by adding more RAM, adding more hard drive space
 
 ![Alt text](Image%20Files/18.jpg)
 
+--------------------------------
+
 
 
 
