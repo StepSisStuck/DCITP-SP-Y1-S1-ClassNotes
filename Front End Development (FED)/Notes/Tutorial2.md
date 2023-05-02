@@ -77,3 +77,23 @@ h1 {
 | User-defined Styles | These are styles that are defined by the user using their own preferences, such as font size, color, and background. User-defined styles are typically set in the user's web browser or operating system settings. |
 
 
+-----------
+What is a HEX code?
+
+- A HEX code is a six-digit, three-byte hexadecimal number used to represent colors in HTML, CSS, SVG, and other computing applications. The bytes represent the red, green and blue components of the color. One byte represents a number in the range 00 to FF (in hexadecimal notation), or 0 to 255 in decimal notation. This represents the least (0) to the most (255) intensity of each of the color components. Thus web colors specify colors in the True Color (24-bit RGB) color scheme. The hex triplet is formed by concatenating three bytes in hexadecimal notation, in the following order:
+
+   - Byte 1: red value (color type red)
+   - Byte 2: green value (color type green)
+   - Byte 3: blue value (color type blue)
+
+- For example, consider the color where the red/green/blue values are decimal numbers: red=36, green=104, blue=160 (a grayish-blue color). The decimal numbers 36, 104 and 160 are equivalent to the hexadecimal numbers 24, 68 and A0 respectively. The hex triplet is obtained by concatenating the 6 hexadecimal digits together, 2468A0 in this example.
+
+- The following example shows how the color sample shown above would be drawn in the three different color modes:
+
+- The color can be represented by the following hexadecimal triplet: #2468A0.
+
+![Alt text](Image%20File/1.png)
+
+- The example above shows how the same color can be represented in different ways. The color is specified according to the RGB color scheme, which uses three values to specify each color: the amount of red, green, and blue in the color. The color can also be specified according to the HSL color scheme, which uses three values to specify each color: the hue, saturation, and lightness of the color. The color can also be specified according to the HSV color scheme, which uses three values to specify each color: the hue, saturation, and value of the color.
+
+
