@@ -1,15 +1,16 @@
 # Tutorial 2
 
 
-Topic listed below:
+Topic listed below: <br>
+[What is CSS?](#1)
 
 
 
 <h2 id="1">
-CSS
+CSS?
 <h4>
 
-- What is CSS?
+- CSS
    - CSS stands for Cascading Style Sheets
     - CSS describes how HTML elements are to be displayed on screen, paper, or in other media
     - CSS saves a lot of work. It can control the layout of multiple web pages all at once
@@ -78,7 +79,12 @@ h1 {
 
 
 -----------
+
+
+<h2 id="2"> 
 What is a HEX code?
+
+<h4>
 
 - A HEX code is a six-digit, three-byte hexadecimal number used to represent colors in HTML, CSS, SVG, and other computing applications. The bytes represent the red, green and blue components of the color. One byte represents a number in the range 00 to FF (in hexadecimal notation), or 0 to 255 in decimal notation. This represents the least (0) to the most (255) intensity of each of the color components. Thus web colors specify colors in the True Color (24-bit RGB) color scheme. The hex triplet is formed by concatenating three bytes in hexadecimal notation, in the following order:
 
@@ -96,4 +102,20 @@ What is a HEX code?
 
 - The example above shows how the same color can be represented in different ways. The color is specified according to the RGB color scheme, which uses three values to specify each color: the amount of red, green, and blue in the color. The color can also be specified according to the HSL color scheme, which uses three values to specify each color: the hue, saturation, and lightness of the color. The color can also be specified according to the HSV color scheme, which uses three values to specify each color: the hue, saturation, and value of the color.
 
+
+<h2 id="3">
+Defining Semi Opaque Colors in CSS
+<h4>
+
+- Opacity is the degree to which content behind an element is hidden, and is the opposite of transparency. The value of the opacity property ranges from 0.0 to 1.0, where 0.0 is completely transparent and 1.0 is completely opaque. The default value is 1.0.
+
+They can use the following syntax to define semi-opaque colors in CSS:
+
+``` CSS
+/* Hexadecimal notation */
+color: #rrggbbaa;
+
+/* RGB functional notation */
+color: rgba(red, green, blue, alpha);
+```
 
