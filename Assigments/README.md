@@ -13,6 +13,7 @@ Table of contents of this document:
 |------------|------------|--------------|
 | CA1 Quiz | - | Monday, 12:01am of Week 2, 24 April 2023 |
 | CA2 Oral Presentation | 70% | Week 6, 26 May 2023 |
+|Finish Slides | | 16 May 2023, 2359H |
 | CA2 Assignment Brief | 30% | Start: Week 2 |
 | Theme | - | "How can AI help in achieving the SDGs?" |
 | Tasks | - | Identify one SDG your group is passionate about. Research an application of AI on the chosen SDG. Discuss the general aspect, technical aspect and social aspect of the AI application you have selected. Refer to CA2 brief (SOC) for details. |
