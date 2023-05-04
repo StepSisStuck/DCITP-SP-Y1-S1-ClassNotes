@@ -103,6 +103,7 @@ What is a HEX code?
 - The example above shows how the same color can be represented in different ways. The color is specified according to the RGB color scheme, which uses three values to specify each color: the amount of red, green, and blue in the color. The color can also be specified according to the HSL color scheme, which uses three values to specify each color: the hue, saturation, and lightness of the color. The color can also be specified according to the HSV color scheme, which uses three values to specify each color: the hue, saturation, and value of the color.
 
 
+
 <h2 id="3">
 Defining Semi Opaque Colors in CSS
 <h4>
@@ -116,7 +117,7 @@ They can use the following syntax to define semi-opaque colors in CSS:
 color: #rrggbbaa;
 
 /* RGB functional notation */
-color: rgba(red, green, blue, alpha);
+color: rgba(red, green, blue, alpha(for opacity));
 ```
 
 - CSS defines the text and background color for each elementsd on a webpage

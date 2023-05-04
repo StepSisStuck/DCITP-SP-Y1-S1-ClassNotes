@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/*
+   Description  : 
+   Author       : 
+   Date         : 
+   Filename     : base_stylesheet.css
+*/
+
+/* =============================================
+	Comments
+   =============================================
+*/
+section p[title="A"]
+{
+   background-color: yellow;
+}
+
+section p[title="B"]
+{
+   background-color: paleturquoise;
+}
+section p[
+   title^="Long Text"
+]
+{
+   background-color: orange;
+}
+
+
