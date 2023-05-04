@@ -392,10 +392,34 @@ Working with Fonts
 
 ![Alt text](Image%20File/2.png)
 
-
+Fall back font
+- If the browser does not support the first font, it tries the next font.
+- This is so that the browser can select a font that is similar to the one you specified.
+ Example:
+``` CSS
+p {
+  font-family: "Times New Roman", Times, serif;
+}
+```
+- If "Times New Roman" is not available, the browser will try to display the text in Times. If Times is not available, the browser will use any available serif font.
+  - If no serif font is available, the browser will use the default font for the browser.
+    - The browser will use the first value it recognizes.
+- The font names should be separated with comma.
+  - If a font name contains white-space, it must be quoted.
+   - If the font name is not found, it is more important to provide a generic family name as the last value. The browser will use the first value it recognizes.
 ## Exploring Web Fonts
 - Web fonts are fonts that are hosted on a server and can be used on a website. They are not installed on the user's computer.
+  - Why not to use web font?
+      - Web fonts are downloaded from the server when a user visits a website. This can slow down the loading of a web page.
+      - You may need to pay for a license to use a web font.
+      - Not all web browsers support web fonts.
+      - Web fonts are not supported by all email clients.
+      - Web fonts are not supported by all operating systems.
+      - Web fonts are not supported by all mobile devices.
+
 - The format most universally supported by browsers is the Web Open Font Format (WOFF). It is a compressed version of the OpenType (OTF) format and is supported by all modern browsers.
+
+
 
 Format|Description|Browser Support
 ------|-----------|---------------
@@ -405,6 +429,184 @@ Web Open Font Format (WOFF)|A compressed version of the OpenType (OTF) format. I
 Scalable Vector Graphics (SVG)|A vector graphics format. It is supported by all modern browsers | All modern browsers like Chrome, Firefox, Safari, Opera, and IE
 Web Open Font Format 2 (WOFF2)|A compressed version of the OpenType (OTF) format. It is supported by all modern browsers | All modern browsers like Chrome, Firefox, Safari, Opera, and IE
 
-----------------------------------------------
-<--- Stoped at slide 39 --->
+Google Fonts
+- Google Fonts is a library of over 800 licensed fonts that can be used on a website. The fonts are hosted on the Google servers and can be included in a web page using the following HTML code:
+``` HTML
+<link href="https://fonts.googleapis.com/css?family=Font+Name" rel="stylesheet">
+```
+- The font name is the name of the font that you want to use. If the font name contains white-space, it must be quoted.
 
+----------------------------------------------
+
+<h2 id="8">
+Setting the Font Size and Style
+<h4>
+  
+  - To set a text size, use the `font-size: size;` property, where `size` is a length, a percentage, or one of the following values:
+    - `xx-small`
+    - `x-small`
+    - `small`
+    - `medium`
+    - `large`
+    - `x-large`
+    - `xx-large`
+    - `smaller`
+    - `larger`
+  - Absolute length values are specified in pixels (px), points (pt), centimeters (cm), millimeters (mm), inches (in), and picas (pc).
+  
+  - Relative length values are specified in em, ex, and ch. 
+  - The three relative measuements used to provide scalability are
+    - percentage
+    - rem or root em 
+    - em
+    - ex
+    - ch
+  - Percentages are relative to the parent element's font size.
+
+``` CSS
+p {
+  font-size:20%;
+  }
+```
+- The font size of the paragraph is 20% of the font size of the parent element.
+
+
+----------------------------------------------
+<h2 id="9">
+Using Viewport Units
+<h4>
+
+- Viewport units are relative to the viewport, or the browser window. They are used to create scalable websites.
+- The four viewport units are:
+  - vw (viewport width)
+  - vh (viewport height)
+  - vmin (viewport minimum length)
+  - vmax (viewport maximum length)
+
+- CSS3 introduced four viewport units that are relative to the viewport, or the browser window. They are used to create scalable websites.
+- The four viewport units are:
+  - vw (viewport width)
+  - vh (viewport height)
+  - vmin (viewport minimum length)
+  - vmax (viewport maximum length)
+  <br> <br>
+  
+  ### Font size are expressed using the following words
+
+   - `xx-small`
+    - `x-small`
+    - `small`
+    - `medium`
+    - `large`
+    - `x-large`
+    - `xx-large`
+    - `smaller`
+    - `larger`
+
+----------------------------------------------
+
+<h2 id="10">
+Controlling Spacing and Indentation
+<h4>
+
+- Kerning is the process of adjusting the spacing between pairs of letters to improve the appearance of the text.
+- The properties to control an element's kerning and tracking are:
+``` CSS
+letter-spacing: value;
+word-spacing: value;
+```
+
+- Leading - Sets the space between lines of text and is defined by the `line-height` property.
+          
+      line-height: value;
+
+- To specify the font style, use
+  ``` CSS
+  font-style: type;
+  ```
+  - where `type` is one of the following values:
+    - `normal`
+    - `italic`
+    - `oblique`
+
+To change the weight of the font, use
+``` CSS
+font-weight: weight;
+```
+   - Where `Weight` is the level of bold formatting applied to the text and can be one of the following values:
+     - `normal`
+     - `bold`
+     - `bolder`
+     - `lighter`
+     - `100`
+     - `200`
+     - `300`
+     - `400`
+     - `500`
+     - `600`
+     - `700`
+     - `800`
+     - `900`    
+
+----------------------------------------------
+<h2 id="11">
+Aligning Text Horizontally and Vertically
+
+<h4>
+
+- To align text horizontally, use the `text-align` property, where `alignment` is one of the following values:
+  - `left`
+  - `right`
+  - `center`
+  - `justify`
+
+- To align text vertically, use the `vertical-align` property, where `alignment` is one of the following values:
+- `baseline`
+- `sub`
+- `super`
+- `top`
+- `text-top`
+- `middle`
+- `bottom`
+- `text-bottom` 
+
+----------------------------------------------  
+
+<h2 id="12">
+Choosing a List of Style Type
+<h4>
+
+List of Style Type| Marker(s)
+------------------|----------
+`none`| No marker
+`disc`| A filled circle
+`circle`| An empty circle
+`square`| A filled square
+`decimal`| A number
+`decimal-leading-zero`| A number with a leading zero
+`lower-roman`| A lowercase roman numeral
+`upper-roman`| An uppercase roman numeral
+`lower-alpha`| A lowercase letter
+`lower-greek`| A lowercase Greek letter
+`upper-greek`| An uppercase Greek letter
+`lower-latin`| A lowercase letter
+`upper-latin`| An uppercase letter
+
+----------------------------------------------
+
+<h2 id="13">
+Styling Lists
+<h4>
+
+Using Image for List Marker
+
+- A custom image can be used as a list marker by using the `list-style-image` property, where `url` is the URL of the image file:
+``` CSS
+ul {
+  list-style-image: url("image.png");
+}
+```
+Where url is the URL of the image file.
+
+
+  
