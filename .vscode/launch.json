@@ -12,7 +12,8 @@
                 "<node_internals>/**"
             ],
             "program": "${file}"
-            "console": "integratedTerminal;
+           "console": "integratedTerminal;
+         
             
         }
     ]
