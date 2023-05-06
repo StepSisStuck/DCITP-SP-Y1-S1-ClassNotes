@@ -16,10 +16,7 @@ Topic listed below: <br>
 12. [Choosing a List of Style Type](#12) <br>
 13. [Styling Links](#13) <br>
 
-
-
-
-
+----------------------------------------------
 <h2 id="1">
 CSS?
 <h4>
