@@ -86,3 +86,28 @@ Explain the output:
 --------------------
 
 <h2 id="4"> while Loop Example
+
+<h4>
+
+```JavaScript
+var number = 1;
+while (number < 3){
+    console.log(number);
+    number++;
+}
+console.log("End of Program");
+```
+```
+Output:
+1
+2
+End of Program
+```
+Explain the output:
+- The statements in the do block will be executed first before the condition is checked. <br>
+- The statements in the do block will be executed at least once. <br>
+- The statements in the do block will be executed repeatedly until the condition is false. <br>
+- The condition is checked after the statements in the do block are executed. <br>
+--------------------
+
+
