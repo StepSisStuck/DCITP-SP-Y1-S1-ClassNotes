@@ -1,7 +1,14 @@
 # Repetitions (Do While Loop)
 
-Topic in this Document:
-
+Topic in this Document: <br>
+[Repetitions](#1) <br>
+[Do While Loop Syntax](#2) <br>
+[Do While Loop Example](#3) <br>
+[While Loop Example](#4) <br>
+[Which Loop to use?](#5) <br>
+[Caution](#6) <br>
+[Nested for Loop](#7) <br>
+[Summary](#8) <br>
 
 
 --------------------
@@ -257,4 +264,19 @@ Explain the output:
 
 --------------------
 
+<h2 id="8"> Summary
 
+<h4>
+
+- A more effective way to make use of the repetition/looping/iteration structures
+    - For loop
+    - while loop
+    - do while loop
+    - Nested for loop
+
+- When to use do-while loop?
+- When to use while loop?
+- When to use For loop?
+- Nested for loop
+- Caution
+- Summary
