@@ -36,6 +36,7 @@ do {
 } while (condition);
 ```
 
+## Example
 ```JavaScript
 var count = 0;
 do {
