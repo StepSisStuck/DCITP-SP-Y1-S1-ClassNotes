@@ -262,7 +262,6 @@ Explain the output:
 - The statements in the do block will be executed at least once. <br>
 - The statements in the do block will be executed repeatedly until the condition is false. <br>
 
-
 --------------------
 
 <h2 id="8"> Summary
