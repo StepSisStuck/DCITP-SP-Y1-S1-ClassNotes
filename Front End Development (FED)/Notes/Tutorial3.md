@@ -245,7 +245,32 @@ footer {
   grid-area: footer;
 }
 ```
-  
+
+
+--------------------
+
+### Defining the Grid Gap
+
+- Another part of the grid layout is defining the space between items in the grid. <br>
+- The gap size is defiined using the following properties: <br>
+   - grid-column-gap <br>
+   - grid-row-gap <br>
+   - grid-gap <br>
+   where `row` is the internal space between grid rows and `column` is the space between grid columns. <br>
+
+``` CSS
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header"
+                       "main main aside"
+                       "footer footer footer";
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+```
+
   
 
 
