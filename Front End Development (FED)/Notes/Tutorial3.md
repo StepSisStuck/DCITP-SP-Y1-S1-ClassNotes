@@ -72,7 +72,7 @@ Example: <br>
    - grid-template-columns <br>
    - grid-template-rows <br>
 
-- Where `width1, width2` etc is a spcace-seprated list that defines the width of the columns or tracks within the grid. <br>
+- Where width1, width2 etc is a spcace-seprated list that defines the width of the columns or tracks within the grid. <br>
    - The values can be a length, a percentage, or a fraction of the free space in the grid (using the fr unit). <br>
    - The values can be a combination of different units, like "25% 50% 25%". <br>
    - The number of values in the list defines the number of columns in the grid layout. <br>
