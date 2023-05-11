@@ -2,19 +2,23 @@
 
 
 Topic listed below: <br>
-1. [What is CSS?](#1) <br>
-2. [What is a HEX code?](#2) <br>
-3. [Defining Semi Opaque Colors in CSS](#3) <br>
-4. [Exploring Selector Patterns](#4) <br>
-5. [Contextual Selectors](#5) <br>
-6. [Attribute Selectors](#6) <br>
-7. [Working with Fonts](#7) <br>
-8. [Working with Font Sizes](#8) <br>
-9. [Using Viewport Units](#9) <br>
-10. [Controlling Spacing and Indentation](#10) <br>
-11. [Aligning Text Horizontally and Vertically](#11) <br>
-12. [Choosing a List of Style Type](#12) <br>
-13. [Styling Links](#13) <br>
+# Tutorial 2
+
+Topic listed below:
+1. [What is CSS?](#1)
+2. [What is a HEX code?](#2)
+3. [Defining Semi Opaque Colors in CSS](#3)
+4. [Exploring Selector Patterns](#4)
+5. [Contextual Selectors](#5)
+6. [Attribute Selectors](#6)
+7. [Working with Fonts](#7)
+8. [Working with Font Sizes](#8)
+9. [Using Viewport Units](#9)
+10. [Controlling Spacing and Indentation](#10)
+11. [Aligning Text Horizontally and Vertically](#11)
+12. [Choosing a List of Style Type](#12)
+13. [Styling Links](#13)
+
 
 ----------------------------------------------
 <h2 id="1">
