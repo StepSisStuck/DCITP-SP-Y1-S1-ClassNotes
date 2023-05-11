@@ -5,19 +5,25 @@ Topic listed below: <br>
 # Tutorial 2
 
 Topic listed below:
-1. [What is CSS?](#CSS)
-2. [What is a HEX code?](#what-is-a-hex-code?)
-3. [Defining Semi Opaque Colors in CSS](#3)
-4. [Exploring Selector Patterns](#4)
-5. [Contextual Selectors](#5)
-6. [Attribute Selectors](#6)
-7. [Working with Fonts](#7)
-8. [Working with Font Sizes](#8)
-9. [Using Viewport Units](#9)
-10. [Controlling Spacing and Indentation](#10)
-11. [Aligning Text Horizontally and Vertically](#11)
-12. [Choosing a List of Style Type](#12)
-13. [Styling Links](#13)
+- [Tutorial 2](#tutorial-2)
+- [Tutorial 2](#tutorial-2-1)
+    - [CSS](#css)
+    - [What is a HEX code?](#what-is-a-hex-code)
+    - [Defining Semi Opaque Colors in CSS](#defining-semi-opaque-colors-in-css)
+    - [Exploring Selector Patterns](#exploring-selector-patterns)
+    - [Contextual Selectors](#contextual-selectors)
+- [SOOOOOOO](#sooooooo)
+    - [Working with Fonts](#working-with-fonts)
+  - [Choosing a Font](#choosing-a-font)
+  - [Choosing a Font](#choosing-a-font-1)
+  - [Exploring Web Fonts](#exploring-web-fonts)
+    - [Setting the Font Size and Style](#setting-the-font-size-and-style)
+    - [Using Viewport Units](#using-viewport-units)
+    - [Font size are expressed using the following words](#font-size-are-expressed-using-the-following-words)
+    - [Controlling Spacing and Indentation](#controlling-spacing-and-indentation)
+    - [Aligning Text Horizontally and Vertically](#aligning-text-horizontally-and-vertically)
+    - [Choosing a List of Style Type](#choosing-a-list-of-style-type)
+    - [Styling Lists](#styling-lists)
 
 
 ----------------------------------------------
@@ -117,10 +123,10 @@ h1 {
 - The example above shows how the same color can be represented in different ways. The color is specified according to the RGB color scheme, which uses three values to specify each color: the amount of red, green, and blue in the color. The color can also be specified according to the HSL color scheme, which uses three values to specify each color: the hue, saturation, and lightness of the color. The color can also be specified according to the HSV color scheme, which uses three values to specify each color: the hue, saturation, and value of the color.
 
 
+----------------------------------------------
 
-<h2 id="3">
-Defining Semi Opaque Colors in CSS
-<h4>
+### Defining Semi Opaque Colors in CSS
+
 
 - Opacity is the degree to which content behind an element is hidden, and is the opposite of transparency. The value of the opacity property ranges from 0.0 to 1.0, where 0.0 is completely transparent and 1.0 is completely opaque. The default value is 1.0.
 
@@ -142,9 +148,9 @@ background-color: color;
 ```
 
 ----------------------------------------------
-<h2 id="4">
-Exploring Selector Patterns
-<h4>
+
+### Exploring Selector Patterns
+
 
 - CSS selectors are patterns used to select the element(s) you want to style.
 
@@ -199,9 +205,8 @@ p {
 
 ----------------------------------------------
 
-<h2 id="5">
-Contextual Selectors
-<h4>
+
+### Contextual Selectors
 
 - What is Parent and Child Element?
    - The parent element is the element that contains the child element. The child element is the element that is contained within the parent element.
@@ -378,10 +383,9 @@ elem1~elem2 | Selects all elements with the tag name "elem2" that are preceded b
 
 ----------------------------------------------
 
-<h2 id="7">
 
-Working with Fonts
-<h4>
+
+### Working with Fonts
 
 - Typography is the art and technique of arranging type to make written language legible, readable, and appealing when displayed. The arrangement of type involves selecting typefaces, point sizes, line lengths, line-spacing (leading), and letter-spacing (tracking), and adjusting the space between pairs of letters (kerning).
 
@@ -452,9 +456,9 @@ Google Fonts
 
 ----------------------------------------------
 
-<h2 id="8">
-Setting the Font Size and Style
-<h4>
+
+### Setting the Font Size and Style
+
   
   - To set a text size, use the `font-size: size;` property, where `size` is a length, a percentage, or one of the following values:
     - `xx-small`
@@ -486,9 +490,9 @@ p {
 
 
 ----------------------------------------------
-<h2 id="9">
-Using Viewport Units
-<h4>
+
+### Using Viewport Units
+
 
 - Viewport units are relative to the viewport, or the browser window. They are used to create scalable websites.
 - The four viewport units are:
@@ -519,9 +523,9 @@ Using Viewport Units
 
 ----------------------------------------------
 
-<h2 id="10">
-Controlling Spacing and Indentation
-<h4>
+
+### Controlling Spacing and Indentation
+
 
 - Kerning is the process of adjusting the spacing between pairs of letters to improve the appearance of the text.
 - The properties to control an element's kerning and tracking are:
@@ -563,10 +567,9 @@ font-weight: weight;
      - `900`    
 
 ----------------------------------------------
-<h2 id="11">
-Aligning Text Horizontally and Vertically
 
-<h4>
+### Aligning Text Horizontally and Vertically
+
 
 - To align text horizontally, use the `text-align` property, where `alignment` is one of the following values:
   - `left`
@@ -586,9 +589,9 @@ Aligning Text Horizontally and Vertically
 
 ----------------------------------------------  
 
-<h2 id="12">
-Choosing a List of Style Type
-<h4>
+
+### Choosing a List of Style Type
+
 
 List of Style Type| Marker(s)
 ------------------|----------
@@ -608,9 +611,9 @@ List of Style Type| Marker(s)
 
 ----------------------------------------------
 
-<h2 id="13">
-Styling Lists
-<h4>
+
+### Styling Lists
+
 
 Using Image for List Marker
 
