@@ -19,6 +19,7 @@ Table of contents listed below:
 - [Node Package Manager (NPM)](#node-package-manager-npm)
 - [Converting Strings to Numbers](#converting-strings-to-numbers)
   - [Can also use this](#can-also-use-this)
+  - [Selection Statements](#selection-statements)
 
 
 
@@ -367,9 +368,9 @@ Using input.questionInt will automatically convert the string to an integer
 ## Can also use this 
 ![Alt text](Images/10.png)
 
-<h2 id="Selection"> Selection Statements
+## Selection Statements
 
-<h4>
+
 
 - Selection statements allow us to execute code based on a condition
     - If statements
