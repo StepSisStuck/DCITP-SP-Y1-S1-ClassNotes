@@ -4,39 +4,30 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Table of contents of this document
-- [Creating the Head of the Document](#1)
-
-- [List of Metadata to the document](#2)
-
-- [Adding comments to your document](#3)
-
-- [Adding a title to your document](#4)
-
-- [Writing the Page Body](#5)
-
-- [Adding a heading to your document](#6)
-
-- [Using Grouping Elements](#7)
-
-- [Working with Character Sets and Special Character](#8)
-
-- [Working with Inline Images](#9)
-
-- [Line breaks](#10)
-
-- [Working with blocks quotes and other elements](#11)
-
-- [Working with Lists](#12)
-
-- [Working with Hyperext links](#13)
-
-- [Turning an Inline Image into a Hyperlink](#14)
-
-- [Linking to a Location on the Same Page](#15)
-
-- [Working with a Hypertext Attributes](#16)
-
-- [Specifying the folder path](#17)
+- [HTML](#html)
+  - [Document to refer](#document-to-refer)
+  - [Table of contents of this document](#table-of-contents-of-this-document)
+    - [Creating the Document Head](#creating-the-document-head)
+    - [List of Metadata to the document](#list-of-metadata-to-the-document)
+    - [Adding comments to your document](#adding-comments-to-your-document)
+    - [Writing the Page Body](#writing-the-page-body)
+    - [Adding a heading to your document](#adding-a-heading-to-your-document)
+    - [Using Grouping Elements](#using-grouping-elements)
+    - [Block and Inline Elements](#block-and-inline-elements)
+    - [Working with Character Sets and Special Character](#working-with-character-sets-and-special-character)
+    - [Working with Inline Images](#working-with-inline-images)
+    - [Line breaks](#line-breaks)
+    - [Working with blocks quotes and other elements](#working-with-blocks-quotes-and-other-elements)
+    - [Working with Lists](#working-with-lists)
+  - [Here are the examples](#here-are-the-examples)
+    - [Working with Hyperext links](#working-with-hyperext-links)
+    - [Turning an Inline Image into a Hyperlink](#turning-an-inline-image-into-a-hyperlink)
+    - [Linking to a Location on the Same Page](#linking-to-a-location-on-the-same-page)
+    - [Working with a Hypertext Attributes](#working-with-a-hypertext-attributes)
+    - [Specifying the folder path](#specifying-the-folder-path)
+    - [Setting the Base Path](#setting-the-base-path)
+    - [Validating HTML](#validating-html)
+    - [How to create a HTML document template?](#how-to-create-a-html-document-template)
 
 
 
@@ -44,16 +35,16 @@
 
 -----------------------------------------------
 
-<h3 id= "1"> Creating the Document Head
-<h4>
+### Creating the Document Head
+
     The document head is the first thing that is read by the browser. It contains information about the document, such as the title, character set, and other metadata. The document head is contained within the <head> tag.
 
     The <head> tag is a container for metadata (data about data) and is placed between the <html> tag and the <body> tag. Metadata is not displayed. Metadata typically define the document title, character set, styles, scripts, and other meta information.
 
-<h3 id ="2"> List of Metadata to the document
+###  List of Metadata to the document
     The following is a list of metadata that can be added to the document head:
 
-<h4>
+
 
     <title> - Specifies a title for the document
 
@@ -71,7 +62,7 @@
 
     <head> - Contains metadata/information for the document
 
-<h3 id = "3"> Adding comments to your document
+### Adding comments to your document
 
 <h4>
  Comments are not displayed in the browser, but can be read by anyone viewing the source code. Comments are used to explain code, and to prevent execution when testing alternative code.
@@ -108,9 +99,9 @@
 
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<h3 id = "4"> Writing the Page Body
+### Writing the Page Body
 
-<h4>
+
 
 
     The body of the page is the part that is displayed in the browser. The body of the page is contained within the <body> tag.
@@ -135,9 +126,9 @@
  ```
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h3 id = "5"> Adding a heading to your document
+### Adding a heading to your document
 
-<h4>
+
 
     The <h1> to <h6> tags are used to define HTML headings.
 
@@ -164,9 +155,9 @@
 
 ```
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<h3 id = "6"> Using Grouping Elements
+### Using Grouping Elements
 
-<h4>
+
 
 
 Here is the list of grouping elements:
@@ -188,9 +179,9 @@ Here is the list of grouping elements:
 
 
 
-<h3 id = "7"> Block and Inline Elements
+### Block and Inline Elements
     
- <h4>
+
     
     HTML elements are either block-level or inline elements.
 
@@ -220,10 +211,7 @@ Here is the list of grouping elements:
 | Block-Level | `<div>`, `<p>`, `<h1>`-`<h6>`, `<ul>`, `<ol>`, `<li>`, `<table>`, `<form>`, `<blockquote>`, `<pre>`, `<hr>` |
 | Inline-Level | `<span>`, `<a>`, `<img>`, `<em>`, `<strong>`, `<code>`, `<br>`, `<input>`, `<button>`, `<select>`, `<textarea>` |
 
-
-<h3 id = "8"> Working with Character Sets and Special Character
-
-<h4>
+### Working with Character Sets and Special Character
 
 Character encoding is the process of converting characters into a format that can be stored or transmitted and reconstructed later. The most common encoding is UTF-8, which is used by HTML5.
 
@@ -246,10 +234,9 @@ Where `char` is the character to be displayed.
 | `¥` | `&yen;` | `&#165;` | Yen currency symbol |
 
 ---------------------------
-<h2 id="9"> Working with Inline Images
+### Working with Inline Images
 
 
-<h4>
 
 - To support embedded content, imported from another source, HTML5 provides the `<img>` tag.
 
@@ -267,9 +254,9 @@ Example
 - Try and put images in a folder called images, and then reference them using the relative path. It's recommended to edit the image on CSS to change the size of the image instead of changing the size of the image itself.
 
 -----------------------------
-<h2 id="10"> Line breaks
+### Line breaks
 
-<h4>
+
 
 - The `<br>` tag is used to insert a single line break.
 
@@ -291,9 +278,8 @@ Green</p>
 
 ```
 ---------------------
-<h2 id="11"> Working with blocks quotes and other elements
+### Working with blocks quotes and other elements
 
-<h4>
 
 - The `<blockquote>` tag is used to define a section that is quoted from another source.
 
@@ -315,9 +301,9 @@ Example
 - The `<q>` tag is used in conjunction with the `<blockquote>` tag.
 ---------------------
 
-<h2 id="12"> Working with Lists
+### Working with Lists
 
-<h4>
+
 
 - HTML lists are used to display data in a list format.
 
@@ -439,9 +425,9 @@ Example
 </dl>
 ```
 
-<h2 id="13"> Working with Hyperext links
+### Working with Hyperext links
 
-<h4>
+
 
     Hyperlinks are used to link from one web page to another using a set of <a> tags.
 
@@ -466,9 +452,9 @@ Example
 
 ---------------------
 
-<h2 id="14"> Turning an Inline Image into a Hyperlink
+### Turning an Inline Image into a Hyperlink
 
-<h4>
+
 
 - The `<a>` tag can be used to turn an image into a hyperlink.
 
@@ -481,9 +467,9 @@ Example
 
 ---------------------
 
-<h2 id="15"> Linking to a Location on the Same Page
+### Linking to a Location on the Same Page
 
-<h4>
+
 
 - You can link to a location on the same page by using the id attribute.
 
@@ -508,9 +494,9 @@ Early web browsers did not support the id attribute. However, nowadays most web 
 
 ---------------------
 
-<h2 id="16">  Working with a Hypertext Attributes
+###  Working with a Hypertext Attributes
 
-<h4>
+
 
 | Attribute | Description |
 | --- | --- |
@@ -563,9 +549,9 @@ Here's an example markdown table of common internet resources and their correspo
 
 ---------------------
 
-<h2 id="17">  Specifying the folder path
+### Specifying the folder path
 
-<h4>
+
 
 - The path attribute specifies the path to the folder that contains the files to be displayed.
 
@@ -588,9 +574,9 @@ Here's an example markdown table of common internet resources and their correspo
 
 ---------------------
 
-<h2 id="18">  Setting the Base Path 
+### Setting the Base Path 
 
-<h4>
+
 
 - The base element specifies the base URL/target for all relative URLs in a page.
 
@@ -605,9 +591,9 @@ Example
 
 ---------------------
 
-<h2 id="19">  Validating HTML
+### Validating HTML
 
-<h4>
+
 
 - The HTML validator is a tool that checks the markup validity of Web documents in HTML, XHTML, SMIL, MathML, etc.
 
@@ -621,9 +607,9 @@ Link: https://validator.w3.org/
 
 ---------------------
 
-<h2 id="20"> How to create a HTML document template?
+### How to create a HTML document template?
 
-<h4>
+
 
 
 
