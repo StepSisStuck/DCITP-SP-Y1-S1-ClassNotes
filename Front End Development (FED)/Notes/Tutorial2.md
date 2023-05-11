@@ -310,7 +310,7 @@ Attribute Selectors
 
 - Selectors also can defined based on attribute. For example, the following selector selects all elements with the attribute "attribute":
 
-`id`- Identifies an element in the document. It must be unique within the document.
+id- Identifies an element in the document. It must be unique within the document.
 
 Example on how to use this element:
 
