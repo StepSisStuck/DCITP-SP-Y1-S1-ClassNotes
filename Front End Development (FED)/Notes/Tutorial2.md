@@ -13,6 +13,7 @@ Topic listed below:
     - [Exploring Selector Patterns](#exploring-selector-patterns)
     - [Contextual Selectors](#contextual-selectors)
 - [SOOOOOOO](#sooooooo)
+    - [Attribute Selectors](#attribute-selectors)
     - [Working with Fonts](#working-with-fonts)
   - [Choosing a Font](#choosing-a-font)
   - [Choosing a Font](#choosing-a-font-1)
@@ -290,7 +291,6 @@ p {
 2. Context is based on the hierarchy of HTML elements. The parent element is the element that contains the child element. The child element is the element that is contained within the parent element.
 
 
-// Create a table for contextual selectors
 
 | Selector | Description |
 |----------|-------------|
@@ -304,9 +304,9 @@ p {
 
 ----------------------------------------------
 
-<h2 id="6">
-Attribute Selectors
-<h4>
+
+### Attribute Selectors
+
 
 - Selectors also can defined based on attribute. For example, the following selector selects all elements with the attribute "attribute":
 
