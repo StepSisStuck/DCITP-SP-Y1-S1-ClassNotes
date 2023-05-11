@@ -65,5 +65,71 @@ Example: <br>
 ```
 
 
+--------------------
+### Working with Grid Rows and Columns
+
+- To define the number and size of grid and columns, use the following properties: <br>
+   - grid-template-columns <br>
+   - grid-template-rows <br>
+
+- Where `width1, width2` etc is a spcace-seprated list that defines the width of the columns or tracks within the grid. <br>
+   - The values can be a length, a percentage, or a fraction of the free space in the grid (using the fr unit). <br>
+   - The values can be a combination of different units, like "25% 50% 25%". <br>
+   - The number of values in the list defines the number of columns in the grid layout. <br>
+   - If you provide less values than the number of columns, the browser will repeat the values until all columns are defined. <br>
+   - If you provide more values than the number of columns, the browser will add the new columns at the end of the grid. <br>
+   - The values can be named grid lines: <br>
+      - The line names must be enclosed in square brackets. <br>
+      - The line names must be separated by whitespace. <br>
+
+Example: <br>
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: [col1-start] 100px [col2-start] 100px [col3-start] 100px [col3-end];
+}
+```
+
+- An **explict grid** is a grid that we have defined by setting the grid-template-columns and grid-template-rows properties. <br>
+   - An **implicit grid** is a grid that we have not defined by setting the grid-template-columns and grid-template-rows properties. <br>
+   - The implicit grid is created by the grid-auto-columns and grid-auto-rows properties. <br>
+   - The implicit grid is created by the grid-auto-flow property. <br>
+
+Example:
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  grid-auto-columns: 100px;
+  grid-auto-rows: 100px;
+}
+```
+An **implicit grid** is created by the grid-auto-columns and grid-auto-rows properties. <br>
+- The grid-auto-columns property defines the width of the columns in the implicit grid. <br>
+- The grid-auto-rows property defines the height of the rows in the implicit grid. <br>
+- The grid-auto-flow property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid. <br>
+   - The grid-auto-flow property has the following values: <br>
+      - row: places items by filling each row in turn, adding new rows as necessary. <br>
+      - column: places items by filling each column in turn, adding new columns as necessary. <br>
+      - dense: attempts to fill in holes earlier in the grid if smaller items come up later. <br>
+
+Example: <br>
+```css
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  grid-auto-columns: 100px;
+  grid-auto-rows: 100px;
+  grid-auto-flow: row dense;
+}
+```
+
+
+
 
 
