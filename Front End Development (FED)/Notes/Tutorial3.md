@@ -56,7 +56,14 @@ Example: <br>
 .grid-container {
   display: grid;
 }
+
+/* OR */
+
+.grid-container {
+  display: inline-grid;
+}
 ```
+
 
 
 
