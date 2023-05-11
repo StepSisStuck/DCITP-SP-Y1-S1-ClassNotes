@@ -184,6 +184,24 @@ article {
 }
 ```
 
+- To extend a grid item so that it covers mutiple columns or rows, we can use the span keyword. <br>
+   - The span keyword can be used with the grid-column-start, grid-column-end, grid-row-start, and grid-row-end properties. <br>
+
+``` CSS
+article {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  grid-row-start: 3;
+  grid-row-end: span 2;
+}
+```
+
+----
+### Placing Grid Items by Area
+- In the grid areas approach to layout you identify grid areas and then assign grid items to the areas. <br>
+- To define a grid area, use the grid-template-areas property. <br>
+- 
+
 
 
 
