@@ -1,21 +1,24 @@
 # Repetitions (Do While Loop)
 
-Topic in this Document: <br>
-[Repetitions](#1) <br>
-[Do While Loop Syntax](#2) <br>
-[Do While Loop Example](#3) <br>
-[While Loop Example](#4) <br>
-[Which Loop to use?](#5) <br>
-[Caution](#6) <br>
-[Nested for Loop](#7) <br>
-[Summary](#8) <br>
+Topic in this Document: 
+- [Repetitions (Do While Loop)](#repetitions-do-while-loop)
+- [Repetitions](#repetitions)
+- [Do While Loop Syntax](#do-while-loop-syntax)
+  - [Example](#example)
+- [do-while Loop Example](#do-while-loop-example)
+- [while Loop Example](#while-loop-example)
+  - [](#)
+  - [Which Loop to use?](#which-loop-to-use)
+- [Caution](#caution)
+- [Nested for Loop](#nested-for-loop)
+  - [Summary](#summary)
 
 
 --------------------
 
-<h2 id="1"> Repetitions
+# Repetitions
 
-<h4>
+
 
 - A more effective way to make use of the repetition/looping/iteration structures
     - For loop
@@ -26,9 +29,9 @@ This topic will focus more on do-whole and while loop.
 
 --------------------
 
-<h2 id="2"> Do While Loop Syntax
+# Do While Loop Syntax
 
-<h4>
+
 
 ```JavaScript
 do {
@@ -66,9 +69,9 @@ Explain the output:
 
 --------------------
 
-<h2 id="3"> do-while Loop Example
+# do-while Loop Example
 
-<h4>
+
 
 ```JavaScript
 var count = 0;
@@ -93,9 +96,9 @@ Explain the output:
 
 --------------------
 
-<h2 id="4"> while Loop Example
+# while Loop Example
 
-<h4>
+
 
 ```JavaScript
 var number = 1;
@@ -119,9 +122,9 @@ Explain the output:
   
   ![Alt text](Images/12.png)
 --------------------
-<h2 id="5"> Which Loop to use?
+## Which Loop to use?
 
-<h4>
+
 
 - When to use do-while loop?
     - When the statements in the do block must be executed at least once.
@@ -144,9 +147,9 @@ Explain the output:
 
 --------------------
 
-<h2 id="6"> Caution
+# Caution
 
-<h4>
+
 
 The following **While Loop** will run forever because the condition is always true.
 
@@ -225,10 +228,9 @@ console.log("End of Program");
 ```
 
 --------------------
+# Nested for Loop
 
-<h2 id="7"> Nested for Loop
 
-<h4>
 
 - A loop within another loop is called a nested loop.
 - The inner loop will be executed one time for each iteration of the outer loop.
@@ -264,9 +266,9 @@ Explain the output:
 
 --------------------
 
-<h2 id="8"> Summary
+## Summary
 
-<h4>
+
 
 - A more effective way to make use of the repetition/looping/iteration structures
     - For loop

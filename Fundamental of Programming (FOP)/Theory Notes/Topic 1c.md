@@ -4,19 +4,28 @@
 
 # Table of Contents Listed Below:
 
-1. [Escape Sequences](#Escape-Sequences)
-2. [How to type " in a string](#How-to-type-quot-in-a-string)
-3. [How to put in a new line" in a string](#How-to-tab)
-4. [Comennting in Javascript](#Comennting-in-Javascript)
-5. [Variable and Data Types](#Variable)
-6. [Initialising a variable](#Initialising)
-7. [Re-initializing a variable is also possible.](#Change-Var)
-8. [Special Math funtions](#SpecialMath)
-9. [Reserved Words](#words)
+- [Topic 1C](#topic-1c)
+  - [Document to refer](#document-to-refer)
+- [Table of Contents Listed Below:](#table-of-contents-listed-below)
+- [Escape Sequences](#escape-sequences)
+  - [How to type " in a string](#how-to-type--in-a-string)
+  - [How to put in a new line" in a string](#how-to-put-in-a-new-line-in-a-string)
+- [Comennting in Javascript](#comennting-in-javascript)
+  - [Single Line Comennting](#single-line-comennting)
+  - [Multi Line Commenting](#multi-line-commenting)
+- [Variable](#variable)
+  - [What is a variable?](#what-is-a-variable)
+  - [Example for this code](#example-for-this-code)
+  - [Declaring a variable](#declaring-a-variable)
+  - [List of data type](#list-of-data-type)
+- [Initialising a variable](#initialising-a-variable)
+  - [Re-initializing a variable.](#re-initializing-a-variable)
+  - [Special Math funtions](#special-math-funtions)
+- [Reserved words](#reserved-words)
 
 
 ------------------
-<h2 id="#Escape-Sequences">Escape Sequences</h2>
+# Escape Sequences
 
 
 An escape sequence is a combination of characters that represents a single character. For example, the escape sequence `\n` represents a newline character. The following table lists some of the most common escape sequences.
@@ -37,7 +46,7 @@ console.log("c:\\user");
 
 
  --------------------------------
-<h2 id="How-to-type-quot-in-a-string">How to type " in a string</h2>
+## How to type " in a string
  
 The wrong way
 ``` javascript
@@ -58,7 +67,7 @@ console.log("I \"love\" you");
 
 
 ------------------
-<h2 id="How-to-tab"> How to put in a new line" in a string</h2>
+## How to put in a new line" in a string
 
 ``` javascript
 console.log("The quick brown fox /njumps over the lazy dog");
@@ -72,13 +81,13 @@ console.log("The quick brown fox /njumps over the lazy dog");
 
 
 -------------------------
-<h2 id="Comennting-in-Javascript" >Comennting in Javascript</h2>
+# Comennting in Javascript
 
-### Single Line Comennting 
+## Single Line Comennting 
 ``` javascript
 console.log("The quick brown fox \njumps over the lazy dog"); // You can use "//" to use to comment 
 ```
-### Multi Line Commenting
+## Multi Line Commenting
 ``` javascript
 console.log("The quick brown fox")
 /*
@@ -86,7 +95,7 @@ This will use a muiltiline comment
 start /* and end with */ 
 
 ```
-<h2 id="Variable">Variable</h2>
+# Variable
 
 ## What is a variable?
 A variable is a named storage for data. We can use variables to store data.
@@ -135,8 +144,8 @@ This is the content of my section.
     - 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 0.0
 
 -------------------------
-<h2 id="Initialising" >Initialising a variable
-<h4>
+# Initialising a variable
+
 
 ``` javascript
 var x; //x is undefined
@@ -144,19 +153,18 @@ var x = 5; //x is 5
 //print x
 console.log(x); //5
 ```
-<h2 id="Change-Var">Re-initializing a variable.
+## Re-initializing a variable.
 
-<h4>
 
 
 ``` javascript
 var area = 5; // Declaring a variable
 area = 8; // Re-initializing a variable
 ```
+-------------------------
+## Special Math funtions
 
-<h2 id="SpecialMath"> Special Math funtions
 
-<h4>
 
 > Math.floor(58.3) result in 58
 
@@ -169,9 +177,8 @@ area = 8; // Re-initializing a variable
 > Math.random() result in 0.123456789
 
 
+# Reserved words
 
-<h2 id="words"> Reserved words
-<h4>
 
 | Reserved Word | Description |
 |---------------|-------------|

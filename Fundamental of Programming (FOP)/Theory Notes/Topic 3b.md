@@ -2,15 +2,17 @@
 <h4>
 
 Topics covered in this section: <br>
-[1. For loop](#1) <br>
-[2. How For loop works?](#2) <br>
-[3. Logical Errors](#3) <br>
-[4. Summary](#4) <br>
+- [Topic 3b: Repetition - For Loop](#topic-3b-repetition---for-loop)
+- [For loop](#for-loop)
+  - [How For loop works?](#how-for-loop-works)
+- [Logical Errors](#logical-errors)
+- [Summary](#summary)
+
 
 ----------------------------------
-<h2 id="1"> 
-For loop
-<h4>
+
+# For loop
+
 
 For loop can be used like this 
 ``` Javascript
@@ -34,9 +36,8 @@ for(var i = 0; i < 10; i++){
 
 ----------------------------------
 
-<h2 id="2">
-How For loop works?
-<h4>
+## How For loop works?
+
 
 For loop is a loop that will run for a certain amount of time. It will run until the condition is false.
 
@@ -53,8 +54,8 @@ console.log(s + "*");
 ```
 - This will print out:
 ```
-0. * 0
-1. * 1
+1. * 0
+2. * 1
 *
 ```
 
@@ -78,9 +79,8 @@ for(var i = 1; i <= 100; i++){
 
 ----------------------------------
 
-<h2 id="3">
-Logical Errors
-<h4>
+# Logical Errors
+
 
 Logical errors are errors that are not syntax errors. It is an error that is caused by the programmer.
 
@@ -98,9 +98,9 @@ for(var i = 0; i < 10; i++){
 
 ----------------------------------
 
-<h2 id="4">
-Summary 
-<h4>
+
+# Summary 
+
 To use for loop statements to control the flow of the program.
 
 ----------------------------------

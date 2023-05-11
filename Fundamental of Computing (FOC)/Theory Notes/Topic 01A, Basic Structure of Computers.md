@@ -2,19 +2,24 @@
 
 # [Document to refer](../School%20Notes/Topic%2001A%20Basic%20Structure%20of%20Computers(1).pdf)
 
-Table of Contents Listed Below:
-1. [Objectives of the topic](#Objectives-of-the-topic)
-2. [Topology](#Topology)
-3. [Computer Funtion](#Computer-Funtion)
-4. [List of Input](#list-input)
-5. [List of Output](#output)
-6. [List of Storage](#Storage)
-7. [What is BIOs](#bios)
-8. [NIC Card](#NIC)
-9. [CPU Cache](#Cache)
-10. [Binary, Octal, Decimal, Hexadecimal Codes](#Codes)
+Topic listed below:
+- [Topic 01A](#topic-01a)
+- [Document to refer](#document-to-refer)
+- [Objectives of the topic](#objectives-of-the-topic)
+  - [Type of Topology](#type-of-topology)
+  - [A computer’s functions can be broken down into three basic tasks:](#a-computers-functions-can-be-broken-down-into-three-basic-tasks)
+  - [These are the common items that are used as input devices:](#these-are-the-common-items-that-are-used-as-input-devices)
+- [Output Components](#output-components)
+  - [Storage and Memory](#storage-and-memory)
+  - [Long Term Storage](#long-term-storage)
+  - [Computer Bus Fundamentals](#computer-bus-fundamentals)
+  - [What is BIOs?](#what-is-bios)
+  - [NIC Card](#nic-card)
+  - [How can CPU cache can enhance the performance of a computer?](#how-can-cpu-cache-can-enhance-the-performance-of-a-computer)
+  - [Binary, Octal, Decimal, Hexadecimal Codes](#binary-octal-decimal-hexadecimal-codes)
+ 
 
-<h2 id="Objectives-of-the-topic " >Objectives of the topic </h2>
+# Objectives of the topic
 
  Describe basic computer
 components and operation
@@ -32,8 +37,8 @@ Computing services
 
 
 ![Alt text](Image%20Files/1.PNG)
-<h2 id="Topology"> Type of Topology <h2>
-<h4>
+## Type of Topology 
+
 >> Ring topology = LAN
 
 >> Bus topology = LAN
@@ -59,9 +64,9 @@ The admin can do offsite or onsite administration.
 
 ---------------------------
 
-<h2 id="Computer-Funtion" > A computer’s functions can be broken down into three basic tasks: <h2>
+## A computer’s functions can be broken down into three basic tasks: 
 
-<h4>
+
 > Input: A user types the letter ‘A’ on the keyboard, which results in sending a code representing the
 letter ‘A’ to the computer
 
@@ -78,7 +83,7 @@ They can use external input devices such as a mouse, keyboard, scanner, or camer
 
 
 ----------------------------------
-<h2 id="list-input"> These are the common items that are used as input devices: <h2>
+ ## These are the common items that are used as input devices: 
 
 <h4>
 
@@ -129,9 +134,9 @@ CPU is the central processing unit of the computer
 ------------------------------
 ![Alt text](Image%20Files/5.PNG)
 
-<h2 id="output">Output Components<h2>
+# Output Components
 
-<h4>
+
 
 > Monitor
 
@@ -150,9 +155,9 @@ CPU is the central processing unit of the computer
 ![Alt text](Image%20Files/6.PNG)
 
 
-<h2 id="Storage"> Storage and Memory <h2>
+## Storage and Memory 
 
-<h4>
+
 - Two types of memory:
 Short term memory (RAM) and long term memory (ROM)
 
@@ -235,9 +240,9 @@ ROM are used to store the BIOS, which is a program that is run when the computer
 
 --------------------------------
 
-<h2 id="Bus">  Computer Bus Fundamentals <h2>
+##  Computer Bus Fundamentals
 
-<h4>
+
 
 A bus is a set of wires that connect the components of a computer together.
 
@@ -283,9 +288,9 @@ The data bus is used to transfer data between the CPU and the RAM.
 
 ---------------------------
 
-<h2 id="bios"> What is BIOs? <h2>
+## What is BIOs? 
 
-<h4>
+
 
 
 BIOS is a program that is run when the computer is turned on.
@@ -300,9 +305,8 @@ BIOS is used to store the CMOS settings.
 
 ---------------------------------
 
-<h2 id="NIC"> NIC Card<h2>
+##  NIC Card
 
-<h4>
 
 NIC stands for Network Interface Card.
 
@@ -349,8 +353,7 @@ They can upgrade their conputer by adding more RAM, adding more hard drive space
 --------------------------------
 
 
-<h2 id = "Cache" > How can CPU cache can enhance the performance of a computer?
-<h4>
+## How can CPU cache can enhance the performance of a computer?
 
 > CPU cache is a small amount of RAM that is located on the CPU.
      >> It is used to store the data that is used by the CPU like a RAM.
@@ -360,9 +363,9 @@ They can upgrade their conputer by adding more RAM, adding more hard drive space
 
 --------------------------------
 
-<h2 id ="Codes"> Binary, Octal, Decimal, Hexadecimal Codes <h2>
+## Binary, Octal, Decimal, Hexadecimal Codes
 
-<h4>
+
 
     Dec: 0,1,2,3,4,5,6,7,8,9,10 -> base 10
 

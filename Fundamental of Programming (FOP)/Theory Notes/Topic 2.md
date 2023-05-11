@@ -2,22 +2,27 @@
 
 ## [Document to refer](../School%20Notes/Topic%202%20Operators%20&%20Selections(I)v1.pdf)
 
-### Table of contents listed below:
-1. [Constrains](#Constrains) 
-2. [Operators](#Operators)
-3. [Use of remainder operator (%)](#Roperator)
-4. [Shorthand Operators](#Short)
-5. [Boolean Operators](#Bool)
-6. [If Statement](#If)
-7. [Operator Precedence and Evaluation Order](#Operator)
-8. [String Data Type](#Type)
-9. [Data Type](#Data)
-10. [Obtaining User Input](#input)
-11. [Converting Strings to Numbers](#StringtoNumber)\
-12. [Selection Statements](#Selection)
+Table of contents listed below:
+- [Topic 2](#topic-2)
+  - [Document to refer](#document-to-refer)
+- [Constrants](#constrants)
+- [Operators](#operators)
+  - [Use of remainder operator (%)](#use-of-remainder-operator-)
+- [Shorthand Operators](#shorthand-operators)
+  - [Boolean Operators](#boolean-operators)
+- [If Statement](#if-statement)
+  - [Operator Precedence and Evaluation Order](#operator-precedence-and-evaluation-order)
+- [This is IMPORTANT](#this-is-important)
+  - [String Data Type](#string-data-type)
+- [Data Type](#data-type)
+  - [Obtaining User Input](#obtaining-user-input)
+- [Node Package Manager (NPM)](#node-package-manager-npm)
+- [Converting Strings to Numbers](#converting-strings-to-numbers)
+  - [Can also use this](#can-also-use-this)
 
 
-<h2 id ="Constrains" > Constrants
+
+# Constrants
 <h4>
 
 >Represents permanent values
@@ -35,8 +40,8 @@
     - const int PI = 3.14159;
 
 
-<h2 id="Operators"> Operators
-<h4>
+# Operators
+
 
 Operators are used to perform operations on variables and values.
 
@@ -58,8 +63,8 @@ Operators are used to perform operations on variables and values.
     - =, +=, -=, *=, /=, %=, <<=, >>=, &=, ^=, |=
 
 
-<h2 id= Roperator> Use of remainder operator (%)
-<h4>
+## Use of remainder operator (%)
+
 
 > To determine whether a number is even or odd, use the remainder operator (%). If the remainder is 0, the number is even; otherwise, it is odd.
 
@@ -75,9 +80,9 @@ So if a numver % 5 is 0 ---> it is divisible by 5
 
 ![ ](Images/3.PNG)
 
-<h2 id="Short"> Shorthand Operators
+# Shorthand Operators
 
-<h4>
+
 
  +=, -=, *=, /=, %=, <<=, >>=, &=, ^=, |=
 
@@ -138,9 +143,9 @@ console.log(b); // 4
 //explaination: b++ is 2, but b is 4
 ``` 
 
-<h2 id="Bool"> Boolean Operators
+## Boolean Operators
 
-<h4>
+
 
 | Operator | Description |
 |----------|-------------|
@@ -200,9 +205,9 @@ Since we got a "Yes" to one of the questions, the audience cheers - which means 
 -------------------------
 
 
-<h2 id="If"> If Statement
+# If Statement
 
-<h4>
+
 
 
 
@@ -224,9 +229,9 @@ console.log("Is " + num + " divisible by 2 or 3? " +((num % 2 == 0) || (num % 3 
 // explaination: 8 is divisible by 2, but not 3
 ```
 
-<h2 id = "Operator"> Operator Precedence and Evaluation Order
+## Operator Precedence and Evaluation Order
 
-<h4>
+
 
 - The expression is evaluated from left to right
 
@@ -250,9 +255,9 @@ console.log((x ** y) ** z); // 4096
 # This is IMPORTANT
 
 
-<h2 id = "Type"> String Data Type
+## String Data Type
 
-<h4>
+
 
 - A string is a sequence of characters surrounded by single or double quotes.
 
@@ -262,9 +267,9 @@ console.log(str);
 ```
 Any value can be converted to a string using the String() function.
 
-<h2 id ="Data"> Data Type 
+# Data Type 
 
-<h4>
+
 
 
 Sure, here's an example markdown table of common data types:
@@ -280,9 +285,9 @@ Sure, here's an example markdown table of common data types:
 | Array     | A collection of values, typically of the same data type |
 
 
-<h2 id= "input"> Obtaining User Input
+## Obtaining User Input
 
-<h4>
+
 
 - Why do we need user input?
     - To make our programs interactive
@@ -300,7 +305,7 @@ var name = prompt("What is your name?");
 console.log("Hello " + name + "!");  
 ```
 
-## Node Package Manager (NPM)
+# Node Package Manager (NPM)
 
 - NPM is a package manager for JavaScript
     - Developers from all over the world contribute to the NPM registry
@@ -314,9 +319,9 @@ console.log("Hello " + name + "!");
     Then, import the library using this code
 
 
-<h2 id="StringtoNumber"> Converting Strings to Numbers
+# Converting Strings to Numbers
 
-<h4>
+
 
 - To input a returned from the keyboard as a number, use the Number() function.
 

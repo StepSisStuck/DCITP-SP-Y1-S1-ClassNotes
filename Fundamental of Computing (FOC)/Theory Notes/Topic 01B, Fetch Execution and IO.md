@@ -5,55 +5,43 @@
 
 
 Table of content: <br>
-- [Binary](#1) <br>
-
-- [Data is Stored in Bits](#2) <br>
-
-- [Bits and Bytes](#3) <br>
-
-- [Funtional Units](#4) <br>
-
-- [Cache Memory](#5) <br>
-
-- [Secondary Memory](#6) <br>
-
-- [Functional units](#7) <br>
-
-- [Processor  - Arithmetic Logic Unit (ALU)](#8) <br>
-
-- [Processor  - Control Unit](#9) <br>
-
-- [Intel CPU 8086](#10) <br>
-
-- [Processor  - Registers](#11) <br>
-
-- [Processor  - Instruction Cycle](#12) <br>
-
-- [Processor  - Instruction Types](#13) <br>
-
-- [Processor  - Instruction Formats](#14) <br>
-
-- [Processor  - Components](#15) <br>    
-
-- [Processor  - Technology Trends](#16) <br>
-
-- [Processor  - Parallelism](#17) <br>
-
+- [Topic 01B](#topic-01b)
+  - [Document to refer](#document-to-refer)
+- [Binary](#binary)
+  - [ASCII ](#ascii-)
+  - [Data is Stored in Bits](#data-is-stored-in-bits)
+  - [Bits and Bytes](#bits-and-bytes)
+- [Funtional Units](#funtional-units)
+  - [Cache Memory](#cache-memory)
+  - [Secondary Memory](#secondary-memory)
+  - [They are larger and slower than main memory. ](#they-are-larger-and-slower-than-main-memory-)
+  - [Functional units](#functional-units)
+  - [Processor  - Arithmetic Logic Unit (ALU)](#processor----arithmetic-logic-unit-alu)
+- [Processor  - Control Unit](#processor----control-unit)
+  - [Intel CPU 8086](#intel-cpu-8086)
+  - [What is a "segmentation"](#what-is-a-segmentation)
+- [Computer](#computer)
+  - [Instruction Cycle](#instruction-cycle)
+  - [Instructions and Programs](#instructions-and-programs)
+  - [Instruction types](#instruction-types)
+  - [Processor Components](#processor-components)
+- [Technology Trends](#technology-trends)
+  - [Parallelism](#parallelism)
 
 
 
 
 -----------------
 
-<h2 id="1"> Binary
-<h4>
+# Binary
+
 
 - What is binary? <br>
 
     - They are 1s and 0s. <br>
 
 
-ASCII <br>
+## ASCII <br>
 
 and ASCII table is a table that contains all the characters and their binary representation. <br>
 
@@ -71,9 +59,9 @@ and ASCII table is a table that contains all the characters and their binary rep
     - 5. Repeat until the quotient is 0. <br>
     - 6. The binary number is the sequence of remainders written in reverse order. <br>
 -----------------
-<h2 id="2"> Data is Stored in Bits
+## Data is Stored in Bits
 
-<h4>
+
 
 - What is a bit? <br>
 
@@ -90,7 +78,7 @@ A pulse of 5 volts is a single bit of data. <br>
 and 0 volts is a single bit of data. <br>
 
 -----------------
-<h2 id="3"> Bits and Bytes
+ ## Bits and Bytes
 
 ![Alt text](Image%20Files/18.png)
 
@@ -104,18 +92,18 @@ and 0 volts is a single bit of data. <br>
 
     - Unicode is a standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems. <br>
 -----------------
-<h2 id="4"> Funtional Units
+# Funtional Units
 
-<h4>
+
 Primary Memory (Also called main memory)    <br>
 
 1. They are Organized into words of typically 32 bits. <br>
 2. A 32-bit word can contain four 8-bit bytes. <br>
 3. A personal computer has 4 GB of memory or more. <br>
 -----------------
-<h2 id="5"> Cache Memory
+## Cache Memory
 
-<h4>
+
 
 - What is cache memory? <br>
 
@@ -130,9 +118,9 @@ They are smaller and faster than main memory. <br>
 Holds sections of main memory that are currently being used. <br>
 
 -----------------
-<h2 id="6"> Secondary Memory
+## Secondary Memory
 
-<h4>
+
 
 - What is secondary memory? <br>
 
@@ -144,9 +132,9 @@ Holds sections of main memory that are currently being used. <br>
 
 They are larger and slower than main memory. <br>   
 -----------------
-<h2 id="7"> Functional units
+## Functional units
 
-<h4>
+
 
 Processor <br>
 
@@ -158,9 +146,9 @@ Processor <br>
 
 4. A bus for communicating with main memory and I/O devices.  (typically 16 or 32 bits wide)<br>
 -----------------
-<h2 id="8"> Processor  - Arithmetic Logic Unit (ALU)
+## Processor  - Arithmetic Logic Unit (ALU)
 
-<h4>
+
 
 - What is Arithmetic Logic Unit (ALU)? <br>
 
@@ -174,9 +162,9 @@ Processor <br>
 
     The ALU is also used to perform logical operations. <br>
 -----------------
-<h2 id="9"> Processor  - Control Unit
+# Processor  - Control Unit
 
-<h4>
+
 
 - What is Control Unit? <br>
 
@@ -201,15 +189,15 @@ Processor <br>
 
 -----------------
 
-<h2 id="10"> Intel CPU 8086
+## Intel CPU 8086
 
-<h4>
+
 
 
 ![Alt text](Image%20Files/20.png)
 
 
-What is a "segmentation"
+## What is a "segmentation"
 
 - Segmentation is a method of dividing a program into segments. <br>
 
@@ -230,10 +218,9 @@ What is a "segmentation"
 
 -----------------
 
-<h2 id="11"> Computer
+# Computer
 
-<h4>
-<br>
+
 
 1. Computer accepts information in the form of programs and data through an input unit and stores it in the memory
 
@@ -246,9 +233,8 @@ What is a "segmentation"
 
 -----------------
 
-<h2 id="12"> Instruction Cycle
+## Instruction Cycle
 
-<h4>
 
 - What is an instruction cycle? <br>
 
@@ -272,9 +258,9 @@ What is a "segmentation"
     - The Fetch stage is the stage where the instruction is fetched from memory. <br>   
 -----------------
 
-<h2 id="13"> Instructions and Programs
+## Instructions and Programs
 
-<h4>
+
 
 An instruction is a single operation that the processor can perform. <br>
 
@@ -283,9 +269,9 @@ A 32-bit instruction can contain four 8-bit bytes. <br>
 
 -----------------
 
-<h2 id="14"> Instruction types
+## Instruction types
 
-<h4>
+
 
 - Load 
     
@@ -305,9 +291,9 @@ A 32-bit instruction can contain four 8-bit bytes. <br>
 
 -----------------   
 
-<h2 id="15"> Processor Components
+## Processor Components
 
-<h4>
+
 
 - What is a processor? <br>
 
@@ -350,9 +336,9 @@ A 32-bit instruction can contain four 8-bit bytes. <br>
 
 -----------------
 
-<h2 id="16"> Technology Trends
+# Technology Trends
 
-<h4>
+
 
 Improvements in technology have led to the development of faster and more powerful processors. <br>
 
@@ -370,9 +356,9 @@ There are the list of the processor technology trends. <br>
 
 -----------------
 
-<h2 id="17"> Parallelism 
+## Parallelism 
 
-<h4>
+
 
 - What is parallelism? <br>
 
