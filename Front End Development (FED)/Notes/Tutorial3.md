@@ -166,6 +166,23 @@ grid-column-gap: 50px;
 grid-row-gap: 50px;
 ```
 
+--------------------
+### Placing items with Grid Lines
+- Grid items are placed using grid lines. <br>
+- To place the `article` element in the second column and the third row, we can use the following properties: <br>
+   - grid-column-start <br>
+   - grid-column-end <br>
+   - grid-row-start <br>
+   - grid-row-end <br>
+
+``` CSS
+article {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+```
 
 
 
