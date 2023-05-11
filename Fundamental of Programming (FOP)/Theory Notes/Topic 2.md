@@ -148,12 +148,54 @@ console.log(b); // 4
 | &&       | And         |
 | \|\|     | Or          |
 
+Example:
+    
+``` javascript
+var b1 = true, b2 = false, b3 = true;
+console.log(b1 && b2); // false
+console.log(b1 || b2); // true
+console.log(!b1); // false
+console.log(b1 && b2 && b3); // false
+console.log(b1 || b2 || b3); // true
+console.log(b1 && b2 || b3); // true
+console.log(b1 && (b2 || b3)); // true
+console.log((b1 && b2) || b3); // true
+```
+Explanation:
+When using &&, if one of the value is false, the whole thing is false
+When using ||, if one of the value is true, the whole thing is true
+
+
+``` javascript
+var b1 = true, b2 = false, b3 = true;
+var a1 = 1, a2 = 2, a3 = 3;
+console.log (b1 && b2 || b3);
+
+/*
+Alright, let's think of this as a wacky game show where b1, b2, and b3 are three contestants who are either really excited (true) or not excited (false) to be there.
+
+The game show host asks the contestants two questions:
+
+"Are both b1 and b2 excited?" - This is what b1 && b2 means.
+"Is b3 excited?" - This is what b3 means.
+Now, if either of these questions gets a "Yes" (true), the audience will cheer. That's what || (or operator) is about: if either side is true, then the whole expression is true.
+
+So, let's see what happens:
+
+b1 (true) and b2 (false) - b1 is excited, but b2 is not. So the answer to the first question is "No" (false).
+b3 (true) - b3 is excited! So the answer to the second question is "Yes" (true).
+Since we got a "Yes" to one of the questions, the audience cheers - which means the console.log will output true.
+*/
+```
+
 
 
 | Operator | Description |
 |----------|-------------|
 | &&       | Logical AND |
 | \|\|     | Logical OR  |
+| !        | Logical NOT |
+
 
 -------------------------
 
