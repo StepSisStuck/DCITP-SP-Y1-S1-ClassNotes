@@ -3,12 +3,12 @@
 
 
 Table of Contents Listed Below:
-1. [Problem Solving Skills](#Problem-Solving-Skills)
-2. [Impliment the algorithm](#Impliment-the-algorithm)
+1. [Problem Solving Skills](#understand-problem-requirements)
+2. [Impliment the algorithm](#impliment-the-algorithm)
 3. [Maintance](#Maintance)
 
 -----------------
-<h2 id="Understand-problem-requirements" >Understand problem requirements</h2>
+## Understand-problem-requirements 
  - What are the inputs?
   
  - What are the outputs?
@@ -20,7 +20,7 @@ Table of Contents Listed Below:
     - combine the solutions to the smaller problems to solve the original problem
 
 ------------------------
-  <h2 id= "Impliment-the-algorithm" >Impliment the algorithm</h2>
+  ## Impliment the algorithm
    Before a computer can solve a problem, you must first write an algorithm that describes the steps to solve the problem. An algorithm is a step-by-step procedure for solving a problem. 
 
   - An algorithm
