@@ -153,6 +153,18 @@ The example show that: <br>
 - The third column is one unit wide. <br>
 
 
+--------------------
+
+### Outlining a Grid
+
+- The grid-column-gap property defines the size of the gap between the columns in a grid layout. <br>
+
+- The grid-row-gap property defines the size of the gap between the rows in a grid layout. <br>
+
+``` CSS
+grid-column-gap: 50px;
+grid-row-gap: 50px;
+```
 
 
 
