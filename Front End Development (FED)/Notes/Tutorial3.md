@@ -200,7 +200,26 @@ article {
 ### Placing Grid Items by Area
 - In the grid areas approach to layout you identify grid areas and then assign grid items to the areas. <br>
 - To define a grid area, use the grid-template-areas property. <br>
-- 
+- To assign a grid item to a grid area, use the grid-area property. <br>
+
+``` CSS
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header"
+                       "main main aside"
+                       "footer footer footer";
+}
+```
+Explain the code: <br>
+- The grid-template-areas property defines the grid areas. <br>
+- The grid-template-areas property defines 3 rows: <br>
+   - The first row is named "header header header". <br>
+   - The second row is named "main main aside". <br>
+   - The third row is named "footer footer footer". <br>
+   
+
 
 
 
