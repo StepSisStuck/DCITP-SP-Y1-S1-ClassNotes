@@ -129,6 +129,31 @@ Example: <br>
 }
 ```
 
+--------------------
+### Track Sizes with Fractional Units
+- A grid track is a space between two adjacent grid lines. <br>
+- A grid cell is the smallest unit on the grid that is created by the intersection of a row and a column. <br>
+- A grid area is the total space surrounded by four grid lines. <br>
+- A grid gap is the space between two adjacent rows or columns. <br>
+- A grid row is a horizontal track of the grid. <br>
+
+A fractional unit is a flexible length unit that is relative to the available space in the grid container. <br>
+They are often combined with absolute lengths (like px or em) or other flexible lengths (like %) to create a flexible grid layout. <br>
+
+<br>
+
+Example: <br>
+
+``` css
+grid-template-columns: 250px 2fr 1fr;
+```
+The example show that: <br>
+- The first column is 250px wide. <br>
+- The second column is twice as wide as the third column. <br>
+- The third column is one unit wide. <br>
+
+
+
 
 
 
