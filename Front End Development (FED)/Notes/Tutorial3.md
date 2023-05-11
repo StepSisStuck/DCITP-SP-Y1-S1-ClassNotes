@@ -218,7 +218,35 @@ Explain the code: <br>
    - The first row is named "header header header". <br>
    - The second row is named "main main aside". <br>
    - The third row is named "footer footer footer". <br>
-   
+
+
+- The grid-area property specifies where to place an item. <br>
+
+    - The general syntax for the grid-area property is: <br>
+    ``` CSS
+    grid-area: name | row-start / column-start / row-end / column-end;
+    ```
+    - The name is the name of the grid area. <br>
+    - The row-start is the starting position of the grid item along the vertical axis. <br>
+    - The column-start is the starting position of the grid item along the horizontal axis. <br>
+
+
+``` CSS
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}
+```
+  
+  
 
 
 
