@@ -4,6 +4,15 @@
 Table of Contents: <br>
 [Overview](#overview-of-grid-layout) <br>
 [CSS Grid Layout](#css-grid-layout) <Br>
+[Creating a CSS Grid Layout](#creating-a-css-grid-layout) <br>
+[Working with Grid Rows and Columns](#working-with-grid-rows-and-columns) <br>
+[Track Sizes with Fractional Units](#track-sizes-with-fractional-units) <br>
+[Outlining a Grid](#outlining-a-grid) <br>
+[Placing items with Grid Lines](#placing-items-with-grid-lines) <br>
+[Placing Grid Items by Area](#placing-grid-items-by-area) <br>
+[Defining the Grid Gap](#defining-the-grid-gap) <br>
+
+
 
 
 --------------------
@@ -44,7 +53,7 @@ The grid numbering (especially the -ve) get more complicated when we have more t
    - Multiple cells. <br>
 
 --------------------
-### Creatig a CSS Grid Layout
+### Creating a CSS Grid Layout
 
 - To create a grid container, we must set the display property to grid or inline-grid. <br>
    - We need to identify the grid container using the following display values: <br>
@@ -270,6 +279,79 @@ footer {
   grid-row-gap: 10px;
 }
 ```
+
+--------------------
+
+### Handline Overflow in Grid Layouts
+
+- The overflow property specifies what happens if content overflows an element's box. <br>
+- **Overflow Property** - Controls a browser's scrollbars when the content of an element overflows the area specified by the width and height properties. <br>
+
+Example: <br>
+``` CSS
+overflow: visible|hidden|scroll|auto|initial|inherit;
+```
+Explain the code: <br>
+- visible: Default. The overflow is not clipped. The content renders outside the element's box. <br>
+- hidden: The overflow is clipped, and the rest of the content will be invisible. <br>
+- scroll: The overflow is clipped, and a scrollbar is added to see the rest of the content. <br>
+- auto: Similar to scroll, but it adds scrollbars only when necessary. <br>
+- initial: Sets this property to its default value. <br>
+- inherit: Inherits this property from its parent element. <br>
+
+``` CSS
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header header"
+                       "main main aside"
+                       "footer footer footer";
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  overflow: hidden;
+}
+``` 
+--------------------
+### Stacking Elements in Grid Layouts
+
+- The z-index property specifies the stack order of an element. <br>
+- An element with greater stack order is always in front of an element with a lower stack order. <br>
+- Note: z-index only works on positioned elements (position:absolute, position:relative, or position:fixed). <br>
+
+Example: <br>
+``` CSS
+z-index: auto|number|initial|inherit;
+```
+Explain the code: <br>
+- auto: Default. Elements render on the default order. <br>
+- number: An integer that specifies the stack order of the element. <br>
+- initial: Sets this property to its default value. <br>
+- inherit: Inherits this property from its parent element. <br>
+
+``` CSS
+header {
+  grid-area: header;
+  z-index: 1;
+}
+main {
+  grid-area: main;
+  z-index: 2;
+}
+aside {
+  grid-area: aside;
+  z-index: 3;
+}
+footer {
+  grid-area: footer;
+  z-index: 4;
+}
+```
+
+--------------------
+
+
+
 
   
 
