@@ -1,5 +1,5 @@
 # Topic 3b: Repetition - For Loop
-<h4>
+
 
 Topics covered in this section: <br>
 - [Topic 3b: Repetition - For Loop](#topic-3b-repetition---for-loop)
