@@ -5,8 +5,8 @@ Topic listed below: <br>
 # Tutorial 2
 
 Topic listed below:
-1. [What is CSS?](#1)
-2. [What is a HEX code?](#2)
+1. [What is CSS?](#CSS)
+2. [What is a HEX code?](#what-is-a-hex-code?)
 3. [Defining Semi Opaque Colors in CSS](#3)
 4. [Exploring Selector Patterns](#4)
 5. [Contextual Selectors](#5)
@@ -21,9 +21,8 @@ Topic listed below:
 
 
 ----------------------------------------------
-<h2 id="1">
-CSS?
-<h4>
+### CSS
+
 
 - CSS
    - CSS stands for Cascading Style Sheets
@@ -96,10 +95,10 @@ h1 {
 -----------
 
 
-<h2 id="2"> 
-What is a HEX code?
 
-<h4>
+### What is a HEX code?
+
+
 
 - A HEX code is a six-digit, three-byte hexadecimal number used to represent colors in HTML, CSS, SVG, and other computing applications. The bytes represent the red, green and blue components of the color. One byte represents a number in the range 00 to FF (in hexadecimal notation), or 0 to 255 in decimal notation. This represents the least (0) to the most (255) intensity of each of the color components. Thus web colors specify colors in the True Color (24-bit RGB) color scheme. The hex triplet is formed by concatenating three bytes in hexadecimal notation, in the following order:
 
