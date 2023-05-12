@@ -8,7 +8,7 @@ Table of Contents Listed Below:
 - [Understand-problem-requirements](#understand-problem-requirements)
   - [If the problem is complex, break it down into smaller problems.](#if-the-problem-is-complex-break-it-down-into-smaller-problems)
   - [Impliment the algorithm](#impliment-the-algorithm)
-  - [Maintance](#maintance)
+- [Maintance](#maintance)
 
 
 -----------------
