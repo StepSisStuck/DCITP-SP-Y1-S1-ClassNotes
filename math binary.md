@@ -1,5 +1,3 @@
-Create a table for binary, hex and decimal numbers.
-
 | Binary | Hex | Decimal |
 | --- | --- | --- |
 | 0000 | 0 | 0 |
