@@ -8,7 +8,7 @@ Table of Contents Listed Below:
 - [Understand-problem-requirements](#understand-problem-requirements)
   - [If the problem is complex, break it down into smaller problems.](#if-the-problem-is-complex-break-it-down-into-smaller-problems)
   - [Impliment the algorithm](#impliment-the-algorithm)
-  - [Maintance](#maintance)
+- [Maintance](#maintance)
 
 
 -----------------
@@ -32,7 +32,7 @@ Table of Contents Listed Below:
     - is a sequence of instructions
     - is a set of rules
 ------------------  
-## Maintance
+# Maintance
 - Once you have written an algorithm, you must test it to make sure it works. You can test your algorithm by running it on a small set of data and comparing the results to the expected results. If the results are not correct, you must debug your algorithm. Debugging is the process of finding and fixing errors in your algorithm.
 
     -  It's good to write comments in your code to explain what your code does. This will help you and others understand your code.

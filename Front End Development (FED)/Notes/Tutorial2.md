@@ -1,11 +1,10 @@
 # Tutorial 2
 
 
-Topic listed below: <br>
-# Tutorial 2
+# [Document to refer](../School%20Notes/Tut02.pptx)
 
 Topic listed below:
-- [Tutorial 2](#tutorial-2)
+- [Document to refer](#document-to-refer)
 - [Tutorial 2](#tutorial-2-1)
     - [CSS](#css)
     - [What is a HEX code?](#what-is-a-hex-code)
