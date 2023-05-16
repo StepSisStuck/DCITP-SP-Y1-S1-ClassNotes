@@ -22,6 +22,7 @@
   - [Re-initializing a variable.](#re-initializing-a-variable)
   - [Special Math funtions](#special-math-funtions)
 - [Reserved words](#reserved-words)
+- [Summary](#summary)
 
 
 ------------------
@@ -221,3 +222,11 @@ area = 8; // Re-initializing a variable
 | `static` | Used to define a static method or property for a class |
 | `get` | Used to define a getter method for an object property |
 | `set` | Used to define a setter method for an object property |
+
+
+# Summary
+
+- A variable is a named storage for data. We can use variables to store data.
+- Although we can declare a variable using the var keyword, it does not require the var keyword.
+- However, it is a good practice to always use the var keyword to declare a variable.
+  
