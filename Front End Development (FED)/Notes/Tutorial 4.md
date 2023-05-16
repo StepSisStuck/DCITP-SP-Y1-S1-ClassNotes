@@ -70,5 +70,3 @@ The `background-repeat` property can take one of the following values:
 -------------------------
 
 
-
-
