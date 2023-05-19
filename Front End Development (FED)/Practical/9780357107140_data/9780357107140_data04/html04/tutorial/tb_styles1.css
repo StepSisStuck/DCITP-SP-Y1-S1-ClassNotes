@@ -131,6 +131,8 @@ aside {
 	margin-right: 15%;
 	padding: 20px;
 	width: 26%;	 
+	background: radial-gradient(white, rgb(175, 207, 167),
+	 rgb(175, 207, 167));
 }
 
 aside h1 {
@@ -163,6 +165,9 @@ footer {
 	color: white;	
 	display: block;
 	padding: 25px;
+	background: linear-gradient(345deg, rgb(172,232,172),
+											rgb(53, 98, 42));
+
 }
 
 body > footer > nav.vertical, body > footer > section {
