@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Bootstrap5 Lesson 6 Table</title>
+<script>function lti_launch( vars, target ) {
+						var query = '';
+						var new_tab = false;
+
+						for(var key in vars) {
+							if(query.length == 0) {
+								query += '?' + key + '=' + encodeURIComponent(vars[key]);
+							}
+							else {
+								query += '&' + key + '=' + encodeURIComponent(vars[key]);
+							}
+						}
+
+						var url = '/d2l/customization/pearsonlti/6667/Launch' + query;(target == '_blank') ? window.open( url, '_blank' ) : location.replace( url );}</script><script src="https://s.brightspace.com/lib/bsi/20.23.4-263/unbundled/mathjax.js?v=20.23.4.18819" type="module"></script><script>document.addEventListener('DOMContentLoaded', function() {
+					if (document.querySelector('math') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+						document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+							elm.setAttribute('style', 'display: block; height: 0.5rem;');
+						});
+
+						window.D2L.MathJax.loadMathJax({
+							'outputScale': 1.3,
+							'renderLatex': true
+						});
+					}
+				});</script><script src="https://s.brightspace.com/lib/bsi/20.23.4-263/unbundled/prism.js?v=20.23.4.18819" type="module"></script><script>document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code);
+					});
+				});</script><script>window.addEventListener('message', function(event) { 
+					if( !event.data ) {
+						return;
+					}
+
+					var params;
+					try {
+						params = JSON.parse( event.data );
+					}
+					catch {
+						return;
+					}
+					if( !params.subject || params.subject !== 'lti.frameResize' ) {
+						return;
+					}
+
+					const MAX_FRAME_HEIGHT = 10000
+					if( !params.height || params.height < 1 || params.height > MAX_FRAME_HEIGHT ) {
+						console.warn( 'Invalid height value received, aborting' );
+						return;
+					}
+					var el = document.getElementsByTagName( 'iframe' );
+					for ( var i=0; i < el.length; i++ ) {
+						if( el[i].contentWindow === event.source ) {
+							el[i].style.height = params.height + 'px';
+							el[i].style.width = '100%';
+							console.info( 'Setting iFrame height to ' + params.height );
+							console.info( 'Setting iFrame width to 100%' );
+						}
+					}
+				});</script></head>
+
+<body>
+
+<!-
+    ==================
+    Slide - T04
+    ==================
+-->
+
+    <div class="container">
+        <h3 class="m-3">Tables</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- On tables -->
+<!-
+    ==================
+    Slide - T05
+    ==================
+-->
+    <div class="container">
+        <table class="table">
+            <!-- On rows -->
+            <thead class="table-danger">
+                <th>Class</th>
+                <th>Heading</th>
+                <th>Heading</th>
+            </thead>
+            <tr class="table-primary">
+                <th>Primary</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-secondary">
+                <th>Secondary</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-success">
+                <th>Success</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-danger">
+                <th>Danger</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-warning">
+                <th>Warning</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-info">
+                <th>Info</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-light">
+                <th>Light</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+            <tr class="table-dark">
+                <th>Dark</th>
+                <td>Cell</td>
+                <td>Cell</td>
+            </tr>
+        </table>
+    </div>
+
+<!-
+    ==================
+    Slide - T06
+    ==================
+-->
+
+    <div class="container">
+        <h3 class="m-3">Striped Rows</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<!-
+    ==================
+    Slide - T07
+    ==================
+-->
+
+    <div class="container">
+        <h3 class="m-3">Bordered Table</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<!-
+    ==================
+    Slide - T08
+    ==================
+-->
+    <div class="container">
+        <h3 class="m-3">Borderless Table</h3>
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<!-
+    ==================
+    Slide - T09
+    ==================
+-->
+    <div class="container">
+        <h3 class="m-3">Small Table</h3>
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<!-
+    ==================
+    Slide - T10
+    ==================
+-->
+    
+    <div class="container">
+        <h2>Responsive Table</h2>
+        <p>The .table-responsive class adds a scrollbar to the table when needed:</p>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <th>#</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                    <th>Heading</th>
+                </thead>
+                <tr>
+                    <td>1</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                    <td>cell</td>
+                </tr>
+            </table>
+        </div>
+
+<!-
+    ==================
+    Slide - T11
+    ==================
+-->
+        <div class="container">
+            <h2>Hover Rows</h2>
+            <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+                </tr>
+                <tr>
+                  <td>Mary</td>
+                  <td>Moe</td>
+                  <td>mary@example.com</td>
+                </tr>
+                <tr>
+                  <td>July</td>
+                  <td>Dooley</td>
+                  <td>july@example.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+</body>
+</html>
