@@ -364,7 +364,46 @@ Bootstrap
 <p class="text-black-50">This is another text.</p>
 <p class="text-white-50 bg-dark">This is another text.</p>
 ```
+## Background Colors
+
+- Bootstrap provides contextual classes that can be used to color the background of a paragraph.
+  
+```HTML
+<p class="bg-primary text-white">This is some text.</p>
+<p class="bg-success text-white">This is another text.</p>
+<p class="bg-danger text-white">This is another text.</p>
+<p class="bg-warning text-white">This is another text.</p>
+<p class="bg-info text-white">This is another text.</p>
+<p class="bg-light text-dark">This is another text.</p>
+<p class="bg-dark text-white">This is another text.</p>
+<p class="bg-body text-white">This is another text.</p>
+<p class="bg-white text-dark">This is another text.</p>
+```
 
 -------------------------
 
+# Spaces - Margin and Padding
+
+- Bootstrap provides several classes for styling HTML elements with margin and padding.
+
+- The classes are named using the format `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm, md, lg, and xl`.
+
+Where property is one of:
+
+- `m` - for classes that set margin
+- `p` - for classes that set padding
+
+Where sides is one of:
+
+- `t` - for classes that set margin-top or padding-top
+- `b` - for classes that set margin-bottom or padding-bottom
+- `l` - for classes that set margin-left or padding-left
+- `r` - for classes that set margin-right or padding-right
+- `x` - for classes that set both *-left and *-right
+
+Where size is one of:
+
+- `0` - for classes that eliminate the margin or padding by setting it to 0
+
+- `1` - (by default) for classes that set the margin or padding to `$spacer * .25`
 
