@@ -21,7 +21,7 @@ Table of content: <br>
   - [Intel CPU 8086](#intel-cpu-8086)
   - [What is a "segmentation"](#what-is-a-segmentation)
 - [Computer](#computer)
-  - [Instruction Cycle](#instruction-cycle)
+  - [Instruction Cycle (CPU)](#instruction-cycle-cpu)
   - [Instructions and Programs](#instructions-and-programs)
   - [Instruction types](#instruction-types)
   - [Processor Components](#processor-components)
@@ -233,7 +233,7 @@ Processor <br>
 
 -----------------
 
-## Instruction Cycle
+## Instruction Cycle (CPU)
 
 
 - What is an instruction cycle? <br>
@@ -246,11 +246,14 @@ Processor <br>
 
 - What are the steps of an instruction cycle? <br>
     
-     - 1. Fetch the instruction from memory. <br>
-    - 2. Decode the instruction. <br>
-     - 3. Execute the instruction. <br>
-     - 4. Store the result. <br> <br>    
-
+     1. Fetch the instruction from memory. <br>
+         - The CPU retrieves the next instruction from memory based on the program counter (PC) value. This instruction is fetched and brought into the CPU for further processing.<br><br>
+     2. Decode the instruction. <br>
+      -  The fetched instruction is decoded to determine the specific operation or instructions to be executed. The CPU interprets the opcode and any associated operands to understand what needs to be done. <br><br>
+      3. Execute the instruction. <br>
+         - The CPU performs the specific operation specified by the decoded instruction. This could involve data transfer, arithmetic or logical computations, or control operations such as branching or jumping. <br><br>
+     4. Store the result. <br>     
+        - After executing the instruction, the CPU may store the result back into memory or update the value in registers as required by the instruction. This ensures that the changes made during the execution are properly recorded and preserved. <br><br>
 - What is the Fetch stage? <br>
 
     - The Fetch stage is the first stage of an instruction cycle. <br>
