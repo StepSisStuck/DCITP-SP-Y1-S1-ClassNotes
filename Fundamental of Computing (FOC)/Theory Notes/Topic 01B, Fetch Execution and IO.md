@@ -22,6 +22,7 @@ Table of content: <br>
   - [What is a "segmentation"](#what-is-a-segmentation)
 - [Computer](#computer)
   - [Instruction Cycle (CPU)](#instruction-cycle-cpu)
+    - [Easier way to know how CPU works](#easier-way-to-know-how-cpu-works)
   - [Instructions and Programs](#instructions-and-programs)
   - [Instruction types](#instruction-types)
   - [Processor Components](#processor-components)
@@ -254,6 +255,18 @@ Processor <br>
          - The CPU performs the specific operation specified by the decoded instruction. This could involve data transfer, arithmetic or logical computations, or control operations such as branching or jumping. <br><br>
      4. Store the result. <br>     
         - After executing the instruction, the CPU may store the result back into memory or update the value in registers as required by the instruction. This ensures that the changes made during the execution are properly recorded and preserved. <br><br>
+
+
+### Easier way to know how CPU works
+
+- "load," "store," and "add" are also common examples of basic instruction types performed by the Central Processing Unit (CPU). These instructions are commonly used in many instruction set architectures and represent fundamental operations in computer programs. <br>
+
+  - Load: The "load" instruction is used to transfer data from memory into a register. It fetches a value from a specific memory location and places it in a register for further processing.
+
+   - Store: The "store" instruction is used to transfer data from a register into memory. It takes the value stored in a register and writes it to a specified memory location.
+
+   - Add: The "add" instruction performs addition on two operands, typically stored in registers or memory locations. It adds the values of the operands together and stores the result in a specified register or memory location.
+
 - What is the Fetch stage? <br>
 
     - The Fetch stage is the first stage of an instruction cycle. <br>
