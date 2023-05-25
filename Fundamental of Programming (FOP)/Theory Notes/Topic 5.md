@@ -1,7 +1,18 @@
 # Topic 5
 [Document to refer](../School%20Notes/Topic%205%20Arraysv1.pdf) <br>
+
+Table of Contents:
 - [Topic 5](#topic-5)
 - [Why do we use arrays?](#why-do-we-use-arrays)
+  - [Example of an array:](#example-of-an-array)
+- [How do we start with the array](#how-do-we-start-with-the-array)
+- [Array Emement Data Types](#array-emement-data-types)
+- [Accessing Array Elements](#accessing-array-elements)
+- [Array Example](#array-example)
+- [Dynamic Array](#dynamic-array)
+- [Processing Array Elements](#processing-array-elements)
+- [Processing Array Elements](#processing-array-elements-1)
+
 
 
 
