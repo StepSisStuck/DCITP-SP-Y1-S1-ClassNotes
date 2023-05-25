@@ -164,8 +164,6 @@ console.log(!b1); // false
 console.log(b1 && b2 && b3); // false
 console.log(b1 || b2 || b3); // true
 console.log(b1 && b2 || b3); // true
-console.log(b1 && (b2 || b3)); // true
-console.log((b1 && b2) || b3); // true
 ```
 Explanation:
 When using &&, if one of the value is false, the whole thing is false
