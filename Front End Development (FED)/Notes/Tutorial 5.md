@@ -5,6 +5,31 @@
 <br>
 
 Table of Contents:
+- [Bootstrap](#bootstrap)
+  - [Document to be used for the Bootstrap tutorial](#document-to-be-used-for-the-bootstrap-tutorial)
+- [Introduction](#introduction)
+    - [Why do we use Bootstrap?](#why-do-we-use-bootstrap)
+    - [What is Bootstrap?](#what-is-bootstrap)
+    - [What is responsive web design?](#what-is-responsive-web-design)
+- [Getting Started](#getting-started)
+- [Breakingpoints](#breakingpoints)
+- [Containers](#containers)
+- [Grid System](#grid-system)
+  - [Grid Classes Example](#grid-classes-example)
+- [Basic Structure if a Bootstrap Page](#basic-structure-if-a-bootstrap-page)
+    - [2 Collumn Layout](#2-collumn-layout)
+    - [3 Collumn Layout](#3-collumn-layout)
+- [Responsive Columns](#responsive-columns)
+- [Setting one column width](#setting-one-column-width)
+- [Offset Classes](#offset-classes)
+- [Reordering Columns](#reordering-columns)
+- [Flex - Direction](#flex---direction)
+    - [Blob Element](#blob-element)
+- [Inline Text Elements](#inline-text-elements)
+- [Text Decoration](#text-decoration)
+  - [Colors](#colors)
+  - [Background Colors](#background-colors)
+- [Spaces - Margin and Padding](#spaces---margin-and-padding)
 
 
 -------------------------
