@@ -75,7 +75,7 @@ for(var i = 1; i <= 100; i++){
    - It will print out 1 to 100.
    - The difference is that it will print out 1 to 100 instead of 0 to 99.
    - <= means less than or equal to.
-   - >= means greater than or equal to.
+  - >= means greater than or equal to.
 
 ----------------------------------
 
