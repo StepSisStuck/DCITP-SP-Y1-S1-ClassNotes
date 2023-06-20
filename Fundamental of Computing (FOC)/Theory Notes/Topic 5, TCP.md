@@ -13,6 +13,7 @@ Table of Contents:
   - [Remote Desktop Protocol (RDP)](#remote-desktop-protocol-rdp)
   - [Telnet and SSH](#telnet-and-ssh)
 - [DNS Domain Name Syetem](#dns-domain-name-syetem)
+- [Transport-Layer Protocols](#transport-layer-protocols)
 - [To calculate IP addresses](#to-calculate-ip-addresses)
   - [Here is an example of how to calculate the network ID and host ID](#here-is-an-example-of-how-to-calculate-the-network-id-and-host-id)
 
@@ -111,6 +112,31 @@ Table of Contents:
    - Without DNS, you would have to type in the IP address of the website.
 
 -----------------
+
+# Transport-Layer Protocols
+- The transport layer is responsible for end-to-end data delivery and error checking.
+- The transport layer is responsible for breaking up the data into segments.
+  - They supply a header field to identify the application that is sending the data.
+  - Provide a reliable connection between the source and destination.
+
+Example of transport layer protocols:
+- Transmission Control Protocol (TCP)
+
+
+
+| Field | Size (bytes) | Description |
+|-------|-------------|-------------|
+| Source Port | 2 | Identifies the sending port |
+| Destination Port | 2 | Identifies the receiving port |
+| Sequence Number | 4 | Used to ensure reliable data transfer |
+| Acknowledgment Number | 4 | Used to acknowledge receipt of data |
+| Data Offset | 4 bits | Specifies the size of the TCP header in 32-bit words |
+| Reserved | 6 bits | Reserved for future use |
+| Flags | 6 bits | Specifies the purpose of the TCP segment |
+| Window Size | 2 | Specifies the number of bytes that can be sent before receiving an acknowledgment |
+| Checksum | 2 | Used to detect errors in the TCP segment |
+| Urgent Pointer | 2 | Indicates the end of urgent data |
+
 
 
 
