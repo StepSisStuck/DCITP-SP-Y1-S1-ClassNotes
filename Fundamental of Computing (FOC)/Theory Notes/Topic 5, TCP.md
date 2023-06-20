@@ -4,6 +4,15 @@ Table of Contents:
 - [TCP/IP topic 5](#tcpip-topic-5)
 - [TCP/IP's Layered Architecture](#tcpips-layered-architecture)
 - [TCP/IP is a layered architecture](#tcpip-is-a-layered-architecture)
+- [OSI Layers](#osi-layers)
+    - [How to remember the OSI layers easily](#how-to-remember-the-osi-layers-easily)
+- [TCP/IP's Layered Architecture](#tcpips-layered-architecture-1)
+  - [Example of how the layers work together](#example-of-how-the-layers-work-together)
+- [Packet details](#packet-details)
+- [Application Layer Protocols](#application-layer-protocols)
+  - [Remote Desktop Protocol (RDP)](#remote-desktop-protocol-rdp)
+  - [Telnet and SSH](#telnet-and-ssh)
+- [DNS Domain Name Syetem](#dns-domain-name-syetem)
 - [To calculate IP addresses](#to-calculate-ip-addresses)
   - [Here is an example of how to calculate the network ID and host ID](#here-is-an-example-of-how-to-calculate-the-network-id-and-host-id)
 
@@ -36,6 +45,74 @@ Table of Contents:
 | Network Access | Ethernet, Wi-Fi, PPP, Token Rings | Provides physical connectivity to the network |
 
 -----------------
+# OSI Layers
+7 - Application
+6 - Presentation
+5 - Session
+4 - Transport
+3 - Network
+2 - Data Link
+1 - Physical
+
+### How to remember the OSI layers easily
+**Please Do Not Throw Singapore Passports Away**
+
+-----------------
+# TCP/IP's Layered Architecture
+- **Protocols** are rules that govern the format and meaning of packets exchanged by communicating entities.
+
+## Example of how the layers work together
+- When you open a web browser and type in a URL, the browser sends a request to the server. The request is sent to the application layer. The application layer then sends the request to the transport layer. The transport layer then sends the request to the internet layer. The internet layer then sends the request to the network access layer. The network access layer then sends the request to the server.
+
+- When the server receives the request, it sends a response back to the browser. The response is sent to the network access layer. The network access layer then sends the response to the internet layer. The internet layer then sends the response to the transport layer. The transport layer then sends the response to the application layer. The application layer then sends the response to the browser.
+
+     - The request should look like this 
+       - Application layer: GET / HTTP/1.1
+
+
+
+-  IP places its own header in front of the TCP header. The IP header contains the source and destination IP addresses. The TCP header contains the source and destination port numbers. The IP header is used to route the packet to the destination. The TCP header is used to deliver the packet to the correct application.
+
+- The unit of data at the transport layer is called a segment. The unit of data at the internet layer is called a packet. The unit of data at the network access layer is called a frame. 
+- Packet is passed to the network access layer. The network access layer then sends the packet to the internet layer. The internet layer then sends the packet to the transport layer. The transport layer then sends the packet to the application layer. The application layer then sends the packet to the browser. Which is where NIC comes in.
+
+- The network access layer is responsible for placing the packet on the network. The network access layer is also responsible for receiving the packet from the network. The network access layer is responsible for placing the packet on the network. The network access layer is also responsible for receiving the packet from the network.
+
+-----------------
+# Packet details
+- The packet contains the source and destination IP addresses. The packet also contains the source and destination port numbers. The packet also contains the data that is being sent.
+- The data part of an Ethernet frame can hold up to 1500 bytes. MAC addresses (48 bits) are 6 bytes long.
+
+-----------------
+# Application Layer Protocols
+## Remote Desktop Protocol (RDP)
+- RDP is a proto
+- RDP is used to access a Windows compurter remotely by using windows GUI.
+- They use port 3389
+## Telnet and SSH
+- Telnet and SSH are used to remotely access a computer.
+- They are used to connect a device across a network via a command line interface (CLI).
+- Telnet uses TCP port 23.
+  - When you telnet to a device, you are using the telnet client to connect to the telnet server on the device.
+  - This is not a secure connection because the data is sent in clear text.
+
+- SSH uses TCP port 22.
+  - When you SSH to a device, you are using the SSH client to connect to the SSH server on the device.
+  - This is a secure connection because the data is encrypted.
+
+-----------------
+
+# DNS Domain Name Syetem 
+- DNS is a name-to-name resolution system that is used to resolve host names to IP addresses.
+- Using DNS a user can type in a host name and the DNS server will resolve the host name to an IP address.
+
+- Example 
+   - When you type in www.google.com, the DNS server will resolve the host name to an IP address.
+   - Without DNS, you would have to type in the IP address of the website.
+
+-----------------
+
+
 
 
 
