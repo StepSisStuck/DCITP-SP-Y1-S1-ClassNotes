@@ -302,6 +302,33 @@ Explanation:
 
 - The code above is a JavaScript program that uses the `Math.pow()` function to calculate the value of a number raised to a power. The `Math.pow()` function takes two parameters, `base` and `exponent`, which are the base and exponent of the power. The function returns the value of `base` raised to the power of `exponent`.
 
+------------------
+```Javascript
+function muiliTable() {
+    for (var x = 1; x <= 12; x++) {
+        console.log(x + " x 5 = " + (x * 5));}
+}
+```
+Output:
+```Javascript
+1 x 5 = 5
+2 x 5 = 10
+3 x 5 = 15
+4 x 5 = 20
+5 x 5 = 25
+6 x 5 = 30
+7 x 5 = 35
+8 x 5 = 40
+9 x 5 = 45
+10 x 5 = 50
+11 x 5 = 55
+12 x 5 = 60
+```
+
+Explanation:
+
+- The code above is a JavaScript program that defines a function called `muiliTable()`. This function takes no parameters. The function then prints the multiplication table for the number 5 to the console. The function uses a for loop to iterate through the numbers 1 through 12. The function then prints the number and the result of multiplying the number by 5 to the console.
+
 
 
 
