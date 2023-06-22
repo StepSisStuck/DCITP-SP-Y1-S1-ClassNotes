@@ -102,5 +102,80 @@ Explanation:
 - The code above is a JavaScript program that defines three functions: `add()`, `multiply()`, and `subtract()`. These functions take two parameters, `a` and `b`, and return the sum, product, and difference of these two values, respectively.
 
 
+------------------
+# Pass by value vs Pass by reference
+
+## Pass by value
+- Pass by value is a method of passing arguments to a function. In this method, the value of the argument is copied into a new variable and then passed to the function. The function can then modify the value of the argument without affecting the original variable.
+
+Example of pass by value:
+```Javascript
+function add(a, b) {
+  return a + b;
+}
+
+var x = 1;
+var y = 2;
+var result = add(x, y);
+
+console.log(result); // Output: 3
+console.log(x); // Output: 1
+console.log(y); // Output: 2
+
+```
+
+Explanation:
+- The code above is a JavaScript program that defines a function called `add()`. This function takes two parameters, `a` and `b`, and returns the sum of these two values using the `+` operator.
+
+
+
+
+## Pass by reference
+
+- Pass by reference is a method of passing arguments to a function. In this method, the address of the argument is passed to the function. The function can then modify the value of the argument without affecting the original variable.
+
+- In this example, the `add()` function takes two parameters, `a` and `b`, which are primitive data types. When the function is called with arguments `x` and `y`, the values of `x` and `y` are copied and passed to the function. This means that any changes made to `a` and `b` inside the function do not affect the original variables `x` and `y`.
+
+Example of pass by reference:
+```Javascript
+function changeName(person) {
+  person.name = 'John';
+}
+
+var myPerson = { name: 'Jane' };
+changeName(myPerson);
+
+console.log(myPerson); // Output: { name: 'John' }
+```
+
+Explanation:
+- The code above is a JavaScript program that defines a function called `changeName()`. This function takes one parameter, `person`, and changes the value of the `name` property of this object to "John".
+
+- In this example, the `changeName() `function takes one parameter, `person`, which is an object. When the function is called with the `myPerson` object, a reference to the object is passed to the function. This means that any changes made to the `person` object inside the function affect the original myPerson object. In this case, the `name` property of the `myPerson` object is changed from `'Jane'` to `'John'`.
+
+
+------------------
+
+``` Javascript
+var myColor = "blue";
+
+function changeColor() {
+    var anotherColor = "red";
+    console.log("Color inside function: " + anotherColor);
+    console.log("myColor inside function: " + myColor);
+}
+
+console.log("My Color is: " + myColor);
+changeColor();
+console.log("Color outside function: " + anotherColor);
+
+```
+
+Explanation:
+- The code above is a JavaScript program that defines a variable called `myColor` and a function called `changeColor()`. The variable `myColor` is initialized with the value `"blue"`. The function `changeColor()` is defined with a local variable called `anotherColor` that is initialized with the value `"red"`. The function also prints the value of `anotherColor` to the console. The function then prints the value of `myColor` to the console. The function is then called. The function prints the value of `anotherColor` to the console. The function then prints the value of `myColor` to the console. The function then returns. The program then prints the value of `myColor` to the console. The program then prints the value of `anotherColor` to the console.
+
+
+
+
 
 
