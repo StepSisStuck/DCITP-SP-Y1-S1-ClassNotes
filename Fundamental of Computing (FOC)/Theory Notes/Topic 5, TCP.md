@@ -14,6 +14,13 @@ Table of Contents:
   - [Telnet and SSH](#telnet-and-ssh)
 - [DNS Domain Name Syetem](#dns-domain-name-syetem)
 - [Transport-Layer Protocols](#transport-layer-protocols)
+- [Role of the Transport Layer](#role-of-the-transport-layer)
+- [Data protection with checksums](#data-protection-with-checksums)
+- [TCP: The Reliable Protocol Layer](#tcp-the-reliable-protocol-layer)
+- [Internetwork-Layer Protocols](#internetwork-layer-protocols)
+  - [In summary, the Internetwork Layer Protocols are responsible for routing data packets between networks, and the IP protocol is a key component of this layer that provides addressing, fragmentation, reassembly, and routing of packets.](#in-summary-the-internetwork-layer-protocols-are-responsible-for-routing-data-packets-between-networks-and-the-ip-protocol-is-a-key-component-of-this-layer-that-provides-addressing-fragmentation-reassembly-and-routing-of-packets)
+- [Data link layer](#data-link-layer)
+- [Data Encapsulation](#data-encapsulation)
 - [To calculate IP addresses](#to-calculate-ip-addresses)
   - [Here is an example of how to calculate the network ID and host ID](#here-is-an-example-of-how-to-calculate-the-network-id-and-host-id)
 
@@ -138,7 +145,74 @@ Example of transport layer protocols:
 | Urgent Pointer | 2 | Indicates the end of urgent data |
 
 
+-----------------
+# Role of the Transport Layer
+- Transport layer protocols have two main responsibilities:
+  - Provide end-to-end data delivery
+  - Provide error checking
 
+- User Datagram Protocol (UDP)
+  - UDP is a connectionless
+  - Connectionless and designed for speed for small amounts of data.
+
+- Transmission Control Protocol (TCP)
+  - TCP is a connection-oriented protocol.
+  - Connection-oriented and designed for reliability for large amounts of data.
+
+
+ - Both:
+    - UDP and TCP use port numbers to identify the application that is sending the data.
+    - Work at the transport layer of the OSI model.
+    - Protect data integrity by using checksums.
+
+-----------------
+# Data protection with checksums
+- Checksums are used to detect errors in the data.
+- They provide a data integrity check.
+
+-----------------
+# TCP: The Reliable Protocol Layer
+
+- If an application requires reliable data delivery, it will use TCP.
+- How does TCP guarantee reliable data delivery?
+  - TCP uses sequence numbers and acknowledgments to guarantee reliable data delivery.
+  - TCP uses a sliding window to guarantee reliable data delivery.
+      - The sliding window is used to control the flow of data between the source and destination.
+      - Establishes a window size that specifies the number of bytes that can be sent before receiving an acknowledgment.
+      - Ensuring that the data is received in the correct order.
+
+- TCP is a connection-oriented protocol.
+  - A connection must be established before data can be sent.
+  - A connection is established by using a three-way handshake.
+  - A connection is terminated by using a four-way handshake.
+
+-----------------
+# Internetwork-Layer Protocols
+- The internetwork layer is responsible for routing packets between networks.
+- Where the IP protocol operates and is the heart of the internet.
+
+The Internetwork Layer Protocols, also known as the Internet Layer, is the third layer in the TCP/IP protocol stack. This layer is responsible for routing packets between networks and is where the Internet Protocol (IP) operates.
+
+The IP protocol is a connectionless protocol that provides best-effort delivery of packets between hosts on different networks. It is responsible for addressing, fragmentation, and reassembly of packets, as well as routing packets to their destination.
+
+In summary, the Internetwork Layer Protocols are responsible for routing data packets between networks, and the IP protocol is a key component of this layer that provides addressing, fragmentation, reassembly, and routing of packets.
+-----------------
+# Data link layer
+
+The Data Link Layer is the second layer in the TCP/IP protocol stack. This layer is responsible for placing packets on the network and receiving packets from the network. It is also responsible for error detection and flow control.
+
+| Layer | Protocol | Function |
+|-------|----------|----------|
+| Data Link | Ethernet, Wi-Fi, PPP | Provides physical connectivity to the network |
+| Logical Link Control (LLC) | 802.2 | Provides a common interface to the network layer |
+| Media Access Control (MAC) | 802.3, 802.11 | Provides addressing and error detection for data frames |
+
+-----------------
+# Data Encapsulation
+
+Data encapsulation is the process of adding headers and trailers to data as it moves down the layers of the OSI model. The headers and trailers are added at each layer of the OSI model.
+
+The headers and trailers are removed as the data moves up the layers of the OSI model.
 
 
 
