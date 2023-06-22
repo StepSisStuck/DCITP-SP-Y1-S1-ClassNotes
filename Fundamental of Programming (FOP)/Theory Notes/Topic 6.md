@@ -174,6 +174,135 @@ console.log("Color outside function: " + anotherColor);
 Explanation:
 - The code above is a JavaScript program that defines a variable called `myColor` and a function called `changeColor()`. The variable `myColor` is initialized with the value `"blue"`. The function `changeColor()` is defined with a local variable called `anotherColor` that is initialized with the value `"red"`. The function also prints the value of `anotherColor` to the console. The function then prints the value of `myColor` to the console. The function is then called. The function prints the value of `anotherColor` to the console. The function then prints the value of `myColor` to the console. The function then returns. The program then prints the value of `myColor` to the console. The program then prints the value of `anotherColor` to the console.
 
+------------------
+
+# Math Funtions
+
+## Math.random()
+- The `Math.random()` function returns a floating-point, pseudo-random number in the range [0, 1) (inclusive of 0, but not 1) with approximately uniform distribution over that range — which you can then scale to your desired range. The implementation selects the initial seed to the random number generation algorithm; it cannot be chosen or reset by the user.
+
+Example:
+```Javascript
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+
+```
+
+Output:
+```Javascript
+0
+```
+
+Explanation:
+
+- The code above is a JavaScript program that defines a function called `getRandomInt()`. This function takes one parameter, `max`, which is the maximum value of the random number that will be generated. The function then returns a random integer between 0 and `max` (inclusive). The function uses the `Math.random()` function to generate a random number between 0 and 1 (exclusive). The function then multiplies this number by `max` and rounds it down to the nearest integer using the `Math.floor()` function.
+
+
+
+
+## Math.floor()
+
+- The `Math.floor()` function returns the largest integer less than or equal to a given number.
+
+Example:
+```Javascript
+console.log(Math.floor(1.95));
+// expected output: 1
+
+console.log(Math.floor(-1.95));
+
+```
+
+Output:
+```Javascript
+1
+```
+
+Explanation:
+
+- The code above is a JavaScript program that uses the `Math.floor()` function to round a number down to the nearest integer. The `Math.floor()` function takes one parameter, `x`, which is the number to be rounded down. The function returns the largest integer less than or equal to `x`.
+
+
+
+
+## Math.ceil()
+
+- The `Math.ceil()` function always rounds a number up to the next largest integer.
+
+Example:
+```Javascript
+console.log(Math.ceil(.95));
+// expected output: 1
+
+console.log(Math.ceil(4));
+
+```
+
+Output:
+```Javascript
+
+1
+```
+
+Explanation:
+
+- The code above is a JavaScript program that uses the `Math.ceil()` function to round a number up to the next largest integer. The `Math.ceil()` function takes one parameter, `x`, which is the number to be rounded up. The function returns the smallest integer greater than or equal to `x`.
+
+
+
+## Math.round()
+
+- The `Math.round()` function returns the value of a number rounded to the nearest integer.
+
+
+Example:
+```Javascript
+console.log(Math.round(0.9));
+// expected output: 1
+
+console.log(Math.round(5.95), Math.round(5.5), Math.round(5.05));
+
+```
+
+Output:
+```Javascript
+1
+```
+
+Explanation:
+
+- The code above is a JavaScript program that uses the `Math.round()` function to round a number to the nearest integer. The `Math.round()` function takes one parameter, `x`, which is the number to be rounded. The function returns the value of `x` rounded to the nearest integer.
+
+
+
+## Math.pow()
+
+- The `Math.pow()` function returns the base to the exponent power, that is, baseexponent.
+
+```Javascript  
+console.log(Math.pow(7, 2));
+// expected output: 49
+
+console.log(Math.pow(4, 0.5));
+// expected output: 2
+
+console.log(Math.pow(7, -2));
+
+```
+
+Output:
+```Javascript
+49
+```
+
+Explanation:
+
+- The code above is a JavaScript program that uses the `Math.pow()` function to calculate the value of a number raised to a power. The `Math.pow()` function takes two parameters, `base` and `exponent`, which are the base and exponent of the power. The function returns the value of `base` raised to the power of `exponent`.
+
+
 
 
 
