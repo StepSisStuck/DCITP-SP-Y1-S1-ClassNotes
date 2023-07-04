@@ -4,7 +4,7 @@ Table of contents of this document:
 - [CDA CA Dates/Assessments](#3)
 - [TCU CA Dates/Assessments](#4)
 
-
+FOC: Indivisual use Local copy, group project use AWS
 <h2 id="1"> AIIA CA Dates/Assessments
 
 <h4>
