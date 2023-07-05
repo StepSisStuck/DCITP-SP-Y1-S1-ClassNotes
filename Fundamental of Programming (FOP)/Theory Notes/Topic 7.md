@@ -88,3 +88,33 @@ You can access object properties in two ways:
 - objectName.propertyName
 - objectName["propertyName"]
 
+# Example 1
+```JavaScript
+class Circle {
+    constructor(radius) {
+        this.radius = radius;
+    }
+
+    get area() {
+        return Math.PI * this.radius * this.radius;
+    }
+}
+
+var c1 = new Circle(10);
+var c2 = new Circle(20);
+var c3 = new Circle(30);
+
+var area_c1 = c1.getArea();
+
+console.log("The area of c1 is " + area_c1 + ".");
+console.log("The area of c2 is " + c2.getArea() + ".");
+```
+
+Code output:
+The area of c1 is 314.1592653589793.
+The area of c2 is 1256.6370614359173.
+Code explanation:
+- The code above defines a class called Circle that has a constructor method and a getArea() method.
+
+
+
