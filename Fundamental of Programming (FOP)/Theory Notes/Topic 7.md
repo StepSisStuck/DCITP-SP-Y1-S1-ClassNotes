@@ -1,6 +1,14 @@
 # Topic 7
 [This is the practical](<../Practical/Practical 7>)
 Table of Contents:
+- [Topic 7](#topic-7)
+- [Classes and Objects](#classes-and-objects)
+  - [What is a Class?](#what-is-a-class)
+  - [What is an Object?](#what-is-an-object)
+- [Object Properties](#object-properties)
+  - [Accessing Object Properties](#accessing-object-properties)
+- [Example 1](#example-1)
+
 
 
 -------------------------
