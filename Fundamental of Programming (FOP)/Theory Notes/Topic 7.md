@@ -1,5 +1,7 @@
 # Topic 7
-[This is the practical](<../Practical/Practical 7>)
+[This is the practical](<../Practical/Practical 7>)<br>
+
+
 Table of Contents:
 - [Topic 7](#topic-7)
 - [Classes and Objects](#classes-and-objects)
@@ -8,6 +10,8 @@ Table of Contents:
 - [Object Properties](#object-properties)
   - [Accessing Object Properties](#accessing-object-properties)
 - [Example 1](#example-1)
+- [Why shall we use Objects and Classes? / Advantages](#why-shall-we-use-objects-and-classes--advantages)
+- [Attributes Defualt Value](#attributes-defualt-value)
 
 
 
@@ -125,4 +129,54 @@ Code explanation:
 - The code above defines a class called Circle that has a constructor method and a getArea() method.
 
 
+-------------------------
+
+# Why shall we use Objects and Classes? / Advantages
+
+1. Encapsulation: Objects allow us to encapsulate data and behavior into a single entity. This makes it easier to manage and organize code, and helps to prevent data from being modified or accessed in unintended ways.
+
+2. Abstraction: Objects provide a level of abstraction that allows us to focus on the essential features of a system, without getting bogged down in the details. This makes it easier to reason about code and to make changes to the system as requirements evolve.
+
+3. Reusability: Objects can be reused in different parts of a system or in different systems altogether. This can save time and effort, and can help to ensure consistency and maintainability across different parts of a system.
+
+4. Inheritance: Classes can inherit properties and methods from other classes, which can help to reduce code duplication and make it easier to manage complex systems.
+
+5. Polymorphism: Objects can be used in different contexts and can respond to messages in different ways. This can make code more flexible and adaptable to changing requirements.
+
+These are just a few examples of the benefits of using objects and classes in programming. By using objects and classes, we can create more modular, maintainable, and extensible code that is easier to reason about and work with.
+
+
+-------------------------
+
+# Attributes Defualt Value
+
+In JavaScript, you can set default values for object attributes in a similar way to other programming languages. 
+
+Here's an example of a JavaScript class with a default attribute value:
+
+```javascript
+class Person {
+  constructor(name, age = 18) {
+    this.name = name;
+    this.age = age;
+  }
+}
+```
+
+In this example, the `Person` class has two attributes: `name` and `age`. The `name` attribute is required and must be specified when creating a new `Person` object. The `age` attribute, on the other hand, has a default value of `18`. If no value is specified for `age` when creating a new `Person` object, it will be assigned the default value of `18`.
+
+You can also set default values for object attributes using the `||` operator. Here's an example:
+
+```javascript
+class Person {
+  constructor(name, age) {
+    this.name = name || 'John Doe';
+    this.age = age || 18;
+  }
+}
+```
+
+In this example, the `Person` class has two attributes: `name` and `age`. If no value is specified for `name` or `age` when creating a new `Person` object, the default values of `'John Doe'` and `18` will be assigned to these attributes, respectively.
+
+Default attribute values can be useful for providing sensible defaults for optional attributes, or for simplifying the process of creating new objects by reducing the number of required arguments. However, it's important to choose default values carefully, as they can affect the behavior of the object and the system as a whole.
 
