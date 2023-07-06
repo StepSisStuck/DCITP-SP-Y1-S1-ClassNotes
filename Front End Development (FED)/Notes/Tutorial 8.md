@@ -1,6 +1,32 @@
 # Web Form
 
 Table of Contents:
+- [Web Form](#web-form)
+- [Overview of a Web Form](#overview-of-a-web-form)
+  - [What is a Front End and Back End?](#what-is-a-front-end-and-back-end)
+    - [Front End](#front-end)
+    - [Back End](#back-end)
+- [Web Form Element](#web-form-element)
+- [Designing a web form](#designing-a-web-form)
+- [Starting a Web Form](#starting-a-web-form)
+- [Adding Field Labels](#adding-field-labels)
+- [Creating input field](#creating-input-field)
+- [Defining Default Values and Placeholder](#defining-default-values-and-placeholder)
+- [Validating a Web Form](#validating-a-web-form)
+- [GET and POST](#get-and-post)
+- [Regex](#regex)
+- [Using Forms Controls](#using-forms-controls)
+  - [Example](#example)
+  - [Explanation of the code:](#explanation-of-the-code)
+- [Checkbox and Radio Buttons](#checkbox-and-radio-buttons)
+  - [Example of the code](#example-of-the-code)
+  - [Explanation of the code:](#explanation-of-the-code-1)
+- [Range Input](#range-input)
+  - [Example of the code:](#example-of-the-code-1)
+  - [Explanation of the code:](#explanation-of-the-code-2)
+- [Floating Labels](#floating-labels)
+  - [Example of the code:](#example-of-the-code-2)
+  - [Explanation of the code:](#explanation-of-the-code-3)
 
 
 
@@ -206,5 +232,117 @@ Here's a table of some common `type` values for the `input` element in HTML:
 
 
 -------------------------
-# Testing for a Valid 
+# GET and POST
+In HTTP, GET and POST are two common request methods used to send data from a client to a server.
 
+The main difference between GET and POST requests is that GET requests are used to retrieve data from the server, while POST requests are used to submit data to the server.
+
+When a GET request is made, the data is sent in the URL as a query string. This makes it easy to bookmark and share the URL, but it also means that the data is visible in the URL, which can be a security risk.
+
+When a POST request is made, the data is sent in the request body, which is not visible in the URL. This makes it more secure than a GET request, but it also means that it cannot be bookmarked or shared as easily.
+
+In general, you should use a GET request when you want to retrieve data from the server, and a POST request when you want to submit data to the server.
+
+
+
+# Regex
+Regular expressions (regex) are a powerful tool for searching and manipulating text. They are supported in many programming languages, including JavaScript, Python, and Java, as well as in text editors like VS Code.
+
+Regex patterns are made up of a combination of characters and special symbols that define a search pattern. For example, the pattern `/hello/` would match the word "hello" in a text string.
+
+Here are a few common regex symbols:
+
+- `.` matches any single character.
+- `*` matches zero or more of the preceding character.
+- `+` matches one or more of the preceding character.
+- `?` matches zero or one of the preceding character.
+- `^` matches the beginning of a line.
+- `$` matches the end of a line.
+- `[]` matches any character within the brackets.
+- `()` groups characters together.
+
+Regex can be used for a variety of tasks, such as finding and replacing text, validating input, and parsing data.
+
+-------------------------
+# Using Forms Controls
+
+Textual from controls like `<input>` and `<textarea>` are used to collect data from the user using the `.form-control` class
+
+## Example
+```html
+<form>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+```
+
+## Explanation of the code:
+GitHub Copilot: Sure, here's an explanation of the code in point form:
+
+- The code is a HTML form that allows users to submit their name, email, and a message.
+- The form is made up of several form groups, each containing a label and an input field.
+- The first form group contains a label for the name input field, followed by a text input field with the name "name" and an ID of "name".
+- The second form group contains a label for the email input field, followed by an email input field with the name "email" and an ID of "email".
+- The third form group contains a label for the message input field, followed by a textarea input field with the name "message" and an ID of "message".
+- At the bottom of the form is a submit button with the text "Submit" and a class of "btn btn-primary".
+- When the user clicks the submit button, the form data is sent to the server for processing.
+
+
+# Checkbox and Radio Buttons
+- Bootstrap provides styling for checkboxes and radio buttons using the `.form-check` class and `form-check-input` class and `form-check-label` class
+
+ ## Example of the code
+ How to use the `.form-check`, `.form-check-input`, and `.form-check-label` classes to style a checkbox input in Bootstrap:
+
+```html
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    Default checkbox
+  </label>
+</div>
+```
+## Explanation of the code:
+
+In this example, the `.form-check` class is applied to a `div` element that contains the checkbox input and label. The `.form-check-input` class is applied to the checkbox input, and the `.form-check-label` class is applied to the label.
+
+This will apply Bootstrap's default styling to the checkbox, including a custom appearance and hover effect. You can also customize the styling further using CSS or additional Bootstrap classes.
+
+
+# Range Input
+- The range input is used to allow users to select a value from a range of values.
+
+## Example of the code:
+```html
+<input type="range" name="name" id="id" min="min" max="max" step="step">
+```
+
+## Explanation of the code:
+Where `min` is the minimum value, `max` is the maximum value, and `step` is the step size.
+
+# Floating Labels
+- Floating labels are used to display labels above input fields instead of next to them.
+
+## Example of the code:
+```html
+<div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInput" placeholder=">
+    <label for="floatingInput">Email address</label>
+</div>
+```
+
+## Explanation of the code:
+In this example, the `.form-floating` class is applied to a `div` element that contains the input field and label. The `.form-control` class is applied to the input field, and the `.form-label` class is applied to the label.
+
+This will apply Bootstrap's default styling to the input field and label, including a custom appearance and hover effect. You can also customize the styling further using CSS or additional Bootstrap classes.
