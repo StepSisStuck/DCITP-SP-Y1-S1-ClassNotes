@@ -337,11 +337,11 @@ Where `min` is the minimum value, `max` is the maximum value, and `step` is the 
 ## Example of the code:
 ```html
 <div class="form-floating mb-3">
-  <input type="email" class="form-control" id="floatingInput" placeholder=">
-    <label for="floatingInput">Email address</label>
+  <input type="email" class="form-control" id="floatingInput" placeholder="Email address">
+  <label for="floatingInput">Email address</label>
 </div>
 ```
-
+z
 ## Explanation of the code:
 In this example, the `.form-floating` class is applied to a `div` element that contains the input field and label. The `.form-control` class is applied to the input field, and the `.form-label` class is applied to the label.
 
