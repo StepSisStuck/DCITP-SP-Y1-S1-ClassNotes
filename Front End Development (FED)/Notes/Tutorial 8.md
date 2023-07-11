@@ -27,6 +27,8 @@ Table of Contents:
 - [Floating Labels](#floating-labels)
   - [Example of the code:](#example-of-the-code-2)
   - [Explanation of the code:](#explanation-of-the-code-3)
+- [Form Select](#form-select)
+  - [Example of the code:](#example-of-the-code-3)
 
 
 
@@ -346,3 +348,22 @@ z
 In this example, the `.form-floating` class is applied to a `div` element that contains the input field and label. The `.form-control` class is applied to the input field, and the `.form-label` class is applied to the label.
 
 This will apply Bootstrap's default styling to the input field and label, including a custom appearance and hover effect. You can also customize the styling further using CSS or additional Bootstrap classes.
+
+
+------
+# Form Select
+- Selects are used to allow users to select one or more options from a list of options.
+
+## Example of the code:
+```html
+ <select size="4-" class="form-select" id="sel2" name="sellist2">
+     <option>Chrome</option>
+     <option>Edge</option>
+      <option>Firefox</option>
+      <option>Opera</option>
+      <option>Safari</option>
+     <option>IE</option>
+     </select>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+```
