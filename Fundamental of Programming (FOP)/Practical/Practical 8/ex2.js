@@ -19,7 +19,7 @@ class Square {
     console.log(sqArray[i].length);
   }
   
-  console.log("\nArea");
+  console.log("\tArea");
   for (var i = 0; i < sqArray.length; i++) {
     console.log(sqArray[i].calculateArea());
   }
