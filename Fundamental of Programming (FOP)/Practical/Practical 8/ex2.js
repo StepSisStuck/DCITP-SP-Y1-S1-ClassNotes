@@ -14,7 +14,12 @@ class Square {
     sqArray.push(square);
   }
   
-  console.log("Length\tArea");
+  console.log("Length");
   for (var i = 0; i < sqArray.length; i++) {
-    console.log(sqArray[i].length + "\t" + sqArray[i].calculateArea().toFixed(1));
+    console.log(sqArray[i].length);
+  }
+  
+  console.log("\nArea");
+  for (var i = 0; i < sqArray.length; i++) {
+    console.log(sqArray[i].calculateArea());
   }
