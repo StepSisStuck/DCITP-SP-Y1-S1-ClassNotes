@@ -121,3 +121,33 @@ let person = {
 }
 ``` 
 
+We can access the properties of the object using dot notation:
+
+```javascript
+person.name; // "John"
+person.age; // 30
+person.hobbies; // ["reading", "music", "movies"]
+person.hobbies[0]; // "reading"
+person.married; // false
+person.address; // {street: "1 Main St", city: "Toronto", province: "ON", postalCode: "A1A 1A1"}
+person.address.street; // "1 Main St"
+person.address.city; // "Toronto"
+person.address.province; // "ON"
+person.address.postalCode; // "A1A 1A1"
+```
+
+We can also access the properties of the object using bracket notation:
+
+```javascript
+person["name"]; // "John"
+person["age"]; // 30
+person["hobbies"]; // ["reading", "music", "movies"]
+person["hobbies"][0]; // "reading"
+person["married"]; // false
+person["address"]; // {street: "1 Main St", city: "Toronto", province: "ON", postalCode: "A1A 1A1"}
+person["address"]["street"]; // "1 Main St"
+person["address"]["city"]; // "Toronto"
+person["address"]["province"]; // "ON"
+person["address"]["postalCode"]; // "A1A 1A1"
+```
+
