@@ -10,7 +10,7 @@ Without further ado, let's get started!
 
 Here is a list of my past projects/assignments. Feel free to use it as a reference or for inspiration. :D
 
-- [CA1 - HTML with CSS](https://github.com/StepSisStuck/CA2-FED-SP-Y1)
+- [CA1 - HTML with CSS](https://github.com/StepSisStuck/CA1-FED-SP-Y1)
    - [Website](https://stepsisstuck.github.io/CA1-FED-SP-Y1/)
 
 - [CA2 - HTML with CSS](https://github.com/StepSisStuck/CA2-FED-SP-Y1)
