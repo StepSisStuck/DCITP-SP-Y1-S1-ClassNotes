@@ -24,7 +24,8 @@ This repository is a collection of resources for the DCITP module. The resources
 
 - [Front End Development](Front%20End%20Development%20(FED))
 
-- [Assigments](Assigments)
+- [Assigments (Not Important)](Assigments)
+
 -----------------
 # Large Files Template
 This is a template for HTML files for Front End Development. To download the template, click on the link below.
