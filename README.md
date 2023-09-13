@@ -8,7 +8,7 @@
 -----------------
 ## Introduction
 
-Hello there! Welcome to the SP-Y1-S1 Common ICT repository. This repository is a collection of notes and resources I have compiled for each module. Some notes may be incomplete or missing. If you have any notes or resources you would like to contribute, please feel free to submit a pull request. :)
+Hello there! Welcome to the SP-Y1-S1 Common ICT repository. This repository is a collection of notes and resources I have compiled for each module. Some notes may be incomplete or missing. If you have any notes or resources you would like to contribute, please feel free to submit an issue and attach a brand-new file. :)
 
 I have a also included some of the assignments I have done for the modules. Please do not copy the assignments as it is. You may use it as a reference or for inspiration. :D
 
