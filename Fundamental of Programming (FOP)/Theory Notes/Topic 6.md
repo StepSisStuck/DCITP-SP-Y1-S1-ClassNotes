@@ -1,6 +1,24 @@
 # Functions
 
-Table of Contents:
+# Table of Contents:
+
+- [Functions](#functions)
+- [Table of Contents:](#table-of-contents)
+- [What is a function?](#what-is-a-function)
+- [Calling a function](#calling-a-function)
+  - [Return statement](#return-statement)
+- [Call Stack (LIFO) Last In First Out](#call-stack-lifo-last-in-first-out)
+  - [Example of a call stack:](#example-of-a-call-stack)
+- [Pass by value vs Pass by reference](#pass-by-value-vs-pass-by-reference)
+  - [Pass by value](#pass-by-value)
+  - [Pass by reference](#pass-by-reference)
+- [Math Funtions](#math-funtions)
+  - [Math.random()](#mathrandom)
+  - [Math.floor()](#mathfloor)
+  - [Math.ceil()](#mathceil)
+  - [Math.round()](#mathround)
+  - [Math.pow()](#mathpow)
+
 
 ------------------
 
