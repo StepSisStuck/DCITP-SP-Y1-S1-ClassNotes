@@ -1,6 +1,13 @@
 # File System with Linux/Ubuntu
 
-Table of Contents:
+# Table of Contents:
+- [File System with Linux/Ubuntu](#file-system-with-linuxubuntu)
+- [Table of Contents:](#table-of-contents)
+- [Directories](#directories)
+- [Important Directories](#important-directories)
+- [Managing Files Commands](#managing-files-commands)
+- [Editing Files with Vi](#editing-files-with-vi)
+- [File Permissions](#file-permissions)
 
 
 --------------------

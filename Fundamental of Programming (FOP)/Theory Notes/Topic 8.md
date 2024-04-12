@@ -1,6 +1,14 @@
 # Topic 8
 
-Table of Contents:
+# Table of Contents:
+- [Topic 8](#topic-8)
+- [Table of Contents:](#table-of-contents)
+- [Arrays for Storing Data](#arrays-for-storing-data)
+    - [Example 1](#example-1)
+- [Example 2](#example-2)
+- [Array of Objects](#array-of-objects)
+- [Data Type](#data-type)
+- [Pass by Value vs Pass by Reference](#pass-by-value-vs-pass-by-reference)
 
 
 
