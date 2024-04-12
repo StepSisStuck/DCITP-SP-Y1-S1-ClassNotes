@@ -1,12 +1,20 @@
 # Tutorial 9, with JavaScript
 
-Table of Contents
+## Table of Contents
 
-
+- [Tutorial 9, with JavaScript](#tutorial-9-with-javascript)
+  - [Table of Contents](#table-of-contents)
+- [Introduction to JavaScript](#introduction-to-javascript)
+- [How many ways can you declare a variable in JavaScript?](#how-many-ways-can-you-declare-a-variable-in-javascript)
+- [Using the var keyword](#using-the-var-keyword)
+- [Declaring a Variable (let)](#declaring-a-variable-let)
+- [Declaring a Constant (const)](#declaring-a-constant-const)
+- [Variable Scope](#variable-scope)
+- [Create a Object](#create-a-object)
 
 
 --------------------
-
+# Introduction to JavaScript
 Javascript is a programming language that is used to make web pages interactive. It is a scripting language that is used to create and control dynamic website content, i.e. anything that moves, refreshes, or otherwise changes on your screen without requiring you to manually reload a web page.
 
 # How many ways can you declare a variable in JavaScript?
