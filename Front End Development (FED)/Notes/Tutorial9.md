@@ -1,8 +1,15 @@
 # Tutorial 9, with JavaScript
 
-Table of Contents
+## Table of Contents
 
-
+- [Tutorial 9, with JavaScript](#tutorial-9-with-javascript)
+  - [Table of Contents](#table-of-contents)
+- [How many ways can you declare a variable in JavaScript?](#how-many-ways-can-you-declare-a-variable-in-javascript)
+- [Using the var keyword](#using-the-var-keyword)
+- [Declaring a Variable (let)](#declaring-a-variable-let)
+- [Declaring a Constant (const)](#declaring-a-constant-const)
+- [Variable Scope](#variable-scope)
+- [Create a Object](#create-a-object)
 
 
 --------------------
