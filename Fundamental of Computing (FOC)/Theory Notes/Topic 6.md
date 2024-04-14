@@ -1,7 +1,7 @@
-# File System with Linux/Ubuntu
+# File Systems with Linux/Ubuntu
 
 # Table of Contents:
-- [File System with Linux/Ubuntu](#file-system-with-linuxubuntu)
+- [File Systems with Linux/Ubuntu](#file-systems-with-linuxubuntu)
 - [Table of Contents:](#table-of-contents)
 - [Directories](#directories)
 - [Important Directories](#important-directories)
